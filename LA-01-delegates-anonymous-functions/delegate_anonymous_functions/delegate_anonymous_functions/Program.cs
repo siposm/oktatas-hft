@@ -36,6 +36,11 @@ namespace delegate_anonymous_functions
             return a + b;
         }
 
+        public static bool ParosE(int szam)
+        {
+            return szam % 2 == 0;
+        }
+
         public static void Main(string[] args)
         {
 
@@ -163,11 +168,20 @@ namespace delegate_anonymous_functions
 
             Console.WriteLine();
             Action<string> udvozlo = (x => Console.WriteLine(">>> " + x));
+
             udvozlo += (x => Console.WriteLine("--- " + x));
             udvozlo += (x => Console.WriteLine("::: " + x));
             udvozlo += (x => Console.WriteLine("==> " + x));
+
             udvozlo?.Invoke("John Wick");
 
+
+
+            Console.WriteLine("\n\n");
+
+            Predicate<int> vizsgalat = ParosE;
+            Console.WriteLine(vizsgalat(10));
+            Console.WriteLine(vizsgalat(11));
 
             /*
              * 
@@ -210,7 +224,7 @@ namespace delegate_anonymous_functions
 
         }
 
-        static int EmberOsszehasonlito(Ember x, Ember y)
+        public static int EmberOsszehasonlito(Ember x, Ember y)
         {
             return x.CompareTo(y);
         }
