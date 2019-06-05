@@ -1,0 +1,6 @@
+/Users/siposmiki/Projects/linq/linq/bin/Debug/linq.exe
+/Users/siposmiki/Projects/linq/linq/bin/Debug/linq.pdb
+/Users/siposmiki/Projects/linq/linq/obj/x86/Debug/linq.csprojAssemblyReference.cache
+/Users/siposmiki/Projects/linq/linq/obj/x86/Debug/linq.csproj.CoreCompileInputs.cache
+/Users/siposmiki/Projects/linq/linq/obj/x86/Debug/linq.exe
+/Users/siposmiki/Projects/linq/linq/obj/x86/Debug/linq.pdb
