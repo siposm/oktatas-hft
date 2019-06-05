@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "delegate_anonymous_functions", "delegate_anonymous_functions\delegate_anonymous_functions.csproj", "{270F55E9-7039-4A08-87A0-D3C018DC62E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "log_feladat", "log_feladat\log_feladat.csproj", "{CF906329-5E7A-4425-AE04-180BF89679D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{270F55E9-7039-4A08-87A0-D3C018DC62E7}.Debug|x86.ActiveCfg = Debug|x86
+		{270F55E9-7039-4A08-87A0-D3C018DC62E7}.Debug|x86.Build.0 = Debug|x86
+		{270F55E9-7039-4A08-87A0-D3C018DC62E7}.Release|x86.ActiveCfg = Release|x86
+		{270F55E9-7039-4A08-87A0-D3C018DC62E7}.Release|x86.Build.0 = Release|x86
+		{CF906329-5E7A-4425-AE04-180BF89679D5}.Debug|x86.ActiveCfg = Debug|x86
+		{CF906329-5E7A-4425-AE04-180BF89679D5}.Debug|x86.Build.0 = Debug|x86
+		{CF906329-5E7A-4425-AE04-180BF89679D5}.Release|x86.ActiveCfg = Release|x86
+		{CF906329-5E7A-4425-AE04-180BF89679D5}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+EndGlobal
