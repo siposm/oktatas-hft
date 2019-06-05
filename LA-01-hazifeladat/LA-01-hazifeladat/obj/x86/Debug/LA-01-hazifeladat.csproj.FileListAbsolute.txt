@@ -1,0 +1,6 @@
+/Users/siposmiki/Projects/LA-01-hazifeladat/LA-01-hazifeladat/bin/Debug/LA-01-hazifeladat.exe
+/Users/siposmiki/Projects/LA-01-hazifeladat/LA-01-hazifeladat/bin/Debug/LA-01-hazifeladat.pdb
+/Users/siposmiki/Projects/LA-01-hazifeladat/LA-01-hazifeladat/obj/x86/Debug/LA-01-hazifeladat.csprojAssemblyReference.cache
+/Users/siposmiki/Projects/LA-01-hazifeladat/LA-01-hazifeladat/obj/x86/Debug/LA-01-hazifeladat.csproj.CoreCompileInputs.cache
+/Users/siposmiki/Projects/LA-01-hazifeladat/LA-01-hazifeladat/obj/x86/Debug/LA-01-hazifeladat.exe
+/Users/siposmiki/Projects/LA-01-hazifeladat/LA-01-hazifeladat/obj/x86/Debug/LA-01-hazifeladat.pdb
