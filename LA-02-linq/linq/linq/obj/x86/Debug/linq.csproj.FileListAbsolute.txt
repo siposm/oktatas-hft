@@ -4,3 +4,9 @@
 /Users/siposmiki/Projects/linq/linq/obj/x86/Debug/linq.csproj.CoreCompileInputs.cache
 /Users/siposmiki/Projects/linq/linq/obj/x86/Debug/linq.exe
 /Users/siposmiki/Projects/linq/linq/obj/x86/Debug/linq.pdb
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/linq/linq/bin/Debug/linq.exe
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/linq/linq/bin/Debug/linq.pdb
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/linq/linq/obj/x86/Debug/linq.csprojAssemblyReference.cache
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/linq/linq/obj/x86/Debug/linq.csproj.CoreCompileInputs.cache
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/linq/linq/obj/x86/Debug/linq.exe
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/linq/linq/obj/x86/Debug/linq.pdb

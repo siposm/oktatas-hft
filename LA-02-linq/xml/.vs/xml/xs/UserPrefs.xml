@@ -1,14 +1,14 @@
-﻿<Properties StartupConfiguration="{D735A667-086D-47D4-BEFE-BBC3D14AD9E9}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="linq/Program.cs">
+﻿<Properties StartupConfiguration="{DE5F33E9-E327-4E93-8B57-E47D60C10C32}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="xml/Program.cs">
     <Files>
-      <File FileName="linq/Program.cs" Line="304" Column="13" />
+      <File FileName="xml/Program.cs" Line="2" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.xml FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.linq PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>

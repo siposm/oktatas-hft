@@ -1,0 +1,6 @@
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/xml/xml/bin/Debug/xml.exe
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/xml/xml/bin/Debug/xml.pdb
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/xml/xml/obj/x86/Debug/xml.csprojAssemblyReference.cache
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/xml/xml/obj/x86/Debug/xml.csproj.CoreCompileInputs.cache
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/xml/xml/obj/x86/Debug/xml.exe
+/Users/siposmiki/Documents/OKTATÁS/WHP/LABOR-GIT-KODOK/oktatas-whp-19201/LA-02-linq/xml/xml/obj/x86/Debug/xml.pdb

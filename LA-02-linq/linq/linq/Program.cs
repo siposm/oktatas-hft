@@ -75,7 +75,7 @@ namespace linq
             List<Hallgato> hallgatok = new List<Hallgato>();
             hallgatok.Add(new Hallgato() { Nev = "Toporgó Tamás" });
             hallgatok.Add(new Hallgato() { Nev = "Embertelen Elemér" });
-            hallgatok.Add(new Hallgato() { Nev = "Xedik Xavár" });
+            hallgatok.Add(new Hallgato() { Nev = "Xedik Xavér" });
             hallgatok.Add(new Hallgato() { Nev = "Kilencedik Klaudia" });
             hallgatok.Add(new Hallgato() { Nev = "Ketyós KlaUdIA" });
 
@@ -237,6 +237,71 @@ namespace linq
                 Console.WriteLine("csoport: {0} <> darabszám: {1}", item.csoport, item.darab);
 
             #endregion
+
+
+
+
+
+
+            // =================================================================
+
+
+
+            // feladat:
+            // kérjük le azokat a hallgatókat, akiknek a nevében van 'e' vagy 'E' betű
+            //
+            // alakítsuk a nevét nagybetűssé egy új objektum keretein belül
+            // tároljuk el mellé még az életkorát is (más-más nevű tulajdonságban)
+            // 
+            // rendezzük életkor szerint
+
+            #region feladat
+
+            var eHallgatok = from x in hallgatok
+                             where x.Nev.Contains('e') || x.Nev.Contains('E')
+                             orderby x.Eletkor
+                             select new {
+                                 HallgatoNeve = x.Nev.ToUpper(),
+                                 HallgatoKora = x.Eletkor,
+                                 HallgatoStatusz = x.Kapcsolat
+                              };
+
+            Feldolgoz(eHallgatok);
+
+
+
+            // feladat:
+            // végezzük el ugyan ezt a lekérdezést, de csoportosítsuk kapcsolatban lévő státusz szerint
+            // és az egyes csoportokban nézzük meg, hogy mennyi az átlagos életkor
+
+
+            var eHallgatok2 = from x in eHallgatok
+                              group x by x.HallgatoStatusz into g
+                              select new
+                              {
+                                  Atlag = g.Average(a => a.HallgatoKora),
+                                  Darab = g.Count(),
+                                  Csoport = g.Key
+                              };
+
+            Feldolgoz(eHallgatok2);
+
+            /* 
+             * Természetesen van lehetőség az egyes query-ket egymásba is ágyazni,
+             * hasonlóan SQL lekérdezésekhez (persze fontos, hogy ez nem ugyan az).
+             * 
+             * Ez esetben próbáljuk ki:
+             * 
+             * Az 'eHallgatok' helyére másoljuk be a teljes lekérdezést zárójelek közé rakva.
+             * Lefuttatva ugyan azt fogjuk kapni!
+             * 
+             * Érdemes átlátni ezt a fajta verziót is, amikor
+             * komplexebb egymásbaágyazások vannak.            
+             * 
+             * */
+
+            #endregion
+
         }
     }
 }
