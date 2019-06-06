@@ -135,8 +135,6 @@ namespace xml
 
             // Feldolgoz(allomany);
 
-
-
         }
     }
 }
