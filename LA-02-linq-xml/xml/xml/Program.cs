@@ -7,6 +7,7 @@ namespace xml
 {
     class MainClass
     {
+
         public static XDocument Betoltes()
         {
             // XDocument nem felismerése esetén:
