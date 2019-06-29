@@ -55,11 +55,81 @@ namespace reflexio_feladat_2
         }
     }
 
+    class Hallgato
+    {
+        public string Nev { get; set; }
+        public string NeptunKod { get; set; }
+        public bool Nem { get; set; }
+        public DateTime Szuletes { get; set; }
 
+        public void OraraJar()
+        {
+
+        }
+
+        [MethodToXML]
+        public void TargyFelvesz()
+        {
+
+        }
+
+        [MethodToXML]
+        public void TargyLead()
+        {
+
+        }
+
+        [MethodToXML]
+        public void VizsgaraJelentkezik()
+        {
+
+        }
+    }
+
+    class Auto
+    {
+        public string Rendszam { get; set; }
+        public string Tulajdonos { get; set; }
+        public bool Szemelygepjarmu { get; set; }
+        public DateTime UzembehelyzesIdeje { get; set; }
+
+        public void Tankol()
+        {
+
+        }
+
+        [MethodToXML]
+        public void Gyorsit()
+        {
+
+        }
+
+        [MethodToXML]
+        public void Lassit()
+        {
+
+        }
+
+        [MethodToXML]
+        public void Szervizel()
+        {
+
+        }
+    }
 
     class DataFetcher
     {
-        public void FetchData()
+
+        /*
+        * Ebben az esetben a futó programból lekérjük a típusokat
+        * kiválasztjuk belőle ami nekünk kell (jelen esetben Kutya)
+        * majd ennek a típusnak lekérjük a tulajdonságait és metódusait.
+        * 
+        * Ezt követően ezeket xml fájlba írjuk és elmentjük.
+        * 
+        * */
+
+        public void FetchDataFromProgram()
         {
             Assembly asse = Assembly.GetExecutingAssembly();
 
@@ -94,6 +164,8 @@ namespace reflexio_feladat_2
                 methods.Add(method);
             }
 
+
+
             WriteToXML(objType,properties,methods);
         }
 
@@ -104,7 +176,7 @@ namespace reflexio_feladat_2
             xdoc.Add(new XElement("entities"));
 
             xdoc.Element("entities").Add(new XElement("entity"));
-            xdoc.Element("entities").Element("entity").Add(new XElement("hash", objType.Name.GetHashCode())); 
+            xdoc.Element("entities").Element("entity").Add(new XElement("hash", objType.Name.GetHashCode()));
             xdoc.Element("entities").Element("entity").Add(new XElement("type", objType.Name));
             xdoc.Element("entities").Element("entity").Add(new XElement("namespace", objType.Namespace));
             xdoc.Element("entities").Element("entity").Add(new XElement("properties"));
@@ -117,7 +189,6 @@ namespace reflexio_feladat_2
                 );
             }
 
-            
             foreach (var item in methods)
             {
                 xdoc.Element("entities").Element("entity").Element("methods").Add(
@@ -125,8 +196,66 @@ namespace reflexio_feladat_2
                 );
             }
 
-            xdoc.Save("output.xml");
+            xdoc.Save("program_output.xml");
         }
+
+
+
+
+        /*
+         * Ebben az esetben viszont nem csak magukat a tulajdonságokat és metódusokat kérjük le
+         * hanem azok aktuális értékeit is!
+         * 
+         * Ebben az esetben tehát egy teljesen dinamikusan működő list-to-xml metódust készítünk.
+         * */
+
+        // list <> ienumerable
+        public void FetchDataFromList <T> (IEnumerable<T> list)
+        {
+            XDocument xdoc = new XDocument();
+            xdoc.Add(new XElement("entities"));
+
+            foreach (var listItem in list)
+            {
+                XElement uj = new XElement("entity",
+                    new XElement("hash", listItem.GetType().Name.GetHashCode()),
+                    new XElement("type", listItem.GetType().Name),
+                    new XElement("namespace", listItem.GetType().Namespace),
+                    new XElement("properties"),
+                    new XElement("methods")
+                    );
+
+                foreach (var propItem in listItem.GetType().GetProperties())
+                {
+                    //Console.WriteLine(
+                    //    "PROP NAME: {0} \t\t PROP VALUE: {1}",
+                    //    propItem, propItem.GetValue(listItem));
+
+                    uj.Element("properties").Add(
+                        new XElement("property",
+                            new XElement("name", propItem),
+                            new XElement("value", propItem.GetValue(listItem))
+                       ));
+                }
+
+                foreach (var methodItem in listItem.GetType().GetMethods().Where(x => x.GetCustomAttribute<MethodToXMLAttribute>() != null))
+                {
+                    //Console.WriteLine(methodItem);
+
+                    uj.Element("methods").Add(
+                        new XElement("method",
+                            new XElement("name", methodItem)
+                       ));
+                }
+
+                xdoc.Root.Add(uj);
+
+            }
+
+            xdoc.Save("list_output.xml");
+        }
+
+        
     }
 
 
@@ -135,7 +264,24 @@ namespace reflexio_feladat_2
         static void Main(string[] args)
         {
             DataFetcher dc = new DataFetcher();
-            dc.FetchData();
+
+            List<Hallgato> hList = new List<Hallgato>();
+            hList.Add(new Hallgato() { Nev = "Lajos" });
+            hList.Add(new Hallgato() { Nev = "Géza" });
+            hList.Add(new Hallgato() { Nev = "Tamás" });
+
+            List<Auto> aList = new List<Auto>();
+            aList.Add(new Auto() { Rendszam = "AAA-111", Tulajdonos = "Gipsz Jakab", UzembehelyzesIdeje = new DateTime(2018, 03, 13) });
+            aList.Add(new Auto() { Rendszam = "BBB-222", Tulajdonos = "Kiss Ede", UzembehelyzesIdeje = new DateTime(2003, 12, 1) });
+            aList.Add(new Auto() { Rendszam = "CCC-333", Tulajdonos = "Tony Stark", UzembehelyzesIdeje = new DateTime(1999, 5, 30) });
+
+
+
+            dc.FetchDataFromList(hList);
+            Console.WriteLine();
+            dc.FetchDataFromList(aList);
+
+            //dc.FetchDataFromProgram();
         }
     }
 }
