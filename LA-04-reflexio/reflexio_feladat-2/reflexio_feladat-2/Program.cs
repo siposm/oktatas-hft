@@ -119,6 +119,16 @@ namespace reflexio_feladat_2
 
     class DataFetcher
     {
+
+        /*
+        * Ebben az esetben a futó programból lekérjük a típusokat
+        * kiválasztjuk belőle ami nekünk kell (jelen esetben Kutya)
+        * majd ennek a típusnak lekérjük a tulajdonságait és metódusait.
+        * 
+        * Ezt követően ezeket xml fájlba írjuk és elmentjük.
+        * 
+        * */
+
         public void FetchDataFromProgram()
         {
             Assembly asse = Assembly.GetExecutingAssembly();
@@ -154,9 +164,50 @@ namespace reflexio_feladat_2
                 methods.Add(method);
             }
 
+
+
             WriteToXML(objType,properties,methods);
         }
 
+        private void WriteToXML(Type objType, List<PropertyInfo> properties, List<MethodInfo> methods)
+        {
+            XDocument xdoc = new XDocument();
+
+            xdoc.Add(new XElement("entities"));
+
+            xdoc.Element("entities").Add(new XElement("entity"));
+            xdoc.Element("entities").Element("entity").Add(new XElement("hash", objType.Name.GetHashCode()));
+            xdoc.Element("entities").Element("entity").Add(new XElement("type", objType.Name));
+            xdoc.Element("entities").Element("entity").Add(new XElement("namespace", objType.Namespace));
+            xdoc.Element("entities").Element("entity").Add(new XElement("properties"));
+            xdoc.Element("entities").Element("entity").Add(new XElement("methods"));
+
+            foreach (var item in properties)
+            {
+                xdoc.Element("entities").Element("entity").Element("properties").Add(
+                    new XElement("property", item)
+                );
+            }
+
+            foreach (var item in methods)
+            {
+                xdoc.Element("entities").Element("entity").Element("methods").Add(
+                    new XElement("method", item)
+                );
+            }
+
+            xdoc.Save("program_output.xml");
+        }
+
+
+
+
+        /*
+         * Ebben az esetben viszont nem csak magukat a tulajdonságokat és metódusokat kérjük le
+         * hanem azok aktuális értékeit is!
+         * 
+         * Ebben az esetben tehát egy teljesen dinamikusan működő list-to-xml metódust készítünk.
+         * */
 
         // list <> ienumerable
         public void FetchDataFromList <T> (IEnumerable<T> list)
@@ -204,35 +255,7 @@ namespace reflexio_feladat_2
             xdoc.Save("list_output.xml");
         }
 
-        private void WriteToXML(Type objType, List<PropertyInfo> properties, List<MethodInfo> methods)
-        {
-            XDocument xdoc = new XDocument();
-
-            xdoc.Add(new XElement("entities"));
-
-            xdoc.Element("entities").Add(new XElement("entity"));
-            xdoc.Element("entities").Element("entity").Add(new XElement("hash", objType.Name.GetHashCode())); 
-            xdoc.Element("entities").Element("entity").Add(new XElement("type", objType.Name));
-            xdoc.Element("entities").Element("entity").Add(new XElement("namespace", objType.Namespace));
-            xdoc.Element("entities").Element("entity").Add(new XElement("properties"));
-            xdoc.Element("entities").Element("entity").Add(new XElement("methods"));
-
-            foreach (var item in properties)
-            {
-                xdoc.Element("entities").Element("entity").Element("properties").Add(
-                    new XElement("property", item)
-                );
-            }
-
-            foreach (var item in methods)
-            {
-                xdoc.Element("entities").Element("entity").Element("methods").Add(
-                    new XElement("method", item)
-                );
-            }
-
-            xdoc.Save("program_output.xml");
-        }
+        
     }
 
 
