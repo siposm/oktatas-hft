@@ -19,8 +19,13 @@ namespace reflexio_feladat_2
 
     }
 
+    class Allat
+    {
+        public bool Novenyevo { get; set; }
+    }
+
     [ModelToXML]
-    class Kutya
+    class Kutya : Allat
     {
         public string Nev { get; set; }
         public int Eletkor { get; set; }
