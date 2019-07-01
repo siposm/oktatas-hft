@@ -1,0 +1,771 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<people>
+<person>
+	<name>Ambrus Csaba</name>
+	<email>ambrus.csaba@nik.uni-obuda.hu</email>
+	<dept>Dékáni Hivatal</dept>
+	<rank>műszaki ügyintéző</rank>
+	<phone>+36 (1) 666-5510</phone>
+	<room>BA.2.11</room>
+</person>
+<person>
+	<name>B. Kiss Judit</name>
+	<email>bkiss.judit@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5550</phone>
+	<room>BA.3.13</room>
+</person>
+<person>
+	<name>Balázs Éva</name>
+	<email>balazs.eva@nik.uni-obuda.hu</email>
+	<dept>Dékáni Hivatal</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5520</phone>
+	<room>BA.4.06</room>
+</person>
+<person>
+	<name>Balázs Éva</name>
+	<email>titkarsag@nik.uni-obuda.hu</email>
+	<dept>Dékáni Hivatal</dept>
+	<rank>NIK titkárság központi címe</rank>
+	<phone>+36 (1) 666-5520</phone>
+	<room>BA.4.06</room>
+</person>
+<person>
+	<name>Bedők Dávid</name>
+	<email>bedok.david@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>ügyvivő szakértő</rank>
+	<phone>+36 (1) 666-5582</phone>
+	<room>BA.3.02</room>
+</person>
+<person>
+	<name>Bringye Zsolt</name>
+	<email>bringye.zsolt@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>ügyvivő szakértő</rank>
+	<phone>+36 (1) 666-5574</phone>
+	<room>TA.3.06</room>
+</person>
+<person>
+	<name>Bácskai Zsuzsanna</name>
+	<email>bacskai.zsuzsanna@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5541</phone>
+	<room>BA.4.08</room>
+</person>
+<person>
+	<name>Vörösné Bánáti-Baumann Anna</name>
+	<email>banati.anna@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanársegéd</rank>
+	<phone>+36 (1) 666-5574</phone>
+	<room>BA.3.06</room>
+</person>
+<person>
+	<name>Cserfalvi Annamária</name>
+	<email>cserfalvi.annamaria@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5590</phone>
+	<room>BA.2.16/b</room>
+</person>
+<person>
+	<name>Cseri Orsolya Eszter</name>
+	<email>cseri.eszter@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5582</phone>
+	<room>BA.3.02</room>
+</person>
+<person>
+	<name>Dr. Cserjés Ágota</name>
+	<email>cserjes.agota@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>címzetes egyetemi docens, óraadó</rank>
+	<phone>+36 (1) 666-5595</phone>
+	<room>BA.4.11</room>
+</person>
+<person>
+	<name>Csicsek Judit</name>
+	<email>csicsek.judit@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>mestertanár</rank>
+	<phone>+36 (1) 666-5597</phone>
+	<room>BA.4.15</room>
+</person>
+<person>
+	<name>Dr. Csink László</name>
+	<email>csink.laszlo@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>egyetemi docens, főiskolai tanár</rank>
+	<phone>+36 (1) 666-5581</phone>
+	<room>BA.3.03</room>
+</person>
+<person>
+	<name>Dr. Csiszár Orsolya</name>
+	<email>csiszar.orsolya@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>adjunktus</rank>
+	<phone>+36 (1) 666-5595</phone>
+	<room>BA.4.11</room>
+</person>
+<person>
+	<name>Dr. habil. Kovács Levente</name>
+	<email>kovacs.levente@nik.uni-obuda.hu</email>
+	<dept>Biomatika Intézet</dept>
+	<rank>egyetemi tanár, oktatási dékánhelyettes, szakterület felelős,H2020 ERC grant projekt koordinátor, igazgató,H2020 ERC StG grant Principal Investigator</rank>
+	<phone>+36 (1) 666-5585</phone>
+	<room>BA.4.06</room>
+</person>
+<person>
+	<name>Drexler Dániel</name>
+	<email>drexler.daniel@nik.uni-obuda.hu</email>
+	<dept>Biomatika Intézet</dept>
+	<rank>adjunktus</rank>
+	<phone>+36 (1) 666-5553</phone>
+	<room>BA.3.25</room>
+</person>
+<person>
+	<name>Dóczi Roland</name>
+	<email>doczi.roland@nik.uni-obuda.hu</email>
+	<dept>Biomatika Intézet</dept>
+	<rank>demonstrátor</rank>
+	<phone>+36 (1) 666-5535</phone>
+	<room>KC.3.04. szoba</room>
+</person>
+<person>
+	<name>Ecsedi Csaba</name>
+	<email>ecsedi.csaba@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>felkészítő tanár</rank>
+	<phone>+36 (1) 666-5534</phone>
+	<room>BA.1.12</room>
+</person>
+<person>
+	<name>Dr. Erdélyi Krisztina</name>
+	<email>erdelyi.krisztina@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>adjunktus</rank>
+	<phone>+36 (1) 666-5575</phone>
+	<room>BA.3.09</room>
+</person>
+<person>
+	<name>Dr. Erdődi László</name>
+	<email>erdodi.laszlo@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>adjunktus, Etikus Hacker Labor vezető</rank>
+	<phone>+36 (1) 666-5575</phone>
+	<room>BA.3.09</room>
+</person>
+<person>
+	<name>Dr. Farkas Károly CSc.</name>
+	<email>farkas.karoly@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>főiskolai docens, óraadó</rank>
+	<phone>+36 (1) 666-5514</phone>
+	<room>BA.3.16</room>
+</person>
+<person>
+	<name>Dr. Fehér Gyula</name>
+	<email>feher.gyula@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>címzetes egyetemi docens, óraadó</rank>
+	<phone>+36 (1) 666-5589</phone>
+	<room>BA.2.16/a</room>
+</person>
+<person>
+	<name>Dr. Fleiner Rita</name>
+	<email>fleiner.rita@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>adjunktus, szakterület felelős</rank>
+	<phone>+36 (1) 666-5578</phone>
+	<room>BA.3.18</room>
+</person>
+<person>
+	<name>Prof. Dr. Fullér Róbert</name>
+	<email>fuller.robert@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>egyetemi tanár, intézetigazgató</rank>
+	<phone>+36 (1) 666-5537</phone>
+	<room>BA.4.17</room>
+</person>
+<person>
+	<name>Dr. Fülöp János</name>
+	<email>fulop.janos@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>egyetemi docens</rank>
+	<phone></phone>
+	<room></room>
+</person>
+<person>
+	<name>Prof. Dr. Galántai Aurél</name>
+	<email>galantai.aurel@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>egyetemi tanár, Alkalmazott Informatikai és Alkalmazott Matematikai Doktori iskola tanácsának elnöke, Doktori Iskola vezetője</rank>
+	<phone>+36 (1) 666-5616</phone>
+	<room>BA.4.23</room>
+</person>
+<person>
+	<name>Garaguly Zoltán</name>
+	<email>garaguly.zoltan@nik.uni-obuda.hu</email>
+	<dept>Biomatika Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (20) 536-0416</phone>
+	<room>KC.3.03</room>
+</person>
+<person>
+	<name>Gulácsi Gábor</name>
+	<email>gulacsi.gabor@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>demonstrátor</rank>
+	<phone></phone>
+	<room></room>
+</person>
+<person>
+	<name>Dr. György Anna</name>
+	<email>gyorgy.anna@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>főiskolai docens</rank>
+	<phone>+36 (1) 666-5525</phone>
+	<room>BA.4.14</room>
+</person>
+<person>
+	<name>Győriné Kontor Éva</name>
+	<email>gyorine.eva@rh.uni-obuda.hu</email>
+	<dept>Dékáni Hivatal</dept>
+	<rank>nyelvtanár</rank>
+	<phone>+36 (1) 666-5704</phone>
+	<room>KC.1.08</room>
+</person>
+<person>
+	<name>Dr. Hegedüs Gábor</name>
+	<email>hegedus.gabor@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>egyetemi docens</rank>
+	<phone>+36 1 666-5729</phone>
+	<room>KC.XXXX</room>
+</person>
+<person>
+	<name>Dr. Holyinka Péter</name>
+	<email>holyinka.peter@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>címzetes egyetemi docens, óraadó</rank>
+	<phone>+36 (1) 666-5556</phone>
+	<room>BA.3.17</room>
+</person>
+<person>
+	<name>Jónás Gábor</name>
+	<email>jonas.gabor@nik.uni-obuda.hu</email>
+	<dept>Neumann János Informatikai Kar</dept>
+	<rank>műszaki ügyintéző</rank>
+	<phone>+36 (1) 666-5510</phone>
+	<room>BA.2.11</room>
+</person>
+<person>
+	<name>Balázsné Kail Eszter</name>
+	<email>kail.eszter@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanársegéd</rank>
+	<phone>+36 (1) 666-5574</phone>
+	<room>BA.3.06</room>
+</person>
+<person>
+	<name>Kelemen József</name>
+	<email>kelemen.jozsef@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5587</phone>
+	<room>BA.3.22</room>
+</person>
+<person>
+	<name>Kertész Gábor</name>
+	<email>kertesz.gabor@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5568</phone>
+	<room>BA.3.08</room>
+</person>
+<person>
+	<name>Kiss Dániel</name>
+	<email>kiss.daniel@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5568</phone>
+	<room>BA.3.08</room>
+</person>
+<person>
+	<name>Kiss Mária</name>
+	<email>kiss.maria@nik.uni-obuda.hu</email>
+	<dept>Dékáni Hivatal</dept>
+	<rank>gazdasági csoportvezető</rank>
+	<phone>+36 (1) 666-5570</phone>
+	<room>BA.4.03</room>
+</person>
+<person>
+	<name>Klespitzné Kovács Krisztina Rita</name>
+	<email>kovacs.krisztina@nik.uni-obuda.hu</email>
+	<dept>Neumann János Informatikai Kar</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5773</phone>
+	<room>BA.3.27</room>
+</person>
+<person>
+	<name>Koschek Vilmos</name>
+	<email>koschek.vilmos@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>óraadó</rank>
+	<phone></phone>
+	<room>BA.3.13</room>
+</person>
+<person>
+	<name>Kovács András</name>
+	<email>kovacs.andras@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>műszaki ügyintéző</rank>
+	<phone>+36 (1) 666-5568</phone>
+	<room>BA.3.08</room>
+</person>
+<person>
+	<name>Dr. Kutor László</name>
+	<email>kutor.laszlo@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>egyetemi docens, főiskolai tanár</rank>
+	<phone>+36 (1) 666-5588</phone>
+	<room>BA.1.18</room>
+</person>
+<person>
+	<name>Dr. Kárász Péter</name>
+	<email>karasz.peter@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>egyetemi docens, intézetigazgató-helyettes, BSc koordinátor</rank>
+	<phone>+36 (1) 666-5596</phone>
+	<room>BA.4.12</room>
+</person>
+<person>
+	<name>Kőhalmi Vivien</name>
+	<email>kohalmi.vivien@nik.uni-obuda.hu</email>
+	<dept>Dékáni Hivatal</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5544</phone>
+	<room>BA.4.22</room>
+</person>
+<person>
+	<name>Lovas István</name>
+	<email>lovas.istvan@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5586</phone>
+	<room>BA.3.22</room>
+</person>
+<person>
+	<name>Léczfalvy Ádám</name>
+	<email>leczfalvy.adam@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5586</phone>
+	<room>BA.3.22</room>
+</person>
+<person>
+	<name>Légrádi Gábor</name>
+	<email>legradi.gabor@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>mestertanár</rank>
+	<phone>+36 (1) 666-5577</phone>
+	<room>BA.3.07</room>
+</person>
+<person>
+	<name>Maróthy Zita</name>
+	<email>marothy.zita@nik.uni-obuda.hu</email>
+	<dept>Tanulmányi Osztály</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5561</phone>
+	<room>BA.1.17</room>
+</person>
+<person>
+	<name>Mezei József</name>
+	<email>mezei.jozsef@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5576</phone>
+	<room>BA.3.22</room>
+</person>
+<person>
+	<name>Mihályi Martin</name>
+	<email>mihalyi.martin@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>óraadó</rank>
+	<phone>+36 (1) 666-5575</phone>
+	<room>BA.3.09</room>
+</person>
+<person>
+	<name>Nagy András</name> 
+	<email>nagy.andras@nik.uni-obuda.hu</email> 
+	<dept>Alkalmazott Informatikai Intézet</dept> 
+	<rank>tanszéki mérnök</rank> 
+	<phone>+36 (1) 666-5514</phone> 
+	<room>3.16</room> 
+</person>
+<person>
+	<name>Nagy István</name> 
+	<email>nagy.istvan@nik.uni-obuda.hu</email> 
+	<dept>Alkalmazott Informatikai Intézet</dept> 
+	<rank>mestertanár, óraadó</rank> 
+	<phone></phone> 
+	<room></room> 
+</person>
+<person>
+	<name>Prof. Dr. Nagy Péter Tibor</name> 
+	<email>nagy.peter@nik.uni-obuda.hu</email> 
+	<dept>Alkalmazott Matematikai Intézet</dept> 
+	<rank>egyetemi tanár</rank> 
+	<phone>+36 (1) 666-5512</phone> 
+	<room>BA.4.20</room> 
+</person>
+<person>
+	<name>Nagy Tibor István</name>
+	<email>nagy.tibor@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanársegéd</rank>
+	<phone>+36 (1) 666-5581</phone>
+	<room>BA.3.03</room>
+</person>
+<person>
+	<name>Nógrády Vajk</name>
+	<email>nogrady.vajk@nik.uni-obuda.hu</email>
+	<dept>Tanulmányi Osztály</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5565</phone>
+	<room>B.A.1.17</room>
+</person>
+<person>
+	<name>Pethes Róbert</name>
+	<email>pethes.robert@phd.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai és Alkalmazott Matematikai Doktori Iskola</dept>
+	<rank>PhD hallgató</rank>
+	<phone></phone>
+	<room></room>
+</person>
+<person>
+	<name>Pick András</name> 
+	<email>pick.andras@nik.uni-obuda.hu</email> 
+	<dept>Tanulmányi osztály</dept> 
+	<rank>Tanulmányi ügyintéző</rank> 
+	<phone>+36 (1) 666-5563</phone> 
+	<room>BA.1.17</room> 
+</person>
+<person>
+	<name>Pintér Gergő</name> 
+	<email>pinter.gergo@nik.uni-obuda.hu</email> 
+	<dept>Alkalmazott Informatikai és Alkalmazott Matematikai Doktori Iskola</dept> 
+	<rank>PhD hallgató</rank> 
+	<phone></phone> 
+	<room></room> 
+</person>
+<person>
+	<name>Pintér Ádám</name> 
+	<email>pinter.adam@nik.uni-obuda.hu</email> 
+	<dept>Alkalmazott Informatikai Intézet</dept> 
+	<rank>tanszéki mérnök</rank> 
+	<phone>+36 (1) 666-5575</phone> 
+	<room>BA.3.09</room> 
+</person>
+<person>
+	<name>Piros Péter</name>
+	<email>piros.peter@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai és Alkalmazott Matematikai Doktori Iskola</dept>
+	<rank>doktorandusz</rank>
+	<phone>+36 (1) 666-5514</phone>
+	<room>BA.3.16</room>
+</person>
+<person>
+	<name>Prof. Dr. Pap Endre</name>
+	<email>pap.endre@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>kutatóprofesszor</rank>
+	<phone>+36 (1) 666-5537</phone>
+	<room>BA.4.17</room>
+</person>
+<person>
+	<name>Prém Dániel</name>
+	<email>prem.daniel@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5580</phone>
+	<room>BA.3.04</room>
+</person>
+<person>
+	<name>Dr. Rövid András</name>
+	<email>rovid.andras@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank></rank>
+	<phone></phone>
+	<room></room>
+</person>
+<person>
+	<name>Dr. Sergyán Szabolcs</name>
+	<email>sergyan.szabolcs@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>egyetemi docens, intézetigazgató, kari Erasmus koordinátor</rank>
+	<phone>+36 (1) 666-5550</phone>
+	<room>BA.3.13</room>
+</person>
+<person>
+	<name>Sicz-Mesziár János</name>
+	<email>sicz-mesziar.janos@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>műszaki ügyintéző</rank>
+	<phone>+36 (1) 666-5587</phone>
+	<room>BA.3.22</room>
+</person>
+<person>
+	<name>Simon Ádám</name>
+	<email>simon.adam@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5580</phone>
+	<room>BA.3.04</room>
+</person>
+<person>
+	<name>Simon-Nagy Gabriella</name>
+	<email>nagy.gabriella@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanársegéd</rank>
+	<phone>+36 (1) 666-5578</phone>
+	<room>BA.3.18</room>
+</person>
+<person>
+	<name>Sipos Miklós</name>
+	<email>sipos.miklos@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5568</phone>
+	<room>BA.3.08</room>
+</person>
+<person>
+	<name>Somlyai László</name>
+	<email>somlyai.laszlo@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanársegéd</rank>
+	<phone>+36 (1) 666-5549</phone>
+	<room>BA.3.23</room>
+</person>
+<person>
+	<name>Dr. Stojcsics Dániel</name>
+	<email>stojcsics.daniel@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>adjunktus, szakterület felelős</rank>
+	<phone>+36 (1) 666-5586</phone>
+	<room>BA.3.22</room>
+</person>
+<person>
+	<name>Susik Márta</name>
+	<email>susik.marta@nik.uni-obuda.hu</email>
+	<dept>Oktatási Csoport</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5527</phone>
+	<room>BA.4.10</room>
+</person>
+<person>
+	<name>Dr. Szabó Gábor</name>
+	<email>szabo.gabor@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>egyetemi docens</rank>
+	<phone></phone>
+	<room></room>
+</person>
+<person>
+	<name>Szabó-Resch Miklós Zsolt</name> 
+	<email>szabo.zsolt@nik.uni-obuda.hu</email> 
+	<dept>Alkalmazott Informatikai Intézet</dept> 
+	<rank>ügyvivő szakértő</rank> 
+	<phone>+36 (1) 666-5582</phone> 
+	<room>BA.3.02</room> 
+</person>
+<person>
+	<name>Szabó-Zsidai Krisztina</name>
+	<email>szabo-zsidai.krisztina@rkk.uni-obuda.hu</email>
+	<dept>Tanulmányi Osztály</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5912</phone>
+	<room>1034 Budapest, Doberdó út 6.</room>
+</person>
+<person>
+	<name>Prof. Dr. Szeidl László</name>
+	<email>szeidl@uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>egyetemi tanár</rank>
+	<phone>+36 (1) 666-5920</phone>
+	<room>BA.4.21</room>
+</person>
+<person>
+	<name>Dr. Szenes Katalin</name>
+	<email>szenes.katalin@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>címzetes egyetemi docens, óraadó</rank>
+	<phone>+36 (1) 666-5556</phone>
+	<room>BA.3.17</room>
+</person>
+<person>
+	<name>Sziklai Zsolt</name>
+	<email>sziklai.zsolt@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5587</phone>
+	<room>BA.3.22</room>
+</person>
+<person>
+	<name>Dr. Szénási Sándor</name>
+	<email>szenasi.sandor@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>egyetemi docens, szakterület felelős, CUDA Teaching Center vezető</rank>
+	<phone>+36 (1) 666-5532</phone>
+	<room>BA.3.11</room>
+</person>
+<person>
+	<name>Dr. Szőke Magdolna</name>
+	<email>szoke.magdolna@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>adjunktus</rank>
+	<phone>+36 (1) 666-5536</phone>
+	<room>BA.4.13</room>
+</person>
+<person>
+	<name>Sántáné-Tóth Edit</name>
+	<email>santane.edit@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>címzetes egyetemi docens, óraadó</rank>
+	<phone>+36 (1) 666-5514</phone>
+	<room>BA.3.16</room>
+</person>
+<person>
+	<name>Dr. Takács Márta</name>
+	<email>takacs.marta@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>egyetemi docens</rank>
+	<phone>+36 (1) 666-5546</phone>
+	<room>BA.4.19</room>
+</person>
+<person>
+	<name>Tanos Katalin</name>
+	<email>tanos.katalin@nik.uni-obuda.hu</email>
+	<dept>Tanulmányi Osztály</dept>
+	<rank>igazgatási ügyintéző</rank>
+	<phone>+36 (1) 666-5511</phone>
+	<room>BA.1.17</room>
+</person>
+<person>
+	<name>Dr. Tick József</name> 
+	<email>tick@uni-obuda.hu</email> 
+	<dept>Rektori Hivatal</dept> 
+	<rank>innovációs főigazgató, egyetemi docens</rank> 
+	<phone>+36 (1) 666-5668</phone> 
+	<room>BA.1.06</room> 
+</person>
+<person>
+	<name>Tikász Ádám</name> 
+	<email>tikasz.adam@nik.uni-obuda.hu</email> 
+	<dept>Alkalmazott Informatikai Intézet</dept> 
+	<rank>tanszéki mérnök</rank> 
+	<phone>+36 (1) 666-5580</phone> 
+	<room>BA.3.04</room> 
+</person>
+<person>
+	<name>Tiszai Tamás</name>
+	<email>tiszai.tamas@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>mestertanár</rank>
+	<phone>+36 (1) 666-5574</phone>
+	<room>BA.3.06</room>
+</person>
+<person>
+	<name>Tóth András</name>
+	<email>toth.andras@nik.uni-obuda.hu</email>
+	<dept>Dékáni Hivatal</dept>
+	<rank>műszaki ügyintéző, csoportvezető</rank>
+	<phone>+36 (1) 666-5567</phone>
+	<room>BA.3.15</room>
+</person>
+<person>
+	<name>Tóth Ádám</name>
+	<email>toth.adam@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>demonstrátor</rank>
+	<phone>+36 (1) 666-5525</phone>
+	<room>BA4.14</room>
+</person>
+<person>
+	<name>Dr. Vajda István</name>
+	<email>vajda.istvan@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>adjunktus</rank>
+	<phone>+36 (1) 666-5597</phone>
+	<room>BA.4.15</room>
+</person>
+<person>
+	<name>Varga Viktor</name>
+	<email>varga.viktor@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>óraadó</rank>
+	<phone></phone>
+	<room></room>
+</person>
+<person>
+	<name>Vladárné Kiss Andrea</name> 
+	<email>kiss.andrea@nik.uni-obuda.hu</email> 
+	<dept>Oktatási Csoport</dept> 
+	<rank>igazgatási ügyintéző</rank> 
+	<phone>+36 (1) 666-5526</phone> 
+	<room>BA.4.10</room> 
+</person>
+<person>
+	<name>Dr. Vámossy Zoltán</name>
+	<email>vamossy.zoltan@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>egyetemi docens, intézetigazgató-helyettes, TDK-felelős</rank>
+	<phone>+36 (1) 666-5550</phone>
+	<room>BA.3.12</room>
+</person>
+<person>
+	<name>Vígh Tamás</name>
+	<email>vigh.tamas@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5589</phone>
+	<room>BA.2.16/a</room>
+</person>
+<person>
+	<name>Zsíros Tímea</name>
+	<email>zsiros.timea@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>tanársegéd</rank>
+	<phone>+36 (1) 666-5536</phone>
+	<room>BA.4.13</room>
+</person>
+<person>
+	<name>Záborszky Ágnes</name>
+	<email>zaborszky.agnes@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>mestertanár</rank>
+	<phone>+36 (1) 666-5596</phone>
+	<room>BA.4.12</room>
+</person>
+<person>
+	<name>Tony Stark</name>
+	<email>tony.stark@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>polihisztor</rank>
+	<phone>+36 (1) 666-1111</phone>
+	<room>BA.0.00</room>
+</person>
+<person>
+	<name>Bruce Banner</name>
+	<email>bruce.banner@gmail.com</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>polihisztor</rank>
+	<phone>+36 (1) 666-1111</phone>
+	<room>BA.0.00</room>
+</person>
+</people>

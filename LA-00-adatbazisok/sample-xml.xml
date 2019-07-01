@@ -1,0 +1,24 @@
+...
+<person>
+	<name>Tony Stark</name>
+	<email>tony.stark@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intezet</dept>
+	<rank>polihisztor</rank>
+	<phone>+36 (1) 666-1111</phone>
+	<room>BA.0.00</room>
+	<friends>
+		<person>
+			<name>Bruce Banner</name>
+			<email>bruce.banner@gmail.com</email>
+			<dept>Alkalmazott Matematikai Intezet</dept>
+			...
+		</person>
+		<person>
+			<name>Dr. Sergyan Szabolcs</name>
+			<email>sergyan.szabolcs@nik.uni-obuda.hu</email>
+			<dept>Alkalmazott Informatikai Intezet</dept>
+			...
+		</person>	
+	</friends>
+</person>
+...
