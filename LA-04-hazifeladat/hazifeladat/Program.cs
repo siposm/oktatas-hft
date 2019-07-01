@@ -18,6 +18,9 @@ namespace hazifeladat
 
         public void SendToFight(object elem)
         {
+            // itt is lehetne vizsgálni, hogy van-e ilyen metódusa egyáltalán, de nem tettem meg, hogy lássuk az exceptiont...
+            // ami akkor váltódik ki, ha kikommentezzük a megfelelő osztályban az AvengerAttribute-ot
+
             switch (elem.GetType().GetMethod("Fight").GetCustomAttribute<AvengerAttribute>().Location)
             {
                 case CurrentLocation.Earth:
@@ -56,8 +59,8 @@ namespace hazifeladat
                 if ( lowerBoundary <= actualEntitysValue )
                 {
                     // debug:
-                    //Console.WriteLine(pinfo);
-                    //Console.WriteLine(pinfo.GetValue(item));
+                    //Console.WriteLine(pinfo); Console.WriteLine(pinfo.GetValue(item));
+
                     Storage.Add(item);
                 }
                 else
@@ -77,6 +80,8 @@ namespace hazifeladat
 
             // tesztelés: OK
             hq.Enroll(new Avenger() { Name = "Tony Stark", SavedQuantity = 88 });
+            hq.Enroll(new Avenger() { Name = "Vízió", SavedQuantity = 101 });
+            hq.Enroll(new Avenger() { Name = "Hulk", SavedQuantity = 30 });
 
 
             // ---------------------------------------------------------------------------
