@@ -13,92 +13,123 @@ namespace hazifeladat
 
     }
 
-    class NoAttributeException : Exception
+    class NoSavedLivesAttributeException : Exception
     {
 
     }
 
-    public enum TartozkodasiHely { Föld, Mars, Vormir, Titan }
+    public enum CurrentLocation { Earth, Mars, Vormir, Titan }
 
     class AvengerAttribute : Attribute
     {
-        public TartozkodasiHely Hely { get; set; }
+        public CurrentLocation Location { get; set; }
 
-        public AvengerAttribute(TartozkodasiHely tartozkodasiHely)
+        public AvengerAttribute(CurrentLocation location)
         {
-            this.Hely = tartozkodasiHely;
+            this.Location = location;
         }
     }
 
     class SavedLivesAttribute : Attribute
     {
         public int Limit { get; set; }
+        public string Percentage { get; set; }
 
-        public SavedLivesAttribute(int limit)
+        public SavedLivesAttribute(string percentage, int limit)
         {
+            this.Percentage = percentage;
             this.Limit = limit;
         }
     }
 
 
-    class Bosszuallo
+    class Avenger
     {
-        public string Nev { get; set; }
+        public string Name { get; set; }
 
-        [SavedLives(30)]
-        public int MegmentettDarabszam { get; set; }
+        [SavedLives("5%",30)]
+        public int SavedQuantity { get; set; }
 
-        [Avenger(TartozkodasiHely.Titan)]
-        public void Harcol()
+        [Avenger(CurrentLocation.Titan)]
+        public void Fight()
         {
 
+        }
+
+        public override string ToString()
+        {
+            return this.Name;
         }
     }
 
-    class Fohadiszallas
+    class NotAvenger
     {
-        public List<Bosszuallo> Bosszuallok { get; set; }
+        public string Name { get; set; }
 
-        public Fohadiszallas()
+        public override string ToString()
         {
-            this.Bosszuallok = new List<Bosszuallo>();
+            return this.Name;
+        }
+    }
+
+    class Headquarters
+    {
+        public List<object> Storage { get; set; }
+
+        public Headquarters()
+        {
+            this.Storage = new List<object>();
         }
 
-        public void HarcolniKuld(Bosszuallo b)
+        public void SendToFight(object elem)
         {
-            switch (b.GetType().GetMethod("Harcol").GetCustomAttribute<AvengerAttribute>().Hely)
+            switch (elem.GetType().GetMethod("Fight").GetCustomAttribute<AvengerAttribute>().Location)
             {
-                case TartozkodasiHely.Föld:
+                case CurrentLocation.Earth:
                     Console.WriteLine("földön harcol");
                     break;
-                case TartozkodasiHely.Mars:
+                case CurrentLocation.Mars:
                     Console.WriteLine("marson harcol");
                     break;
-                case TartozkodasiHely.Vormir:
+                case CurrentLocation.Vormir:
                     Console.WriteLine("vormiron harcol");
                     break;
-                case TartozkodasiHely.Titan:
-                    Console.WriteLine("titanon harcol");
+                case CurrentLocation.Titan:
+                    Console.WriteLine("titánon harcol");
                     break;
                 default:
                     break;
             }
         }
 
-        public void Felvesz(Bosszuallo b)
+        public void Enroll(object item)
         {
-            if( typeof(Bosszuallo).GetProperties().Where(x => x.GetCustomAttributes<SavedLivesAttribute>() != null) != null )
+            // van-e ilyen attribútuma
+            if (item.GetType().GetProperties().Where(x => x.GetCustomAttribute(typeof(SavedLivesAttribute)) != null).Any())
             {
-                foreach (var item in typeof(Bosszuallo).GetProperties().Where(t => t.GetCustomAttribute<SavedLivesAttribute>() != null)) // foreach nem annyira szép itt
+                // property ahol van megfelelő attrib. 
+                PropertyInfo pinfo = item.GetType().GetProperties().Where(x => x.GetCustomAttribute(typeof(SavedLivesAttribute)) != null).FirstOrDefault();
+
+                // megfelelő property már meg van >> kell a percentage érték és az int érték
+                double percentageValue = double.Parse(((SavedLivesAttribute)pinfo.GetCustomAttribute(typeof(SavedLivesAttribute))).Percentage.Split('%')[0]);
+                double limitNumber = ((SavedLivesAttribute)pinfo.GetCustomAttribute(typeof(SavedLivesAttribute))).Limit;
+
+                // számolás + aktuális entitás értékének lekérdezése (megfelelő prop. alapján!)
+                double lowerBoundary = limitNumber - (limitNumber * (percentageValue/100));
+                int actualEntitysValue = (int)pinfo.GetValue(item);
+                
+                if ( lowerBoundary <= actualEntitysValue )
                 {
-                    if (item.GetCustomAttribute<SavedLivesAttribute>().Limit <= b.MegmentettDarabszam)
-                        Bosszuallok.Add(b);
-                    else
-                        throw new NotValidAvengerException();
+                    // debug:
+                    //Console.WriteLine(pinfo);
+                    //Console.WriteLine(pinfo.GetValue(item));
+                    Storage.Add(item);
                 }
+                else
+                    throw new NotValidAvengerException();
             }
             else
-                throw new NoAttributeException();
+                throw new NoSavedLivesAttributeException();
         }
     }
 
@@ -107,28 +138,67 @@ namespace hazifeladat
     {
         static void Main(string[] args)
         {
-            Fohadiszallas hq = new Fohadiszallas();
+            Headquarters hq = new Headquarters();
 
-            hq.Felvesz(new Bosszuallo() { Nev = "Tony Stark", MegmentettDarabszam = 88 });
+            // tesztelés: OK
+            hq.Enroll(new Avenger() { Name = "Tony Stark", SavedQuantity = 88 });
 
+
+            // ---------------------------------------------------------------------------
+
+
+            // tesztelés: NEM OK (kevés megmentett ember)
             try
             {
-                hq.Felvesz(new Bosszuallo() { Nev = "Hawkeye", MegmentettDarabszam = 10 });
+                hq.Enroll(new Avenger() { Name = "Hawkeye", SavedQuantity = 10 });
             }
             catch (NotValidAvengerException)
             {
-                Console.WriteLine("hiba volt");
+                Console.WriteLine("[ERR] ez a bosszúálló még nem elég tapasztalt");
             }
 
 
+            // ---------------------------------------------------------------------------
 
 
-            foreach (var item in hq.Bosszuallok)
+            // tesztelés: NEM OK (nincs ilyen attrib.)
+            try
             {
-                Console.WriteLine(item.Nev);
+                hq.Enroll(new NotAvenger() { Name = "Ultron" });
+            }
+            catch (NoSavedLivesAttributeException)
+            {
+                Console.WriteLine("[ERR] nincs ilyen attribútuma...");
             }
 
-            hq.HarcolniKuld(new Bosszuallo() { Nev = "Tony Stark", MegmentettDarabszam = 88 });
+
+            // ---------------------------------------------------------------------------
+
+
+
+            // tesztelés: NEM OK (nincs ilyen metódus)
+            try
+            {
+                hq.SendToFight(new NotAvenger() { Name = "Ultron" });
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("[ERR] nincs ilyen metódusa...");
+            }
+
+
+            // ---------------------------------------------------------------------------
+
+
+
+            Console.WriteLine("FELVETT BOSSZÚÁLLÓK:");
+            foreach (var item in hq.Storage)
+                Console.WriteLine("\t> " + item);
+
+
+
+
+            hq.SendToFight(new Avenger() { Name = "Tony Stark", SavedQuantity = 88 });
 
         }
     }
