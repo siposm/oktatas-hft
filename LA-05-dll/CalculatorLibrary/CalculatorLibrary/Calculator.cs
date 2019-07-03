@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace my_dll_file
+namespace CalculatorLibrary
 {
     public class Calculator
     {

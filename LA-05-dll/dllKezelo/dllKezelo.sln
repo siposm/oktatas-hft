@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "my-dll-file", "my-dll-file\my-dll-file.csproj", "{09F05654-CBE2-417C-8CAD-E1DC3C4DAAD3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dllKezelo", "dllKezelo\dllKezelo.csproj", "{2FE39C7B-F4EA-4DDC-BEC1-74CB329F604C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{09F05654-CBE2-417C-8CAD-E1DC3C4DAAD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09F05654-CBE2-417C-8CAD-E1DC3C4DAAD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09F05654-CBE2-417C-8CAD-E1DC3C4DAAD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09F05654-CBE2-417C-8CAD-E1DC3C4DAAD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FE39C7B-F4EA-4DDC-BEC1-74CB329F604C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FE39C7B-F4EA-4DDC-BEC1-74CB329F604C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FE39C7B-F4EA-4DDC-BEC1-74CB329F604C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FE39C7B-F4EA-4DDC-BEC1-74CB329F604C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {45434147-CD15-44C3-A644-B8F15E045802}
+		SolutionGuid = {6EF8D545-E968-43BA-9E63-40969E61F3B1}
 	EndGlobalSection
 EndGlobal
