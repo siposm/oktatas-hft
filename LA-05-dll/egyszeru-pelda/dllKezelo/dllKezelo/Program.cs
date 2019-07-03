@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-// saját dll usingolása!
-using CalculatorLibrary;
+using CalculatorLibrary; // saját dll usingolása!
 
 namespace dllKezelo
 {
@@ -16,8 +15,9 @@ namespace dllKezelo
             Calculator calc = new Calculator();
 
             Console.WriteLine(calc.Addition(10, 25));
-
             Console.WriteLine(calc.Substraction(50,12));
+
+
         }
     }
 }
