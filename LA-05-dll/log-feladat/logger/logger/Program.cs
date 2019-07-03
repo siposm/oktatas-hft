@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 using LoggerTXT;        // >> logger for txt
 using LoggerLibrary;    // >> interface + student osztály
 
-using System.Linq;      // >> xdocument
 using System.Xml.Linq;  // >> xdocument
+using System.Reflection;// >> assembly
+using System.IO;        // >> directory info
 
 namespace logger
 {
@@ -21,7 +22,7 @@ namespace logger
                 new XElement("student_entity",
                     new XElement("name" , student.Name,
                         new XAttribute("hash" , student.Name.GetHashCode())),
-                    new XElement("registration", student.RegistrationDate)
+                    new XElement("registration_year", student.RegistrationDate.Year)
                 ));
             xdoc.Save("output_xml.xml");
         }
@@ -31,6 +32,9 @@ namespace logger
     {
         static void Main(string[] args)
         {
+            // Feladat 1.: kézi tesztelés
+            // ----------------------------------------------------
+
             try
             {
                 LoggerForTXT txtLogger = new LoggerForTXT();
@@ -46,6 +50,45 @@ namespace logger
             finally
             {
                 Console.WriteLine("ready...");
+            }
+
+
+
+            
+
+
+
+
+            // Feladat 2.: automatikus tesztelés / futtatás
+            // ----------------------------------------------------
+
+            List<Type> loggerClasses = new List<Type>();
+
+            loggerClasses.AddRange(Assembly.GetExecutingAssembly().GetTypes()
+                .Where(x => x.GetInterface("ILogger") != null));
+
+            DirectoryInfo dinfo = new DirectoryInfo(Directory.GetCurrentDirectory());
+
+            foreach (var item in dinfo.GetFiles("*.dll"))
+            {
+                loggerClasses.AddRange(
+                    Assembly.LoadFrom(item.FullName).GetTypes()
+                    .Where ( x => x.GetInterface("ILogger") != null)
+                    );
+            }
+
+            Console.Write("STUDENT NAME: ");
+            string name = Console.ReadLine();
+
+            Student stud = new Student() { Name = name };
+
+            foreach (var item in loggerClasses)
+            {
+                var instance = Activator.CreateInstance(item);
+
+                var q = item.GetMethod("Log");
+
+                q.Invoke(instance, new object[] { stud });
             }
         }
     }
