@@ -62,13 +62,17 @@ namespace logger
             // Feladat 2.: automatikus tesztelés / futtatás
             // ----------------------------------------------------
 
+            // minden osztály ami loggerként funkcionál (ILogger-t megvalósítják)
             List<Type> loggerClasses = new List<Type>();
 
+            // csak az interfészt megvalósító osztályok hozzáadása
             loggerClasses.AddRange(Assembly.GetExecutingAssembly().GetTypes()
                 .Where(x => x.GetInterface("ILogger") != null));
 
+            // aktuális könyvtár ahol a .exe fájl van (!)
             DirectoryInfo dinfo = new DirectoryInfo(Directory.GetCurrentDirectory());
 
+            // adott mappa dll fájljainak bejárása
             foreach (var item in dinfo.GetFiles("*.dll"))
             {
                 loggerClasses.AddRange(
@@ -84,11 +88,18 @@ namespace logger
 
             foreach (var item in loggerClasses)
             {
+                // minden Logger osztály Log metódusát meg akarjuk hívni
+
+                // 1. példányokat hozunk létre
                 var instance = Activator.CreateInstance(item);
 
+                // 2. a Log metódusra mutató referenciát hozunk létre
                 var q = item.GetMethod("Log");
 
+                // 3. meghívjuk a log metódust adott paraméterrel
                 q.Invoke(instance, new object[] { stud });
+
+                // 4. kimenetek ellenőrzése /bin/debug-ban
             }
         }
     }
