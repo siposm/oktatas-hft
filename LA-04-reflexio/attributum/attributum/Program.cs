@@ -14,6 +14,34 @@ namespace attributum
     }
 
 
+    // megszorítás >> csak osztályra helyezhető attrib.
+
+    [AttributeUsage(AttributeTargets.Class)]
+    class MyClassAttribute : Attribute { }
+
+
+    // megszorítás >> csak metódusra helyezhető attrib.
+
+    [AttributeUsage(AttributeTargets.Method)]
+    class MyMethodAttribute : Attribute { }
+
+
+
+    //[MyMethod] // nem ok
+    [MyClass] // ok
+    class Auto
+    {
+        public string Rendszam { get; set; }
+
+        [MyMethod] // ok
+        //[MyClass] // nem ok
+        public void Tankol()
+        {
+
+        }
+    }
+
+
 
     class Neptun
     {
@@ -31,6 +59,8 @@ namespace attributum
             // hallgató felvitele...
         }
     }
+
+
 
 
     class Program
