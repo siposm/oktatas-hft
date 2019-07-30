@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace mocking
 {
-    interface IRepository
+    public interface IRepository
     {
         List<Avenger> Avengers { get; set; }
         List<Avenger> GetAvengers();
+        void AddAvenger(Avenger avenger);
     }
 }

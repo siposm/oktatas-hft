@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace mocking
 {
-    class AvengerController
+    public class AvengerController
     {
         IRepository repo;
 
+        // dependency !!!
         public AvengerController(IRepository repo)
         {
             this.repo = repo;
@@ -23,6 +24,17 @@ namespace mocking
             {
                 Console.WriteLine(ave.Name);
             }
+        }
+
+        public void AddAvenger(Avenger avenger)
+        {
+            // szűrés / vizsgálat / validálás stb. (ezt most kihagyjuk)
+            repo.AddAvenger(avenger);
+        }
+
+        public void AddAvengerROSSZ(Avenger avenger)
+        {
+            // nem csinálunk semmit >> hibát okozva ezzel
         }
     }
 }

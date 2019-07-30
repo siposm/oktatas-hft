@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mocking
 {
-    class Repository : IRepository
+    public class Repository : IRepository
     {
         public List<Avenger> Avengers { get; set; }
 
@@ -31,6 +31,12 @@ namespace mocking
                 Name = "Black Widow", Gender = true, SuperPower = false
             });
             return lista;
+        }
+
+        public void AddAvenger(Avenger avenger)
+        {
+            // itt már nem kell szűrni, de itt is lehetne ezt-azt vizsgálni
+            this.Avengers.Add(avenger);
         }
     }
 }

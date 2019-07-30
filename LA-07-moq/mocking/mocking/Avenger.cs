@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace mocking
 {
-    class Avenger
+    public class Avenger
     {
         public string Name { get; set; }
         public bool Gender { get; set; }

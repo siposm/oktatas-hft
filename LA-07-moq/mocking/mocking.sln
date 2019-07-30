@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mocking", "mocking\mocking.csproj", "{F756AC6A-6FC0-41F9-914E-407DD2EC19F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestAvengers", "UnitTestAvengers\UnitTestAvengers.csproj", "{DB0D0A73-BB05-4A68-9699-7B0123067899}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F756AC6A-6FC0-41F9-914E-407DD2EC19F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F756AC6A-6FC0-41F9-914E-407DD2EC19F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F756AC6A-6FC0-41F9-914E-407DD2EC19F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0D0A73-BB05-4A68-9699-7B0123067899}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0D0A73-BB05-4A68-9699-7B0123067899}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0D0A73-BB05-4A68-9699-7B0123067899}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0D0A73-BB05-4A68-9699-7B0123067899}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
