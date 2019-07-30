@@ -10,6 +10,6 @@ namespace mocking
     {
         List<Avenger> Avengers { get; set; }
         List<Avenger> GetAvengers();
-        void AddAvenger(Avenger avenger);
+        int AddAvenger(Avenger avenger);
     }
 }

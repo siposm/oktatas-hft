@@ -10,6 +10,11 @@ namespace mocking
     {
         public List<Avenger> Avengers { get; set; }
 
+        public Repository()
+        {
+            Avengers = new List<Avenger>();
+        }
+
         public List<Avenger> GetAvengers()
         {
             List<Avenger> lista = new List<Avenger>();
@@ -33,10 +38,11 @@ namespace mocking
             return lista;
         }
 
-        public void AddAvenger(Avenger avenger)
+        public int AddAvenger(Avenger avenger)
         {
             // itt már nem kell szűrni, de itt is lehetne ezt-azt vizsgálni
             this.Avengers.Add(avenger);
+            return this.Avengers.Count - 1;
         }
     }
 }
