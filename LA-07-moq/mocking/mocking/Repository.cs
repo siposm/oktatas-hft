@@ -8,44 +8,22 @@ namespace mocking
 {
     public class Repository : IRepository
     {
-
-        // TODO: add items from entity framework
-        // TODO: add all CRUD functions
-
-        public List<Avenger> Avengers { get; set; }
+        AvengerDatabaseEntities db;
 
         public Repository()
         {
-            Avengers = new List<Avenger>();
+            db = new AvengerDatabaseEntities();
         }
 
         public List<Avenger> GetAvengers()
         {
-            List<Avenger> lista = new List<Avenger>();
-
-            lista.Add(new Avenger()
-            {
-                Name = "Tony Stark", Gender = false, SuperPower = false
-            });
-
-            lista.Add(new Avenger()
-            {
-                Name = "Hulk", Gender = false, SuperPower = true
-            });
-
-            lista.Add(new Avenger()
-            {
-                Name = "Black Widow", Gender = true, SuperPower = false
-            });
-
-            return lista;
+            return db.Avenger.ToList();
         }
 
-        public int AddAvenger(Avenger avenger)
+        public void AddAvenger(Avenger avenger)
         {
-            // itt már nem kell szűrni, de itt is lehetne ezt-azt vizsgálni
-            this.Avengers.Add(avenger);
-            return this.Avengers.Count - 1;
+            db.Avenger.Add(avenger);
+            db.SaveChanges();
         }
     }
 }

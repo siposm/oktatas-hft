@@ -8,8 +8,9 @@ namespace mocking
 {
     public interface IRepository
     {
-        List<Avenger> Avengers { get; set; }
+        // itt kéne előírni minden CRUD műveletet ideális esetben
+
         List<Avenger> GetAvengers();
-        int AddAvenger(Avenger avenger);
+        void AddAvenger(Avenger avenger);
     }
 }
