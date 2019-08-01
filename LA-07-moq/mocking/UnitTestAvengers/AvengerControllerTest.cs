@@ -74,10 +74,19 @@ namespace UnitTestAvengers
 
             Assert.That(ave2.Name == "Thor");
             Assert.That(ave2.Gender == false);
+
+            Assert.NotNull(ave1);
+
+            
+            // referenciás érdekesség
+            Avenger thor = new Avenger() { Name = "Thor", Gender = false, SuperPower = true, Strength = 20 };
+            Assert.AreNotSame(ave2, thor);
+            thor = ave2;
+            Assert.AreSame(ave2, thor);
         }
 
         [Test]
-        public void Test_SelectAvengersByIndex()
+        public void Test_SelectAvengersByIndexException()
         {
             Assert.Throws<IndexOutOfRangeException>(() => avengerController.SelectAvengerByIndex(200));
 
