@@ -30,6 +30,9 @@ namespace UnitTestAvengers
         // látható, hogy ez nem az a "repo tartalom" amit korábban megírtunk az osztályban
         // hanem csak egy demo, ami tesztelésre alkalmas
 
+        // moq-olásnál nem a repót tesztelem, hanem a controllert (ahol a business logic van)
+        // tehát a bonyolultabb algoritmusokat! CRUD műveleteket szinte sosem...
+
 
         Mock<IRepository> mockRepo;
         AvengerController avengerController;

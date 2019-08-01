@@ -8,6 +8,10 @@ namespace mocking
 {
     public class Repository : IRepository
     {
+
+        // TODO: add items from entity framework
+        // TODO: add all CRUD functions
+
         public List<Avenger> Avengers { get; set; }
 
         public Repository()
@@ -18,8 +22,6 @@ namespace mocking
         public List<Avenger> GetAvengers()
         {
             List<Avenger> lista = new List<Avenger>();
-
-            // TODO: add items from entity framework
 
             lista.Add(new Avenger()
             {

@@ -26,18 +26,6 @@ namespace mocking
             return repo.GetAvengers().Where( x => x.Gender == gender).ToList();
         }
 
-        // maximum kiválasztás pl. legerősebb bosszúálló
-        // komolyabb alg. alapján%
-        // ezt tesztelni jó a mock-kal
-        
-        // mock mindig azt a 20 elemet biztosítja!!!
-
-        // itt lévő bonyi algoritmusokat tesztelem
-
-            // nem a repo-t teszteljük hanem a controllert!
-
-            // 
-
         public int AddAvenger(Avenger avenger)
         {
             // vizsgálat
