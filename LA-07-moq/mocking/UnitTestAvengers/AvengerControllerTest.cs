@@ -44,14 +44,14 @@ namespace UnitTestAvengers
 
             mockRepo.Setup(x => x.GetAvengers()).Returns(new List<Avenger>()
             {
-                new Avenger() { Name = "Captain America", Gender = false, SuperPower = true, Strength = 2 },
-                new Avenger() { Name = "Thor", Gender = false, SuperPower = true, Strength = 20 },
-                new Avenger() { Name = "Black Widow", Gender = true, SuperPower = false, Strength = 5 },
-                new Avenger() { Name = "Scarlet Witch", Gender = true, SuperPower = true, Strength = 18 },
-                new Avenger() { Name = "Spider-Man", Gender = false, SuperPower = true, Strength = 13 },
-                new Avenger() { Name = "Ant-Man", Gender = false, SuperPower = false, Strength = 9 },
-                new Avenger() { Name = "Vision", Gender = false, SuperPower = true, Strength = 17 },
-                new Avenger() { Name = "Iron Man", Gender = false, SuperPower = false, Strength = 16 }
+                new Avenger() { Name = "Captain America", Gender = false, Superpower = true, Strength = 2 },
+                new Avenger() { Name = "Thor", Gender = false, Superpower = true, Strength = 20 },
+                new Avenger() { Name = "Black Widow", Gender = true, Superpower = false, Strength = 5 },
+                new Avenger() { Name = "Scarlet Witch", Gender = true, Superpower = true, Strength = 18 },
+                new Avenger() { Name = "Spider-Man", Gender = false, Superpower = true, Strength = 13 },
+                new Avenger() { Name = "Ant-Man", Gender = false, Superpower = false, Strength = 9 },
+                new Avenger() { Name = "Vision", Gender = false, Superpower = true, Strength = 17 },
+                new Avenger() { Name = "Iron Man", Gender = false, Superpower = false, Strength = 16 }
             });
 
             avengerController = new AvengerController(mockRepo.Object);
@@ -73,7 +73,7 @@ namespace UnitTestAvengers
             Avenger ave2 = avengerController.SelectAvengerByIndex(1);
 
             Assert.That(ave1.Name == "Captain America");
-            Assert.That(ave1.SuperPower == true);
+            Assert.That(ave1.Superpower == true);
 
             Assert.That(ave2.Name == "Thor");
             Assert.That(ave2.Gender == false);
@@ -82,7 +82,7 @@ namespace UnitTestAvengers
 
             
             // referenciás érdekesség
-            Avenger thor = new Avenger() { Name = "Thor", Gender = false, SuperPower = true, Strength = 20 };
+            Avenger thor = new Avenger() { Name = "Thor", Gender = false, Superpower = true, Strength = 20 };
             Assert.AreNotSame(ave2, thor);
             thor = ave2;
             Assert.AreSame(ave2, thor);
@@ -109,7 +109,7 @@ namespace UnitTestAvengers
         {
             foreach (Avenger avenger in avengerController.AvengersAssemble())
             {
-                Assert.IsTrue(avenger.SuperPower);
+                Assert.IsTrue(avenger.Superpower);
             }
         }
 
