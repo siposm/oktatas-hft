@@ -35,6 +35,7 @@ namespace mocking
             {
                 Name = "Black Widow", Gender = true, SuperPower = false
             });
+
             return lista;
         }
 

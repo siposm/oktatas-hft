@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Avenger.cs" />
     <Compile Include="AvengerController.cs" />
+    <Compile Include="AvengerExistsException.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

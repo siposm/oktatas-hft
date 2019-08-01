@@ -11,6 +11,6 @@ namespace mocking
         public string Name { get; set; }
         public bool Gender { get; set; }
         public bool SuperPower { get; set; }
-        
+        public int Strength { get; set; }
     }
 }

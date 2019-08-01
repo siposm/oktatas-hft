@@ -16,124 +16,103 @@ using Moq; // moq nuget hozzáadása után
 
 
 
-
 namespace UnitTestAvengers
 {
+    // Moq's official Github:
+    // https://github.com/Moq/moq4/wiki/Quickstart
+
     [TestFixture]
     public class AvengerControllerTest
     {
+        //var avengerController = new AvengerController( [REPO_REF_IDE] );
+        // itt jön a probléma: kellene repo is hozzá... >> mockolunk egyet
 
+        // látható, hogy ez nem az a "repo tartalom" amit korábban megírtunk az osztályban
+        // hanem csak egy demo, ami tesztelésre alkalmas
+
+
+        Mock<IRepository> mockRepo;
+        AvengerController avengerController;
+
+        [SetUp]
+        public void Init()
+        {
+            mockRepo = new Mock<IRepository>();
+
+            mockRepo.Setup(x => x.GetAvengers()).Returns(new List<Avenger>()
+            {
+                new Avenger() { Name = "Captain America", Gender = false, SuperPower = true, Strength = 2 },
+                new Avenger() { Name = "Thor", Gender = false, SuperPower = true, Strength = 20 },
+                new Avenger() { Name = "Black Widow", Gender = true, SuperPower = false, Strength = 5 },
+                new Avenger() { Name = "Scarlet Witch", Gender = true, SuperPower = true, Strength = 18 },
+                new Avenger() { Name = "Spider-Man", Gender = false, SuperPower = true, Strength = 13 },
+                new Avenger() { Name = "Ant-Man", Gender = false, SuperPower = false, Strength = 9 },
+                new Avenger() { Name = "Vision", Gender = false, SuperPower = true, Strength = 17 },
+                new Avenger() { Name = "Iron Man", Gender = false, SuperPower = false, Strength = 16 }
+            });
+
+            avengerController = new AvengerController(mockRepo.Object);
+        }
 
         [Test]
         public void Test_SelectAvengersByGender()
         {
-            //var avengerController = new AvengerController( [REPO_REF_IDE] );
-            // itt jön a probléma: kellene repo is hozzá... >> mockolunk egyet
+            List<Avenger> listFalse = avengerController.SelectAvengersByGender(false); // men
+            List<Avenger> listTrue = avengerController.SelectAvengersByGender(true); // women
 
-            // kiszervezhetők [SetUp]-ba a fix dolgok (pl. repo inicializálás)
-            Mock<IRepository> mockRepo = new Mock<IRepository>();
-
-            mockRepo.Setup(x => x.GetAvengers()).Returns(new List<Avenger>()
-            {
-                new Avenger() { Name = "Captain America", Gender = false, SuperPower = true },
-                new Avenger() { Name = "Thor", Gender = false, SuperPower = true }
-            });
-            // látható, hogy ez nem az a "repo tartalom" amit korábban megírtunk az osztályban
-            // hanem csak egy demo, ami tesztelésre alkalmas
-
-            var avengerController = new AvengerController(mockRepo.Object);
-
-            List<Avenger> listFalse = avengerController.SelectAvengersByGender(false);
-            List<Avenger> listTrue = avengerController.SelectAvengersByGender(true);
-
-            Assert.That(listFalse.Count == 2 && listTrue.Count == 0);
+            Assert.That(listFalse.Count == 6 && listTrue.Count == 2);
         }
 
         [Test]
-        public void Test_AddAvenger()
+        public void Test_SelectAvengerByIndex()
         {
-            // ARRANGE
-            Mock<IRepository> mockRepo = new Mock<IRepository>();
+            Avenger ave1 = avengerController.SelectAvengerByIndex(0);
+            Avenger ave2 = avengerController.SelectAvengerByIndex(1);
 
-            mockRepo.Setup(x => x.AddAvenger(
-                new Avenger() { Name = "Teszt Tony" })).
-                Returns(0);
-            
-            var avengerController = new AvengerController(mockRepo.Object);
+            Assert.That(ave1.Name == "Captain America");
+            Assert.That(ave1.SuperPower == true);
 
-            // ACT
-            int index = avengerController.AddAvenger(new Avenger()
-            {
-                Name = "Test Avenger"
-            });
-
-            
-            //ASSERT
-            Assert.AreEqual(index, 0);
-            //Assert.AreEqual(index, 1); // expected: 0, but was: 1
-
-
-            // ennek van-e értelme itt?
-            Assert.AreEqual(avengerController.GetAvengers()[0].Name, "Teszt Tony");
-            Assert.AreEqual(avengerController.GetAvengers()[0].Name, "Test Avenger");
-            
-            
-            
-            // ezzel mi legyen?
-            //mockRepo.Verify(x => x.AddAvenger(It.IsAny<Avenger>()));
+            Assert.That(ave2.Name == "Thor");
+            Assert.That(ave2.Gender == false);
         }
 
         [Test]
-        public void Test_AddAvenger_Wrongly()
+        public void Test_SelectAvengersByIndex()
         {
-            // itt jön a probléma: kellene repo is hozzá... >> mockolunk egyet
-            //var avengerController = new AvengerController( [REPO_REF_IDE] );
+            Assert.Throws<IndexOutOfRangeException>(() => avengerController.SelectAvengerByIndex(200));
 
-
-            // ARRANGE
-            Mock<IRepository> mockRepo = new Mock<IRepository>();
-
-            mockRepo.Setup(x => x.GetAvengers()).Returns(new List<Avenger>()
-            {
-                // alapból úgy teszünk, mintha üres lenne a DB
-                //new Avenger() { Name = "Captain America", Gender = false, SuperPower = true },
-                //new Avenger() { Name = "Thor", Gender = false, SuperPower = true }
-            });
-            
-            var avengerController = new AvengerController(mockRepo.Object);
-            List<Avenger> loadedRepo = avengerController.GetAvengers(); // csak a fent mock-oltak lesznek benne ami most üres
-
-
-            // ACT
-            // avengerController.AddAvengerROSSZ(new Avenger() // ezzel szándékosan hibára fut!
-            avengerController.AddAvenger(new Avenger()
-            {
-                Name = "Teszt Tony"
-            });
-
-
-            // ASSERT
-            mockRepo.Verify(x => x.AddAvenger(It.IsAny<Avenger>()));
+            Assert.DoesNotThrow(() => avengerController.SelectAvengerByIndex(2));
         }
 
         [Test]
-        public void Test_AvengerSelect()
+        public void Test_GetStrongestAvenger()
         {
-            //Mock<IRepository> mockRepo = new Mock<IRepository>();
+            Avenger item = avengerController.GetStrongestAvenger();
 
-            //mockRepo.Setup(x => x.GetAvengers()).Returns(new List<Avenger>()
-            //{
-            //    new Avenger() { Name = "Captain America", Gender = false, SuperPower = true },
-            //    new Avenger() { Name = "Thor", Gender = false, SuperPower = true }
-            //});
-
-            //var avengerController = new AvengerController(mockRepo.Object);
-
-            //// ACT
-            //Avenger item = avengerController.SelectAvengerByIndex(1);
-            //;
-            //// ASSERT
-            //Assert.That(item.Name == "Captain America");
+            Assert.That(item.Name == "Thor");
         }
+
+        [Test]
+        public void Test_AvengersAssemble()
+        {
+            foreach (Avenger avenger in avengerController.AvengersAssemble())
+            {
+                Assert.IsTrue(avenger.SuperPower);
+            }
+        }
+
+        [Test]
+        public void Test_GetStrongestAvengers()
+        {
+            List<Avenger> avs = avengerController.GetStrongestAvengers(3);
+
+            // 20, 18, 17
+            // Thor, Scarlet, Vision
+
+            Assert.That(avs[0].Name == "Thor");
+            Assert.That(avs[1].Name == "Scarlet Witch");
+            Assert.That(avs[2].Name == "Vision");
+        }
+
     }
 }
