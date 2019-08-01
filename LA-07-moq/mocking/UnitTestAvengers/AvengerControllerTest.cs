@@ -123,5 +123,24 @@ namespace UnitTestAvengers
             Assert.That(avs[2].Name == "Vision");
         }
 
+        [Test]
+        public void Test_SelectAvengerByIndex_Verify()
+        {
+            avengerController.SelectAvengerByIndex(2); // számít a számérték!
+
+            mockRepo.Verify(x => x.GetAvengers(), Times.Exactly(2));
+        }
+
+        [Test]
+        public void Test_AddAvenger_Verify()
+        {
+            // egy metódust meghívva konkrét értékkel tesztelésként (AddAvenger a controllerben)
+            // ami tovább hívja a repo AddAvenger metódusát (bármilyen értékkel)?
+
+            avengerController.AddAvenger(new Avenger() { Name = "Test Tony" });
+
+            // repo AddAvenger metódusa!
+            mockRepo.Verify(x => x.AddAvenger(It.IsAny<Avenger>()), Times.Once());
+        }
     }
 }
