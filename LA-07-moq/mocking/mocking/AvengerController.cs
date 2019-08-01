@@ -26,7 +26,7 @@ namespace mocking
             return repo.GetAvengers().Where( x => x.Gender == gender).ToList();
         }
 
-        public int AddAvenger(Avenger avenger)
+        public void AddAvenger(Avenger avenger)
         {
             // vizsgálat
             bool exist = false;
@@ -41,11 +41,12 @@ namespace mocking
                 }
 
                 if (!exist)
-                    return repo.AddAvenger(avenger);
+                    repo.AddAvenger(avenger);
                 else
                     throw new AvengerExistsException("This Avenger already exists in the database.");
             }
-            throw new NullReferenceException("Null reference was caused from AddAvenger.");
+            else
+                throw new NullReferenceException("Null reference was caused from AddAvenger.");
         }
 
         public Avenger SelectAvengerByIndex(int index)
@@ -73,7 +74,7 @@ namespace mocking
         public List<Avenger> AvengersAssemble()
         {
             if (repo.GetAvengers().Count > 0)
-                return repo.GetAvengers().Where( x => x.SuperPower == true).ToList();
+                return repo.GetAvengers().Where( x => x.Superpower == true).ToList();
             else
                 throw new Exception("Avengers list is empty.");
         }
