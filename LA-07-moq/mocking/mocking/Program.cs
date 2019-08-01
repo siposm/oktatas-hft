@@ -10,6 +10,7 @@ namespace mocking
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
