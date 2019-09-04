@@ -27,7 +27,7 @@ Töltsd le, telepítsd, indítsd el: https://git-scm.com/downloads
 `cd ~/Desktop/`\
 `mkdir whp-laboranyag`\
 `cd whp-laboranyag`\
-`git clone https://gitlab.com/siposm/oktatas-whp-19201.git`\
+`git clone https://gitlab.com/siposm/oktatas-whp-19201.git`
 
 ---
 
