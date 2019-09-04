@@ -4,7 +4,7 @@ stages:
 build_badges:
   stage: build
   tags:
-    - docker-build
+    - docker
   before_script:
     - chmod +x get-updated-badge-info.sh
   script:
