@@ -42,4 +42,3 @@ Szoftvertervezés és -Fejlesztés Intézet\
 2019 - 2020 - 1 félév\
 (C)
 
-teszt from develop
