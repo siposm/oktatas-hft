@@ -15,7 +15,7 @@ A C# nyelv haladó eszközei (Lambda kifejezések, LINQ, Entity Framework, Attri
 - Haladó Fejlesztési Technikák ~ Haladó Programozás = HP >> C#
 
 ## Menetrend
-- 01 - Események, névtelen függvények, lambda kifejezések
+- 01 - Események (delegáltak), névtelen metódusok, lambda kifejezések
 - 02 - Linq to objects, Linq to XML
 - 03 - Linq to Entities
 - 04 - Reflection
@@ -42,8 +42,8 @@ Mind a két zárthelyi dolgozaton legalább 50% (elégséges) szint elérése sz
 - http://users.nik.uni-obuda.hu/prog3/ >> gyakorló feladatok rész
 - http://users.nik.uni-obuda.hu/siposm/ >> Jegyzetek / WHP feladatgyűjtemény
 
-**Gyakorló feladat != minta zh.\
-ZH = azonos tudásanyagot / témakört számonkérő teljesen más dolgozat.**
+**Gyakorló feladat != minta zh.\**
+**ZH = azonos tudásanyagot / témakört számonkérő teljesen más dolgozat.**
 
 ## Féléves feladat
 
@@ -53,7 +53,7 @@ ZH = azonos tudásanyagot / témakört számonkérő teljesen más dolgozat.**
 - Kiadás 5. héttől, ekkor kerül leadásra a *dll* tananyag, ami szükséges a feladat megírásához.
 
 ### Védés
-- [1.] körben a GITSTAT-on szükséges, hogy átmenjen a feladat.
+- [1.] körben a [GITSTAT](http://users.nik.uni-obuda.hu/gitstats/)-on szükséges, hogy átmenjen a feladat.
 - [2.] körben személyes védésre kerül sor.
 
 ### Határidő
@@ -67,4 +67,3 @@ TVSZ szerinti 30% megengedett >> 4 db alkalomról lehet hiányozni.
 - WHP >> aktuális tárgy anyagai
 - Órarend >> mikor és hol vagyok megtalálható kérdés esetén
 - Twitter >> érdekességek programozással kapcsolatban, kiegészítő információk amelyek az óra menetébe nem férnek bele de a tananyaghoz esetleg kapcsolódnak
-- Tárgy hivatalos honlapja: http://users.nik.uni-obuda.hu/prog3/
