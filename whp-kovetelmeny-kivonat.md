@@ -42,7 +42,7 @@ Mind a két zárthelyi dolgozaton legalább 50% (elégséges) szint elérése sz
 - http://users.nik.uni-obuda.hu/prog3/ >> gyakorló feladatok rész
 - http://users.nik.uni-obuda.hu/siposm/ >> Jegyzetek / WHP feladatgyűjtemény
 
-**Gyakorló feladat != minta zh.\**
+**Gyakorló feladat != minta zh.**
 **ZH = azonos tudásanyagot / témakört számonkérő teljesen más dolgozat.**
 
 ## Féléves feladat
