@@ -15,7 +15,7 @@ A C# nyelv haladó eszközei (Lambda kifejezések, LINQ, Entity Framework, Attri
 - Haladó Fejlesztési Technikák ~ Haladó Programozás = HP >> C#
 
 ## Menetrend
-- 01 - Események, névtelen függvények, lambda kifejezések
+- 01 - Események (delegáltak), névtelen metódusok, lambda kifejezések
 - 02 - Linq to objects, Linq to XML
 - 03 - Linq to Entities
 - 04 - Reflection
@@ -42,8 +42,8 @@ Mind a két zárthelyi dolgozaton legalább 50% (elégséges) szint elérése sz
 - http://users.nik.uni-obuda.hu/prog3/ >> gyakorló feladatok rész
 - http://users.nik.uni-obuda.hu/siposm/ >> Jegyzetek / WHP feladatgyűjtemény
 
-**Gyakorló feladat != minta zh.\
-ZH = azonos tudásanyagot / témakört számonkérő teljesen más dolgozat.**
+**Gyakorló feladat != minta zh.\**
+**ZH = azonos tudásanyagot / témakört számonkérő teljesen más dolgozat.**
 
 ## Féléves feladat
 
