@@ -102,6 +102,8 @@ namespace delegate_anonymous_functions
             // ehhez delegate-et használunk
             // ezt a formát ma már nem igazán használjuk (helyette: lambda)
 
+            int paros_e = lista.Find(ParosE); // metódus is átadható (csak úgy nem igaz ez, itt a Find képes fogadni!)
+
             Console.WriteLine("\nLISTA KERESÉS DELEGÁLTTAL");
             int keresettParosElem = lista.Find(delegate (int x) {
                 return x % 2 == 0;
@@ -161,6 +163,9 @@ namespace delegate_anonymous_functions
             int a = converter("333");
 
             Console.WriteLine(a);
+
+            Func<int, int, int> adder = (x, y) => x + y;
+            Console.WriteLine("adder func:\t" + adder(10, 11));
 
 
             // =================================================================
