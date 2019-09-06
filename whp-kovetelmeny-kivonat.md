@@ -3,10 +3,12 @@ A C# nyelv haladó eszközei (Lambda kifejezések, LINQ, Entity Framework, Attri
 `Sipos Miklós / 2019-2020-1`
 
 ## Oktatói anyagok, kódok és minden egyéb
+{: .gitlab-orange}
 - Oktatói oldalam: http://users.nik.uni-obuda.hu/siposm
 - Tárgy oldala: http://users.nik.uni-obuda.hu/prog3
 
 ## A tárgyról
+{: .gitlab-orange}
 - SzTF 1 & 2: Programozás nyelv független **alapok**
 - WHP: C# nyelv specifikus(abb) **haladó technikák**
     - sok dolog csak C# -ra igaz...
@@ -15,6 +17,7 @@ A C# nyelv haladó eszközei (Lambda kifejezések, LINQ, Entity Framework, Attri
 - Haladó Fejlesztési Technikák ~ Haladó Programozás = HP >> C#
 
 ## Menetrend
+{: .gitlab-orange}
 - 01 - Események, névtelen függvények, lambda kifejezések
 - 02 - Linq to objects, Linq to XML
 - 03 - Linq to Entities
@@ -30,6 +33,7 @@ A C# nyelv haladó eszközei (Lambda kifejezések, LINQ, Entity Framework, Attri
 Hivatalos menetrend / heti bontás: http://users.nik.uni-obuda.hu/prog3/_docs/prog3_schedule_HUN.pdf
 
 ## Zárthelyi információk
+{: .gitlab-orange}
 A zárthelyi dolgozatok központi időben, minden hallgatónak egységesen kerülnek kiadásra.
 - [06.] szorgalmi hét péntek >> 1. ZH
 - [13.] szorgalmi hét péntek >> 2. ZH
@@ -46,6 +50,7 @@ Mind a két zárthelyi dolgozaton legalább 50% (elégséges) szint elérése sz
 ZH = azonos tudásanyagot / témakört számonkérő teljesen más dolgozat.**
 
 ## Féléves feladat
+{: .gitlab-orange}
 
 ### Elvárások a feladattal kapcsolatban
 - Részletes leírás: http://users.nik.uni-obuda.hu/prog3/_progtools/prog3_layers_requirements.pdf
@@ -53,18 +58,19 @@ ZH = azonos tudásanyagot / témakört számonkérő teljesen más dolgozat.**
 - Kiadás 5. héttől, ekkor kerül leadásra a *dll* tananyag, ami szükséges a feladat megírásához.
 
 ### Védés
-- [1.] körben a GITSTAT-on szükséges, hogy átmenjen a feladat.
+- [1.] körben a [GITSTAT](http://users.nik.uni-obuda.hu/gitstats/)-on szükséges, hogy átmenjen a feladat.
 - [2.] körben személyes védésre kerül sor.
 
 ### Határidő
 13. szorgalmi hét csütörtök, 23:59 (pót leadási határidőre **nincs** lehetőség)
 
 ## Hiányzás
+{: .gitlab-orange}
 TVSZ szerinti 30% megengedett >> 4 db alkalomról lehet hiányozni.
 
 ## Oktatói oldalam fontosabb részei
+{: .gitlab-orange}
 - Link: http://users.nik.uni-obuda.hu/siposm/
 - WHP >> aktuális tárgy anyagai
 - Órarend >> mikor és hol vagyok megtalálható kérdés esetén
 - Twitter >> érdekességek programozással kapcsolatban, kiegészítő információk amelyek az óra menetébe nem férnek bele de a tananyaghoz esetleg kapcsolódnak
-- Tárgy hivatalos honlapja: http://users.nik.uni-obuda.hu/prog3/
