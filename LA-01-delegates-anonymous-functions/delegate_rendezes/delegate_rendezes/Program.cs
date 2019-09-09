@@ -21,7 +21,16 @@ namespace delegate_rendezes
 
         public int CompareTo(object obj)
         {
-            return Comparison.Invoke(this, (obj as Student));
+            // ?.Invoke esetén lenne null check, de akkor nem elégül ki a visszatérési érték
+            // megoldás: if-else VAGY try-catch koncepció köréépítése
+            try
+            {
+                return Comparison.Invoke(this, (obj as Student));
+            }
+            catch (NullReferenceException)
+            {
+                return -200;
+            }
         }
     }
 
@@ -34,7 +43,7 @@ namespace delegate_rendezes
             Student s1 = new Student() { Name = "A Lajos", ID = 10 };
             Student s2 = new Student() { Name = "B Béla", ID = 1230 };
 
-            s1.Comparison = new Comparison<Student>((x, y) => x.ID.CompareTo(y.ID));
+            //s1.Comparison = new Comparison<Student>((x, y) => x.ID.CompareTo(y.ID));
             s2.Comparison = new Comparison<Student>((x, y) => x.Name.CompareTo(y.Name));
 
             Console.WriteLine(s1.CompareTo(s2)); // ID : -1 >> s1 kisebb mint s2
