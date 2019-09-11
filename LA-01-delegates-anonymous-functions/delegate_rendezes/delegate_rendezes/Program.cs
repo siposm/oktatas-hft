@@ -26,10 +26,13 @@ namespace delegate_rendezes
             try
             {
                 return Comparison.Invoke(this, (obj as Student));
+                // sima hívás is jó lenne, nem csak az invoke-os
             }
             catch (NullReferenceException)
             {
                 return -200;
+                // valami olyad adunk vissza, amit a túloldalon dedikáltan jelzi, hogy gond volt
+                // compareto alapból: 1 / 0 / -1 -et ad vissza
             }
         }
     }
