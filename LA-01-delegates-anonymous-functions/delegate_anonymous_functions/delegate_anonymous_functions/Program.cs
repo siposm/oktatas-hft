@@ -150,6 +150,27 @@ namespace delegate_anonymous_functions
                 Console.WriteLine(item);
 
 
+            // bonyolultabb logika is írható
+            emberLista.Find(x => 
+            {
+                if (x.Eletkor < 40)
+                {
+                    if (x.Nev[0] == 'B')
+                    {
+                        return true;
+                    }
+                    if (x.Eletkor * Math.Sin(3.0112) < 990)
+                    {
+                        return false;
+                    }
+                }
+                else if (x.Eletkor > 50 && x.Eletkor < 55)
+                {
+                    return true;
+                }
+                return false;
+            });
+
             // =================================================================
 
 
@@ -197,6 +218,8 @@ namespace delegate_anonymous_functions
              * > Predicate is a special kind of Func often used for comparisons.
              * 
              * src: https://stackoverflow.com/questions/4317479/func-vs-action-vs-predicate
+             * 
+             * Érdemes a docs.microsoft.com-on is nézelődni!
              *     
              */
 
@@ -216,6 +239,8 @@ namespace delegate_anonymous_functions
                 new Ember() { Nev = "János", Eletkor = 12 }
             };
 
+
+            
             foreach (var item in emberek)
                 Console.WriteLine("> " + item);
 
