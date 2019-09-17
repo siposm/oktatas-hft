@@ -135,7 +135,7 @@ namespace linq
 
             #region feladat
 
-            // hallgatók adatainak kiegészítése
+            // hallgatók adatainak kiegészítése (életkor + kapcs. státusz)
 
             for (int i = 0; i < hallgatok.Count; i++)
             {
