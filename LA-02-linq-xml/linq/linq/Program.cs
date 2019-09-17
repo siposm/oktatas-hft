@@ -21,6 +21,8 @@ namespace linq
         {
             Console.WriteLine();
 
+            // lista.Count vagy lista.Length (ha tömb lenne)
+            // NEM elérhető! csak azok, amik az iface-n keresztül elérhetők
             foreach (var item in lista)
                 Console.WriteLine(item);
 
@@ -29,16 +31,18 @@ namespace linq
 
         public static void Main(string[] args)
         {
-            // kell using system . collections . generic
-            // kell using system . linq
+            // kell using system . collections . generic >> list-hez
+            // kell using system . linq >> linq-hoz
 
             List<int> lista = new List<int>();
             Random r = new Random();
             for (int i = 0; i < 10; i++)
                 lista.Add(r.Next(99));
 
-
-
+            
+            IEnumerable<int> xlista = lista.FindAll(x => x % 2 == 0);
+            int maxElem = xlista.Max(x => x);
+            
 
 
             // var bevezetése !!! indokolt esetben csak
@@ -49,14 +53,14 @@ namespace linq
 
 
 
-            // páros számok kinyerése LINQ-val
+            // páros számok kinyerése LINQ-val (query syntax !!!)
             var parosSzamok = from x in lista
                               where x % 2 == 0
                               select x;
 
             Feldolgoz(parosSzamok);
 
-            // páros számok kinyerése LINQ-val és lambdával-val
+            // páros számok kinyerése LINQ-val (method syntax !!! + lambda)
             var parosSzamok2 = lista.Where(x => x % 2 == 0);
 
             Feldolgoz(parosSzamok2);
