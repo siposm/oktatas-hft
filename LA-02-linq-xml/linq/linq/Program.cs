@@ -100,7 +100,7 @@ namespace linq
             Feldolgoz(nevnaposok);
 
 
-            // feladat:
+            // 1. feladat:
             // adott egy adatbázis List-ként, kérdezzük le a Klaudiák számát
             // ekkora mérettel hozzunk létre tömböt
             // és másoljuk át a tömbbe a Klaudiákat
@@ -128,7 +128,7 @@ namespace linq
             // =================================================================
 
 
-            // feladat:
+            // 2. feladat:
             // hallgatók lekérése, akiknek életkoruk 20-50 között van
             // és még nincsenek párkapcsolatban
             // ehhez egészítsük ki a hallgató osztályt
@@ -166,7 +166,7 @@ namespace linq
 
 
 
-            // feladat:
+            // 3. feladat:
             // hallgatók lekérése, akiknek életkoruk 20-50 között van
             // és még nincsenek párkapcsolatban
             // ehhez egészítsük ki a hallgató osztályt
@@ -198,7 +198,7 @@ namespace linq
 
 
 
-            // feladat:
+            // 3.1. feladat:
             // kérjük le azokat, akik kapcsolatban vannak
             // a kapott eredményt rendezzük sorrendbe név alapján
             // és alakítsuk nagybetűssé a neveket
@@ -221,7 +221,7 @@ namespace linq
 
 
 
-            // feladat:
+            // 4. feladat:
             // kérjük le a kapcsolatban / nem kapcs. lévő hallgatókat
 
             #region feladat
@@ -251,7 +251,7 @@ namespace linq
 
 
 
-            // feladat:
+            // 5. feladat:
             // kérjük le azokat a hallgatókat, akiknek a nevében van 'e' vagy 'E' betű
             //
             // alakítsuk a nevét nagybetűssé egy új objektum keretein belül
@@ -274,7 +274,7 @@ namespace linq
 
 
 
-            // feladat:
+            // 5.1. feladat:
             // végezzük el ugyan ezt a lekérdezést, de csoportosítsuk kapcsolatban lévő státusz szerint
             // és az egyes csoportokban nézzük meg, hogy mennyi az átlagos életkor
 
