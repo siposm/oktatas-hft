@@ -14,7 +14,12 @@ namespace xml
             // using system . xml . linq
             // mac esetén project > edit references > hozzáadás"
 
-            return XDocument.Load("workers.xml");
+            // local megadás /bin/debug mappában található fájlra
+            //return XDocument.Load("workers.xml");
+
+            // egyből egy url is magadható neki
+            // FF >> java szerver végpont
+            return XDocument.Load("http://users.nik.uni-obuda.hu/siposm/db/workers.xml");
         }
 
         public static void Feldolgoz <T> (IEnumerable<T> bemenet)
