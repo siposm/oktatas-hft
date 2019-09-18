@@ -7,12 +7,13 @@ namespace linq
     class Hallgato
     {
         public string Nev { get; set; }
+        public int Eletkor { get; set; }
+        public bool Kapcsolat { get; set; }
+
         public override string ToString()
         {
             return Nev + " " + Eletkor + " " + Kapcsolat;
         }
-        public int Eletkor { get; set; }
-        public bool Kapcsolat { get; set; }
     }
 
     class MainClass
@@ -47,8 +48,9 @@ namespace linq
 
             // var bevezetése !!! indokolt esetben csak
             var valami = new Hallgato() { Nev = "X Ember" };
-            var masikValami = new { Nev = "Lajoska", Eletkor = 23, Nemzetiseg = "Magyar" };
+            var masikValami = new { Nev = "Lajoska", Eletkor = 23, Nemzetiseg = "Magyar" }; // tetszőleges "struktúra" megadható, kialakítható (!= osztály)
 
+            string s = masikValami.Nev; // ugyan úgy lekérhetők a tulajdonságai mintha általunk definiált objektum lenne
 
 
 
