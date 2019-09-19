@@ -200,7 +200,7 @@ namespace linq
 
 
 
-            // 3.1. feladat:
+            // 3. feladat:
             // kérjük le azokat, akik kapcsolatban vannak
             // a kapott eredményt rendezzük sorrendbe név alapján
             // és alakítsuk nagybetűssé a neveket
