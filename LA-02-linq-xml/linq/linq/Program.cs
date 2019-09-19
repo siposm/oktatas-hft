@@ -22,8 +22,9 @@ namespace linq
         {
             Console.WriteLine();
 
-            // lista.Count vagy lista.Length (ha tömb lenne)
-            // NEM elérhető! csak azok, amik az iface-n keresztül elérhetők
+            // tomb.Length (és egyéb dolgok) NEM elérhetők!
+            // csak azok, amik az iface-n keresztül elérhetők
+
             foreach (var item in lista)
                 Console.WriteLine(item);
 
@@ -32,6 +33,12 @@ namespace linq
 
         public static void Main(string[] args)
         {
+            // =================================================================
+
+
+            #region BEVEZETO
+
+
             // kell using system . collections . generic >> list-hez
             // kell using system . linq >> linq-hoz
 
@@ -68,11 +75,13 @@ namespace linq
             Feldolgoz(parosSzamok2);
 
 
+            #endregion
 
 
             // =================================================================
 
 
+            #region ADATGENERALAS
 
             var rendezettSzamok = lista.OrderBy(x => x);
 
@@ -86,20 +95,23 @@ namespace linq
             hallgatok.Add(new Hallgato() { Nev = "Ketyós KlaUdIA" });
 
 
+            // bevezető példák / tesztelés
+
             var rendezettHallgatok = hallgatok.OrderBy(x => x.Nev);
 
             Feldolgoz(rendezettHallgatok);
 
+            var nevnaposok = hallgatok.Where(x => x.Nev.Contains("Tamás"));
 
+            Feldolgoz(nevnaposok);
+
+            #endregion
 
 
             // =================================================================
 
 
-
-            var nevnaposok = hallgatok.Where( x => x.Nev.Contains("Tamás") );
-
-            Feldolgoz(nevnaposok);
+            #region FELADAT1
 
 
             // 1. feladat:
@@ -109,7 +121,6 @@ namespace linq
             //
             // figyeljünk arra, hogy az adatbázisban lehet, hogy kis és nagybetűvel egyaránt lesz név
 
-            #region feladat
 
             int dbSzam = hallgatok.Count(x => x.Nev.ToUpper().Contains("klaudia".ToUpper()));
             var klaudiak = hallgatok.Where(x => x.Nev.ToUpper().Contains("klaudia".ToUpper()));
@@ -125,17 +136,16 @@ namespace linq
             #endregion
 
 
-
-
             // =================================================================
 
+
+            #region FELADAT2
+            
 
             // 2. feladat:
             // hallgatók lekérése, akiknek életkoruk 20-50 között van
             // és még nincsenek párkapcsolatban
             // ehhez egészítsük ki a hallgató osztályt
-
-            #region feladat
 
             // hallgatók adatainak kiegészítése (életkor + kapcs. státusz)
 
@@ -161,46 +171,13 @@ namespace linq
             #endregion
 
 
-
-
-
             // =================================================================
 
 
+            #region FELADAT3
+
 
             // 3. feladat:
-            // hallgatók lekérése, akiknek életkoruk 20-50 között van
-            // és még nincsenek párkapcsolatban
-            // ehhez egészítsük ki a hallgató osztályt
-
-            #region feladat
-
-            // hallgatók adatainak kiegészítése
-
-            for (int i = 0; i < hallgatok.Count; i++)
-            {
-                Predicate<int> kapcsolatDonto = x => { return x == 0; };
-
-                hallgatok[i].Kapcsolat = (bool)kapcsolatDonto?.Invoke(r.Next(2));
-                hallgatok[i].Eletkor = r.Next(10, 60);
-            }
-
-            Feldolgoz(hallgatok);
-
-
-
-            // hallgatók lekérése
-
-            lekertHallgatok = hallgatok.Where(x =>
-            {
-                return x.Kapcsolat == true && (x.Eletkor > 19 && x.Eletkor < 51);
-            });
-            Feldolgoz(lekertHallgatok);
-
-
-
-
-            // 3.1. feladat:
             // kérjük le azokat, akik kapcsolatban vannak
             // a kapott eredményt rendezzük sorrendbe név alapján
             // és alakítsuk nagybetűssé a neveket
@@ -215,18 +192,16 @@ namespace linq
             #endregion
 
 
-
-
-
-
             // =================================================================
 
 
+            #region FELADAT4
 
             // 4. feladat:
             // kérjük le a kapcsolatban / nem kapcs. lévő hallgatókat
+            //  csoportsítva és számoljuk meg, hogy hány entitás van egyik/másik csoportban
 
-            #region feladat
+
 
             var csoport1 = hallgatok.GroupBy( x => x.Kapcsolat );
 
@@ -245,13 +220,10 @@ namespace linq
             #endregion
 
 
-
-
-
-
             // =================================================================
 
 
+            #region FELADAT5
 
             // 5. feladat:
             // kérjük le azokat a hallgatókat, akiknek a nevében van 'e' vagy 'E' betű
@@ -261,7 +233,7 @@ namespace linq
             // 
             // rendezzük életkor szerint
 
-            #region feladat
+
 
             var eHallgatok = from x in hallgatok
                              where x.Nev.Contains('e') || x.Nev.Contains('E')
@@ -308,6 +280,8 @@ namespace linq
 
             #endregion
 
+
+            // =================================================================
         }
     }
 }

@@ -61,7 +61,7 @@ namespace xml
 
 
 
-            // feladat:
+            // 1. feladat:
             // kérdezzük le a tamásokat (figyelve kis és nagybetűkre)
 
             var tamasok = from x in allomany.Root.Descendants("person")
@@ -76,7 +76,7 @@ namespace xml
 
 
 
-            // feladat:
+            // 2. feladat:
             // kérjük le a polihisztorokat (email és név)
 
             var polihisztorok = from x in allomany.Root.Descendants("person")
@@ -89,11 +89,13 @@ namespace xml
 
             Feldolgoz(polihisztorok);
 
-            // feladat:
-            // számoljuk meg, hányan dolgoznak az egyes intézetekben
-            //
-            // majd számoljuk meg (egy teljesen új lekéréssel) hogy csak az AII-ben hányan
 
+            // =================================================================
+
+
+
+            // 3. feladat:
+            // számoljuk meg, hányan dolgoznak az egyes intézetekben
 
             var intezetek = from x in allomany.Root.Descendants("person")
                       group x by x.Element("dept").Value into g
@@ -105,6 +107,14 @@ namespace xml
 
             Feldolgoz(intezetek);
 
+
+            // =================================================================
+
+
+
+            // 4. feladat
+            // számoljuk meg (egy teljesen új lekéréssel) hogy csak az AII-ben hányan
+            // HF: csináljuk meg ugyan ezt, de az eredmény a 3. feladat "intezetek" változójából nyerjük ki!
 
             var aii = from x in allomany.Root.Descendants("person")
                       where x.Element("dept").Value.Equals("Alkalmazott Informatikai Intézet")
@@ -124,7 +134,7 @@ namespace xml
 
 
 
-            // feladat:
+            // 5. feladat:
             // adjunk hozzá az egész állományhoz egy új alkalmazottat
 
 
@@ -140,6 +150,9 @@ namespace xml
             allomany.Root.Add(uj);
 
             // Feldolgoz(allomany);
+
+            // mentés, ha akarjuk
+            //allomany.Save("ujTetszolegesNev.xml");
 
         }
     }
