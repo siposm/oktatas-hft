@@ -22,8 +22,9 @@ namespace linq
         {
             Console.WriteLine();
 
-            // lista.Count vagy lista.Length (ha tömb lenne)
-            // NEM elérhető! csak azok, amik az iface-n keresztül elérhetők
+            // tomb.Length (és egyéb dolgok) NEM elérhetők!
+            // csak azok, amik az iface-n keresztül elérhetők
+
             foreach (var item in lista)
                 Console.WriteLine(item);
 
