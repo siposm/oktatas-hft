@@ -114,6 +114,7 @@ namespace xml
 
             // 4. feladat
             // számoljuk meg (egy teljesen új lekéréssel) hogy csak az AII-ben hányan
+            // HF: csináljuk meg ugyan ezt, de az eredmény a 3. feladat "intezetek" változójából nyerjük ki!
 
             var aii = from x in allomany.Root.Descendants("person")
                       where x.Element("dept").Value.Equals("Alkalmazott Informatikai Intézet")
