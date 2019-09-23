@@ -12,6 +12,7 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -68,58 +68,39 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DEPT.cs">
-      <DependentUpon>EmpDeptDataModel.tt</DependentUpon>
+      <DependentUpon>EDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EDModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EDModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="EMP.cs">
-      <DependentUpon>EmpDeptDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmpDeptDataModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmpDeptDataModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmpDeptDataModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmpDeptDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="EmpDeptDataModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EmpDeptDataModel.edmx</DependentUpon>
+      <DependentUpon>EDModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="EmpDeptDataModel.edmx">
+    <EntityDeploy Include="EDModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EmpDeptDataModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>EDModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="EmpDeptDataModel.edmx.diagram">
-      <DependentUpon>EmpDeptDataModel.edmx</DependentUpon>
+    <None Include="EDModel.edmx.diagram">
+      <DependentUpon>EDModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="EmpDeptDataModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmpDeptDataModel.edmx</DependentUpon>
-      <LastGenOutput>EmpDeptDataModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="EmpDeptDataModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EmpDeptDataModel.edmx</DependentUpon>
-      <LastGenOutput>EmpDeptDataModel.cs</LastGenOutput>
-    </Content>
-    <Content Include="EmpDeptEntities.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="EmpDeptEntities_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>EmpDeptEntities.mdf</DependentUpon>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -135,6 +116,25 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EDDatabase.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="EDDatabase_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>EDDatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="EDModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDModel.edmx</DependentUpon>
+      <LastGenOutput>EDModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EDModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EDModel.edmx</DependentUpon>
+      <LastGenOutput>EDModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

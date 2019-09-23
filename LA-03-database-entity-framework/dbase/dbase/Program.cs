@@ -8,14 +8,14 @@ namespace dbase
 {
     class Program
     {
-        static void InsertToDb(EmpDeptEntities db, EMP ember)
+        static void InsertToDb(EDDatabaseEntities db, EMP ember)
         {
             db.EMP.Add(ember);
             db.SaveChanges();
             Console.WriteLine("insert ok");
         }
 
-        static void UpdateInDb(EmpDeptEntities db, int empnumber)
+        static void UpdateInDb(EDDatabaseEntities db, int empnumber)
         {
             EMP ember = db.EMP.Single(x => x.EMPNO == empnumber);
             ember.ENAME = "Hulk";
@@ -23,7 +23,7 @@ namespace dbase
             Console.WriteLine("update ok");
         }
 
-        static void ListEmployees(EmpDeptEntities db)
+        static void ListEmployees(EDDatabaseEntities db)
         {
             Console.WriteLine("\nEMPLOYEES:");
             foreach (var item in db.EMP)
@@ -32,7 +32,7 @@ namespace dbase
             }
         }
 
-        static void DeleteFromDb(EmpDeptEntities db, int empnumber)
+        static void DeleteFromDb(EDDatabaseEntities db, int empnumber)
         {
             EMP ember = db.EMP.Single(x => x.EMPNO == empnumber);
             db.EMP.Remove(ember);
@@ -46,12 +46,18 @@ namespace dbase
             //
             // DB LÉTREHOZÁSÁNAK LÉPÉSEI
             //
-            // 1.lépés: jobb klikk projekt >> add new item >> service based database(ha kéri a VS, hogy legyen telepítve SQL valami, akkor telepítsük)
+            // 0.lépés: ha hibát dob a Service Based Database létrehozásakor, akkor fel kell telepíteni a VS_telepítőből a 'Data Storage and Processing' csoportot is
+            //
+            // 1.lépés: jobb klikk projekt >> add new item >> service based database (ha kéri a VS, hogy legyen telepítve SQL valami, akkor telepítsük)
             //
             // 2.lépés: view felső menü >> server explorer >> megjelent a database >> jobb klikk new query >> futtassuk le az sql fájl tartalmát(kiinduló állapot létrehozása)
             //
             // 3.lépés: jobb klikk projekt >> add new item >> ado.net entity data model >> generate from database (első) >> _.mdf fájl kiválasztása
             //
+            //
+            // megjegyzés: ha letöltitek / klónozzátok mindig újra végig kell járni a fentebbi folyamatokat!
+            // 
+            // megjegyzés2: saját solution esetén viszont bezáráskor ismét eltűnik >> ehhez jobb klikk az mdf fájlra a sol.explorerben és 'open' >> ekkor megjelenik a server explorerben a kapcsolat
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -59,7 +65,7 @@ namespace dbase
 
 
 
-            EmpDeptEntities db = new EmpDeptEntities();
+            EDDatabaseEntities db = new EDDatabaseEntities();
             Console.WriteLine("* connection OK *");
 
             DEPT reszl = db.DEPT.First();
