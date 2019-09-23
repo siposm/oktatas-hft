@@ -8,14 +8,14 @@ namespace dbase
 {
     class Program
     {
-        static void InsertToDb(EmpDeptEntities db, EMP ember)
+        static void InsertToDb(EDDatabaseEntities db, EMP ember)
         {
             db.EMP.Add(ember);
             db.SaveChanges();
             Console.WriteLine("insert ok");
         }
 
-        static void UpdateInDb(EmpDeptEntities db, int empnumber)
+        static void UpdateInDb(EDDatabaseEntities db, int empnumber)
         {
             EMP ember = db.EMP.Single(x => x.EMPNO == empnumber);
             ember.ENAME = "Hulk";
@@ -23,7 +23,7 @@ namespace dbase
             Console.WriteLine("update ok");
         }
 
-        static void ListEmployees(EmpDeptEntities db)
+        static void ListEmployees(EDDatabaseEntities db)
         {
             Console.WriteLine("\nEMPLOYEES:");
             foreach (var item in db.EMP)
@@ -32,7 +32,7 @@ namespace dbase
             }
         }
 
-        static void DeleteFromDb(EmpDeptEntities db, int empnumber)
+        static void DeleteFromDb(EDDatabaseEntities db, int empnumber)
         {
             EMP ember = db.EMP.Single(x => x.EMPNO == empnumber);
             db.EMP.Remove(ember);
@@ -59,7 +59,7 @@ namespace dbase
 
 
 
-            EmpDeptEntities db = new EmpDeptEntities();
+            EDDatabaseEntities db = new EDDatabaseEntities();
             Console.WriteLine("* connection OK *");
 
             DEPT reszl = db.DEPT.First();

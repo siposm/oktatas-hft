@@ -13,10 +13,10 @@ namespace dbase
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class EmpDeptEntities : DbContext
+    public partial class EDDatabaseEntities : DbContext
     {
-        public EmpDeptEntities()
-            : base("name=EmpDeptEntities")
+        public EDDatabaseEntities()
+            : base("name=EDDatabaseEntities")
         {
         }
     

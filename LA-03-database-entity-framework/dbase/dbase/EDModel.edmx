@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EmpDeptEntitiesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="EDDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DEPT">
           <Key>
             <PropertyRef Name="DEPTNO" />
@@ -50,7 +50,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EmpDeptEntitiesModelStoreContainer">
+        <EntityContainer Name="EDDatabaseModelStoreContainer">
           <EntitySet Name="DEPT" EntityType="Self.DEPT" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="EMP" EntityType="Self.EMP" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="EMP_BOSS_KEY" Association="Self.EMP_BOSS_KEY">
@@ -66,7 +66,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="EmpDeptEntitiesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="EDDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="DEPT">
           <Key>
             <PropertyRef Name="DEPTNO" />
@@ -116,7 +116,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="EmpDeptEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="EDDatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="DEPT" EntityType="Self.DEPT" />
           <EntitySet Name="EMP" EntityType="Self.EMP" />
           <AssociationSet Name="EMP_FOREIGN_KEY" Association="Self.EMP_FOREIGN_KEY">
@@ -133,9 +133,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EmpDeptEntitiesModelStoreContainer" CdmEntityContainer="EmpDeptEntities">
+        <EntityContainerMapping StorageEntityContainer="EDDatabaseModelStoreContainer" CdmEntityContainer="EDDatabaseEntities">
           <EntitySetMapping Name="DEPT">
-            <EntityTypeMapping TypeName="EmpDeptEntitiesModel.DEPT">
+            <EntityTypeMapping TypeName="EDDatabaseModel.DEPT">
               <MappingFragment StoreEntitySet="DEPT">
                 <ScalarProperty Name="DEPTNO" ColumnName="DEPTNO" />
                 <ScalarProperty Name="DNAME" ColumnName="DNAME" />
@@ -144,7 +144,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="EMP">
-            <EntityTypeMapping TypeName="EmpDeptEntitiesModel.EMP">
+            <EntityTypeMapping TypeName="EDDatabaseModel.EMP">
               <MappingFragment StoreEntitySet="EMP">
                 <ScalarProperty Name="EMPNO" ColumnName="EMPNO" />
                 <ScalarProperty Name="ENAME" ColumnName="ENAME" />
