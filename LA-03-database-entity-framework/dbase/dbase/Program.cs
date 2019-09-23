@@ -48,12 +48,7 @@ namespace dbase
 
             foreach (var item in db.EMP)
             {
-                kimenet.Root.Add(new XElement("ember", 
-                    new XAttribute("ID",item.EMPNO),
-                    new XElement("nev", item.ENAME),
-                    new XElement("munkakor", item.JOB),
-                    new XElement("juttatas", item.SAL + item.COMM)
-                    ));
+                kimenet.Root.Add(new XElement("nev", item.ENAME));
             }
 
             kimenet.Save("mentett_embernevek.xml");
@@ -229,9 +224,11 @@ namespace dbase
             //      fokozzuk le, azaz fizetésük felét kapják innentől kezdve csak
 
             // F7 - mentsük el .xml fájlba a neveket
-            //SaveToXML(db);
-            
-            // használjunk metódus helyett (megfelelő) delegáltat:
+            SaveToXML(db);
+
+            // használjunk metódus helyett (megfelelő) delegáltat és adjunk hozzá pár extrát még:
+
+            Func<decimal?, int> ValutaValto = x => (int) x * 334;
 
             Func<EDDatabaseEntities, XDocument> XML_Saver = (x =>
             {
@@ -244,7 +241,19 @@ namespace dbase
                         new XAttribute("ID", item.EMPNO),
                         new XElement("nev", item.ENAME),
                         new XElement("munkakor", item.JOB),
-                        new XElement("juttatas", item.SAL + item.COMM)
+                        
+                        (item.COMM == null)
+                            ?
+                            new XElement("juttatas1", item.SAL, new XAttribute("valuta", "USD"))
+                            :
+                            new XElement("juttatas1", item.SAL + item.COMM, new XAttribute("valuta", "USD")),
+
+                        (item.COMM == null)
+                            ? 
+                            new XElement("juttatas2", ValutaValto(item.SAL), new XAttribute("valuta","HUF"))
+                            :
+                            new XElement("juttatas2", ValutaValto(item.SAL + item.COMM), new XAttribute("valuta", "HUF"))
+                        
                         ));
                 }
 
