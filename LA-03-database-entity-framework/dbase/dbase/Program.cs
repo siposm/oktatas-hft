@@ -80,6 +80,7 @@ namespace dbase
             EDDatabaseEntities db = new EDDatabaseEntities();
             Console.WriteLine("* connection OK *");
 
+
             DEPT reszl = db.DEPT.First();
             Console.WriteLine(reszl.DNAME);
 
@@ -241,7 +242,8 @@ namespace dbase
                         new XAttribute("ID", item.EMPNO),
                         new XElement("nev", item.ENAME),
                         new XElement("munkakor", item.JOB),
-                        
+                        new XElement("eltoltottMunkaido", DateTime.Now.Year - item.HIREDATE.Value.Year),
+
                         (item.COMM == null)
                             ?
                             new XElement("juttatas1", item.SAL, new XAttribute("valuta", "USD"))
