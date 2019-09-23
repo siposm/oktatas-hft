@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace dbase
 {
@@ -40,6 +41,24 @@ namespace dbase
             Console.WriteLine("remove ok");
         }
 
+        static void SaveToXML(EDDatabaseEntities db)
+        {
+            XDocument kimenet = new XDocument();
+            kimenet.Add(new XElement("emberek", new XAttribute("darabszam", db.EMP.Count())));
+
+            foreach (var item in db.EMP)
+            {
+                kimenet.Root.Add(new XElement("ember", 
+                    new XAttribute("ID",item.EMPNO),
+                    new XElement("nev", item.ENAME),
+                    new XElement("munkakor", item.JOB),
+                    new XElement("juttatas", item.SAL + item.COMM)
+                    ));
+            }
+
+            kimenet.Save("mentett_embernevek.xml");
+        }
+
         static void Main(string[] args)
         {
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,6 +66,8 @@ namespace dbase
             // DB LÉTREHOZÁSÁNAK LÉPÉSEI
             //
             // 0.lépés: ha hibát dob a Service Based Database létrehozásakor, akkor fel kell telepíteni a VS_telepítőből a 'Data Storage and Processing' csoportot is
+            //      ehhez a vs telepítőt futtasd le megint, klikk a 'Modify' gombra, és ott válaszd ki a fentebbi csomagot pluszban >> install
+            //      restart vs és jó lesz, mehet a többi lépés:
             //
             // 1.lépés: jobb klikk projekt >> add new item >> service based database (ha kéri a VS, hogy legyen telepítve SQL valami, akkor telepítsük)
             //
@@ -54,10 +75,6 @@ namespace dbase
             //
             // 3.lépés: jobb klikk projekt >> add new item >> ado.net entity data model >> generate from database (első) >> _.mdf fájl kiválasztása
             //
-            //
-            // megjegyzés: ha letöltitek / klónozzátok mindig újra végig kell járni a fentebbi folyamatokat!
-            // 
-            // megjegyzés2: saját solution esetén viszont bezáráskor ismét eltűnik >> ehhez jobb klikk az mdf fájlra a sol.explorerben és 'open' >> ekkor megjelenik a server explorerben a kapcsolat
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -211,8 +228,32 @@ namespace dbase
             // F6 - a RESEARCH osztályon dolgozó, a nevükben 'S' betűvel rendelkező dolgozókat
             //      fokozzuk le, azaz fizetésük felét kapják innentől kezdve csak
 
+            // F7 - mentsük el .xml fájlba a neveket
+            //SaveToXML(db);
+            
+            // használjunk metódus helyett (megfelelő) delegáltat:
 
+            Func<EDDatabaseEntities, XDocument> XML_Saver = (x =>
+            {
+                XDocument kimenet = new XDocument();
+                kimenet.Add(new XElement("emberek", new XAttribute("darabszam", x.EMP.Count())));
 
+                foreach (var item in x.EMP)
+                {
+                    kimenet.Root.Add(new XElement("ember",
+                        new XAttribute("ID", item.EMPNO),
+                        new XElement("nev", item.ENAME),
+                        new XElement("munkakor", item.JOB),
+                        new XElement("juttatas", item.SAL + item.COMM)
+                        ));
+                }
+
+                return kimenet;
+            });
+
+            XDocument file_to_save = XML_Saver(db);
+
+            file_to_save.Save("delegalt_mentes.xml");
 
         }
     }
