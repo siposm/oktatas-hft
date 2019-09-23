@@ -54,6 +54,10 @@ namespace dbase
             //
             // 3.lépés: jobb klikk projekt >> add new item >> ado.net entity data model >> generate from database (első) >> _.mdf fájl kiválasztása
             //
+            //
+            // megjegyzés: ha letöltitek / klónozzátok mindig újra végig kell járni a fentebbi folyamatokat!
+            // 
+            // megjegyzés2: saját solution esetén viszont bezáráskor ismét eltűnik >> ehhez jobb klikk az mdf fájlra a sol.explorerben és 'open' >> ekkor megjelenik a server explorerben a kapcsolat
             // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
