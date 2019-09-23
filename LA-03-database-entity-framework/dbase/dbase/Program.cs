@@ -46,7 +46,9 @@ namespace dbase
             //
             // DB LÉTREHOZÁSÁNAK LÉPÉSEI
             //
-            // 1.lépés: jobb klikk projekt >> add new item >> service based database(ha kéri a VS, hogy legyen telepítve SQL valami, akkor telepítsük)
+            // 0.lépés: ha hibát dob a Service Based Database létrehozásakor, akkor fel kell telepíteni a VS_telepítőből a 'Data Storage and Processing' csoportot is
+            //
+            // 1.lépés: jobb klikk projekt >> add new item >> service based database (ha kéri a VS, hogy legyen telepítve SQL valami, akkor telepítsük)
             //
             // 2.lépés: view felső menü >> server explorer >> megjelent a database >> jobb klikk new query >> futtassuk le az sql fájl tartalmát(kiinduló állapot létrehozása)
             //
