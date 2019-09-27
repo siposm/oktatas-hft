@@ -80,7 +80,6 @@ namespace dbase
             EDDatabaseEntities db = new EDDatabaseEntities();
             Console.WriteLine("* connection OK *");
 
-
             DEPT reszl = db.DEPT.First();
             Console.WriteLine(reszl.DNAME);
 
@@ -165,8 +164,16 @@ namespace dbase
                                 dolgozo.ENAME,
                                 dolgozo.SAL,
                                 dolgozo.COMM,
-                                reszleg.DNAME
+                                reszleg.DNAME // lásd megjegyzés lentebb
                             };
+            
+            // megjegyzés!
+            // órán néztük: dolgozo.DEPT.DNAME volt a reszleg.DNAME helyére írva >> ez alapból is működik, nem kell join hozzá!!! >> LAZY LOADING
+            //
+            // pl.: a db.EMP.First().DEPT >> a teljes DEPT entitást visszaadja nekünk, amelyet ugye az EMP entitáson keresztül kérünk le
+            //EMP emberEntitas = db.EMP.First();
+            //Console.WriteLine(emberEntitas.DEPT.DNAME);
+
 
             foreach (var item in dolgozok2)
                 Console.WriteLine(item.ENAME + "\t" + item.SAL + "\t" + item.COMM + "\t" + item.DNAME);
@@ -183,7 +190,7 @@ namespace dbase
                                 dolgozo.ENAME,
                                 dolgozo.SAL,
                                 dolgozo.COMM,
-                                dolgozo.DEPT.DNAME
+                                dolgozo.DEPT.DNAME // itt már lazy loading elvet használunk egyből
                             };
 
             foreach (var item in dolgozok3)
