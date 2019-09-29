@@ -57,7 +57,8 @@ Mind a két zárthelyi dolgozaton legalább 50% (elégséges) szint elérése sz
 - [2.] körben személyes védésre kerül sor.
 
 ### Határidő
-13. szorgalmi hét péntek, 23:59 (pót leadási határidőre **nincs** lehetőség)
+- 13. szorgalmi hét csütörtök, 23:59 (pót leadási határidőre **nincs** lehetőség)
+- amennyiben a FF itt nem került leadásra és/vagy nem került sikeres megvédésre (+GITSTAT) akkor aláíráspótlóra még lehet hozni a szokásos feltételek mentén/ellenében
 
 ## Hiányzás
 TVSZ szerinti 30% megengedett >> 4 db alkalomról lehet hiányozni.
