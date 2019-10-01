@@ -99,7 +99,7 @@ namespace reflexio_feladat_2
          * Ebben az esetben viszont nem csak magukat a tulajdonságokat és metódusokat kérjük le
          * hanem azok aktuális értékeit is!
          * 
-         * Ebben az esetben tehát egy teljesen dinamikusan működő list-to-xml metódust készítünk.
+         * Így tehát egy teljesen dinamikusan működő list-to-xml metódust készítünk.
          * */
 
         // list <> ienumerable
