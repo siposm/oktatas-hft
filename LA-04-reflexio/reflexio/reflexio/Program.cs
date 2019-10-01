@@ -45,6 +45,17 @@ namespace reflexio
     {
         static void Main(string[] args)
         {
+            // =================================================================================
+            //
+            // Figyelem!
+            //
+            // Jelen példafeladat nem a legidálisabb megoldásokat tartalmazza, ezt javasolt a 2. számú nagy feladat nézegetni!
+            // Gyakorolni, és egy egyszerűbb feladaton megnézni az egyes lépések értelmét/lényegét, arra teljesen alkalmas.
+            // 
+            // a 'typeof(Ember)' / 'typeof(Hallgato)' nem túl ideális megoldás, erről órán részletesen beszélünk.
+            //
+            // =================================================================================
+
             Ember e = new Ember() { Nev = "Lajos", ID = 889 };
 
             Type t = typeof(Ember);
