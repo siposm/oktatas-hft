@@ -34,7 +34,7 @@ namespace reflexio_feladat_2
             //}
 
             Type objType = types.Where(x => x.GetCustomAttribute<ModelToXMLAttribute>() != null ).FirstOrDefault();
-
+            
             var instance = Activator.CreateInstance(objType);
 
             List<PropertyInfo> properties = new List<PropertyInfo>();
@@ -45,7 +45,7 @@ namespace reflexio_feladat_2
                 properties.Add(prop);
                 //Console.WriteLine(prop.GetValue(instance)); // var lényege / használhatósága !
             }
-
+            
             //foreach (var method in instance.GetType().GetMethods())
             //{
             //    methods.Add(method);
@@ -99,7 +99,7 @@ namespace reflexio_feladat_2
          * Ebben az esetben viszont nem csak magukat a tulajdonságokat és metódusokat kérjük le
          * hanem azok aktuális értékeit is!
          * 
-         * Ebben az esetben tehát egy teljesen dinamikusan működő list-to-xml metódust készítünk.
+         * Így tehát egy teljesen dinamikusan működő list-to-xml metódust készítünk.
          * */
 
         // list <> ienumerable
@@ -158,6 +158,10 @@ namespace reflexio_feladat_2
         {
             DataFetcher dc = new DataFetcher();
 
+            dc.FetchDataFromProgram();
+
+
+
             List<Hallgato> hList = new List<Hallgato>();
             hList.Add(new Hallgato() { Nev = "Lajos" });
             hList.Add(new Hallgato() { Nev = "Géza" });
@@ -174,7 +178,7 @@ namespace reflexio_feladat_2
             Console.WriteLine();
             dc.FetchDataFromList(aList);
 
-            //dc.FetchDataFromProgram();
+
         }
     }
 }
