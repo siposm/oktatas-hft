@@ -11,6 +11,29 @@ namespace reflexio_feladat_2
         public bool Novenyevo { get; set; }
     }
 
+    class Macska : Allat
+    {
+        public Macska()
+        {
+            Novenyevo = false;
+        }
+
+        public string Nev { get; set; }
+        public int Eletkor { get; set; }
+        public int EletekSzama { get; set; }
+
+        public string Koszon() { return "szia"; }
+
+        [MethodToXML]
+        public void Nyavog() { }
+
+        [MethodToXML]
+        public int Setal() { return 0; }
+
+        [MethodToXML]
+        public double FaraMaszik(string a, bool b) { return 0.5; }
+    }
+
     [ModelToXML]
     class Kutya : Allat
     {
@@ -24,22 +47,13 @@ namespace reflexio_feladat_2
             return 10; // ugatás hosszát adja vissza (msp)
         }
 
-        public void Koszon()
-        {
-            // ...
-        }
+        public void Koszon() { }
 
         [MethodToXML]
-        public double Futas()
-        {
-            return 4.009;
-        }
+        public double Futas() { return 4.009; }
 
         [MethodToXML]
-        public double Seta()
-        {
-            return 432.114;
-        }
+        public double Seta() { return 432.114; }
     }
 
     class Hallgato
@@ -49,28 +63,16 @@ namespace reflexio_feladat_2
         public bool Nem { get; set; }
         public DateTime Szuletes { get; set; }
 
-        public void OraraJar()
-        {
-
-        }
+        public void OraraJar() { }
 
         [MethodToXML]
-        public void TargyFelvesz()
-        {
-
-        }
+        public void TargyFelvesz() { }
 
         [MethodToXML]
-        public void TargyLead()
-        {
-
-        }
+        public void TargyLead() { }
 
         [MethodToXML]
-        public void VizsgaraJelentkezik()
-        {
-
-        }
+        public void VizsgaraJelentkezik() { }
     }
 
     class Auto
@@ -80,27 +82,15 @@ namespace reflexio_feladat_2
         public bool Szemelygepjarmu { get; set; }
         public DateTime UzembehelyzesIdeje { get; set; }
 
-        public void Tankol()
-        {
-
-        }
+        public void Tankol() { }
 
         [MethodToXML]
-        public void Gyorsit()
-        {
-
-        }
+        public void Gyorsit() { }
 
         [MethodToXML]
-        public void Lassit()
-        {
-
-        }
+        public void Lassit() { }
 
         [MethodToXML]
-        public void Szervizel()
-        {
-
-        }
+        public void Szervizel() { }
     }
 }

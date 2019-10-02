@@ -103,12 +103,12 @@ namespace reflexio_feladat_2
          * */
 
         // list <> ienumerable
-        public void FetchDataFromList <T> (IEnumerable<T> list)
+        public void FetchDataFromCollection <T> (IEnumerable<T> collection)
         {
             XDocument xdoc = new XDocument();
             xdoc.Add(new XElement("entities"));
 
-            foreach (var listItem in list)
+            foreach (var listItem in collection)
             {
                 XElement uj = new XElement("entity",
                     new XElement("hash", listItem.GetType().Name.GetHashCode()),
@@ -156,11 +156,13 @@ namespace reflexio_feladat_2
     {
         static void Main(string[] args)
         {
+            // -----------------------------------------------------------------------------------------------------------
+
             DataFetcher dc = new DataFetcher();
 
             dc.FetchDataFromProgram();
 
-
+            // -----------------------------------------------------------------------------------------------------------
 
             List<Hallgato> hList = new List<Hallgato>();
             hList.Add(new Hallgato() { Nev = "Lajos" });
@@ -172,11 +174,20 @@ namespace reflexio_feladat_2
             aList.Add(new Auto() { Rendszam = "BBB-222", Tulajdonos = "Kiss Ede", UzembehelyzesIdeje = new DateTime(2003, 12, 1) });
             aList.Add(new Auto() { Rendszam = "CCC-333", Tulajdonos = "Tony Stark", UzembehelyzesIdeje = new DateTime(1999, 5, 30) });
 
+            List<Allat> allatok = new List<Allat>();
+            allatok.Add(new Macska() { EletekSzama = 8, Nev = "M1", Eletkor = 2 });
+            allatok.Add(new Macska() { EletekSzama = 8, Nev = "M2", Eletkor = 2 });
+            allatok.Add(new Kutya() { Nev = "K1", Eletkor = 2, Nosteny = false });
+            allatok.Add(new Kutya() { Nev = "K2", Eletkor = 7, Nosteny = true });
+            allatok.Add(new Macska() { EletekSzama = 8, Nev = "M3", Eletkor = 2 });
+            allatok.Add(new Macska() { EletekSzama = 8, Nev = "M4", Eletkor = 2 });
+            allatok.Add(new Kutya() { Nev = "K3", Eletkor = 10, Nosteny = true });
 
+            // -----------------------------------------------------------------------------------------------------------
 
-            dc.FetchDataFromList(hList);
-            Console.WriteLine();
-            dc.FetchDataFromList(aList);
+            dc.FetchDataFromCollection(hList);
+            dc.FetchDataFromCollection(aList);
+            dc.FetchDataFromCollection(allatok); // !!!
 
 
         }
