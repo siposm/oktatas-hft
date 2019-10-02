@@ -103,12 +103,12 @@ namespace reflexio_feladat_2
          * */
 
         // list <> ienumerable
-        public void FetchDataFromList <T> (IEnumerable<T> list)
+        public void FetchDataFromCollection <T> (IEnumerable<T> collection)
         {
             XDocument xdoc = new XDocument();
             xdoc.Add(new XElement("entities"));
 
-            foreach (var listItem in list)
+            foreach (var listItem in collection)
             {
                 XElement uj = new XElement("entity",
                     new XElement("hash", listItem.GetType().Name.GetHashCode()),
@@ -174,9 +174,9 @@ namespace reflexio_feladat_2
 
 
 
-            dc.FetchDataFromList(hList);
+            dc.FetchDataFromCollection(hList);
             Console.WriteLine();
-            dc.FetchDataFromList(aList);
+            dc.FetchDataFromCollection(aList);
 
 
         }
