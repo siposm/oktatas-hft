@@ -14,25 +14,13 @@ namespace attributum
         public string HelpText { get; set; }
     }
 
+    [AttributeUsage(AttributeTargets.Class)]    // megszorítás >> csak osztályra helyezhető attrib.
+    class MyClassAttribute : Attribute { }
 
-    // megszorítás >> csak osztályra helyezhető attrib.
+    [AttributeUsage(AttributeTargets.Method)]   // megszorítás >> csak metódusra helyezhető attrib.
+    class MyMethodAttribute : Attribute { }
 
-    [AttributeUsage(AttributeTargets.Class)]
-    class MyClassAttribute : Attribute
-    {
-        // ...
-    }
-
-
-    // megszorítás >> csak metódusra helyezhető attrib.
-
-    [AttributeUsage(AttributeTargets.Method)]
-    class MyMethodAttribute : Attribute
-    {
-        // ...
-    }
-
-    [AttributeUsage(AttributeTargets.Property)]
+    [AttributeUsage(AttributeTargets.Property)] // megszorítás >> csak tulajdonságra helyezhető attrib.
     class CheckLength : Attribute
     {
         public int MaxLength { get; set; }
@@ -67,16 +55,10 @@ namespace attributum
         [Obsolete]
         //[Obsolete("használd az újabb metódust")] // >> megjelenik az üzenet a tooltip-ben
         //[Obsolete("használd az újabb metódust",true)] // >> errort kap, nem warningot
-        public void HallgatoFelvetele()
-        {
-            // hallgató felvitele...
-        }
+        public void HallgatoFelvetele() { }
 
-        [Help(HelpText ="új hallgató felvitele a neptun rendszerbe itt történik")]
-        public void UJ_HallgatoFelvetele()
-        {
-            // hallgató felvitele...
-        }
+        [Help(HelpText = "új hallgató felvitele a neptun rendszerbe itt történik")]
+        public void UJ_HallgatoFelvetele() { }
     }
 
 
@@ -87,8 +69,6 @@ namespace attributum
         static void RendszamBeallitas(Auto a, string r)
         {
             // feltételezve, hogy ez valahol egy nagy program szeparált pontján történik...
-            a.Rendszam = r;
-
             // ellenőrzés
             foreach (PropertyInfo p in a.GetType().GetProperties())
             {
@@ -97,10 +77,10 @@ namespace attributum
                     CheckLength c = (CheckLength)att;
                     if (p.Name == "Rendszam")
                     {
-                        if (a.Rendszam.Length > c.MaxLength) // hossz ellenőrzése
-                        {
+                        if (r.Length > c.MaxLength) // hossz ellenőrzése
                             throw new Exception("A megadott érték túl hosszú.");
-                        }
+                        else
+                            a.Rendszam = r;
                     }
                 }
             }
@@ -108,14 +88,12 @@ namespace attributum
 
         static void Main(string[] args)
         {
-            Neptun n = new Neptun();
-
-            n.HallgatoFelvetele(); // tooltip >> deprecated (nem támogatott már)
-
-
-
             // -----------------------------------------------------------------------------------------------------------
 
+            Neptun n = new Neptun();
+            n.HallgatoFelvetele(); // tooltip >> deprecated (nem támogatott már)
+
+            // -----------------------------------------------------------------------------------------------------------
 
             Auto a = new Auto();
             try
@@ -127,9 +105,6 @@ namespace attributum
                 Console.WriteLine(e.Message);
             }
 
-            
-            
-            
             // -----------------------------------------------------------------------------------------------------------
 
 
