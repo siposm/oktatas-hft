@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using LoggerTXT;        // >> logger for txt
+using TXTLoggerLibrary; // >> logger for txt
 using LoggerLibrary;    // >> interface + student osztály
 
 using System.Xml.Linq;  // >> xdocument
@@ -25,6 +25,15 @@ namespace logger
                     new XElement("registration_year", student.RegistrationDate.Year)
                 ));
             xdoc.Save("output_xml.xml");
+        }
+    }
+
+    class LoggerForConsole : ILogger
+    {
+        public void Log(Student student)
+        {
+            Console.WriteLine("NAME: " + student.Name);
+            Console.WriteLine("HASH: " + student.Name.GetHashCode());
         }
     }
 
@@ -52,7 +61,7 @@ namespace logger
                 Console.WriteLine("ready...");
             }
 
-
+            
 
             
 
@@ -68,7 +77,7 @@ namespace logger
             // csak az interfészt megvalósító osztályok hozzáadása
             loggerClasses.AddRange(Assembly.GetExecutingAssembly().GetTypes()
                 .Where(x => x.GetInterface("ILogger") != null));
-
+            
             // aktuális könyvtár ahol a .exe fájl van (!)
             DirectoryInfo dinfo = new DirectoryInfo(Directory.GetCurrentDirectory());
 
@@ -80,7 +89,7 @@ namespace logger
                     .Where ( x => x.GetInterface("ILogger") != null)
                     );
             }
-
+            
             Console.Write("STUDENT NAME: ");
             string name = Console.ReadLine();
 
