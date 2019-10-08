@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using CalculatorLibrary; // saját dll usingolása!
+using CalcLib; // saját dll usingolása!
 
 namespace dllKezelo
 {

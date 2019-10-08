@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CalculatorLibrary
+namespace CalcLib
 {
     public class Calculator
     {
@@ -17,6 +13,5 @@ namespace CalculatorLibrary
         {
             return from - what;
         }
-
     }
 }
