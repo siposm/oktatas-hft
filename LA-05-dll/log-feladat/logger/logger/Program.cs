@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-using LoggerTXT;        // >> logger for txt
+using TXTLoggerLibrary; // >> logger for txt
 using LoggerLibrary;    // >> interface + student osztály
 
 using System.Xml.Linq;  // >> xdocument
