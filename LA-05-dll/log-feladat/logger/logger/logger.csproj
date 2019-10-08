@@ -34,10 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LoggerLibrary">
-      <HintPath>..\..\LoggerTXT\LoggerLibrary\bin\Debug\LoggerLibrary.dll</HintPath>
-    </Reference>
-    <Reference Include="LoggerTXT">
-      <HintPath>..\..\LoggerTXT.dll</HintPath>
+      <HintPath>..\..\LoggerLibrary.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -47,6 +44,9 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+    <Reference Include="TXTLoggerLibrary">
+      <HintPath>..\..\TXTLoggerLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
