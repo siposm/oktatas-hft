@@ -32,8 +32,10 @@ namespace logger
     {
         public void Log(Student student)
         {
+            Console.WriteLine();
             Console.WriteLine("NAME: " + student.Name);
             Console.WriteLine("HASH: " + student.Name.GetHashCode());
+            Console.WriteLine("-----------------------");
         }
     }
 
@@ -89,11 +91,16 @@ namespace logger
                     .Where ( x => x.GetInterface("ILogger") != null)
                     );
             }
-            
-            Console.Write("STUDENT NAME: ");
-            string name = Console.ReadLine();
 
-            Student stud = new Student() { Name = name };
+            //Console.Write("STUDENT NAME: ");
+            //string name = Console.ReadLine();
+            //Student stud = new Student() { Name = name };
+
+            List<Student> slist = new List<Student>();
+            slist.Add(new Student() { Name = "Student_1" });
+            slist.Add(new Student() { Name = "Student_2" });
+            slist.Add(new Student() { Name = "Student_3" });
+            slist.Add(new Student() { Name = "Student_4" });
 
             foreach (var item in loggerClasses)
             {
@@ -106,7 +113,7 @@ namespace logger
                 var q = item.GetMethod("Log");
 
                 // 3. meghívjuk a log metódust adott paraméterrel
-                q.Invoke(instance, new object[] { stud });
+                foreach (var stud in slist) q.Invoke(instance, new object[] { stud });
 
                 // 4. kimenetek ellenőrzése /bin/debug-ban
             }
