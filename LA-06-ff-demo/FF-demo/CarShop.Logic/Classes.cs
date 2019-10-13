@@ -51,11 +51,6 @@ namespace CarShop.Logic
             carRepo.ChangePrice(id, newprice);
         }
 
-        public IList<cars> GetAllCars()
-        {
-            return carRepo.GetAll().ToList();
-        }
-
         public IList<AveragesResult> GetBrandAverages()
         {
             var q = from car in carRepo.GetAll()
@@ -72,6 +67,15 @@ namespace CarShop.Logic
         public cars GetOneCar(int id)
         {
             return carRepo.GetOne(id);
+        }
+
+        public List<string> GetCarsWithLetter(char param)
+        {
+            var q = from x in carRepo.GetAll().ToList()
+                    where x.car_model.Contains(param)
+                    select x.car_model;
+
+            return q.ToList();
         }
     }
 }

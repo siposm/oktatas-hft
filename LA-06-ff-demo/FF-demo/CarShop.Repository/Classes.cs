@@ -12,13 +12,19 @@ namespace CarShop.Repository
     public interface IRepository<T> where T : class
     {
         T GetOne(int id);
-        IQueryable<T> GetAll();
+        IQueryable<T> GetAll(); // sql kiszolgáló lerendezi és csak a result-ot küldi meg
     }
+
+
+
 
     public interface ICarRepository : IRepository<cars>
     {
         void ChangePrice(int id, int newprice);
     }
+
+
+
 
     public abstract class Repository<T> : IRepository<T> where T : class
     {
@@ -31,11 +37,14 @@ namespace CarShop.Repository
 
         public IQueryable<T> GetAll()
         {
-            return ctx.Set<T>(); // "Set" as a noun, not as a verb!!!
+            return ctx.Set<T>(); // set mint halmaz
         }
 
         public abstract T GetOne(int id);
     }
+
+
+
 
     public class CarRepository : Repository<cars>, ICarRepository
     {

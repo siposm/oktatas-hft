@@ -29,8 +29,16 @@ namespace FF_demo
 
             foreach (var item in q) Console.WriteLine(item);
 
+
+            // ----
+
+
             CarLogic cl = new CarLogic();
+            Console.WriteLine("----");
             foreach (var item in cl.GetBrandAverages()) Console.WriteLine(item);
+
+            Console.WriteLine("----");
+            foreach (var item in cl.GetCarsWithLetter('A')) Console.WriteLine(item);
         }
     }
 }
