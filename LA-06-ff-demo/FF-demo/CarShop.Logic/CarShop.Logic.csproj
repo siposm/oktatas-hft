@@ -5,19 +5,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33D850F5-29C3-4671-94EF-08A6ED0CFC80}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>FF_demo</RootNamespace>
-    <AssemblyName>FF-demo</AssemblyName>
+    <ProjectGuid>{2E3196EB-F941-4D5F-AC08-8187D293EFEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CarShop.Logic</RootNamespace>
+    <AssemblyName>CarShop.Logic</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -27,7 +26,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -53,26 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Classes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarShop.Data\CarShop.Data.csproj">
       <Project>{2d1a28d9-7119-4c8d-a589-b4a684b12b84}</Project>
       <Name>CarShop.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CarShop.Logic\CarShop.Logic.csproj">
-      <Project>{2e3196eb-f941-4d5f-ac08-8187d293efef}</Project>
-      <Name>CarShop.Logic</Name>
-    </ProjectReference>
     <ProjectReference Include="..\CarShop.Repository\CarShop.Repository.csproj">
       <Project>{de8b31e3-9d90-4243-9378-a9f3dc52d155}</Project>
       <Name>CarShop.Repository</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

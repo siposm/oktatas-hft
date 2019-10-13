@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 // teljes projekt hozzáadása a referenciákhoz
 using CarShop.Data;
+using CarShop.Logic;
 
 namespace FF_demo
 {
@@ -18,7 +19,18 @@ namespace FF_demo
             CarDatabaseEntities db = new CarDatabaseEntities();
             Console.WriteLine(db.cars.Count());
 
-            
+            var q = from car in db.cars
+                    group car by car.brands into grp
+                    select new
+                    {
+                        Brand = grp.Key.brand_name,
+                        AvgPrice = grp.Average(car => car.car_baseprice)
+                    };
+
+            foreach (var item in q) Console.WriteLine(item);
+
+            CarLogic cl = new CarLogic();
+            foreach (var item in cl.GetBrandAverages()) Console.WriteLine(item);
         }
     }
 }
