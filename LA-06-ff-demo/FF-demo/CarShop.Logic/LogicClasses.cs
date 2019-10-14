@@ -9,7 +9,7 @@ using CarShop.Repository;
 
 namespace CarShop.Logic
 {
-    public class AveragesResult
+    public class AverageResult
     {
         public string BrandName { get; set; }
         public double AveragePrice { get; set; }
@@ -29,7 +29,7 @@ namespace CarShop.Logic
         CAR GetOneCar(int id);
         void ChangeCarPrice(int id, int newprice);
         IList<CAR> GetAllCars();
-        IList<AveragesResult> GetBrandAverages();
+        IList<AverageResult> GetBrandAverages();
     }
 
     public class CarLogic
@@ -73,16 +73,16 @@ namespace CarShop.Logic
             carRepo.Deletecar(id);
         }
 
-        public List<string> GetCarsWithLetter(char param, bool caseSensitive)
+        public IEnumerable<string> GetCarsWithLetter(char param, bool caseSensitive)
         {
             if (caseSensitive)
                 return (from x in carRepo.GetAll().ToList()
                         where x.car_model.Contains(param)
-                        select x.car_model).ToList();
+                        select x.car_model);
             else
                 return (from x in carRepo.GetAll().ToList()
                         where x.car_model.ToUpper().Contains(char.ToUpper(param))
-                        select x.car_model).ToList();
+                        select x.car_model);
         }
 
 
@@ -90,17 +90,26 @@ namespace CarShop.Logic
         // https://stackoverflow.com/questions/376708/ilist-vs-ienumerable-for-collections-on-entities
         // https://stackoverflow.com/questions/3228708/what-should-i-use-an-ienumerable-or-ilist
 
-        public IList<AveragesResult> GetBrandAverages()
+        public IList<AverageResult> GetBrandAverages()
         {
             var q = from car in carRepo.GetAll()
                     group car by car.BRAND into grp
-                    select new AveragesResult()
+                    select new AverageResult()
                     {
                         BrandName = grp.Key.brand_name,
-                        AveragePrice = grp.Average(car => car.car_baseprice) ?? 0
+                        AveragePrice = grp.Average(car => car.car_baseprice) ?? 0 // if not null
                     };
 
             return q.ToList();
+        }
+
+        public string GetCheapestCarModel()
+        {
+            var q = from x in carRepo.GetAll()
+                    orderby x.car_baseprice ascending
+                    select x.car_model;
+
+            return q.First().ToString();
         }
     }
 }

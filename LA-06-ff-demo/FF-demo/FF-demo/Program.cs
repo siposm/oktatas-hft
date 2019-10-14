@@ -40,12 +40,23 @@ namespace FF_demo
             Console.WriteLine("----");
             foreach (var item in cl.GetCarsWithLetter('a',false)) Console.WriteLine(item);
 
-            cl.InsertCar(new CAR() { car_model = "Ford mustang" });
+            cl.InsertCar(new CAR()
+            {
+                car_model = "Ford mustang",
+                car_baseprice = 990,
+                car_discountprice = 10,
+                car_brand = 1,
+                car_id = 5 // no identity ~ auto incr.
+            });
 
             cl.DeleteCar(1);
 
             Console.WriteLine("----");
-            foreach (var item in cl.GetAll()) Console.WriteLine(item.car_model);
+            foreach (var item in cl.GetAll())
+                Console.WriteLine($"{item.car_model} {item.car_baseprice} {item.car_discountprice}");
+
+            Console.WriteLine("----");
+            Console.WriteLine(cl.GetCheapestCarModel());
         }
     }
 }

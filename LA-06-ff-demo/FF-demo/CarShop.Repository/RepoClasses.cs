@@ -18,7 +18,7 @@ namespace CarShop.Repository
 
         // read
         CAR GetOne(int id);
-        IEnumerable<CAR> GetAll();
+        IQueryable<CAR> GetAll(); // sql intézi a munkát (ha szükséges)
 
         // update
         void UpdatePrice(int id, int newPrice);
@@ -35,6 +35,12 @@ namespace CarShop.Repository
         private CarDatabaseEntities db;
         public CarRepository(CarDatabaseEntities db) { this.db = db; }
 
+
+        public CAR GetOne(int id)
+        {
+            return db.CAR.Where(x => x.car_id == id).FirstOrDefault();
+        }
+
         public void UpdateName(int id, string newName)
         {
             var car = GetOne(id);
@@ -49,11 +55,6 @@ namespace CarShop.Repository
             db.SaveChanges();
         }
 
-        public CAR GetOne(int id)
-        {
-            return db.CAR.Where(x => x.car_id == id).FirstOrDefault();
-        }
-
         public void CreateCar(CAR car)
         {
             db.CAR.Add(car);
@@ -66,7 +67,7 @@ namespace CarShop.Repository
             db.SaveChanges();
         }
 
-        public IEnumerable<CAR> GetAll()
+        public IQueryable<CAR> GetAll()
         {
             return db.CAR;
         }
