@@ -9,7 +9,13 @@ using CarShop.Data; // saját using
 
 namespace CarShop.Repository
 {
-    public interface ICarRepository
+    public interface IRepository <T> where T : class
+    {
+        T GetOne(int id);
+        IQueryable<T> GetAll();
+    }
+
+    public interface ICarRepository : IRepository<CAR>
     {
         // CRUD - create, read, update, delete
 
@@ -17,8 +23,8 @@ namespace CarShop.Repository
         void CreateCar(CAR car);
 
         // read
-        CAR GetOne(int id);
-        IQueryable<CAR> GetAll(); // sql intézi a munkát (ha szükséges)
+        //CAR GetOne(int id);
+        //IQueryable<CAR> GetAll(); // sql intézi a munkát (ha szükséges)
 
         // update
         void UpdatePrice(int id, int newPrice);

@@ -18,6 +18,9 @@ namespace CarShop.Logic
             return $"BRAND = {BrandName}, AVG = {AveragePrice}";
         }
     }
+
+    // https://www.driver733.com/2018/10/08/entity-and-dto.html
+    //
     // Should add DTO instead of Entities => SKIP for this semester
     // This is a SERIOUS security hole!
     // var car = logic.GetOneCar(40);
