@@ -5,8 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-// teljes projekt hozzáadása a referenciákhoz
-using CarShop.Data;
+using CarShop.Data;     // teljes projektek hozzáadása a referenciákhoz
 using CarShop.Logic;
 
 namespace FF_demo
@@ -15,7 +14,9 @@ namespace FF_demo
     {
         static void Main(string[] args)
         {
-            // add connection string!
+            // add connection string
+            // add entity fw
+
             CarDatabaseEntities db = new CarDatabaseEntities();
             Console.WriteLine(db.CAR.Count());
 
