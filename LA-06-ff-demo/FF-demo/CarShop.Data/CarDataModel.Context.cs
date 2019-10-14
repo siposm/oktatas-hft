@@ -25,7 +25,7 @@ namespace CarShop.Data
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<brands> brands { get; set; }
-        public virtual DbSet<cars> cars { get; set; }
+        public virtual DbSet<BRAND> BRAND { get; set; }
+        public virtual DbSet<CAR> CAR { get; set; }
     }
 }

@@ -5,14 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="CarDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="brands">
+        <EntityType Name="BRAND">
           <Key>
             <PropertyRef Name="brand_id" />
           </Key>
           <Property Name="brand_id" Type="int" Nullable="false" />
           <Property Name="brand_name" Type="nvarchar" MaxLength="100" />
         </EntityType>
-        <EntityType Name="cars">
+        <EntityType Name="CAR">
           <Key>
             <PropertyRef Name="car_id" />
           </Key>
@@ -20,25 +20,26 @@
           <Property Name="car_brand" Type="int" />
           <Property Name="car_model" Type="nvarchar" MaxLength="100" />
           <Property Name="car_baseprice" Type="int" />
+          <Property Name="car_discountprice" Type="int" />
         </EntityType>
-        <Association Name="FK__cars__car_brand__25869641">
-          <End Role="brands" Type="Self.brands" Multiplicity="0..1" />
-          <End Role="cars" Type="Self.cars" Multiplicity="*" />
+        <Association Name="FK__CAR__car_brand__25869641">
+          <End Role="BRAND" Type="Self.BRAND" Multiplicity="0..1" />
+          <End Role="CAR" Type="Self.CAR" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="brands">
+            <Principal Role="BRAND">
               <PropertyRef Name="brand_id" />
             </Principal>
-            <Dependent Role="cars">
+            <Dependent Role="CAR">
               <PropertyRef Name="car_brand" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="CarDatabaseModelStoreContainer">
-          <EntitySet Name="brands" EntityType="Self.brands" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="cars" EntityType="Self.cars" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__cars__car_brand__25869641" Association="Self.FK__cars__car_brand__25869641">
-            <End Role="brands" EntitySet="brands" />
-            <End Role="cars" EntitySet="cars" />
+          <EntitySet Name="BRAND" EntityType="Self.BRAND" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CAR" EntityType="Self.CAR" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__CAR__car_brand__25869641" Association="Self.FK__CAR__car_brand__25869641">
+            <End Role="BRAND" EntitySet="BRAND" />
+            <End Role="CAR" EntitySet="CAR" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -46,15 +47,15 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CarDatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="brands">
+        <EntityType Name="BRAND">
           <Key>
             <PropertyRef Name="brand_id" />
           </Key>
           <Property Name="brand_id" Type="Int32" Nullable="false" />
           <Property Name="brand_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="cars" Relationship="Self.FK__cars__car_brand__25869641" FromRole="brands" ToRole="cars" />
+          <NavigationProperty Name="CAR" Relationship="Self.FK__CAR__car_brand__25869641" FromRole="BRAND" ToRole="CAR" />
         </EntityType>
-        <EntityType Name="cars">
+        <EntityType Name="CAR">
           <Key>
             <PropertyRef Name="car_id" />
           </Key>
@@ -62,26 +63,27 @@
           <Property Name="car_brand" Type="Int32" />
           <Property Name="car_model" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="car_baseprice" Type="Int32" />
-          <NavigationProperty Name="brands" Relationship="Self.FK__cars__car_brand__25869641" FromRole="cars" ToRole="brands" />
+          <Property Name="car_discountprice" Type="Int32" />
+          <NavigationProperty Name="BRAND" Relationship="Self.FK__CAR__car_brand__25869641" FromRole="CAR" ToRole="BRAND" />
         </EntityType>
-        <Association Name="FK__cars__car_brand__25869641">
-          <End Role="brands" Type="Self.brands" Multiplicity="0..1" />
-          <End Role="cars" Type="Self.cars" Multiplicity="*" />
+        <Association Name="FK__CAR__car_brand__25869641">
+          <End Role="BRAND" Type="Self.BRAND" Multiplicity="0..1" />
+          <End Role="CAR" Type="Self.CAR" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="brands">
+            <Principal Role="BRAND">
               <PropertyRef Name="brand_id" />
             </Principal>
-            <Dependent Role="cars">
+            <Dependent Role="CAR">
               <PropertyRef Name="car_brand" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="CarDatabaseEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="brands" EntityType="Self.brands" />
-          <EntitySet Name="cars" EntityType="Self.cars" />
-          <AssociationSet Name="FK__cars__car_brand__25869641" Association="Self.FK__cars__car_brand__25869641">
-            <End Role="brands" EntitySet="brands" />
-            <End Role="cars" EntitySet="cars" />
+          <EntitySet Name="BRAND" EntityType="Self.BRAND" />
+          <EntitySet Name="CAR" EntityType="Self.CAR" />
+          <AssociationSet Name="FK__CAR__car_brand__25869641" Association="Self.FK__CAR__car_brand__25869641">
+            <End Role="BRAND" EntitySet="BRAND" />
+            <End Role="CAR" EntitySet="CAR" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -90,21 +92,22 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="CarDatabaseModelStoreContainer" CdmEntityContainer="CarDatabaseEntities">
-          <EntitySetMapping Name="brands">
-            <EntityTypeMapping TypeName="CarDatabaseModel.brands">
-              <MappingFragment StoreEntitySet="brands">
+          <EntitySetMapping Name="BRAND">
+            <EntityTypeMapping TypeName="CarDatabaseModel.BRAND">
+              <MappingFragment StoreEntitySet="BRAND">
                 <ScalarProperty Name="brand_id" ColumnName="brand_id" />
                 <ScalarProperty Name="brand_name" ColumnName="brand_name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="cars">
-            <EntityTypeMapping TypeName="CarDatabaseModel.cars">
-              <MappingFragment StoreEntitySet="cars">
+          <EntitySetMapping Name="CAR">
+            <EntityTypeMapping TypeName="CarDatabaseModel.CAR">
+              <MappingFragment StoreEntitySet="CAR">
                 <ScalarProperty Name="car_id" ColumnName="car_id" />
                 <ScalarProperty Name="car_brand" ColumnName="car_brand" />
                 <ScalarProperty Name="car_model" ColumnName="car_model" />
                 <ScalarProperty Name="car_baseprice" ColumnName="car_baseprice" />
+                <ScalarProperty Name="car_discountprice" ColumnName="car_discountprice" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

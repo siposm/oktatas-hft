@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2D1A28D9-7119-4C8D-A589-B4A684B12B84}</ProjectGuid>
+    <ProjectGuid>{82ED6632-0505-4302-8970-422E8456F176}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CarShop.Data</RootNamespace>
@@ -28,8 +27,6 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,10 +47,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.3.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
@@ -68,26 +65,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="brands.cs">
-      <DependentUpon>CarDbContext.tt</DependentUpon>
+    <Compile Include="BRAND.cs">
+      <DependentUpon>CarDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CarDbContext.Context.cs">
+    <Compile Include="CAR.cs">
+      <DependentUpon>CarDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CarDbContext.Context.tt</DependentUpon>
+      <DependentUpon>CarDataModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="CarDbContext.cs">
+    <Compile Include="CarDataModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CarDbContext.tt</DependentUpon>
+      <DependentUpon>CarDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="CarDbContext.Designer.cs">
+    <Compile Include="CarDataModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CarDbContext.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="cars.cs">
-      <DependentUpon>CarDbContext.tt</DependentUpon>
+      <DependentUpon>CarDataModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -99,27 +96,27 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>CarDatabase.mdf</DependentUpon>
     </Content>
-    <Content Include="CarDbContext.Context.tt">
+    <Content Include="CarDataModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>CarDbContext.Context.cs</LastGenOutput>
-      <DependentUpon>CarDbContext.edmx</DependentUpon>
+      <LastGenOutput>CarDataModel.Context.cs</LastGenOutput>
+      <DependentUpon>CarDataModel.edmx</DependentUpon>
     </Content>
-    <Content Include="CarDbContext.tt">
+    <Content Include="CarDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>CarDbContext.edmx</DependentUpon>
-      <LastGenOutput>CarDbContext.cs</LastGenOutput>
+      <DependentUpon>CarDataModel.edmx</DependentUpon>
+      <LastGenOutput>CarDataModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="CarDbContext.edmx">
+    <EntityDeploy Include="CarDataModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>CarDbContext.Designer.cs</LastGenOutput>
+      <LastGenOutput>CarDataModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />
-    <None Include="CarDbContext.edmx.diagram">
-      <DependentUpon>CarDbContext.edmx</DependentUpon>
+    <None Include="CarDataModel.edmx.diagram">
+      <DependentUpon>CarDataModel.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -139,12 +136,4 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.props'))" />
-    <Error Condition="!Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.3.0\build\EntityFramework.targets'))" />
-  </Target>
-  <Import Project="..\packages\EntityFramework.6.3.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.3.0\build\EntityFramework.targets')" />
 </Project>

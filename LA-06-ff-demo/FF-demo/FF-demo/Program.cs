@@ -17,17 +17,17 @@ namespace FF_demo
         {
             // add connection string!
             CarDatabaseEntities db = new CarDatabaseEntities();
-            Console.WriteLine(db.cars.Count());
+            Console.WriteLine(db.CAR.Count());
 
-            var q = from car in db.cars
-                    group car by car.brands into grp
-                    select new
-                    {
-                        Brand = grp.Key.brand_name,
-                        AvgPrice = grp.Average(car => car.car_baseprice)
-                    };
+            //var q = from car in db.CAR
+            //        group car by car.BRAND into grp
+            //        select new
+            //        {
+            //            Brand = grp.Key.brand_name,
+            //            AvgPrice = grp.Average(car => car.car_baseprice)
+            //        };
 
-            foreach (var item in q) Console.WriteLine(item);
+            //foreach (var item in q) Console.WriteLine(item);
 
 
             // ----
@@ -38,7 +38,14 @@ namespace FF_demo
             foreach (var item in cl.GetBrandAverages()) Console.WriteLine(item);
 
             Console.WriteLine("----");
-            foreach (var item in cl.GetCarsWithLetter('A')) Console.WriteLine(item);
+            foreach (var item in cl.GetCarsWithLetter('a',false)) Console.WriteLine(item);
+
+            cl.InsertCar(new CAR() { car_model = "Ford mustang" });
+
+            cl.DeleteCar(1);
+
+            Console.WriteLine("----");
+            foreach (var item in cl.GetAll()) Console.WriteLine(item.car_model);
         }
     }
 }

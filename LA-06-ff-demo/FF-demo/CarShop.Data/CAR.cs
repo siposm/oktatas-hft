@@ -12,18 +12,14 @@ namespace CarShop.Data
     using System;
     using System.Collections.Generic;
     
-    public partial class brands
+    public partial class CAR
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public brands()
-        {
-            this.cars = new HashSet<cars>();
-        }
+        public int car_id { get; set; }
+        public Nullable<int> car_brand { get; set; }
+        public string car_model { get; set; }
+        public Nullable<int> car_baseprice { get; set; }
+        public Nullable<int> car_discountprice { get; set; }
     
-        public int brand_id { get; set; }
-        public string brand_name { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cars> cars { get; set; }
+        public virtual BRAND BRAND { get; set; }
     }
 }

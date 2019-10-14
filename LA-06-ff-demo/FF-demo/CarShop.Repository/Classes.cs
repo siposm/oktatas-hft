@@ -9,57 +9,66 @@ using CarShop.Data; // saját using
 
 namespace CarShop.Repository
 {
-    public interface IRepository<T> where T : class
+    public interface ICarRepository
     {
-        T GetOne(int id);
-        IQueryable<T> GetAll(); // sql kiszolgáló lerendezi és csak a result-ot küldi meg
+        // CRUD - create, read, update, delete
+
+        //create
+        void CreateCar(CAR car);
+
+        // read
+        CAR GetOne(int id);
+        IEnumerable<CAR> GetAll();
+
+        // update
+        void UpdatePrice(int id, int newPrice);
+        void UpdateName(int id, string newName);
+
+        // delete
+        void Deletecar(int id);
     }
 
+    // --------------------------------------------------------------------------------------------------------
 
-
-
-    public interface ICarRepository : IRepository<cars>
+    public class CarRepository : ICarRepository
     {
-        void ChangePrice(int id, int newprice);
-    }
+        private CarDatabaseEntities db;
+        public CarRepository(CarDatabaseEntities db) { this.db = db; }
 
-
-
-
-    public abstract class Repository<T> : IRepository<T> where T : class
-    {
-        protected DbContext ctx;
-
-        public Repository(DbContext ctx)
-        {
-            this.ctx = ctx;
-        }
-
-        public IQueryable<T> GetAll()
-        {
-            return ctx.Set<T>(); // set mint halmaz
-        }
-
-        public abstract T GetOne(int id);
-    }
-
-
-
-
-    public class CarRepository : Repository<cars>, ICarRepository
-    {
-        public CarRepository(DbContext ctx) : base(ctx) { }
-
-        public void ChangePrice(int id, int newprice)
+        public void UpdateName(int id, string newName)
         {
             var car = GetOne(id);
-            car.car_baseprice = newprice;
-            ctx.SaveChanges();
+            car.car_model = newName;
+            db.SaveChanges();
         }
 
-        public override cars GetOne(int id)
+        public void UpdatePrice(int id, int newPrice)
         {
-            return GetAll().SingleOrDefault(x => x.car_id == id);
+            var car = GetOne(id);
+            car.car_baseprice = newPrice;
+            db.SaveChanges();
+        }
+
+        public CAR GetOne(int id)
+        {
+            return db.CAR.Where(x => x.car_id == id).FirstOrDefault();
+        }
+
+        public void CreateCar(CAR car)
+        {
+            db.CAR.Add(car);
+            db.SaveChanges();
+        }
+
+        public void Deletecar(int id)
+        {
+            db.CAR.Remove(this.GetOne(id));
+            db.SaveChanges();
+        }
+
+        public IEnumerable<CAR> GetAll()
+        {
+            return db.CAR;
         }
     }
 }

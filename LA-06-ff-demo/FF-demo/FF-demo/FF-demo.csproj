@@ -62,7 +62,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CarShop.Data\CarShop.Data.csproj">
-      <Project>{2d1a28d9-7119-4c8d-a589-b4a684b12b84}</Project>
+      <Project>{82ed6632-0505-4302-8970-422e8456f176}</Project>
       <Name>CarShop.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\CarShop.Logic\CarShop.Logic.csproj">

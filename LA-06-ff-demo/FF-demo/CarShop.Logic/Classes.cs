@@ -26,9 +26,9 @@ namespace CarShop.Logic
 
     public interface ICarLogic // veszélyes: túl sok felelősséggel rendelkező osztály (kerülendő)
     {
-        cars GetOneCar(int id);
+        CAR GetOneCar(int id);
         void ChangeCarPrice(int id, int newprice);
-        IList<cars> GetAllCars();
+        IList<CAR> GetAllCars();
         IList<AveragesResult> GetBrandAverages();
     }
 
@@ -46,34 +46,59 @@ namespace CarShop.Logic
             this.carRepo = repo;
         }
 
+        // --------------------------------------------------------------------------------------------------------
+
         public void ChangeCarPrice(int id, int newprice)
         {
-            carRepo.ChangePrice(id, newprice);
+            carRepo.UpdatePrice(id, newprice);
         }
+
+        public CAR GetOneCar(int id)
+        {
+            return carRepo.GetOne(id);
+        }
+
+        public List<CAR> GetAll()
+        {
+            return carRepo.GetAll().ToList();
+        }
+
+        public void InsertCar(CAR car)
+        {
+            carRepo.CreateCar(car);
+        }
+
+        public void DeleteCar(int id)
+        {
+            carRepo.Deletecar(id);
+        }
+
+        public List<string> GetCarsWithLetter(char param, bool caseSensitive)
+        {
+            if (caseSensitive)
+                return (from x in carRepo.GetAll().ToList()
+                        where x.car_model.Contains(param)
+                        select x.car_model).ToList();
+            else
+                return (from x in carRepo.GetAll().ToList()
+                        where x.car_model.ToUpper().Contains(char.ToUpper(param))
+                        select x.car_model).ToList();
+        }
+
+
+        // Megjegyzés:
+        // https://stackoverflow.com/questions/376708/ilist-vs-ienumerable-for-collections-on-entities
+        // https://stackoverflow.com/questions/3228708/what-should-i-use-an-ienumerable-or-ilist
 
         public IList<AveragesResult> GetBrandAverages()
         {
             var q = from car in carRepo.GetAll()
-                    group car by car.brands into grp
+                    group car by car.BRAND into grp
                     select new AveragesResult()
                     {
                         BrandName = grp.Key.brand_name,
                         AveragePrice = grp.Average(car => car.car_baseprice) ?? 0
                     };
-
-            return q.ToList();
-        }
-
-        public cars GetOneCar(int id)
-        {
-            return carRepo.GetOne(id);
-        }
-
-        public List<string> GetCarsWithLetter(char param)
-        {
-            var q = from x in carRepo.GetAll().ToList()
-                    where x.car_model.Contains(param)
-                    select x.car_model;
 
             return q.ToList();
         }
