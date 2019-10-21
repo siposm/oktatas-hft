@@ -12,32 +12,24 @@ namespace StudentTesting
     [TestFixture]
     public class StudentTest
     {
-
         [Test]
         public void StudentNameTest()
         {
             Student s = new Student() { Name = "Lajos", StartYear = 2018 };
-
             Assert.AreEqual("Lajos", s.Name);
         }
 
         [Test]
-        public void StudentLogTest()
+        public void StudentSemesterTest()
         {
             Student s = new Student() { Name = "Lajos", StartYear = 2018 };
-
-            s.LogStudentToTXT();
-
-            string[] x = File.ReadAllLines("student.txt");
-
-            Assert.AreEqual(x[0], s.Name);
+            Assert.That(s.CountSemester(), Is.EqualTo(2));
         }
 
         [Test]
         public void StudentObjectThrowsTest()
         {
             Student s = new Student();
-
             Assert.That(() => s.CreateInstanceFromString("#Lajos%2012"),
                 Throws.TypeOf<FormatException>());
         }
@@ -46,7 +38,6 @@ namespace StudentTesting
         public void StudentObjectNotThrowsTest()
         {
             Student s = new Student();
-
             Assert.That(() => s.CreateInstanceFromString("Lajos%2012"),
                 ! Throws.TypeOf<FormatException>());
         }

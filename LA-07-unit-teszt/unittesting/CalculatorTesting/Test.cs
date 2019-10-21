@@ -79,5 +79,13 @@ namespace CalculatorTesting
             Calculator calc = new Calculator();
             Assert.Throws<DivideByZeroException>( () => calc.Division(10, 0));
         }
+
+        [Test]
+        public void SpecialMethodExceptionTest()
+        {
+            Calculator calc = new Calculator();
+            Assert.Throws<UnderFlow_Exception>(() => calc.SpecialMethod(-10));
+            Assert.Throws<OverFlow_Exception>(() => calc.SpecialMethod(50));
+        }
     }
 }

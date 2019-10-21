@@ -12,11 +12,9 @@ namespace unittesting
         public string Name { get; set; }
         public int StartYear { get; set; }
 
-        public void LogStudentToTXT()
+        public int CountSemester()
         {
-            StreamWriter sw = new StreamWriter("student.txt");
-            sw.WriteLine(Name);
-            sw.Close();
+            return (DateTime.Now.Year - this.StartYear) * 2;
         }
 
         public void CreateInstanceFromString(string input)
