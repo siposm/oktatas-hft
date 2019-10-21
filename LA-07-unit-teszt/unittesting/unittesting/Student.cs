@@ -7,10 +7,15 @@ using System.Threading.Tasks;
 
 namespace unittesting
 {
-    public class Student
+    public class Student : IComparable
     {
         public string Name { get; set; }
         public int StartYear { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            return this.StartYear.CompareTo((obj as Student).StartYear);
+        }
 
         public int CountSemester()
         {

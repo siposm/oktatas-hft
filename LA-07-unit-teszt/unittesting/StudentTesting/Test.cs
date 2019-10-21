@@ -42,20 +42,38 @@ namespace StudentTesting
                 ! Throws.TypeOf<FormatException>());
         }
 
+        //[TestCase(0, "Béla", 2012, TestName = "Első teszt")]
+        //[TestCase(1, "Tamara", 2013, TestName = "Második teszt")]
         [TestCase(0, "Béla", 2012)]
         [TestCase(1, "Tamara", 2013)]
         public void CasesTest(int index, string name, int startYear)
         {
-            List<Student> students = new List<Student>();
-            students.Add(new Student() { Name = "Béla", StartYear = 2012 });
-            students.Add(new Student() { Name = "Tamara", StartYear = 2013 });
-
-            Assert.That(students[index].Name, Is.EqualTo(name));
-            Assert.That(students[index].StartYear, Is.EqualTo(startYear));
+            Assert.That(name, Is.AnyOf(new[] { "Béla", "Tamara" }));
+            Assert.That(name, Is.Not.AnyOf(new[] { "X", "Y" }));
         }
 
         [Test]
-        public void SortingStudentsTest()
+        public void SortingStudentsViaCompareToTest()
+        {
+            List<Student> students = new List<Student>();
+            students.Add(new Student() { Name = "Tamara", StartYear = 2015 });
+            students.Add(new Student() { Name = "Tamás", StartYear = 2013 });
+            students.Add(new Student() { Name = "Béla", StartYear = 2011 }); // should be 1st
+            students.Add(new Student() { Name = "Andris", StartYear = 2012 });
+
+            students.Sort(); // default compareto
+
+            // check first
+            Assert.That(students[0].Name, Is.EqualTo("Béla"));
+            Assert.That(students[0].StartYear, Is.EqualTo(2011));
+
+            // check last
+            Assert.That(students[students.Count() - 1].Name, Is.EqualTo("Tamara"));
+            Assert.That(students[students.Count() - 1].StartYear, Is.EqualTo(2015));
+        }
+
+        [Test]
+        public void SortingStudentsViaDelegateTest()
         {
             List<Student> students = new List<Student>();
             students.Add(new Student() { Name = "Béla", StartYear = 2012 });
