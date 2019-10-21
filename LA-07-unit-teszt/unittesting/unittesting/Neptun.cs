@@ -15,6 +15,11 @@ namespace unittesting
             this.Students = new List<Student>();
         }
 
+        public int GetStudentNumber
+        {
+            get { return this.Students.Count(); }
+        }
+
         public void AddStudent(Student s)
         {
             this.Students.Add(s);
