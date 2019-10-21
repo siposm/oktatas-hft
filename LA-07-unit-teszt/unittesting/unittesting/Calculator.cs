@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace unittesting
 {
+    public class OverFlow_Exception : Exception { }
+    public class UnderFlow_Exception : Exception { }
+
     public class Calculator // osztály public!
     {
         public string Welcome()
@@ -34,6 +37,19 @@ namespace unittesting
                 throw new DivideByZeroException("nullával osztás");
             else
                 return Math.Round((double)(a / b), 2);
+        }
+
+        public double SpecialMethod(int number)
+        {
+            if (number > 0 && number < 10)
+                return Math.Sin(number);
+            else
+            {
+                if (number < 0)
+                    throw new UnderFlow_Exception();
+                else
+                    throw new OverFlow_Exception();
+            }
         }
     }
 }
