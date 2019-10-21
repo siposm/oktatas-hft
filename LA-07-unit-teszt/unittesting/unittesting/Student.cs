@@ -12,6 +12,11 @@ namespace unittesting
         public string Name { get; set; }
         public int StartYear { get; set; }
 
+        public char GetFirstCharacter
+        {
+            get { return char.ToUpper(this.Name[0]); }
+        }
+
         public int CompareTo(object obj)
         {
             return this.StartYear.CompareTo((obj as Student).StartYear);

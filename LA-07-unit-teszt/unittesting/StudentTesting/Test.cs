@@ -27,6 +27,13 @@ namespace StudentTesting
         }
 
         [Test]
+        public void StudentFirstCharacterTest()
+        {
+            Student s = new Student() { Name = "Lajos" };
+            Assert.That(s.GetFirstCharacter, Is.EqualTo('L'));
+        }
+
+        [Test]
         public void StudentObjectThrowsTest()
         {
             Student s = new Student();
