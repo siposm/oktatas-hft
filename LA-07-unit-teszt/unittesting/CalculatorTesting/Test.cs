@@ -60,5 +60,20 @@ namespace CalculatorTesting
             double result = calc.Division(10, 3);
             Assert.That(result, Is.EqualTo(10 / 3));
         }
+
+        [Test]
+        public void DivisionExceptionTest()
+        {
+            Calculator calc = new Calculator();
+            Assert.That(() => calc.Division(10, 0), Throws.TypeOf<DivideByZeroException>());
+            // () >> nulla db argumentumú delegált
+        }
+
+        [Test]
+        public void DivisionException2Test()
+        {
+            Calculator calc = new Calculator();
+            Assert.Throws<DivideByZeroException>( () => calc.Division(10, 0));
+        }
     }
 }
