@@ -27,7 +27,6 @@ namespace CalculatorTesting
     [TestFixture]
     public class CalculatorTest
     {
-
         [Test]
         public void AdditionTest()
         {
@@ -40,7 +39,6 @@ namespace CalculatorTesting
             // ASSERT = ellenőrzés
             Assert.That(x, Is.EqualTo(30));
         }
-
 
         [Test]
         public void MultiplicationTest()
@@ -55,6 +53,12 @@ namespace CalculatorTesting
             Assert.That(x, Is.EqualTo(200));
         }
 
-
+        [Test]
+        public void DivisionResultTest()
+        {
+            Calculator calc = new Calculator();
+            double result = calc.Division(10, 3);
+            Assert.That(result, Is.EqualTo(10 / 3));
+        }
     }
 }
