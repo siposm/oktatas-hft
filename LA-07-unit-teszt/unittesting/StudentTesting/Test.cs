@@ -10,7 +10,7 @@ using unittesting;
 namespace StudentTesting
 {
     [TestFixture]
-    public class Test
+    public class StudentTest
     {
 
         [Test]

@@ -25,7 +25,7 @@ namespace CalculatorTesting
      * */
 
     [TestFixture]
-    public class Test
+    public class CalculatorTest
     {
 
         [Test]

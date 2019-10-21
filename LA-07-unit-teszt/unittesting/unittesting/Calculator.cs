@@ -22,5 +22,13 @@ namespace unittesting
         {
             return a * b;
         }
+
+        public double Division(int a, int b)
+        {
+            if (b == 0)
+                throw new DivideByZeroException("nullával osztás");
+            else
+                return Math.Round((double)(a / b), 2);
+        }
     }
 }
