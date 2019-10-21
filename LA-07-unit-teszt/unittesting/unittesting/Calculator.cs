@@ -35,7 +35,5 @@ namespace unittesting
             else
                 return Math.Round((double)(a / b), 2);
         }
-
-        public 
     }
 }

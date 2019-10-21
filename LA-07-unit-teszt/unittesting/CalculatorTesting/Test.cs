@@ -41,15 +41,19 @@ namespace CalculatorTesting
         }
 
         [Test]
+        public void SubtractionTest()
+        {
+            Calculator calc = new Calculator();
+            int result = calc.Subtraction(3, 10);
+            Assert.That(result, Is.Negative);
+            Assert.That(result, Is.EqualTo(-7));
+        }
+
+        [Test]
         public void MultiplicationTest()
         {
-            // ARRANGE = előkészítés
             Calculator calc = new Calculator();
-
-            // ACT = 1 db fgv lefuttatása
             int x = calc.Multiplication(10, 20);
-
-            // ASSERT = ellenőrzés
             Assert.That(x, Is.EqualTo(200));
         }
 
