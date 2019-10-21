@@ -18,6 +18,11 @@ namespace unittesting
             return a + b;
         }
 
+        public int Subtraction(int a, int b)
+        {
+            return a - b;
+        }
+
         public int Multiplication(int a, int b)
         {
             return a * b;
@@ -30,5 +35,7 @@ namespace unittesting
             else
                 return Math.Round((double)(a / b), 2);
         }
+
+        public 
     }
 }
