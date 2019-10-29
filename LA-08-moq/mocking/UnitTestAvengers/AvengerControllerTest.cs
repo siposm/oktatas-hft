@@ -72,13 +72,13 @@ namespace UnitTestAvengers
             Avenger ave1 = avengerController.SelectAvengerByIndex(0);
             Avenger ave2 = avengerController.SelectAvengerByIndex(1);
 
+            Assert.NotNull(ave1);
+
             Assert.That(ave1.Name == "Captain America");
             Assert.That(ave1.Superpower == true);
 
             Assert.That(ave2.Name == "Thor");
             Assert.That(ave2.Gender == false);
-
-            Assert.NotNull(ave1);
 
             
             // referenciás érdekesség
@@ -108,9 +108,7 @@ namespace UnitTestAvengers
         public void Test_AvengersAssemble()
         {
             foreach (Avenger avenger in avengerController.AvengersAssemble())
-            {
                 Assert.IsTrue(avenger.Superpower);
-            }
         }
 
         [Test]
@@ -129,7 +127,7 @@ namespace UnitTestAvengers
         [Test]
         public void Test_SelectAvengerByIndex_Verify()
         {
-            avengerController.SelectAvengerByIndex(2); // számít a számérték!
+            avengerController.SelectAvengerByIndex(2);
 
             mockRepo.Verify(x => x.GetAvengers(), Times.Exactly(2));
         }
