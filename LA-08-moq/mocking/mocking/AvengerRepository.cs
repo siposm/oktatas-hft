@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace mocking
 {
-    public class Repository : IRepository
+    public class AvengerRepository : IRepository
     {
         AvengerDatabaseEntities db;
 
-        public Repository()
+        public AvengerRepository()
         {
             db = new AvengerDatabaseEntities();
         }
