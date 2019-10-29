@@ -33,12 +33,8 @@ namespace mocking
             if(avenger != null)
             {
                 foreach (Avenger item in repo.GetAvengers())
-                {
                     if (item.Name == avenger.Name)
-                    {
                         exist = true;
-                    }
-                }
 
                 if (!exist)
                     repo.AddAvenger(avenger);
@@ -51,15 +47,10 @@ namespace mocking
 
         public Avenger SelectAvengerByIndex(int index)
         {
-            // vizsgálat
-            if(index >= 0)
-            {
-                if(index < repo.GetAvengers().Count)
-                {
-                    // hívás
-                    return repo.GetAvengers()[index];
-                }
-            }
+            if(index >= 0) // vizsgálat
+                if (index < repo.GetAvengers().Count)
+                    return repo.GetAvengers()[index]; // hívás
+
             throw new IndexOutOfRangeException("Not valid index was given.");
         }
 
