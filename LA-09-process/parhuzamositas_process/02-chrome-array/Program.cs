@@ -11,7 +11,6 @@ namespace _02_chrome_array
     {
         static void Main(string[] args)
         {
-            string url = "http://users.nik.uni-obuda.hu/siposm/";
             Random r = new Random();
             Process[] procs = new Process[5];
 
@@ -21,12 +20,20 @@ namespace _02_chrome_array
                 {
                     StartInfo = new ProcessStartInfo()
                     {
-                        FileName = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
-                        Arguments = url
+                        FileName = @"D:\CODES\oktatas-whp-19201\LA-09-process\parhuzamositas_process\Counter\bin\Debug\Counter.exe",
+                        Arguments = r.Next(10, 20) + " " + r.Next(30, 40),
+                        RedirectStandardOutput = true, // próba: = false
+                        UseShellExecute = false
                     }
                 };
 
                 procs[i].Start();
+            }
+
+            for (int i = 0; i < procs.Length; i++)
+            {
+                procs[i].WaitForExit(); // >> lefuttatáskor érdemes figyelni, hogy mikor éppen hogy alakul a process végrehajtásának ideje
+                Console.WriteLine(procs[i].StandardOutput.ReadToEnd());
             }
         }
     }

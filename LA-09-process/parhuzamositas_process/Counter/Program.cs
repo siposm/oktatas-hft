@@ -16,8 +16,8 @@ namespace Counter
             int sum = 0;
             for (int i = min; i <= max; i++)
             {
-                Console.WriteLine("[i]: " + i);
-                System.Threading.Thread.Sleep(1000);
+                Console.WriteLine($"[{i}]");
+                System.Threading.Thread.Sleep(250); // negyed msp
                 sum += i;
             }
             Console.WriteLine(" > SUM: " + sum);
