@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-chrome-array", "03-chrom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-chrome-basics", "01-chrome-basics\01-chrome-basics.csproj", "{BDDCE51A-A7F8-4431-B3A8-887DD4B15301}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05-event_binding", "05-event_binding\05-event_binding.csproj", "{ED542B1E-3286-4E63-9546-AA9CC1834BEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{BDDCE51A-A7F8-4431-B3A8-887DD4B15301}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDDCE51A-A7F8-4431-B3A8-887DD4B15301}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDDCE51A-A7F8-4431-B3A8-887DD4B15301}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED542B1E-3286-4E63-9546-AA9CC1834BEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED542B1E-3286-4E63-9546-AA9CC1834BEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED542B1E-3286-4E63-9546-AA9CC1834BEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED542B1E-3286-4E63-9546-AA9CC1834BEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

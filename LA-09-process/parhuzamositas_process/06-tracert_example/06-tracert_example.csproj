@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{ED542B1E-3286-4E63-9546-AA9CC1834BEF}</ProjectGuid>
+    <ProjectGuid>{2C7E1C1C-8812-4DE4-B915-FB0B6453F0CC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_05_event_binding</RootNamespace>
-    <AssemblyName>05-event_binding</AssemblyName>
+    <RootNamespace>_06_tracert_example</RootNamespace>
+    <AssemblyName>_06_tracert_example</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
