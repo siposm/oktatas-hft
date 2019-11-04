@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _03_chrome_array
+namespace _03_process_array
 {
     class Program
     {
@@ -20,8 +20,8 @@ namespace _03_chrome_array
                 {
                     StartInfo = new ProcessStartInfo()
                     {
-                        FileName = @"D:\CODES\oktatas-whp-19201\LA-09-process\parhuzamositas_process\Counter\bin\Debug\Counter.exe",
-                        Arguments = r.Next(10, 20) + " " + r.Next(30, 40),
+                        FileName = @"D:\CODES\oktatas-whp-19201\LA-09-process\parhuzamositas_process\02-counter\bin\Debug\02-counter.exe",
+                        Arguments = r.Next(10) + " " + r.Next(11,20),
                         RedirectStandardOutput = true, // próba: = false
                         UseShellExecute = false
                     }
@@ -32,7 +32,7 @@ namespace _03_chrome_array
 
             for (int i = 0; i < procs.Length; i++)
             {
-                procs[i].WaitForExit(); // >> lefuttatáskor érdemes figyelni, hogy mikor éppen hogy alakul a process végrehajtásának ideje
+                procs[i].WaitForExit();
                 Console.WriteLine(procs[i].StandardOutput.ReadToEnd());
             }
         }

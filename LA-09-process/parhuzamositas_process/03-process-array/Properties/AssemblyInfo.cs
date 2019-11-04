@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("03-chrome-array")]
+[assembly: AssemblyTitle("03-process-array")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("03-chrome-array")]
+[assembly: AssemblyProduct("03-process-array")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("04ba2034-8cc5-47e4-a56d-20579926c03c")]
+[assembly: Guid("fcbdeeac-db47-4ec1-b63c-2633bcdfaa90")]
 
 // Version information for an assembly consists of the following four values:
 //
