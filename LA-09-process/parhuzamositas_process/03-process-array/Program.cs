@@ -9,6 +9,16 @@ namespace _03_process_array
 {
     class Program
     {
+        static void SyncPoint(Process[] procs)
+        {
+            for (int i = 0; i < procs.Length; i++)
+            {
+                procs[i].WaitForExit();
+                Console.WriteLine(procs[i].StandardOutput.ReadToEnd());
+            }
+            // --- at this point, all of the processes will be done ~ synced
+        }
+
         static void Main(string[] args)
         {
             Random r = new Random();
@@ -30,11 +40,7 @@ namespace _03_process_array
                 procs[i].Start();
             }
 
-            for (int i = 0; i < procs.Length; i++)
-            {
-                procs[i].WaitForExit();
-                Console.WriteLine(procs[i].StandardOutput.ReadToEnd());
-            }
+            SyncPoint(procs);
         }
     }
 }

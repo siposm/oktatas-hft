@@ -11,8 +11,6 @@ namespace _09_fileProcessor_main
     {
         static void Main(string[] args)
         {
-            // D:\CODES\oktatas-whp-19201\LA-09-process\parhuzamositas_process\08-fileProcessor\bin\Debug\08-fileProcessor.exe
-
             string[] inputs = new string[] {
                 "file1.txt",
                 "file2.txt",
