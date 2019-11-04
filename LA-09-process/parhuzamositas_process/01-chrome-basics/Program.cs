@@ -23,7 +23,7 @@ namespace _01_chrome_basics
                 p.StartInfo.Arguments = url;
                 p.Start();
 
-                System.Threading.Thread.Sleep(1000);
+                //System.Threading.Thread.Sleep(1000);
 
             }
 

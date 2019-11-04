@@ -29,7 +29,6 @@ namespace _05_event_binding
                 p.EnableRaisingEvents = true;
                 p.Exited += P_Exited;
             }
-            Console.ReadLine();
         }
 
         private static void P_Exited(object sender, EventArgs e)
