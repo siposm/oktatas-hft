@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{161ED4B6-C679-4FA7-8283-067687383476}</ProjectGuid>
+    <ProjectGuid>{04BA2034-8CC5-47E4-A56D-20579926C03C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02_chrome_array</RootNamespace>
-    <AssemblyName>02-chrome-array</AssemblyName>
+    <RootNamespace>_03_chrome_array</RootNamespace>
+    <AssemblyName>03-chrome-array</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

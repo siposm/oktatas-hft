@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _02_chrome_array
+namespace _03_chrome_array
 {
     class Program
     {

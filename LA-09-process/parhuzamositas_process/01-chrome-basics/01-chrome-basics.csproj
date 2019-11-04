@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B58D8FD1-0C31-49C4-865C-0507CBAF9D5C}</ProjectGuid>
+    <ProjectGuid>{BDDCE51A-A7F8-4431-B3A8-887DD4B15301}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>parhuzamositas_process</RootNamespace>
-    <AssemblyName>parhuzamositas_process</AssemblyName>
+    <RootNamespace>_01_chrome_basics</RootNamespace>
+    <AssemblyName>01-chrome-basics</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

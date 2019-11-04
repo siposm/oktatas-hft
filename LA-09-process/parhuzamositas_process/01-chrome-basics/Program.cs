@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace parhuzamositas_process
+namespace _01_chrome_basics
 {
     class Program
     {
@@ -28,7 +28,8 @@ namespace parhuzamositas_process
             }
 
 
-            Console.Read();
+            foreach (var p in Process.GetProcesses().OrderBy(x => x.Id))
+                Console.WriteLine(string.Format("#{0}\t {1}", p.Id, p.ProcessName));
         }
     }
 }
