@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "parhuzamositas_process", "parhuzamositas_process\parhuzamositas_process.csproj", "{B58D8FD1-0C31-49C4-865C-0507CBAF9D5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-chrome-basic", "parhuzamositas_process\01-chrome-basic.csproj", "{B58D8FD1-0C31-49C4-865C-0507CBAF9D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-chrome-array", "02-chrome-array\03-chrome-array.csproj", "{161ED4B6-C679-4FA7-8283-067687383476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-Counter", "Counter\02-Counter.csproj", "{4104E903-FC0C-4955-AEF7-49FA8807FA82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B58D8FD1-0C31-49C4-865C-0507CBAF9D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B58D8FD1-0C31-49C4-865C-0507CBAF9D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B58D8FD1-0C31-49C4-865C-0507CBAF9D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{161ED4B6-C679-4FA7-8283-067687383476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{161ED4B6-C679-4FA7-8283-067687383476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{161ED4B6-C679-4FA7-8283-067687383476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{161ED4B6-C679-4FA7-8283-067687383476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4104E903-FC0C-4955-AEF7-49FA8807FA82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4104E903-FC0C-4955-AEF7-49FA8807FA82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4104E903-FC0C-4955-AEF7-49FA8807FA82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4104E903-FC0C-4955-AEF7-49FA8807FA82}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

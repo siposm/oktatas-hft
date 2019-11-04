@@ -18,6 +18,7 @@ namespace parhuzamositas_process
                 Process p = new Process();
                 p.StartInfo = new ProcessStartInfo();
                 p.StartInfo.FileName = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe";
+                // filename = url esetén is az alapértelmezett program nyílik meg
 
                 p.StartInfo.Arguments = url;
                 p.Start();
