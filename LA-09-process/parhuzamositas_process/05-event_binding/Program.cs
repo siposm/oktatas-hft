@@ -40,16 +40,26 @@ namespace _05_event_binding
 
                 p.EnableRaisingEvents = true;
                 p.Start();
-
+                p.Exited += P_Exited; // (A) verzió: eseményen keresztül olvasom az adatokat
             }
 
             foreach (var item in procs) item.WaitForExit(); // sync
 
-            foreach (var p in procs)
-            {
-                Console.WriteLine(p.StandardOutput.ReadToEnd());
-                Console.WriteLine("\n-------------------\n");
-            }
+            // (B) verzió: elemenként kiolvasom az adatokat
+            //foreach (var p in procs)
+            //{
+            //    Console.WriteLine(p.StandardOutput.ReadToEnd());
+            //    Console.WriteLine("\n-------------------\n");
+            //}
+
+            // A/B verzió: egyszerre csak az egyik legyen használva, a másikat kommentezd ki
+            // tehát vagy az eseményen keresztül olvasd a kimenetet (A)
+            // vagy elemenként (B)
+        }
+
+        private static void P_Exited(object sender, EventArgs e)
+        {
+            Console.WriteLine((sender as Process).StandardOutput.ReadToEnd());
         }
     }
 }
