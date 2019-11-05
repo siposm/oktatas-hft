@@ -13,27 +13,43 @@ namespace _05_event_binding
         {
             string[] hosts = new string[]
                {
-                "users.nik.uni-obuda.hu",
-                "index.hu",
-                "google.com"
+                "www.gitlab.com",
+                "www.index.hu",
+                "www.google.com"
                };
 
-            foreach (var h in hosts)
-            {
-                Process p = Process.Start(new ProcessStartInfo("ping", "-n 10 " + h)
-                {
-                    CreateNoWindow = true,
-                    UseShellExecute = false,
-                    RedirectStandardOutput = true
-                });
-                p.EnableRaisingEvents = true;
-                p.Exited += P_Exited;
-            }
-        }
+            Process[] procs = new Process[hosts.Length];
 
-        private static void P_Exited(object sender, EventArgs e)
-        {
-            Console.WriteLine((sender as Process).StandardOutput.ReadToEnd());
+            for (int i = 0; i < procs.Length; i++)
+            {
+                // 1 soros verzió
+                //Process.Start("CMD.exe", "/c ping www.google.com -t");
+
+                // Megjegyzés: van beépített Ping osztály...
+                // using System.Net.NetworkInformation
+
+                Process p = new Process();
+                procs[i] = p;
+                
+                p.StartInfo.FileName = "cmd.exe";
+                p.StartInfo.Arguments = $"/c ping {hosts[i]}";
+
+                //p.StartInfo.CreateNoWindow = true;
+                p.StartInfo.UseShellExecute = false;
+                p.StartInfo.RedirectStandardOutput = true;
+
+                p.EnableRaisingEvents = true;
+                p.Start();
+
+            }
+
+            foreach (var item in procs) item.WaitForExit(); // sync
+
+            foreach (var p in procs)
+            {
+                Console.WriteLine(p.StandardOutput.ReadToEnd());
+                Console.WriteLine("\n-------------------\n");
+            }
         }
     }
 }
