@@ -43,18 +43,25 @@ namespace _05_event_binding
                 p.Exited += P_Exited; // (A) verzió: eseményen keresztül olvasom az adatokat
             }
 
-            foreach (var item in procs) item.WaitForExit(); // sync
+            Console.ReadLine(); // (A) verzió esetén kell, hogy ne "haljon el" a főprogram mire a processek exitelnek
+
 
             // (B) verzió: elemenként kiolvasom az adatokat
+            //foreach (var item in procs) item.WaitForExit(); // sync
             //foreach (var p in procs)
             //{
             //    Console.WriteLine(p.StandardOutput.ReadToEnd());
             //    Console.WriteLine("\n-------------------\n");
             //}
 
-            // A/B verzió: egyszerre csak az egyik legyen használva, a másikat kommentezd ki
-            // tehát vagy az eseményen keresztül olvasd a kimenetet (A)
-            // vagy elemenként (B)
+
+            // A/B verzió: egyszerre csak az egyik legyen használva, a másikat kommentezd ki;
+            // tehát vagy az eseményen keresztül olvasd a kimenetet (A)*
+            // vagy elemenként (B).
+
+            // * ez esetben kell egy blokkoló utasítás ami meggátolja, hogy a program.cs fő szála leálljon.
+            // Ha ez nincs (kommentezd ki), akkor előbb végrehajtódik a fő szál (press any key to continue...)
+            // minthogy az elindított process-ek exitelnének...
         }
 
         private static void P_Exited(object sender, EventArgs e)
