@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<people>
+<person>
+	<name>Tony Stark</name>
+	<email>tony.stark@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Matematikai Intézet</dept>
+	<rank>polihisztor</rank>
+	<phone>+36 (1) 666-1111</phone>
+	<room>BA.0.00</room>
+	<friends>
+		<person>
+			<name>Bruce Banner</name>
+			<email>bruce.banner@gmail.com</email>
+			<dept>Alkalmazott Matematikai Intézet</dept>
+			<rank>polihisztor</rank>
+			<phone>+36 (1) 666-1111</phone>
+			<room>BA.0.00</room>
+		</person>
+		<person>
+			<name>Dr. Sergyán Szabolcs</name>
+			<email>sergyan.szabolcs@nik.uni-obuda.hu</email>
+			<dept>Alkalmazott Informatikai Intézet</dept>
+			<rank>egyetemi docens, intézetigazgató, kari Erasmus koordinátor</rank>
+			<phone>+36 (1) 666-5550</phone>
+			<room>BA.3.13</room>
+		</person>	
+	</friends>
+</person>
+<person>
+	<name>Thanos</name>
+	<email>thanos@neptun.com</email>
+	<dept>Titan</dept>
+	<rank>villain</rank>
+	<phone>+36 (1) 666-1111</phone>
+	<room>BA.0.11</room>
+</person>
+<person>
+	<name>Szabó-Resch Miklós Zsolt</name> 
+	<email>szabo.zsolt@nik.uni-obuda.hu</email> 
+	<dept>Alkalmazott Informatikai Intézet</dept> 
+	<rank>ügyvivő szakértő</rank> 
+	<phone>+36 (1) 666-5582</phone> 
+	<room>BA.3.02</room> 
+</person>
+<person>
+	<name>Sziklai Zsolt</name>
+	<email>sziklai.zsolt@nik.uni-obuda.hu</email>
+	<dept>Alkalmazott Informatikai Intézet</dept>
+	<rank>tanszéki mérnök</rank>
+	<phone>+36 (1) 666-5587</phone>
+	<room>BA.3.22</room>
+</person>
+</people>
