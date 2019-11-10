@@ -12,5 +12,6 @@ namespace mocking
 
         List<Avenger> GetAvengers();
         void AddAvenger(Avenger avenger);
+        void GetRecursivelySomething();
     }
 }

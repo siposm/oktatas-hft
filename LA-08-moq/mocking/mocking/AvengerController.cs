@@ -77,5 +77,13 @@ namespace mocking
             else
                 throw new Exception("Avengers list is empty.");
         }
+
+        public int GetRecursiveMethod(int number)
+        {
+            for (int i = 0; i < number; i++)
+                repo.GetRecursivelySomething();
+
+            return new Random().Next(100);
+        }
     }
 }
