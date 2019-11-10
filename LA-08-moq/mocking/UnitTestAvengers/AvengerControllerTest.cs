@@ -143,5 +143,23 @@ namespace UnitTestAvengers
             // repo AddAvenger metódusa!
             mockRepo.Verify(x => x.AddAvenger(It.IsAny<Avenger>()), Times.Once());
         }
+
+        [Test]
+        public void Test_CountRecursiveForExactNumber()
+        {
+            int number = 10;
+            avengerController.GetRecursiveMethod(number);
+            mockRepo.Verify( x => x.GetRecursivelySomething(), Times.Exactly(number) );
+        }
+
+        [Test]
+        public void Test_CountRecursiveForBetweenValues()
+        {
+            int min = 10;
+            int max = 21;
+            int number = new Random().Next(min, max);
+            avengerController.GetRecursiveMethod(number);
+            mockRepo.Verify(x => x.GetRecursivelySomething(), Times.Between(min, max, Range.Inclusive));
+        }
     }
 }
