@@ -21,6 +21,11 @@ namespace mocking
             return repo.GetAvengers();
         }
 
+        public IEnumerable<Avenger> GetAvengersFromRealDB()
+        {
+            return repo.GetRealDatabaseRecords();
+        }
+
         public List<Avenger> SelectAvengersByGender(bool gender)
         {
             return repo.GetAvengers().Where( x => x.Gender == gender).ToList();

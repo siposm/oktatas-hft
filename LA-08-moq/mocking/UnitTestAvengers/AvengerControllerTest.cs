@@ -59,6 +59,9 @@ namespace UnitTestAvengers
             avengerController = new AvengerController(mockRepo.Object);
         }
 
+
+
+
         [Test]
         public void Test_SelectAvengersByGender()
         {
@@ -169,6 +172,12 @@ namespace UnitTestAvengers
         {
             int x = avengerController.GetRecursiveMethod(new Random().Next(10));
             Assert.That( x, Is.InRange(0,100));
+        }
+
+        [Test]
+        public void Test_MockRepoException()
+        {
+            Assert.Throws<NullReferenceException>(() => avengerController.GetAvengersFromRealDB());
         }
     }
 }
