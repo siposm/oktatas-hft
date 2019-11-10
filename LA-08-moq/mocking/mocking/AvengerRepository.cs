@@ -30,5 +30,10 @@ namespace mocking
         {
             // do nothing
         }
+
+        public IEnumerable<Avenger> GetRealDatabaseRecords()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

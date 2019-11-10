@@ -54,6 +54,8 @@ namespace UnitTestAvengers
                 new Avenger() { Name = "Iron Man", Gender = false, Superpower = false, Strength = 16 }
             });
 
+            mockRepo.Setup(x => x.GetRealDatabaseRecords()).Throws<NullReferenceException>();
+
             avengerController = new AvengerController(mockRepo.Object);
         }
 
@@ -136,7 +138,7 @@ namespace UnitTestAvengers
         public void Test_AddAvenger_Verify()
         {
             // egy metódust meghívva konkrét értékkel tesztelésként (AddAvenger a controllerben)
-            // ami tovább hívja a repo AddAvenger metódusát (bármilyen értékkel)?
+            // ami tovább hívja a repo AddAvenger metódusát (bármilyen értékkel)
 
             avengerController.AddAvenger(new Avenger() { Name = "Test Tony" });
 
@@ -160,6 +162,13 @@ namespace UnitTestAvengers
             int number = new Random().Next(min, max);
             avengerController.GetRecursiveMethod(number);
             mockRepo.Verify(x => x.GetRecursivelySomething(), Times.Between(min, max, Range.Inclusive));
+        }
+
+        [Test]
+        public void Test_CheckRecursiveMethodReturnValue()
+        {
+            int x = avengerController.GetRecursiveMethod(new Random().Next(10));
+            Assert.That( x, Is.InRange(0,100));
         }
     }
 }
