@@ -54,8 +54,13 @@ namespace UnitTestAvengers
                 new Avenger() { Name = "Iron Man", Gender = false, Superpower = false, Strength = 16 }
             });
 
+            mockRepo.Setup(x => x.GetRealDatabaseRecords()).Throws<NullReferenceException>();
+
             avengerController = new AvengerController(mockRepo.Object);
         }
+
+
+
 
         [Test]
         public void Test_SelectAvengersByGender()
@@ -136,12 +141,43 @@ namespace UnitTestAvengers
         public void Test_AddAvenger_Verify()
         {
             // egy metódust meghívva konkrét értékkel tesztelésként (AddAvenger a controllerben)
-            // ami tovább hívja a repo AddAvenger metódusát (bármilyen értékkel)?
+            // ami tovább hívja a repo AddAvenger metódusát (bármilyen értékkel)
 
             avengerController.AddAvenger(new Avenger() { Name = "Test Tony" });
 
             // repo AddAvenger metódusa!
             mockRepo.Verify(x => x.AddAvenger(It.IsAny<Avenger>()), Times.Once());
+        }
+
+        [Test]
+        public void Test_CountRecursiveForExactNumber()
+        {
+            int number = 10;
+            avengerController.GetRecursiveMethod(number);
+            mockRepo.Verify( x => x.GetRecursivelySomething(), Times.Exactly(number) );
+        }
+
+        [Test]
+        public void Test_CountRecursiveForBetweenValues()
+        {
+            int min = 10;
+            int max = 21;
+            int number = new Random().Next(min, max);
+            avengerController.GetRecursiveMethod(number);
+            mockRepo.Verify(x => x.GetRecursivelySomething(), Times.Between(min, max, Range.Inclusive));
+        }
+
+        [Test]
+        public void Test_CheckRecursiveMethodReturnValue()
+        {
+            int x = avengerController.GetRecursiveMethod(new Random().Next(10));
+            Assert.That( x, Is.InRange(0,100));
+        }
+
+        [Test]
+        public void Test_MockRepoException()
+        {
+            Assert.Throws<NullReferenceException>(() => avengerController.GetAvengersFromRealDB());
         }
     }
 }

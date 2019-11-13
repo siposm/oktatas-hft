@@ -25,5 +25,15 @@ namespace mocking
             db.Avenger.Add(avenger);
             db.SaveChanges();
         }
+
+        public void GetRecursivelySomething()
+        {
+            // do nothing
+        }
+
+        public IEnumerable<Avenger> GetRealDatabaseRecords()
+        {
+            return null;
+        }
     }
 }
