@@ -21,6 +21,11 @@ namespace mocking
             return repo.GetAvengers();
         }
 
+        public IEnumerable<Avenger> GetAvengersFromRealDB()
+        {
+            return repo.GetRealDatabaseRecords();
+        }
+
         public List<Avenger> SelectAvengersByGender(bool gender)
         {
             return repo.GetAvengers().Where( x => x.Gender == gender).ToList();
@@ -76,6 +81,14 @@ namespace mocking
                 return repo.GetAvengers().OrderByDescending( x => x.Strength).Take(number).ToList();
             else
                 throw new Exception("Avengers list is empty.");
+        }
+
+        public int GetRecursiveMethod(int number)
+        {
+            for (int i = 0; i < number; i++)
+                repo.GetRecursivelySomething();
+
+            return new Random().Next(100);
         }
     }
 }
