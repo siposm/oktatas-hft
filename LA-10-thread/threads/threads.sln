@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "threads", "threads\threads.csproj", "{694AAD26-B261-438C-A0F4-29C8E585174F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-thread-alapok", "01-thread-alapok\01-thread-alapok.csproj", "{AF12FC6E-D717-4392-B8FB-60CE5FD8DB5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-szoveges-allomany", "02-szoveges-allomany\02-szoveges-allomany.csproj", "{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{694AAD26-B261-438C-A0F4-29C8E585174F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{694AAD26-B261-438C-A0F4-29C8E585174F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{694AAD26-B261-438C-A0F4-29C8E585174F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{694AAD26-B261-438C-A0F4-29C8E585174F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF12FC6E-D717-4392-B8FB-60CE5FD8DB5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF12FC6E-D717-4392-B8FB-60CE5FD8DB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF12FC6E-D717-4392-B8FB-60CE5FD8DB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF12FC6E-D717-4392-B8FB-60CE5FD8DB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

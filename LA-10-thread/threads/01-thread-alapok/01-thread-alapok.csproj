@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{694AAD26-B261-438C-A0F4-29C8E585174F}</ProjectGuid>
+    <ProjectGuid>{AF12FC6E-D717-4392-B8FB-60CE5FD8DB5B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>threads</RootNamespace>
-    <AssemblyName>threads</AssemblyName>
+    <RootNamespace>_01_thread_alapok</RootNamespace>
+    <AssemblyName>01-thread-alapok</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
