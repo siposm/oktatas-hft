@@ -27,7 +27,6 @@ namespace _04_RSS_reader
 
         public static List<RSS> news = new List<RSS>();
 
-
         public static void Open(string url)
         {
             Process p = new Process();
@@ -42,6 +41,7 @@ namespace _04_RSS_reader
         {
             int id = (int)o;
             xdocs[id] = XDocument.Load(urls[id]);
+
             foreach (var item in xdocs[id].Descendants("item"))
             {
                 news.Add(new RSS()
