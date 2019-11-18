@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01-thread-alapok", "01-thre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02-szoveges-allomany", "02-szoveges-allomany\02-szoveges-allomany.csproj", "{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03-task-alapok", "03-task-alapok\03-task-alapok.csproj", "{64E6F3A6-1E64-4BD0-A363-C6FDBA36B692}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{620D71BA-1FF5-4341-BEDC-DD024C2AFD69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E6F3A6-1E64-4BD0-A363-C6FDBA36B692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E6F3A6-1E64-4BD0-A363-C6FDBA36B692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E6F3A6-1E64-4BD0-A363-C6FDBA36B692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E6F3A6-1E64-4BD0-A363-C6FDBA36B692}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
