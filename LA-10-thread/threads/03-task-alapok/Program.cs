@@ -17,8 +17,11 @@ namespace _03_task_alapok
             Task[] tasks = new Task[10];
             for (int i = 0; i < tasks.Length; i++)
             {
+                // new Task ( Action delegate )
                 tasks[i] = new Task(Count, i);
                 tasks[i].Start();
+
+                // task.run vs task.start !
             }
 
             // sync
