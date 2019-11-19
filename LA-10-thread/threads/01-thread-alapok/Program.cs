@@ -7,48 +7,12 @@ using System.Threading.Tasks;
 
 namespace _01_thread_alapok
 {
-    class Ember
-    {
-        public string Nev { get; set; }
-    }
-
     class Program
     {
         static Random r = new Random();
 
         static void Main(string[] args)
         {
-            Task<string> t1 = new Task<string>(() =>
-           {
-               Thread.Sleep(1000);
-               return "alma";
-           });
-            t1.Start();
-
-            Console.WriteLine(t1.Result);
-
-            Task<Ember> t2 = Task.Run(() =>
-           {
-               Thread.Sleep(1000);
-               return new Ember() { Nev = "Lajos" };
-           });
-            t2.ContinueWith<int>(x =>
-            {
-                Console.WriteLine("Vége a <t2> task-nak.");
-                return x.Id;
-            }).ContinueWith(x => Console.WriteLine("ID: " + x.Id));
-
-            // az alsó rész megírása után komment ezt ki / be !!
-            // result esetén meg kell várni az eredményt, tehát olyan mintha a .wait-et is meghívnánk
-            //t2.Wait();
-            Console.WriteLine(t2.Result);
-
-
-
-            // --------------------------------------------------------------------
-
-
-
             Thread[] threads = new Thread[10];
 
             for (int i = 0; i < threads.Length; i++)
