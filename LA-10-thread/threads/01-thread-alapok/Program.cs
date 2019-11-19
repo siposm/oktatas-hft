@@ -32,9 +32,18 @@ namespace _01_thread_alapok
                Thread.Sleep(1000);
                return new Ember() { Nev = "Lajos" };
            });
-            t2.ContinueWith(x => Console.WriteLine($"Vége a t2 [ID: {x.Id}] task-nak."));
+            t2.ContinueWith<int>(x =>
+            {
+                Console.WriteLine("Vége a <t2> task-nak.");
+                return x.Id;
+            }).ContinueWith(x => Console.WriteLine("ID: " + x.Id));
 
+            // az alsó rész megírása után komment ezt ki / be !!
+            // result esetén meg kell várni az eredményt, tehát olyan mintha a .wait-et is meghívnánk
+            //t2.Wait();
             Console.WriteLine(t2.Result);
+
+
 
             // --------------------------------------------------------------------
 

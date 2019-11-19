@@ -17,7 +17,7 @@ namespace _02_szoveges_allomany
 
     class DataProcessor
     {
-        public void Process(object o)
+        public static void Process(object o)
         {
             DataTransfer dt = (o as DataTransfer);
 
@@ -36,7 +36,7 @@ namespace _02_szoveges_allomany
             sw.Close();
         }
 
-        public void CollectData(string[] outputs)
+        public static void CollectData(string[] outputs)
         {
             string full = "";
             for (int i = 0; i < outputs.Length; i++)
@@ -84,7 +84,7 @@ namespace _02_szoveges_allomany
 
             for (int i = 0; i < threads.Length; i++)
             {
-                threads[i] = new Thread(new DataProcessor().Process);
+                threads[i] = new Thread(DataProcessor.Process);
                 threads[i].Start(new DataTransfer()
                 {
                     OpenFile = inputs[i],
@@ -98,7 +98,7 @@ namespace _02_szoveges_allomany
                 threads[i].Join();
 
             // biztosan minden kimeneti fájl előállt már
-            new DataProcessor().CollectData(outputs);
+            DataProcessor.CollectData(outputs);
         }
     }
 }
