@@ -28,16 +28,16 @@ namespace _02_lock_2
         {
             //eloszor lock nelkul, aztan:
             //lock (lockObject)
-            {
-                for (int i = 0; i < 50000; i++)
-                {
-                    sum = sum + 1;
-                }
-            }
+            //{
+            //    for (int i = 0; i < 50000; i++)
+            //    {
+            //        sum = sum + 1;
+            //    }
+            //}
 
             //vegul az egesz cserelheto arra hogy:
-            //for (int i = 0; i < 50000; i++)
-            //  Interlocked.Increment(ref sum); //atomi muvelet : nem megszakithato
+            for (int i = 0; i < 50000; i++)
+                Interlocked.Increment(ref sum); //atomi muvelet : nem megszakithato
             //nyilvan a cikluson belul, de lock nelkul
         }
     }
