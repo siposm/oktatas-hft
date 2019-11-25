@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64AE9A59-139D-409C-A6F7-723FE2CA8E1C}</ProjectGuid>
+    <ProjectGuid>{BD17FCFE-03B4-46A1-9F78-443B651C08ED}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02_lock_2</RootNamespace>
-    <AssemblyName>02-lock-2</AssemblyName>
+    <RootNamespace>_05_feladat_1</RootNamespace>
+    <AssemblyName>05-feladat-1</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

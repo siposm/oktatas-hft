@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64AE9A59-139D-409C-A6F7-723FE2CA8E1C}</ProjectGuid>
+    <ProjectGuid>{EA354697-73E9-4CDD-8073-02FAE3100142}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_02_lock_2</RootNamespace>
-    <AssemblyName>02-lock-2</AssemblyName>
+    <RootNamespace>_04_monitor</RootNamespace>
+    <AssemblyName>04-monitor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
