@@ -69,7 +69,7 @@ namespace _02_webstat
                 avgTim += (int)sw.ElapsedMilliseconds;
                 sw.Reset();
 
-                Thread.Sleep(500);
+                Thread.Sleep(500); // DOS...
             }
 
             e.Byte = avgLen / iteration;

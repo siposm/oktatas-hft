@@ -27,7 +27,7 @@ namespace _03_task_alapok
             });
             t1.Start();
 
-            Console.WriteLine(t1.Result);
+            Console.WriteLine("TASK1 RESULT: " + t1.Result);
 
             Task<Ember> t2 = Task.Run(() =>
             {
@@ -38,7 +38,9 @@ namespace _03_task_alapok
             t2.ContinueWith<int>(x =>
             {
                 Console.WriteLine("Vége a <t2> task-nak.");
+                Console.WriteLine("Kapott bemenet: " + x.Result.Nev);
                 return x.Id;
+
             }).ContinueWith(x => Console.WriteLine("ID: " + x.Id)); // ez nem mindig látszódik, .wait-tel meg lehet várni...
 
 
