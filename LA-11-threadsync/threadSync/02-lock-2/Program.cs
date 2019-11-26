@@ -16,10 +16,13 @@ namespace _02_lock_2
         {
             Thread th01 = new Thread(Count);
             Thread th02 = new Thread(Count);
+
             th01.Start();
             th02.Start();
+
             th01.Join();
             th02.Join();
+
             Console.WriteLine("Sum: " + sum);
             Console.ReadLine();
         }

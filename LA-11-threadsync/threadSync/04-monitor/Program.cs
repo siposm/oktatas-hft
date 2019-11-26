@@ -12,7 +12,7 @@ namespace _04_monitor
         static int sum = 0;
         static object lockObject = new object();
 
-        // Példák: https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor?view=netframework-4.8
+        // Egyéb példák: https://docs.microsoft.com/en-us/dotnet/api/system.threading.monitor?view=netframework-4.8
 
         static void Main(string[] args)
         {

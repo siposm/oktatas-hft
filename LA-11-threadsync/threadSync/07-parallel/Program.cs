@@ -11,31 +11,40 @@ namespace _07_parallel
     {
         static void Main(string[] args)
         {
-            //int[] A = new int[] { 2, 4, 6, 8, 3, 1, 5, 7, 2, 0 };
-
-            List<int> A = Enumerable.Range(0, 10).ToList();
-
-            Parallel.For(0, A.Count,
-                i => Console.WriteLine("\t" + A[i])
+            List<int> A = Enumerable.Range(0, 20).ToList();
+            
+            Parallel.For(0, A.Count, i => {
+                    if (A[i] % 2 == 0)
+                        Console.WriteLine("\t" + A[i]);
+                }
             );
 
-            Parallel.For(0, 100, i => Console.Write(i + " "));
+            Parallel.For(0, 20, i => Console.Write(i + " "));
 
             Parallel.ForEach(A, i => Console.Write(i + " "));
 
+            // action delegate-tet / -teket fogad
             Parallel.Invoke(
                 () => Console.WriteLine("A"),
                 () => Console.WriteLine("B"),
                 () => Console.WriteLine("C"),
-                () => Console.WriteLine("D"),
-                () => Console.WriteLine("E")
+                () => Console.WriteLine("D")
             );
 
-            //eddig blokkol
-            Console.WriteLine("Vege");
+            // PLINQ
 
-            foreach (var e in A.AsParallel().Select(x => x))
-                Console.Write(e + " ");
+            int[] C = new int[] { 2, 4, 6, 8, 3, 1, 5, 7, 2, 0 };
+
+            ParallelQuery<int> pq = from x in A.AsParallel()
+                                    where x % 5 == 0
+                                    select x;
+
+            pq.ForAll(i => DoWork(i));
+        }
+
+        static void DoWork(int i)
+        {
+            Console.WriteLine(">> " + i);
         }
     }
 }

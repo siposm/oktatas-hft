@@ -52,10 +52,13 @@ namespace _01_lock
         {
             while (true)
             {
-                //A Lock is a way for us to synchronize between Threads.
+                // A Lock is a way for us to synchronize between Threads.
                 // A lock is a shared object that can be Acquired by a Thread, and also Released.
-                //Once Acquired, other threads can be made to halt execution until the lock is Released.
+                // Once Acquired, other threads can be made to halt execution until the lock is Released.
                 // A lock is usually placed around a critical section, where you want to allow a single Thread at a time.
+                // -
+                // The code between the brackets is executed in a thread-safe manner and will not let
+                // other threads operate on the object being locked until the lock execution is completed.
                 lock (threadLocker)
                 {
                     int _c = counter;
