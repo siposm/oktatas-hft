@@ -13,7 +13,7 @@ namespace _02_webstat
         public string Url { get; set; }
         public int Byte { get; set; }
         public int MilliSec { get; set; }
-        public double Speed { get { return (double)Byte / MilliSec; } }
+        public double Speed { get { return Math.Round((double)Byte / MilliSec, 3); } }
     }
 
     class Program
@@ -56,16 +56,25 @@ namespace _02_webstat
         static void Measure(object o)
         {
             Result e = o as Result;
-            //System.Net.WebClient wc = new System.Net.WebClient();
-            for (int i = 0; i < 50; i++)
+            Stopwatch sw = new Stopwatch();
+            int avgLen = 0;
+            int avgTim = 0;
+            int iteration = 10;
+
+            for (int i = 0; i < iteration; i++)
             {
-                Stopwatch sw = new Stopwatch();
                 sw.Start();
-                e.Byte += (new System.Net.WebClient()).DownloadString(e.Url).Length;
+                avgLen += (new System.Net.WebClient()).DownloadString(e.Url).Length;
                 sw.Stop();
-                e.MilliSec += (int)sw.ElapsedMilliseconds;
-                //Thread.Sleep(100);
+                avgTim += (int)sw.ElapsedMilliseconds;
+                sw.Reset();
+
+                Thread.Sleep(500);
             }
+
+            e.Byte = avgLen / iteration;
+            e.MilliSec = avgTim / iteration;
+            
         }
     }
 }
