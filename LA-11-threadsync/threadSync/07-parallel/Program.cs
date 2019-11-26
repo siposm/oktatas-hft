@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace _07_parallel
@@ -10,8 +11,11 @@ namespace _07_parallel
     {
         static void Main(string[] args)
         {
-            int[] A = new int[] { 2, 4, 6, 8, 3, 1, 5, 7, 2, 0 };
-            Parallel.For(0, A.Length,
+            //int[] A = new int[] { 2, 4, 6, 8, 3, 1, 5, 7, 2, 0 };
+
+            List<int> A = Enumerable.Range(0, 10).ToList();
+
+            Parallel.For(0, A.Count,
                 i => Console.WriteLine("\t" + A[i])
             );
 
@@ -26,6 +30,7 @@ namespace _07_parallel
                 () => Console.WriteLine("D"),
                 () => Console.WriteLine("E")
             );
+
             //eddig blokkol
             Console.WriteLine("Vege");
 
