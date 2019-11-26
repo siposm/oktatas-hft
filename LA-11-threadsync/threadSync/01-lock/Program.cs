@@ -40,7 +40,9 @@ namespace _01_lock
                 Thread.Sleep(250);
                 counter = _c + 1;
 
+                Console.ForegroundColor = (ConsoleColor)Thread.CurrentThread.ManagedThreadId;
                 Console.WriteLine($"THREAD ID: {Thread.CurrentThread.ManagedThreadId} VALUE: {_c}");
+                Console.ResetColor();
                 Thread.Sleep(250);
             }
         }
@@ -71,11 +73,11 @@ namespace _01_lock
             //Thread t1 = new Thread(IncrementVersion_1);
             //Thread t2 = new Thread(IncrementVersion_1);
 
-            //Thread t1 = new Thread(IncrementVersion_2);
-            //Thread t2 = new Thread(IncrementVersion_2);
+            Thread t1 = new Thread(IncrementVersion_2);
+            Thread t2 = new Thread(IncrementVersion_2);
 
-            Thread t1 = new Thread(IncrementVersion_3);
-            Thread t2 = new Thread(IncrementVersion_3);
+            //Thread t1 = new Thread(IncrementVersion_3);
+            //Thread t2 = new Thread(IncrementVersion_3);
 
             t1.Start();
             Thread.Sleep(300);

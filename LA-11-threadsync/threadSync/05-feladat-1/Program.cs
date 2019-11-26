@@ -11,6 +11,9 @@ namespace _05_feladat_1
     {
         static void Main(string[] args)
         {
+            //Készítsünk programot, amelyben 4 Task versenyez a konzolra íráson!
+            // Az egyes Taskok külön sorokba, különböző színnel írhatnak.
+
             Task.Run(() => RunConsole(ConsoleColor.Green, 0));
             Task.Run(() => RunConsole(ConsoleColor.Blue, 2));
             Task.Run(() => RunConsole(ConsoleColor.Yellow, 4));
