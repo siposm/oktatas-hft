@@ -27,7 +27,7 @@ namespace _03_task_alapok
             });
             t1.Start();
 
-            Console.WriteLine(t1.Result);
+            Console.WriteLine("TASK1 RESULT: " + t1.Result);
 
             Task<Ember> t2 = Task.Run(() =>
             {
@@ -38,12 +38,14 @@ namespace _03_task_alapok
             t2.ContinueWith<int>(x =>
             {
                 Console.WriteLine("Vége a <t2> task-nak.");
+                Console.WriteLine("Kapott bemenet: " + x.Result.Nev);
                 return x.Id;
-            }).ContinueWith(x => Console.WriteLine("ID: " + x.Id)); // ez nem mindig látszódik, .wait-tel meg lehet várni...
+
+            }).ContinueWith(x => Console.WriteLine("ID: " + x.Id)); // ha szükséges .wait-tel meg lehet várni
 
 
 
-            // result esetén meg kell várni az eredményt, tehát olyan mintha a .wait-et is meghívnánk
+            // result esetén meg kell várni az eredményt, tehát blokkol (mint a wait)
             //t2.Wait();
 
             // az alsó rész megírása után komment ezt ki / be !!
@@ -98,7 +100,7 @@ namespace _03_task_alapok
             for (int i = min; i < max; i++)
             {
                 Console.ForegroundColor = (ConsoleColor)id;
-                Console.WriteLine(i);
+                Console.WriteLine("\t" + i);
             }
         }
     }
