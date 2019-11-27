@@ -42,15 +42,16 @@ namespace _02_webstat
 
             // info 
             for (int i = 0; i < T.Length; i++)
-                Console.WriteLine($"Waiting for {threads[i].Name} test...");
+                WriteOutName(threads[i].Name);
 
             // sync
             for (int i = 0; i < T.Length; i++)
                 threads[i].Join();
 
+            Console.WriteLine("\n\n");
             // returned info
-            for (int i = 0; i < T.Length; i++)
-                Console.WriteLine("\tRESULT:\t{0}: {1} kB/s", T[i].Url, T[i].Speed);
+            foreach (var item in T.OrderBy(x => x.Speed))
+                WriteOutResult(item.Url, item.Speed);
         }
 
         static void Measure(object o)
@@ -59,9 +60,9 @@ namespace _02_webstat
             Stopwatch sw = new Stopwatch();
             int avgLen = 0;
             int avgTim = 0;
-            int iteration = 10;
+            int iterations = 10;
 
-            for (int i = 0; i < iteration; i++)
+            for (int i = 0; i < iterations; i++)
             {
                 sw.Start();
                 avgLen += (new System.Net.WebClient()).DownloadString(e.Url).Length;
@@ -72,9 +73,28 @@ namespace _02_webstat
                 Thread.Sleep(500); // DOS...
             }
 
-            e.Byte = avgLen / iteration;
-            e.MilliSec = avgTim / iteration;
+            e.Byte = avgLen / iterations;
+            e.MilliSec = avgTim / iterations;
             
+        }
+
+        static void WriteOutName(string input)
+        {
+            Console.Write($"> Waiting for ");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"{input}");
+            Console.ResetColor();
+            Console.Write($" test...\n");
+        }
+
+        static void WriteOutResult(string url, double speed)
+        {
+            Console.Write($"> RESULT:");
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.Write($"{url} ");
+            Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.Write($"{speed} kB/s\n");
+            Console.ResetColor();
         }
     }
 }

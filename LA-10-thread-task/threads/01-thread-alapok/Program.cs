@@ -21,11 +21,11 @@ namespace _01_thread_alapok
                 threads[i].Start(i);
             }
 
-            //szinkronizációs pont // kommentezd ki és be
+            // szinkronizációs pont // kommentezd ki és be, hogy lásd az eltérő működés vele / nélküle
             for (int i = 0; i < threads.Length; i++)
                 threads[i].Join();
 
-            //szekvenciális rész
+            // szekvenciális rész innentől
             Console.ResetColor();
             for (int i = 0; i < 5; i++)
                 Console.WriteLine("F I N I S H E D");
