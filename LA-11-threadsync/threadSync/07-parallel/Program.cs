@@ -25,13 +25,16 @@ namespace _07_parallel
             Parallel.ForEach(A, i => Console.Write(i + " "));
 
             // action delegate-tet / -teket fogad
+            Action<int> valami = x => Console.WriteLine(x * 3);
             Parallel.Invoke(
                 () => Console.WriteLine("A"),
                 () => Console.WriteLine("B"),
                 () => Console.WriteLine("C"),
-                () => Console.WriteLine("D")
+                () => Console.WriteLine("D")//,
+                //valami // csak üres bemenetű action-nel működik
             );
 
+            
 
             // ------------------------------------------------------------------------
             // PLINQ
@@ -47,7 +50,7 @@ namespace _07_parallel
 
             Console.WriteLine("\n-\t-\t-\t-\n");
             // ------------------------------------------------------------------------
-            // párhuzamos feldolgozás vs szekvenciális (megéri?)
+            // párhuzamos feldolgozás vs szekvenciális (nem mindig jobb!)
 
             // ESET 1.
             int sum = 0;
@@ -66,11 +69,7 @@ namespace _07_parallel
 
             Console.WriteLine("SEQ TIME:\t" + sw.Elapsed);
 
-            // ez esetben látható, hogy a feladat nem jól párhuzamosítható...
-
-
-
-
+            // >>> ez esetben látható, hogy a feladat nem jól párhuzamosítható...
 
             Console.WriteLine("\n-\t-\t-\t-\n");
             
@@ -89,7 +88,7 @@ namespace _07_parallel
 
             Console.WriteLine("SEQ TIME:\t" + sw.Elapsed);
 
-            // ebben az esetben pedig elég nagy feladatot választva (for iterációszám) végül a párhuzamos megmutatja előnyét
+            // >>> ebben az esetben pedig elég nagy feladatot választva (for iterációszám) végül a párhuzamos megmutatja előnyét
         }
 
         static string Encrypt(string stringToEncrypt = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce aliquam magna ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit.")
