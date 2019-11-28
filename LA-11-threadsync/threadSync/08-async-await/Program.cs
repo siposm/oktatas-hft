@@ -13,7 +13,12 @@ namespace _08_async_await
         {
             // ! ! ! 
             //
-            // Jelen félévben és tárgyban nem tárgyaljuk az async-await párost.
+            // Jelen félévben és tárgyban nem tárgyaljuk az async-await "párost",
+            //      mivel nem kimondottan párhuzamos elképzelésről van szó (habár hasonló hozzá),
+            //      hanem aszinkron végrehajtásról.
+            //
+            // Aszinkron vs párhuzamos: [https://stackoverflow.com/questions/12434369/what-is-the-relation-between-asynchronous-and-parallel-programming-in-c]
+            //
             //
             // Bővebben SzT szakirányon kerül elő majd.
             //
