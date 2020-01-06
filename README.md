@@ -2,6 +2,7 @@
 
 A Webprogramozás és Haladó Fejlesztési Technikák tárgy, C# részéhez tartozó laboranyagok, házi és gyakorló feladatok kódjai.
 
+
 ## Tartalom
 
 A C# nyelv haladó eszközei:
