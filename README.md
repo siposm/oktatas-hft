@@ -1,45 +1,47 @@
-## WHP
+## Haladó Fejlesztési Technikák
 
-A Webprogramozás és Haladó Fejlesztési Technikák tárgy, C# részéhez tartozó laboranyagok, házi és gyakorló feladatok kódjai.
+A Haladó Fejlesztési Technikák tárgyhoz tartozó laboranyagok, házi és gyakorló feladatok kódjai.
 
 
 ## Tartalom
 
 A C# nyelv haladó eszközei:
-* Lambda kifejezések
-* LINQ
-* Entity Framework
+* Delegáltak, Lambda kifejezések
+* XML
+* LINQ, XLINQ
+* Adatbázis (code first)
 * Attribútumok
 * Reflexió
 * DLL készítése és használata
 * Unit tesztelés
-* Mock
-* Folyamatok és szálak kezelése
+* Folyamatok és szálak kezelése (thread, task)
 
-Egyéb anyagok a(z) http://users.nik.uni-obuda.hu/siposm/whp oldalon.
+Egyéb anyagok a(z) https://users.nik.uni-obuda.hu/siposm/hft oldalon.
 
 ## Használat
 ### Letöltés
-Clone gomb alatt a felhőre katt, mentés a kiválaszott állományban.
+Clone gomb mellett a letöltés nyílra katt, majd mentés a kiválaszott állományban.
 
 ### Git
 Töltsd le, telepítsd, indítsd el: https://git-scm.com/downloads
     
 `cd ~/Desktop/`\
-`mkdir whp-laboranyag`\
-`cd whp-laboranyag`\
-`git clone https://gitlab.com/siposm/oktatas-whp-19201.git`
+`mkdir hft-laboranyag`\
+`cd hft-laboranyag`\
+`git clone https://gitlab.com/siposm/oktatas-hft-20211.git`
+
+Minden esetben javasolt, hogy hetente nézz rá a repóra mert a feltöltött állományok frissülnek az egész félévben.
 
 ---
 
-Meglátás / észrevétel / probléma esetén megtalálható vagyok az alábbi elérhetőségen.
+<br><br>
 
+Meglátás / észrevétel / probléma esetén megtalálható vagyok az alábbi elérhetőségen.
 
 **Sipos Miklós**\
 Tanszéki Mérnök\
 sipos.miklos@nik.uni-obuda.hu\
 Óbudai Egyetem Neumann János Informatikai Kar\
-Szoftvertervezés és -Fejlesztés Intézet\
-2019 - 2020 - 1 félév\
-(C)
+Szoftvertervezés és -fejlesztés Intézet\
+2020 - 2021 - 1 félév
 
