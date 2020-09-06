@@ -34,7 +34,7 @@ Töltsd le, telepítsd, indítsd el: https://git-scm.com/downloads
 `git clone https://gitlab.com/siposm/oktatas-hft-20211.git`
 
 Frissítések letöltése:\
-`cd ~/Desktop/hft-laboranyag/`
+`cd ~/Desktop/hft-laboranyag/`\
 `git pull`
 
 <br><br>
@@ -48,6 +48,7 @@ Meglátás / észrevétel / probléma esetén megtalálható vagyok az alábbi e
 **Sipos Miklós**\
 Tanszéki Mérnök\
 sipos.miklos@nik.uni-obuda.hu\
+https://users.nik.uni-obuda.hu/siposm\
 Óbudai Egyetem Neumann János Informatikai Kar\
 Szoftvertervezés és -fejlesztés Intézet\
 2020 - 2021 - 1 félév
