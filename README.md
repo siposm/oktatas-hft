@@ -19,6 +19,9 @@ A C# nyelv haladó eszközei:
 Egyéb anyagok a(z) https://users.nik.uni-obuda.hu/siposm/hft oldalon.
 
 ## Használat
+
+Minden esetben javasolt, hogy hetente nézz rá a repóra mert a feltöltött állományok frissülnek az egész félévben.
+
 ### Letöltés
 Clone gomb mellett a letöltés nyílra katt, majd mentés a kiválaszott állományban.
 
@@ -30,7 +33,11 @@ Töltsd le, telepítsd, indítsd el: https://git-scm.com/downloads
 `cd hft-laboranyag`\
 `git clone https://gitlab.com/siposm/oktatas-hft-20211.git`
 
-Minden esetben javasolt, hogy hetente nézz rá a repóra mert a feltöltött állományok frissülnek az egész félévben.
+Frissítések letöltése:\
+`cd ~/Desktop/hft-laboranyag/`
+`git pull`
+
+<br><br>
 
 ---
 
