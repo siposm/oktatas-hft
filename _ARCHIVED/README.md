@@ -1,4 +1,4 @@
-# Archív tartalom
+# 🔴 Archív tartalom 🔴
 
 - Korábbi félév(ek) anyagait átmozgattam ebbe a mappába.
 - Az itt található kódok .NET Framework-ben íródtak.
