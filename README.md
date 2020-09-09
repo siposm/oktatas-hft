@@ -16,14 +16,14 @@ A C# nyelv haladó eszközei:
 * Unit tesztelés
 * Folyamatok és szálak kezelése (thread, task)
 
-Egyéb anyagok a(z) https://users.nik.uni-obuda.hu/siposm/hft oldalon.
+A tárgyhoz tartozó oktatói aloldalam: https://users.nik.uni-obuda.hu/siposm/hft-minfo
 
 ## Használat
 
 Minden esetben javasolt, hogy hetente nézz rá a repóra mert a feltöltött állományok frissülnek az egész félévben.
 
 ### Letöltés
-Clone gomb mellett a letöltés nyílra katt, majd mentés a kiválaszott állományban.
+Clone gomb mellett a letöltés nyílra katt, majd mentés a kiválaszott állományban. Ha csak egy dedikált mappára van szükséged, lépj bele itt a felületen és ugyan ezen gombra kattintva van lehetőség csak azt az 1 mappát letölteni.
 
 ### Git
 Töltsd le, telepítsd, indítsd el: https://git-scm.com/downloads
