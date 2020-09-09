@@ -14,9 +14,11 @@ namespace xml
 
         static void Process<T>(IEnumerable<T> input)
         {
-            System.Console.WriteLine();
+            System.Console.WriteLine("\n\t~~~~~~~~~~~\n");
+
             foreach (var item in input)
                 System.Console.WriteLine(item);
+            
             System.Console.WriteLine();
         }
 
@@ -107,7 +109,7 @@ namespace xml
 
             doc.Root.Add(uj);
 
-            // Process(doc);
+            //Process(doc);
 
             // mentés, ha akarjuk
             //allomany.Save("ujTetszolegesNev.xml");
