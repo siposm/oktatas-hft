@@ -1,26 +1,25 @@
 ## Haladó Fejlesztési Technikák
 
-A Haladó Fejlesztési Technikák tárgyhoz tartozó laboranyagok, házi és gyakorló feladatok kódjai.
+A Haladó Fejlesztési Technikák tárgyhoz tartozó laboranyagok, házi és gyakorló feladatok kódjai.\
+Figyelem, bizonyos régebbi anyagok (pl. házi feladatok kódjai) az `_ARCHIVED` mappába kerültek át.
 
+## Heti menetrend
 
-## Tartalom
-
-A C# nyelv haladó eszközei:
-* Delegáltak, Lambda kifejezések
-* XML
-* LINQ, XLINQ
-* Adatbázis (code first)
-* Attribútumok
-* Reflexió
-* DLL készítése és használata
-* Unit tesztelés
-* Folyamatok és szálak kezelése (thread, task)
+| Hét | Tananyag                  | Hét | Tananyag                   |
+|-----|---------------------------|-----|----------------------------|
+| 1   | Delegáltak                | 8   | Unit tesztelés             |
+| 2   | LINQ, XML, XLINQ          | 9   | FF code review             |
+| 3   | Reflexió                  | 10  | FF code review             |
+| 4   | DbContext (code first DB) | 11  | Párhuzamos prog (task)     |
+| 5   | Rétegzés (mini FF)        | 12  | Párhuzamos prog (thread)   |
+| 6   | ZH gyak                   | 13  | FF Q&A // Gitstat határidő |
+| 7   | ZH                        | 14  | FF védés // pót ZH         |
 
 A tárgyhoz tartozó oktatói aloldalam: https://users.nik.uni-obuda.hu/siposm/hft-minfo
 
 ## Használat
 
-Minden esetben javasolt, hogy hetente nézz rá a repóra mert a feltöltött állományok frissülnek az egész félévben.
+Minden esetben javasolt jelen repo követése hétről hétre, mivel az anyagok folyamatosan frissülnek, módosulnak ahogy halad előre a félév.
 
 ### Letöltés
 Clone gomb mellett a letöltés nyílra katt, majd mentés a kiválaszott állományban. Ha csak egy dedikált mappára van szükséged, lépj bele itt a felületen és ugyan ezen gombra kattintva van lehetőség csak azt az 1 mappát letölteni.
