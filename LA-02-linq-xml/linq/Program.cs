@@ -8,7 +8,7 @@ namespace linq
     {
         public string Name { get; set; }
         public int Age { get; set; }
-        public bool Status { get; set; } /* eljegyezve / hajadon */
+        public bool Status { get; set; } // single / taken
 
         public override string ToString()
         {
