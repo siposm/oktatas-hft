@@ -37,21 +37,32 @@ namespace xml
             // 0. feladat:
             // írjuk ki minden ember nevét
 
-            var workerNames = from x in doc.Root.Descendants("person")
+            var task0 = from x in doc.Root.Descendants("person")
                             select x.Element("name").Value;
 
-            Process(workerNames);
+            Process(task0);
 
             // 1. feladat:
             // kérdezzük le a tamásokat (figyelve kis és nagybetűkre)
 
-            var tamasok = from x in doc.Root.Descendants("person")
+            var task1 = from x in doc.Root.Descendants("person")
                           where x.Element("name").Value.ToUpper().Contains("tamás".ToUpper())
                           select x.Element("name").Value;
 
-            Process(tamasok);
+            Process(task1);
 
-            
+            // 2. feladat:
+            // kérjük le a polihisztorokat (email és név)
+
+            var task2 = from x in doc.Root.Descendants("person")
+                                where x.Element("rank").Value.Equals("polihisztor")
+                                select new
+                                {
+                                    Nev = x.Element("name").Value,
+                                    Mail = x.Element("email").Value
+                                };
+
+            Process(task2);
 
         }
     }
