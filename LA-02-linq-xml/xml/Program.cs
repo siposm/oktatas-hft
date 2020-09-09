@@ -24,7 +24,7 @@ namespace xml
         {
             var persons = from x in doc.Root.Descendants("person")
                             select x;
-                            
+
             foreach (var item in persons)
                 System.Console.WriteLine(item);
         }
@@ -33,6 +33,26 @@ namespace xml
         {
             XDocument doc = LoadXML();
             Process(doc);
+
+            // 0. feladat:
+            // írjuk ki minden ember nevét
+
+            var workerNames = from x in doc.Root.Descendants("person")
+                            select x.Element("name").Value;
+
+            Process(workerNames);
+
+            // 1. feladat:
+            // kérdezzük le a tamásokat (figyelve kis és nagybetűkre)
+
+            var tamasok = from x in doc.Root.Descendants("person")
+                          where x.Element("name").Value.ToUpper().Contains("tamás".ToUpper())
+                          select x.Element("name").Value;
+
+            Process(tamasok);
+
+            
+
         }
     }
 }
