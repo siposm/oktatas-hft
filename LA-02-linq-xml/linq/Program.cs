@@ -50,24 +50,28 @@ namespace linq
 
 
             // var bevezetése !!! indokolt esetben csak
+            // fordító majd lekezeli
+            // a létrehozáskor engem nem érdekel vagy nem tudom hogy mi a típusa
+            // minden NE legyen var
             var stud1 = new Student() { Name = "X Ember" };
             var stud2 = new {   Name = "Lajoska",
                                 Age = 23,
-                                Nationality = "Magyar" }; // tetszőleges "struktúra" megadható, kialakítható (!= osztály)
+                                Nationality = "Magyar" };
+                                // ideiglenes, apró, csak adat összefogására 
 
             string s = stud2.Name; // ugyan úgy lekérhetők a tulajdonságai mintha általunk definiált objektum lenne
 
 
 
 
-            // páros számok kinyerése LINQ-val (query syntax !!!)
+            // páros számok kinyerése LINQ-val (query syntax)
             var evens = from x in list
                               where x % 2 == 0
                               select x;
 
             Process(evens);
 
-            // páros számok kinyerése LINQ-val (method syntax !!! + lambda)
+            // páros számok kinyerése LINQ-val (method syntax + lambda)
             var evens2 = list.Where(x => x % 2 == 0);
 
             Process(evens2);
