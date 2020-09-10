@@ -24,10 +24,10 @@ namespace xml
 
         static void Process(XDocument doc)
         {
-            var persons = from x in doc.Root.Descendants("person")
+            var people = from x in doc.Root.Descendants("person")
                             select x;
 
-            foreach (var item in persons)
+            foreach (var item in people)
                 System.Console.WriteLine(item);
         }
 
