@@ -23,7 +23,9 @@ namespace _02_reflection
 
     class Student : Person
     {
-        [CheckLength(MaxLength = 6)]
+        [CheckLength(MaxLength = 10)]
+        public string Email { get; set; }
+
         public string NeptunID { get; set; }
 
         public int Credits { get; set; }
@@ -33,10 +35,10 @@ namespace _02_reflection
     {
         public int EnrollmentYear; // sima mező, nem tulajdonság
 
-        private int ActiveSemesters_1;
-        private int ActiveSemesters_2;
-        private int ActiveSemesters_3;
-        private int ActiveSemesters_4;
+        private int ActiveSemesters_1; // priv. nem látszik
+        public int ActiveSemesters_2;
+        public int ActiveSemesters_3;
+        public int ActiveSemesters_4;
 
         public string Greeting()
         {
@@ -145,10 +147,19 @@ namespace _02_reflection
 
             #region 03-EXAMPLE-WITH-ATTRIBUTES
 
-            // a Student típusok neptunkódját ellenőrizzük le
+            // 0. RÉSZ
+            // Hozzuk létre a szükséges attribútumot.
+            // - CheckLength: int MaxLength tulajdonsággal állítható
+            // Alkalmazzuk ezt az Email tulajdonságra Student-ben.
+
+            // 1. RÉSZ
+            // A Student típusok emailjeit ellenőrizzük le! (pl. a user beír valamit, és még mielőtt elmentenénk)
+            // Reflexió segítségével vizsgáljuk meg a teljes tömböt, HA Student típusról van szó
+            // akkor szűrjünk a megfelelő tulajdonságra és attribútum felhasználásával ellenőrizzük
+            // annak helyességét.
 
             int countStudentTypes = 0;
-            string initNeptunID = "AAA1234"; // AAA123 >> OK, 6 db karakter mehet
+            string newEmail = "elment_a_macska_a_boltba@mail.com"; // első rész max 10 karakter lehet
 
             foreach (var studentObject in students)
             {
@@ -161,15 +172,20 @@ namespace _02_reflection
                         foreach (Attribute attr in prop.GetCustomAttributes())
                         {
                             CheckLength cl = attr as CheckLength;
-                            if(prop.Name == "NeptunID")
+                            if(prop.Name == "Email")
                             {
-                                if(initNeptunID.Length <= cl.MaxLength)
-                                {
-                                    (studentObject as Student).NeptunID = initNeptunID;
+                                string firstPart = newEmail.Split('@')[0];
+                                string secondPart = newEmail.Split('@')[1];
+                                    
+                                if(firstPart.Length <= cl.MaxLength)
+                                { 
+                                    // ok
+                                    (studentObject as Student).Email = newEmail;
                                 }
                                 else
-                                {
-                                    (studentObject as Student).NeptunID = initNeptunID.Substring(0,6);
+                                { 
+                                    // nem ok
+                                    (studentObject as Student).Email = firstPart.Substring(0,cl.MaxLength) + "@" + secondPart;
                                     //throw new Exception("ERROR: NEPTUN ID IS INCORRECT!");
                                 }
                             }
@@ -178,16 +194,17 @@ namespace _02_reflection
                 }
             }
 
+            // 2. RÉSZ
+            // Ellenőrzés: kérjük le a Student típusokat és írjuk ki a neptun kódjukat.
+
             Console.WriteLine("\n-----------------\n");
             Console.WriteLine("STUDENT TYPES: " + countStudentTypes);
-            
-            // Kérjük le a Student típusokat és írjuk ki a neptun kódjukat, hogy meggyőződjünk.
             
             var q = from x in students
                     where x.GetType().Equals(typeof(Student))
                     select x;
             
-            q.ToList().ForEach( x => Console.WriteLine((x as Student).NeptunID));
+            q.ToList().ForEach( x => Console.WriteLine((x as Student).Email));
 
             #endregion
         }
