@@ -185,7 +185,7 @@ namespace _02_reflection
                                 else // email nem ok
                                 {   
                                     (studentObject as Student).Email = firstPart.Substring(0,cl.MaxLength) + "@" + secondPart;
-                                    //throw new Exception("ERROR: NEPTUN ID IS INCORRECT!");
+                                    //throw new Exception("ERROR: EMAIL IS INCORRECT!");
                                 }
                             }
                         }
