@@ -163,7 +163,8 @@ namespace _02_reflection
 
             foreach (var studentObject in students)
             {
-                if(studentObject.GetType().Equals(typeof(Student)))
+                //if(studentObject.GetType().Equals(typeof(Student)))
+                if(studentObject is Student) // << rövidebben :)
                 {
                     countStudentTypes++;
 
@@ -177,14 +178,12 @@ namespace _02_reflection
                                 string firstPart = newEmail.Split('@')[0];
                                 string secondPart = newEmail.Split('@')[1];
                                     
-                                if(firstPart.Length <= cl.MaxLength)
+                                if(firstPart.Length <= cl.MaxLength) // email ok
                                 { 
-                                    // ok
                                     (studentObject as Student).Email = newEmail;
                                 }
-                                else
-                                { 
-                                    // nem ok
+                                else // email nem ok
+                                {   
                                     (studentObject as Student).Email = firstPart.Substring(0,cl.MaxLength) + "@" + secondPart;
                                     //throw new Exception("ERROR: NEPTUN ID IS INCORRECT!");
                                 }
