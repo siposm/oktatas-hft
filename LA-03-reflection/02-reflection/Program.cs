@@ -159,7 +159,7 @@ namespace _02_reflection
             // annak helyességét.
 
             int countStudentTypes = 0;
-            string newEmail = "elment_a_macska_a_boltba@mail.com"; // első rész max 10 karakter lehet
+            string newEmail = "lorem-ipsum-dolor-sit-amet@mail.com"; // első rész max 10 karakter lehet
 
             foreach (var studentObject in students)
             {
@@ -194,8 +194,13 @@ namespace _02_reflection
                 }
             }
 
+            // HF.: nem csak karakterszámra nézzük az emailt, hanem pl. van-e benne @ jel.
+            // Ehhez itt található egy nagyon jó ValidationFactory példa. Érdemes átnézni és logikailag végigkövetni.
+            // Ha 2 vagy több attribútum alapján akarunk validálni, akkor ez a helyes irány!
+            // link: https://gitlab.com/siposm/oktatas-hft-20211/-/blob/master/_ARCHIVED/LA-04-reflexio/reflexio_feladat-1-VALIDATOR/reflexio_feladat/Program.cs
+
             // 2. RÉSZ
-            // Ellenőrzés: kérjük le a Student típusokat és írjuk ki a neptun kódjukat.
+            // Ellenőrzés: kérjük le a Student típusokat és írjuk ki az email címüket.
 
             Console.WriteLine("\n-----------------\n");
             Console.WriteLine("STUDENT TYPES: " + countStudentTypes);
