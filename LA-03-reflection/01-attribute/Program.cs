@@ -15,7 +15,7 @@ namespace _01_attribute
     class MyMethodAttribute : Attribute { }
 
     [AttributeUsage(AttributeTargets.Property)] // megszorítás >> csak tulajdonságra helyezhető attrib.
-    class CheckLength : Attribute
+    class CheckLengthAttribute : Attribute
     {
         public int MaxLength { get; set; }
     }
