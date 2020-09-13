@@ -85,9 +85,18 @@ namespace _03_xml
             // 4. feladat
             // methods-ok esetén a () jeleket töröljük és úgy mentsük (erre Func-ot használjunk)
 
-            // 5. feladat H.F.
+            // 5. feladat {HF}
             // methods-ok esetén legyen külön tag a visszatérésnek és külön a névnek
 
+            // 6. feladat {HF}
+            // ellenőrizzétek le, hogy mi történik ha az Entities.cs-ben a Kutya osztály helyett
+            // az Auto osztályra teszitek rá a [ModelToXML] attribútumot
+            // a teljes kimeneti xml ennek megfelelően frissülni fog
+            
+            // 7. feladat {HF}
+            // csináljátok meg a FetchDataFromProgram metódust úgy, hogy több db entitásra is működjön
+            // amin rajta van a [ModelToXML] attribútum
+            
             XDocument xdoc = new XDocument();
 
             xdoc.Add(new XElement("entities")); // Root
