@@ -5,7 +5,7 @@ using System.Reflection;
 namespace _02_reflection
 {
     [AttributeUsage(AttributeTargets.Property)]
-    class CheckLength : Attribute
+    class CheckLengthAttribute : Attribute
     {
         public int MaxLength { get; set; }
     }
@@ -172,7 +172,7 @@ namespace _02_reflection
                     {
                         foreach (Attribute attr in prop.GetCustomAttributes())
                         {
-                            CheckLength cl = attr as CheckLength;
+                            CheckLengthAttribute cl = attr as CheckLengthAttribute;
                             if(prop.Name == "Email")
                             {
                                 string firstPart = newEmail.Split('@')[0];
