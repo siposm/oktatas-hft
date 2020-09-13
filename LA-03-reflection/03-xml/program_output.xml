@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<entities>
+  <entity hash="1223546760">
+    <type>Kutya</type>
+    <namespace>_03_xml</namespace>
+    <properties count="4">
+      <property>System.String Nev</property>
+      <property>Int32 Eletkor</property>
+      <property>Boolean Nosteny</property>
+      <property>Boolean Novenyevo</property>
+    </properties>
+    <methods count="3">
+      <method>Int32 Ugat</method>
+      <method>Double Futas</method>
+      <method>Double Seta</method>
+    </methods>
+  </entity>
+</entities>
