@@ -74,7 +74,15 @@ namespace _02_reflection
 
             // ---------------------------------------------------------------
 
-            // TODO invoke greetings method !!
+            // Metódus meghívása dinamikusan.
+            
+            Type bscStudType = typeof(BscStudent);
+            object testInstance = Activator.CreateInstance(bscStudType);
+            
+            MethodInfo toInvoke = bscStudType.GetMethod("Greeting");
+            var returnedValue = (string)toInvoke.Invoke(testInstance, null);
+            System.Console.WriteLine("Invoked methods return value: " + returnedValue);
+            
 
             #endregion
 
