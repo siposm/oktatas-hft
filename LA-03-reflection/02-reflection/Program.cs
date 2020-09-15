@@ -171,8 +171,8 @@ namespace _02_reflection
 
             foreach (var studentObject in students)
             {
-                //if(studentObject.GetType().Equals(typeof(Student)))
-                if(studentObject is Student) // << rövidebben :)
+                //if(studentObject is Student) // nem jó, túl gyenge szűrés (leszármazottat is beleveszi)
+                if(studentObject.GetType().Equals(typeof(Student)))
                 {
                     countStudentTypes++;
 
