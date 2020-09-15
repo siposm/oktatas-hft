@@ -33,8 +33,7 @@ Töltsd le, telepítsd, indítsd el: https://git-scm.com/downloads
 `git clone https://gitlab.com/siposm/oktatas-hft-20211.git`
 
 Frissítések letöltése:\
-`cd ~/Desktop/hft-laboranyag/`\
-`git pull`
+`git pull` a gyökérmappából
 
 <br><br>
 
