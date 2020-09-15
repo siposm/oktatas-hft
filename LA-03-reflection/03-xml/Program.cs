@@ -39,7 +39,6 @@ namespace _03_xml
 
             instance.GetType()
                     .GetMethods()
-                    .ToList()
                     .Where(x => x.GetCustomAttribute<MethodToXMLAttribute>() != null)
                     .ToList()
                     .ForEach( x => methods.Add(x));
