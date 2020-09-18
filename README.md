@@ -1,4 +1,4 @@
-## ℹ️ Általános információk
+## Általános információk
 Az ÓE NIK Mérnökinformatikus képzésen található **Haladó Fejlesztési Technikák** tárgyhoz tartozó laboranyagok, házi és gyakorló feladatok kódjai.
 
 Figyelem, bizonyos régebbi anyagok (pl. házi feladatok kódjai) az `_ARCHIVED` mappába kerültek át.
@@ -30,7 +30,7 @@ Későbbi "frissítések letöltése":\
 
 <br><br>
 
-## 🔗 Hasznos linkek
+## Hasznos linkek
 - A tárgyhoz tartozó oktatói aloldalam:
     - https://users.nik.uni-obuda.hu/siposm/hft-minfo
 - Repo processor:
@@ -42,7 +42,7 @@ Későbbi "frissítések letöltése":\
 
 <br><br>
 
-## 📅 Heti menetrend
+## Heti menetrend
 
 | Hét | Tananyag                  | Hét | Tananyag                   |
 |-----|---------------------------|-----|----------------------------|
