@@ -41,7 +41,7 @@ namespace _02_dataprocess
                 full += sr.ReadToEnd() + "\n";
                 sr.Close();
             }
-            StreamWriter sw = new StreamWriter("./output/final.txt");
+            StreamWriter sw = new StreamWriter("./_output/final.txt");
             sw.Write(full);
             sw.Close();
         }
