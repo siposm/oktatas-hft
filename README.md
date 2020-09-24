@@ -36,9 +36,9 @@ Későbbi "frissítések letöltése":\
 - Repo processor:
     - https://users.nik.uni-obuda.hu/siposm/repo
     - Féléves feladatok állapotát (GITSTATS kimenet) feldolgozó és megjelenítő program, a könnyebb használhatóság érdekében.
-    - // aktualizálása a féléves feladatok elstartolása környékén várható (~ 6-7. hét) //
+    - aktualizálása a féléves feladatok elstartolása környékén várható (~ 6-7. hét)
 - YouTube csatorna, ahol a gyakorlati videók publikálásra kerülnek:
-    - https://www.youtube.com/channel/UCaTjOBlGrGmtzizlJiWDaaA
+    - https://www.youtube.com/siposm
 
 <br><br>
 
