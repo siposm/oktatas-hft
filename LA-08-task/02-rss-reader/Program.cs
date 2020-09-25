@@ -64,28 +64,25 @@ namespace _02_rss_reader
             {
                 int _i = i; // OVT!!!
                 tasks[i] = Task.Run( () => DataProcessor.Download(_i) );
-                // tasks[i] = new Task(DataProcessor.Download, i);
-                // tasks[i].Start();
             }
 
             // sync and write out
             Task.WhenAll(tasks).ContinueWith(t =>
             {
-                int id = 0;
+                int id = 0; // != task ID
                 foreach (var item in DataProcessor.news)
                     Console.WriteLine($"[{id++}] : {item.Title}");
 
                 Console.WriteLine("Select ID!");
                 int choosen = new Random().Next(0,371);
+                Console.WriteLine("CHOOSEN: " + choosen);
                 //int choosen = int.Parse(Console.ReadLine());
-                /*
-                    console readline-hoz linux / mac esetén a .vscode/launch.json-ban állítani kell!
+                /* console readline-hoz linux / mac esetén a .vscode/launch.json-ban állítani kell!
                     src: https://github.com/OmniSharp/omnisharp-vscode/issues/2029
-                    "In launch.json change the default value of console from internalTerminal to externalTerminal."
-                */
+                    "In launch.json change the default value of console from internalTerminal to externalTerminal." */
                 DataProcessor.Open(DataProcessor.news[choosen].URL);
 
-            }).Wait();
+            }, TaskContinuationOptions.OnlyOnRanToCompletion);
         }
     }
 }
