@@ -71,14 +71,11 @@ namespace _02_rss_reader
             {
                 int id = 0;
                 foreach (var item in DataProcessor.news)
-                {
-                    Console.WriteLine("[" + id + "]: " + item.Title);
-                    id++;
-                }
+                    Console.WriteLine($"[{id++}] : {item.Title}");
 
                 Console.WriteLine("Select ID!");
-                //int choosen = int.Parse(Console.ReadLine());
                 int choosen = new Random().Next(0,371);
+                //int choosen = int.Parse(Console.ReadLine());
                 /*
                     console readline-hoz linux / mac esetén a .vscode/launch.json-ban állítani kell!
                     src: https://github.com/OmniSharp/omnisharp-vscode/issues/2029
