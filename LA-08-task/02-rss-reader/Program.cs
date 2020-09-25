@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
@@ -36,13 +37,18 @@ namespace _02_rss_reader
             p.WaitForExit();
         }
 
-        public static void Download(object o)
+        public static void Download(object o, CancellationToken CT)
         {
             int id = (int)o;
             xdocs[id] = XDocument.Load(urls[id]);
 
+            // if (ct.IsCancellationRequested) break;
+            CT.ThrowIfCancellationRequested();
+
             foreach (var item in xdocs[id].Descendants("item"))
             {
+                Thread.Sleep(10);
+
                 news.Add(new RSS()
                 {
                     Title = item.Element("title").Value,
@@ -52,9 +58,11 @@ namespace _02_rss_reader
         }
     }
 
-
+    
     class Program
     {
+        static CancellationTokenSource CTS = new CancellationTokenSource();
+
         static void Main(string[] args)
         {
             Task[] tasks = new Task[DataProcessor.urls.Length];
@@ -63,11 +71,11 @@ namespace _02_rss_reader
             for (int i = 0; i < tasks.Length; i++)
             {
                 int _i = i; // OVT!!!
-                tasks[i] = Task.Run( () => DataProcessor.Download(_i) );
+                tasks[i] = Task.Run( () => DataProcessor.Download(_i, CTS.Token), CTS.Token );
             }
 
             // sync and write out
-            Task.WhenAll(tasks).ContinueWith(t =>
+            Task.WhenAll(tasks).ContinueWith( x =>
             {
                 int id = 0; // != task ID
                 foreach (var item in DataProcessor.news)
@@ -82,7 +90,30 @@ namespace _02_rss_reader
                     "In launch.json change the default value of console from internalTerminal to externalTerminal." */
                 DataProcessor.Open(DataProcessor.news[choosen].URL);
 
-            }, TaskContinuationOptions.OnlyOnRanToCompletion);
+            }, TaskContinuationOptions.OnlyOnRanToCompletion); //.Wait >> blokkolná az egészet, nem tud továbbmenni lefele!!!
+            
+            Task.WhenAll(tasks).ContinueWith( x =>
+            {
+                Console.WriteLine("::: TASKS WERE CANCELED :::");
+            }, TaskContinuationOptions.OnlyOnCanceled);
+
+
+
+            
+            Console.WriteLine("\n\n ::: PRESS ENTER TO CANCEL :::");
+            Console.ReadLine();
+            Console.WriteLine("\n\n ::: CANCELLING... :::");
+            CTS.Cancel();
+            Console.WriteLine("\n\n ::: ...CANCEL DONE :::");
+
+            //Console.ReadLine(); // readline esetén a program még vár
+                                // (blokkolva van a readline miatt) ezért az exception bekövetkezik
+                                //
+                                // readline berakása esetén
+                                // utána nyomjunk a "folytatás" gombra és látni fogjuk hogy az OnlyOnCanceled rész is lefut
+                                //
+                                // itt most ez így jó nekünk, de lásd:
+                                // https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-cancellation
         }
     }
 }
