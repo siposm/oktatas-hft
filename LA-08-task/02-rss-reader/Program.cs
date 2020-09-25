@@ -62,8 +62,10 @@ namespace _02_rss_reader
             // start downloading
             for (int i = 0; i < tasks.Length; i++)
             {
-                tasks[i] = new Task(DataProcessor.Download, i);
-                tasks[i].Start();
+                int _i = i; // OVT!!!
+                tasks[i] = Task.Run( () => DataProcessor.Download(_i) );
+                // tasks[i] = new Task(DataProcessor.Download, i);
+                // tasks[i].Start();
             }
 
             // sync and write out
