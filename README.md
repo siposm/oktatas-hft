@@ -49,7 +49,7 @@ Későbbi "frissítések letöltése":\
 | 1.  | Delegáltak                | 8.  | Unit tesztelés             |
 | 2.  | LINQ, XML, XLINQ          | 9.  | FF code review             |
 | 3.  | Reflexió                  | 10. | FF code review             |
-| 4.  | code first DB // EFCore   | 11. | Párhuzamos prog (task)     |
+| 4.  | code first DB, EFCore     | 11. | Párhuzamos prog (task)     |
 | 5.  | Rétegzés (mini FF)        | 12. | Párhuzamos prog (thread)   |
 | 6.  | ZH gyak                   | 13. | FF Q&A // Gitstat határidő |
 | 7.  | ZH                        | 14. | FF védés // pót ZH         |
