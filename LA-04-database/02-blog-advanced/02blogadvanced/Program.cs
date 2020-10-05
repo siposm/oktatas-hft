@@ -190,6 +190,9 @@ namespace _02blogadvanced
 
             // X. kategóriánként hány komment érkezett
             // [ special thanks to SzaboZs :) ]
+            // 
+            // Először próbáljátok meg Method Syntax-szal, utána Query Syntax-szal.
+            //
             var qx_sub = from x in db.Comments
                          group x by x.BlogId into g
                          select new
