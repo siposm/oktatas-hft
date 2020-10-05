@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Blogging.Data\Blogging.Data.csproj" />
+    <ProjectReference Include="..\Blogging.Repository\Blogging.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
