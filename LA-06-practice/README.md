@@ -2,7 +2,7 @@
 
 A feladat megoldása során a tanult elveket, szintaktikákat javasolt alkalmazni.
 
-A feladatban felhasználandó állomány: [pizzas-database.xml](https://users.nik.uni-obuda.hu/siposm/db/pizzas-database.xml)
+A feladatban felhasználandó állomány: [pizzas-database.xml](https://users.nik.uni-obuda.hu/siposm/db/pizza-database.xml)
 
 <br>
 <br>
