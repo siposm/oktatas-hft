@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<workers count="4">
+  <class>
+    <name>Worker</name>
+    <hash>828626828</hash>
+  </class>
+  <class>
+    <name>ThirdFloorWorker</name>
+    <hash>1242186213</hash>
+  </class>
+  <class>
+    <name>SecondFloorWorker</name>
+    <hash>-1077323712</hash>
+  </class>
+  <class>
+    <name>FirstFloorWorker</name>
+    <hash>-436007993</hash>
+  </class>
+</workers>
