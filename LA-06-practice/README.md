@@ -1,8 +1,13 @@
 # Gyakorló I. Zárthelyi Dolgozat
 
+<br>
+<br>
+
 A feladat megoldása során a tanult elveket, szintaktikákat javasolt alkalmazni.
 
 A feladatban felhasználandó állomány: [pizzas-database.xml](https://users.nik.uni-obuda.hu/siposm/db/pizza-database.xml)
+
+Figyelem! Jelen feladathoz megoldás (kód) nincs. A `ZH1` mappában található feladat egy másik feladatsorra vonatkozik. Részletekért lásd `README.md` abban a mappában.
 
 <br>
 <br>
