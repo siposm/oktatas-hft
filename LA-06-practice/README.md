@@ -103,7 +103,7 @@ A már létező Dictionary típusnak reflexió segítségével kérje le a típu
 Az egyes részfeladatokat a `Main` részből tesztelje.
 
 ## Feladat 13.
-Szusszanjunk. 👌😊
+Szusszanjunk. 🙂👌
 
 <br>
 <br>
