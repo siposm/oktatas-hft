@@ -6,10 +6,6 @@ A feladat megoldása során a tanult elveket, szintaktikákat javasolt alkalmazn
 
 A feladatban felhasználandó állomány: [pizzas-database.xml](https://users.nik.uni-obuda.hu/siposm/db/pizzas-database.xml)
 
-A feltöltött fájl csak részben tartalmazza a megoldást; nem végig!
-
-Videó amin részben végigvezetem a megoldást.
-
 <br>
 <br>
 
