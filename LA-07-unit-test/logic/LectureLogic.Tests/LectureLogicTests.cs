@@ -49,11 +49,20 @@ namespace LectureLogic.Tests
         [Test]
         public void AddStudentToLecture()
         {
-            lLogic.GetLectureByIndex(1).Students.Add(new Student()
+            Student temp = new Student()
             {
-                Name = "Test Student",
+                Name = "Gipsz Jakab",
                 StartYear = 2019
-            });
+            };
+
+            lectureLogic.GetLectureByIndex(1).Students.Add(temp);
+
+            Assert.That(
+                lectureLogic.GetLectureByIndex(1)
+                .Students.Contains(temp),
+
+                Is.True
+            );
         }
     }
 }
