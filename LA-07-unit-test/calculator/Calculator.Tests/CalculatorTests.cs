@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 
 namespace Calculator.Tests
@@ -45,6 +46,27 @@ namespace Calculator.Tests
         {
             int res = calc.Mul(a, b);
             Assert.That(res, Is.EqualTo(expected));
+        }
+
+        [TestCase(2, 2, 1)]
+        [TestCase(2, 1, 2)]
+        [TestCase(20, 2, 10)]
+        [TestCase(-4, 2, -2)]
+        [TestCase(-2, -2, 1)]
+        [TestCase(-20, -2, 10)]
+        public void CalculatorDivision_ExpectedResult(int what, int with, double expected)
+        {
+            double res = calc.Div(what, with);
+            Assert.That(res, Is.EqualTo(expected));
+        }
+
+        [TestCase(2, 0)]
+        [TestCase(20, 0)]
+        [TestCase(200, 0)]
+        [TestCase(-1, 0)]
+        public void CalculatorDivision_ThrowsException(int what, int with)
+        {
+            Assert.That(() => calc.Div(what, with), Throws.TypeOf<DivideByZeroException>());
         }
     }
 }

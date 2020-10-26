@@ -18,5 +18,13 @@ namespace Calculator
         {
             return a * b;
         }
+
+        public double Div(int what, int with)
+        {
+            if (with == 0)
+                throw new DivideByZeroException("ERR :: cannot divide by zero");
+
+            return what / with;
+        }
     }
 }
