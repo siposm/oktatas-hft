@@ -1,5 +1,10 @@
 using System;
 
+
+/*
+*   Note: model / entity class-okat nem szoktunk unit-tesztelni!
+*/
+
 public class Student : IComparable
 {
     public string Name { get; set; }
