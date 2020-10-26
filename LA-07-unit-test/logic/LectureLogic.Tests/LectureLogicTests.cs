@@ -55,10 +55,10 @@ namespace LectureLogic.Tests
                 StartYear = 2019
             };
 
-            lectureLogic.GetLectureByIndex(1).Students.Add(temp);
+            lLogic.GetLectureByIndex(1).Students.Add(temp);
 
             Assert.That(
-                lectureLogic.GetLectureByIndex(1)
+                lLogic.GetLectureByIndex(1)
                 .Students.Contains(temp),
 
                 Is.True
