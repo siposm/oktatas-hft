@@ -1,5 +1,9 @@
 ﻿using System;
+/*
+    STEP BY STEP LEÍRÁS
+    https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-nunit
 
+*/
 namespace Calculator
 {
     public class Calculator
