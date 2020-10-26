@@ -13,10 +13,17 @@ namespace LectureLogic
         public int HoursPerSemester { get; set; }
         public int Credit { get; set; }
         public List<Student> Students { get; set; } // dotnet add reference !!! a student-hez
+
+        public Lecture()
+        {
+            this.Students = new List<Student>();
+        }
     }
 
     public interface ILectureLogic
     {
+        int LectureCount { get; }
+        List<Lecture> GetAll();
         void AddLecture(Lecture lec);
         Lecture GetLectureByIndex(int index);
         void AddStudentToLecture(Student stud, int lectureIndex);
@@ -25,6 +32,14 @@ namespace LectureLogic
     public class LectureLogic : ILectureLogic
     {
         private List<Lecture> Lectures { get; set; }
+
+        public int LectureCount
+        {
+            get
+            {
+                return this.Lectures.Count;
+            }
+        }
 
         public LectureLogic()
         {
@@ -44,6 +59,11 @@ namespace LectureLogic
         public void AddStudentToLecture(Student stud, int lectureIndex)
         {
             this.Lectures[lectureIndex].Students.Add(stud);
+        }
+
+        public List<Lecture> GetAll()
+        {
+            return this.Lectures;
         }
     }
 }
