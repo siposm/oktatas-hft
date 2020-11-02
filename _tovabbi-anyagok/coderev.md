@@ -2,13 +2,13 @@
 
 A CR célja az lenne, hogy közösen átnézve a kódot megnézzük, hogy jó-e az irány, esetleg vannak benne kisebb-nagyobb elvi hibák amiket ki kell javítani és ehhez hasonlók.
 
-Ebből adódóan itt nem az lenne a cél, hogy az ilyen-olyan stylecop error mit jelent és miért következett be. Ezeket nyugodtan lehet továbbra is teams chat-en vagy emailben feltenni.
+Ebből adódóan itt nem az lenne a cél, hogy (pl.) az ilyen-olyan stylecop error mit jelent és miért következett be. Ezeket nyugodtan lehet továbbra is teams chat-en vagy emailben feltenni. Összefoglalva: NEM problémamegoldás/hibakeresés, hanem ELLENŐRZÉS ÉS JAVASLATOK ADÁSA a cél. Egy-egy CR 10, maximum 15 percet vehet igénybe.
 
 ## Beosztás
 
 A beosztást úgy kell értelmezni, hogy X hallgató a 9. héten, Y hallgató pedig a 10. héten kereshet (és csak akkor). Ezt azért tartsuk, hogy ne egyszerre 100+ ember jelenjen meg terhelésként.
 
-A beosztás **fakultatív**! Tehát aki nem szeretne egyeztetni, számára nem kötelező egyáltalán.
+A beosztás **fakultatív**! Tehát aki nem szeretne egyeztetni (bármilyen okból kifolyólag), számára nem kötelező egyáltalán.
 
 ## Menetrend
 
