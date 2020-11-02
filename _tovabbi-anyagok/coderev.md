@@ -6,7 +6,7 @@ Ebből adódóan itt nem az lenne a cél, hogy (pl.) az ilyen-olyan stylecop err
 
 ## Beosztás
 
-A beosztást úgy kell értelmezni, hogy X hallgató a 9. héten, Y hallgató pedig a 10. héten kereshet (és csak akkor). Ezt azért tartsuk, hogy ne egyszerre 100+ ember jelenjen meg terhelésként.
+A beosztást úgy kell értelmezni, hogy X hallgató a 9. héten, Y hallgató pedig a 10. héten kereshet (és csak akkor). Ezt azért tartsuk, hogy ne egyszerre 100+ ember jelenjen meg terhelésként. Tehát amit látsz a neptunkódod mellett, úgy kalkulálj.
 
 A beosztás **fakultatív**! Tehát aki nem szeretne egyeztetni (bármilyen okból kifolyólag), számára nem kötelező egyáltalán.
 
