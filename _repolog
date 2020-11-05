@@ -6,3 +6,4 @@ W|10.18. 11:48|Amennyiben emailt írtok bármilyen FF-el kapcsolatos kérdéssel
 S|10.27. 12:12|Frissítettem a névsort mert sajnos az ide-oda vándorlások miatt pár helyen módosult. Így belekerültek extra emberek akik eddig nem voltak benne, és tűntek el olyanok akik eddig benne voltak (de feleslegesen). Kérnék mindenkit, hogy nézzen rá a saját sorára, hogy minden rendben van-e továbbra is.
 S|10.27. 12:13|Felkerült továbbá egy plusz gomb felülre ami a <code>REPOLOG.md</code> file-ra mutat, ahol vezetem, hogy adott pillanatban ki hogyan áll a mérföldkövekkel (nagyvonalakban).
 S|10.28. 15:24|Csináltam egy FILTER funkciót, ha nem jelenne meg akkor CTRL+SHIFT+R (force refresh) az oldalon.
+S|11.05. 14:00|Küldtem neptun körüzenetet a Code Review első köre után pár meglátással, általános kérdésekre adott válasszal. Ezek mentén járjatok el, ha kell akkor javítsátok a kódot.
