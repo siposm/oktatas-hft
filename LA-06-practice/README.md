@@ -5,7 +5,7 @@
 
 A feladat megoldása során a tanult elveket, szintaktikákat javasolt alkalmazni.
 
-A feladatban felhasználandó állomány: [pizzas-database.xml](https://users.nik.uni-obuda.hu/siposm/db/pizza-database.xml)
+A feladatban felhasználandó állomány: [pizza-database.xml](https://users.nik.uni-obuda.hu/siposm/db/pizza-database.xml)
 
 Figyelem! Jelen feladathoz megoldás (kód) nincs. A `ZH1` mappában található feladat egy másik feladatsorra vonatkozik. Részletekért lásd `README.md` abban a mappában.
 
@@ -13,7 +13,7 @@ Figyelem! Jelen feladathoz megoldás (kód) nincs. A `ZH1` mappában található
 <br>
 
 ## Feladat 0.
-Hozzon létre egy class library projektet `ConsoleLoggerLibrary` néven. Hozzon létre benne egy osztály `ConsoleLogger` néven, benne egy void `ConsoleLog` metódust, amely egy `object` típust fogad. Az object-et írja ki a konzolra, a ToString metódus segítségével. Társítsa hozzá a másik (lentebbi következő) projekthez.
+Hozzon létre egy class library projektet `ConsoleLoggerLibrary` néven. Hozzon létre benne egy osztályt `ConsoleLogger` néven, benne egy void `ConsoleLog` metódust, amely egy `object` típust fogad. Az object-et írja ki a konzolra, a ToString metódus segítségével. Társítsa hozzá a másik (lentebbi következő) projekthez.
 
 ## Feladat 1.
 Készítsen egy `IPizza` interfészt, ami az alábbi publikus tulajdonságokat írja elő:
