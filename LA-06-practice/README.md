@@ -58,7 +58,7 @@ Olvassa be a `pizza-database.xml` állományt és hajtsa végre rajta a követke
 - 6.7.1. módosítsa úgy az xml elemeit, hogy ahol "cm" attribútum érték található, ott írja ki helyette (a fájlban), hogy "centimetres"
 - 6.7.2. hasonló elv mentén a pizza neve mellé helyezze el "chars" nevű attribútumként, hogy hány karakterből áll a neve. az új xml-t `_mod.xml` néven mentse el
 - 6.8. határozza meg, hogy az egyes méretekből típusonként hány darab található
-- 6.9. kérje le, hogy melyek azok a pizzák amelyeknek a neve kevesebb karakterből áll mint a PastaThickness (tészta vastagás) és a NumberOfToppings (feltétek száma) összegének a kétszerese
+- 6.9. kérje le, hogy melyek azok a pizzák amelyeknek a neve kevesebb karakterből áll mint a PastaThickness (tészta vastagság) és a NumberOfToppings (feltétek száma) összegének a kétszerese
 - 6.10. határozza meg, hogy melyik pizzából lehet kettőt vagy többet vásárolni, úgy, hogy még mindig kevesebb összegbe kerül, mint a legdrágább pizza (több elfogadható megoldás esetén mindre kíváncsiak vagyunk)
 - 6.11. határozza meg, hogy a VIP státusszal ellátott pizzák átlagára az olcsóbb, vagy pedig a sima pizzák átlagára
 - 6.12. határozza meg, hogy a VIP vagy sima pizzáknál fordul elő többször a 30-as méret
