@@ -39,6 +39,8 @@ Későbbi "frissítések letöltése":\
     - aktualizálása a féléves feladatok elstartolása környékén várható (~ 6-7. hét)
 - YouTube csatorna, ahol a gyakorlati videók publikálásra kerülnek:
     - https://www.youtube.com/siposm
+- EA videók
+    - https://www.youtube.com/playlist?list=PLGgtxIMNuefaNb5ECOaLiiIGEhoVsVZm4
 
 <br><br>
 
