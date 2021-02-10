@@ -25,7 +25,7 @@ Utána (Mac / Win / Linux esetén egyaránt):
 `cd ~/Desktop/`\
 `mkdir hft-laboranyag`\
 `cd hft-laboranyag`\
-`git clone https://gitlab.com/siposm/oktatas-hft-20211.git`
+`git clone https://github.com/siposm/oktatas-hft-20211.git`
 
 Későbbi "frissítések letöltése":\
 `git pull` a gyökérmappából
