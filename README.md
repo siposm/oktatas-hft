@@ -3,13 +3,15 @@ Az ÓE NIK Mérnökinformatikus képzésen található **Haladó Fejlesztési Te
 
 Figyelem, bizonyos régebbi anyagok (pl. házi feladatok kódjai) az `_ARCHIVED` mappába kerültek át.
 
-###  Repository használata
+<br><br>
+
+##  Repository használata
 Minden esetben javasolt jelen repository követése hétről-hétre, mivel az anyagok folyamatosan frissülnek, módosulnak ahogy halad előre a félév.
 
-#### Letöltés
+### Letöltés
 Clone gomb mellett a letöltés nyílra katt, majd mentés a kiválaszott állományban. Ha csak egy dedikált mappára van szükséged, lépj bele itt a felületen és ugyan ezen gombra kattintva van lehetőség csak azt az 1 mappát letölteni.
 
-#### Git
+### Git
 Windows esetén: töltsd le, telepítsd, indítsd el: https://git-scm.com/downloads
 
 Linux / Mac esetén, CLI-ből:
@@ -23,12 +25,23 @@ Utána (Mac / Win / Linux esetén egyaránt):
 `cd ~/Desktop/`\
 `mkdir hft-laboranyag`\
 `cd hft-laboranyag`\
-`git clone https://gitlab.com/siposm/oktatas-hft-20211.git`
+`git clone https://github.com/siposm/oktatas-hft-20211.git`
 
 Későbbi "frissítések letöltése":\
 `git pull` a gyökérmappából
 
 <br><br>
+
+## Kommunikációs felület
+- Teams csoport
+  - törekedjünk (!!!) a közös channelbe írni az esetleges kérdéseket
+  - privát megkeresések tényleg csak indokolt, magánügyi téma kapcsán történjenek
+    - egymásnak is tudtok segíteni
+    - nem kapok 100db ugyan olyan kérdéssel üzenetet
+  - alapvetően ritkábban vagyok ott elérhető
+  - ha SOS akkor email (ld. weboldalam vagy lap alja)
+  
+  <br><br>
 
 ## Hasznos linkek
 - A tárgyhoz tartozó oktatói aloldalam:
@@ -39,6 +52,8 @@ Későbbi "frissítések letöltése":\
     - aktualizálása a féléves feladatok elstartolása környékén várható (~ 6-7. hét)
 - YouTube csatorna, ahol a gyakorlati videók publikálásra kerülnek:
     - https://www.youtube.com/siposm
+- EA videók
+    - https://www.youtube.com/playlist?list=PLGgtxIMNuefaNb5ECOaLiiIGEhoVsVZm4
 
 <br><br>
 
@@ -70,4 +85,3 @@ https://users.nik.uni-obuda.hu/siposm \
 Óbudai Egyetem Neumann János Informatikai Kar\
 Szoftvertervezés és -fejlesztés Intézet\
 2020 - 2021 - 1 félév
-
