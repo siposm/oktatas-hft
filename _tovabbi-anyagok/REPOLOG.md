@@ -33,3 +33,9 @@ Nincs repó létrehozva (04.06.):
 - MCLOK9
 - A0Y0RM
 
+Nincs repó létrehozva (04.11.):
+- JCAPEO
+- CNT9UL
+- DDB2DA
+- GYNV4E
+- U50P8X
