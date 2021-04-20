@@ -35,10 +35,11 @@ A videóban kerüljenek bemutatásra a következők:
     - tesztek, főleg a komplexebb részek
     - osztályok és azok hierarchiája ha van benne valami extra
 
-#### How to
+#### " How to "
 - Én úgy csinálnám, hogy megmutatom a menüt, felviszek 1-2 elemet, utána kilistázom az elemeket, hogy jéé bekerült a DB-be is, majd módosítok egyet. Ezzel a CRUD rész le lett fedve.
 - Utána megmutatom a teszteket, kiemelem azt amivel mondjuk sok meló volt és/vagy büszke vagyok rá, majd ugyan így tennék a logicnál is pl. valamelyik bonyolultabb non-crudot szóban bemutatnám. Ha ez után még marad idő akkor nyugodtan be lehet mutatni valami olyan részt, amire azt mondod, hogy ez saját ötlet volt és örülsz neki, hogy megvalósítottad mert tök jó ezért és ezért.
 
+---
 
 ### Hiányok
 Nincs repó létrehozva (03.16.):
