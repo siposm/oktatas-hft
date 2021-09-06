@@ -10,6 +10,18 @@ This repository contains all the materials (eg. lecture presentations, lab prese
 
 <br><br>
 
+## Folder structure
+- `_ARCHIVED`
+  - contains old codes, made in .NET Framework
+- `LA-xx-yy`
+  - contains each lab occasion's codes
+- `_lecture-materials`
+  - contains all the lecture presentations and other materials
+- `_other-materials`
+  - contains other materials like exam results etc.
+
+<br><br>
+
 ##  Usage of this repository
 In all cases it's recommended to check for updates on a weekly basis, as the codes and other materials may be updated.
 
