@@ -6,7 +6,7 @@ Jelen repository tartalmazza az ÓE NIK Mérnökinformatikus képzésen találha
 Figyelem, bizonyos régebbi anyagok (pl. házi feladatok kódjai) az `_ARCHIVED` mappába kerültek át.
 
 ### EN
-This repository contains all the materials (eg. lecture presentations, lab presentations, lab codes etc.) for the Advanced Development Techniques subject held at ÓE NIK.
+This repository contains all the materials (eg. lecture presentations, lab presentations, lab codes etc.) for the **Advanced Development Techniques** subject held at ÓE NIK.
 
 <br><br>
 
