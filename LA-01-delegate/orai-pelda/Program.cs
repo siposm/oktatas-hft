@@ -4,22 +4,22 @@ using System.Collections.Generic;
 namespace LA_01_delegate
 {
 
-    public delegate int Metodusok(int a, int b);
+    public delegate int Methods(int a, int b);
 
 
-    class Ember : IComparable
+    class Person : IComparable
     {
-        public string Nev { get; set; }
-        public int Eletkor { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
 
         public int CompareTo(object obj)
         {
-            return this.Eletkor.CompareTo((obj as Ember).Eletkor);
+            return this.Age.CompareTo((obj as Person).Age);
         }
 
         public override string ToString()
         {
-            return string.Format("{0} - {1}", this.Nev, this.Eletkor);
+            return string.Format("{0} - {1}", this.Name, this.Age);
         }
 
     }
@@ -32,20 +32,22 @@ namespace LA_01_delegate
             System.Console.WriteLine(a+b);
             return a+b;
         }
+
         static int M2(int a, int b) {
             System.Console.WriteLine(a-b);
             return a-b;
         }
 
-        static bool ParosE(int szam) {
+        static bool IsItEven(int szam) {
             return szam % 2 == 0;
         }
 
+
+
+
         static void Main(string[] args)
         {
-            Console.WriteLine("--LA01--");
-
-            Metodusok met = new Metodusok( M1 );
+            Methods met = new Methods( M1 );
             met += M2;
 
             met(10,5);
@@ -60,7 +62,7 @@ namespace LA_01_delegate
 
             // ############################################################
 
-            met += delegate (int a, int b)
+            met += delegate (int a, int b) // anonym method
             {
                 System.Console.WriteLine(a*b);
                 return a*b;
@@ -71,21 +73,21 @@ namespace LA_01_delegate
             // ############################################################
 
             Random r = new Random();
-            List<int> lista = new List<int>();
+            List<int> myList = new List<int>();
 
             for (int i = 0; i < 10; i++)
-                lista.Add(r.Next(100));
+                myList.Add(r.Next(100));
 
-            Console.WriteLine("ELEMEK");
-            foreach (var item in lista)
+            Console.WriteLine("ITEMS");
+            foreach (var item in myList)
                 Console.WriteLine(">>" + item);
 
             // delegate
-            int p1 = lista.Find( ParosE );
+            int p1 = myList.Find( IsItEven );
             System.Console.WriteLine(p1);
 
             // lambda
-            int p2 = lista.Find( x => x % 2 == 0 );
+            int p2 = myList.Find( x => x % 2 == 0 );
             System.Console.WriteLine(p2);
 
 
@@ -102,16 +104,17 @@ namespace LA_01_delegate
              * src: https://stackoverflow.com/questions/4317479/func-vs-action-vs-predicate
              * 
              * Érdemes a docs.microsoft.com-on is nézelődni!
+             * Recommended to visit and learn more at docs.microsoft.com!
              *     
              */
 
-            Action<string> udvozlo = ( x => Console.WriteLine(">>>" + x) );
+            Action<string> welcommer = ( x => Console.WriteLine(">>>" + x) );
 
-            udvozlo += ( x => Console.WriteLine(":::" + x));
-            udvozlo += ( x => Console.WriteLine("==>" + x));
-            udvozlo += ( x => Console.WriteLine("~~~" + x));
+            welcommer += ( x => Console.WriteLine(":::" + x));
+            welcommer += ( x => Console.WriteLine("==>" + x));
+            welcommer += ( x => Console.WriteLine("~~~" + x));
 
-            udvozlo?.Invoke("John Wick");
+            welcommer?.Invoke("John Wick");
 
             // ------------
 
@@ -131,30 +134,30 @@ namespace LA_01_delegate
 
             // --------
 
-            Predicate<int> eldontes = ParosE;
+            Predicate<int> eldontes = IsItEven;
             Console.WriteLine(eldontes(10));
             Console.WriteLine(eldontes(11));
 
             // ############################################################
 
-            Ember[] emberek = new Ember[]
+            Person[] ppl = new Person[]
             {
-                new Ember() { Nev = "András", Eletkor = 20 },
-                new Ember() { Nev = "Klaudia", Eletkor = 35 },
-                new Ember() { Nev = "Barbara", Eletkor = 75 },
-                new Ember() { Nev = "János", Eletkor = 12 }
+                new Person() { Name = "András", Age = 20 },
+                new Person() { Name = "Klaudia", Age = 35 },
+                new Person() { Name = "Barbara", Age = 75 },
+                new Person() { Name = "János", Age = 12 }
             };
 
-            foreach (var item in emberek)
+            foreach (var item in ppl)
                 Console.WriteLine("> " + item);
 
-            Array.Sort( emberek, EmberOsszehasonlito );
+            Array.Sort( ppl, PersonComparer );
 
-            foreach (var item in emberek)
+            foreach (var item in ppl)
                 Console.WriteLine("==> " + item);
         }
 
-        static int EmberOsszehasonlito(Ember x, Ember y)
+        static int PersonComparer(Person x, Person y)
         {
             return x.CompareTo(y);
         }
