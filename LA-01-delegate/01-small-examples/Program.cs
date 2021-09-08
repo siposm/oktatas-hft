@@ -82,11 +82,17 @@ namespace LA_01_delegate
             foreach (var item in myList)
                 Console.WriteLine(">>" + item);
 
-            // delegate
+            // using delegate
             int p1 = myList.Find( IsItEven );
             System.Console.WriteLine(p1);
 
-            // lambda
+            // using anonym method
+            myList.Find( delegate(int number)
+            {
+                return number % 2 == 0;
+            });
+
+            // using lambda
             int p2 = myList.Find( x => x % 2 == 0 );
             System.Console.WriteLine(p2);
 
