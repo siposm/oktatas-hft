@@ -134,9 +134,9 @@ namespace LA_01_delegate
 
             // --------
 
-            Predicate<int> eldontes = IsItEven;
-            Console.WriteLine(eldontes(10));
-            Console.WriteLine(eldontes(11));
+            Predicate<int> decision = IsItEven;
+            Console.WriteLine(decision(10));
+            Console.WriteLine(decision(11));
 
             // ############################################################
 
