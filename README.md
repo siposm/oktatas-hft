@@ -11,12 +11,12 @@ This repository contains lab materials, codes, lecture slides and all the other 
 <br><br>
 
 ## 🗃 Folder structure
-- `LA-xx-yy` => contains each lab occasion's codes
+- `LA-xx-yy` => contains each lab occasion's codes (both for HFT and ADT!)
 - `_archived` => contains old codes, made in .NET Framework
 - `_other-materials` => other materials like slides, images, pdf and xls results
     - `old-results` => exam results of the previous semesters
-    - `HFT-LA-slides` => materials regarding the Hungarian Haladó Fejlesztési Technikák subject
-    - `ADT-lecture-materials` => materials regarding the English Advanced Development Techniques subject
+    - `HFT-LA-slides` => **lab** materials regarding the Hungarian Haladó Fejlesztési Technikák subject
+    - `ADT-lecture-materials` => **lecture** materials regarding the English Advanced Development Techniques subject
 
 <br><br>
 
@@ -112,6 +112,8 @@ Please note that small changes / delays can occur during the weeks.
 <br><br>
 
 If you have any problem or demand feel free to reach out to me via email.
+
+Bármi kérdés, probléma vagy meglátás esetén állok rendelkezésre az alábbi elérhetőségen.
 
 **Sipos Miklós**\
 Tanszéki Mérnök\
