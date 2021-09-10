@@ -1,4 +1,4 @@
-## Általános információk / General information
+## ℹ️ Általános információk / General information
 
 ### HU
 Jelen repository tartalmazza az ÓE NIK Mérnökinformatikus képzésen található **Haladó Fejlesztési Technikák** tárgyhoz tartozó laboranyagok, házi és gyakorló feladatok kódjait, valamint előadás- és labordiáit.
@@ -10,7 +10,7 @@ This repository contains lab materials, codes, lecture slides and all the other 
 
 <br><br>
 
-## Folder structure
+## 🗃 Folder structure
 - `LA-xx-yy` => contains each lab occasion's codes
 - `_archived` => contains old codes, made in .NET Framework
 - `_other-materials` => other materials like slides, images, pdf and xls results
@@ -20,7 +20,7 @@ This repository contains lab materials, codes, lecture slides and all the other 
 
 <br><br>
 
-##  Usage of this repository
+## 🔧 Usage of this repository
 In all cases it's recommended to check for updates on a weekly basis, as the codes and other materials may be updated.
 
 ### Downloading directly
@@ -47,7 +47,7 @@ Use the command below to check and download updates:\
 
 <br><br>
 
-## Useful links
+## 🔗 Useful links
 - Personal website
   - Hungarian Haladó fejlesztési Technikák: https://users.nik.uni-obuda.hu/siposm/hft-minfo
   - English Advanced Development Techniques: https://users.nik.uni-obuda.hu/siposm/adt
@@ -61,7 +61,7 @@ Use the command below to check and download updates:\
 
 <br><br>
 
-## Schedule
+## 🗓 Schedule
 
 Please note that small changes / delays can occur during the weeks.
 
