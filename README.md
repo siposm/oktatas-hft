@@ -77,12 +77,12 @@ Please note that small changes / delays can occur during the weeks.
 | 6  | NUnit, Moq theory II.             | Unit testing                            |                                              |
 | 7  | CI/CD                             | Mock                                    |                                              |
 | 8  | Data Exchange Protocols           | API endpoint                            |                                              |
-| 9  | Parallel I.                       | LAB ZH                                  |                                              |
+| 9  | Parallel I.                       | **LAB ZH**                              |                                              |
 | 10 | Parallel II.                      | FF code review #1                       |
-| 11 | \-- BREAK --                      | \-- BREAK --                            | FF code review #2 via Teams (ha kell  )      |
+| 11 | \-- SZÜNET --                     | \-- SZÜNET --                           | FF code review #2 via Teams (ha kell  )      |
 | 12 | Parallel III.                     | Thread, Task                            |                                              |
-| 13 | extra + EA ZH                     | ThreadSync                              | határidő #1 Thursday 23:59                   |
-| 14 | .NET versions + EA pótZH          | LAB pótZH                               | határidő #2 Thursday 23:59 + FF demó         |
+| 13 | extra + **EA ZH**                 | ThreadSync                              | **határidő** #1 Thursday 23:59                   |
+| 14 | .NET versions + **EA pótZH**      | **LAB pótZH**                           | **határidő** #2 Thursday 23:59 + **FF demó**         |
 
 
 ### EN
@@ -96,13 +96,13 @@ Please note that small changes / delays can occur during the weeks.
 | 5  | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
 | 6  | NUnit, Moq theory II.             | Unit testing                            |                                              |
 | 7  | CI/CD                             | Mock                                    |                                              |
-| 8  | Data Exchange Protocols           | LAB EXAM                                |                                              |
+| 8  | Data Exchange Protocols           | **LAB EXAM**                            |                                              |
 | 9  | Parallel I.                       | API endpoint                            |                                              |
 | 10 | Parallel II.                      | PW code review #1                       |
 | 11 | \-- BREAK --                      | \-- BREAK --                            | PW code review #2 via Teams (if needed)      |
 | 12 | Parallel III.                     | Thread, Task                            |                                              |
-| 13 | extra + THEORY EXAM               | ThreadSync                              | deadline #1 Thursday 23:59                   |
-| 14 | .NET versions + THEORY retake     | LAB retake                              | deadline #2 Thursday 23:59 + PW presentation |
+| 13 | extra + **THEORY EXAM**           | ThreadSync                              | **deadline** #1 Thursday 23:59                   |
+| 14 | .NET versions + **THEORY retake** | **LAB retake**                          | **deadline** #2 Thursday 23:59 + **PW presentation** |
 
 
 <br><br>
