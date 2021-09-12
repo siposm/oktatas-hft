@@ -89,10 +89,10 @@ Please note that small changes / delays can occur during the weeks.
 
 |    | LECTURE                           | LAB                                     | PROJECT WORK                                 |
 | -- | --------------------------------- | --------------------------------------- | -------------------------------------------- |
-| 1  | Intro + Requirements + LINQ + XML | Lambda                                  |                                              |
-| 2  | DLL + Databases                   | LINQ + XLINQ                            |                                              |
-| 3  | Layering                          | Reflection + DLL                        |                                              |
-| 4  | Git                               | Code First DB + EF                      | details will be published                    |
+| 1  | Intro + Requirements + delegates  | Lambda                                  |                                              |
+| 2  | LINQ + XML                        | LINQ + XLINQ                            |                                              |
+| 3  | DLL + Databases + Reflection      | Reflection + DLL                        |                                              |
+| 4  | Git + Layering                    | Code First DB + EF                      | details will be published                    |
 | 5  | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
 | 6  | NUnit, Moq theory II.             | Unit testing                            |                                              |
 | 7  | CI/CD                             | Mock                                    |                                              |
