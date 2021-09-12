@@ -20,13 +20,14 @@ namespace linq
     {
         static void Process <T> (IEnumerable<T> x)
         {
-            System.Console.WriteLine("\n\t~~~~~~~~~~~\n");
+            Console.WriteLine("\n\t~~~~~~~~~~~\n");
 
             // x.Length és társai nem elérhetők mert interface-n keresztül nézem !!!
+            // x.Length and others are NOT available, since they are seen THROUGH the interface
             foreach (var item in x)
-                System.Console.WriteLine(item);
+                Console.WriteLine(item);
 
-            System.Console.WriteLine();
+            Console.WriteLine();
         }
 
         static void Main(string[] args)
@@ -53,18 +54,27 @@ namespace linq
             // fordító majd lekezeli
             // a létrehozáskor engem nem érdekel vagy nem tudom hogy mi a típusa
             // minden NE legyen var
+            //
+            // var should be used only in specific cases
+            // var means that the compiler will take care of the type and determine it in runtime
+            // we should avoid using var for everything
+
             var stud1 = new Student() { Name = "X Ember" };
             var stud2 = new {   Name = "Lajoska",
                                 Age = 23,
                                 Nationality = "Magyar" };
-                                // ideiglenes, apró, csak adat összefogására 
+                                // ideiglenes, apró, csak adat összefogására
+                                // only for small, temporary data to hold them together
 
-            string s = stud2.Name; // ugyan úgy lekérhetők a tulajdonságai mintha általunk definiált objektum lenne
+            // ugyan úgy lekérhetők a tulajdonságai mintha általunk definiált objektum lenne
+            // properties available even though there is no specific type defined by us previously
+            string s = stud2.Name;
 
 
 
 
             // páros számok kinyerése LINQ-val (query syntax)
+            // get all even numbers with LINQ query syntax
             var evens = from x in list
                               where x % 2 == 0
                               select x;
@@ -72,6 +82,7 @@ namespace linq
             Process(evens);
 
             // páros számok kinyerése LINQ-val (method syntax + lambda)
+            // get all even numbers with LINQ method syntax (linq operators) + lambda
             var evens2 = list.Where(x => x % 2 == 0);
 
             Process(evens2);
@@ -100,6 +111,7 @@ namespace linq
 
 
             // bevezető példák / tesztelés
+            // intro examples
 
             var orderedStuds = students.OrderBy(x => x.Name);
 
@@ -121,12 +133,19 @@ namespace linq
 
             #region TASK1
 
+            // HU ******************
             // 1. feladat:
             // adott egy adatbázis List-ként, kérdezzük le a Klaudiák számát
             // ekkora mérettel hozzunk létre tömböt
             // és másoljuk át a tömbbe a Klaudiákat
             //
             // figyeljünk arra, hogy az adatbázisban lehet, hogy kis és nagybetűvel egyaránt lesz név
+            
+            // EN ******************
+            // we have a database as List, get how many Klaudia are there
+            // create an array with this length and copy all the Klaudias there
+            //
+            // make sure that names can contain small and capital letters as well
 
 
             int count = students.Count(x => x.Name.ToUpper().Contains("klaudia".ToUpper()));
@@ -151,12 +170,16 @@ namespace linq
 
             #region TASK2
 
+            // HU ******************
             // 2. feladat:
             // hallgatók lekérése, akiknek életkoruk 20-50 között van
             // és még nincsenek párkapcsolatban
             // (ehhez egészítsük ki a hallgató osztályt)
-
+            //
             // hallgatók adatainak kiegészítése (életkor + kapcs. státusz)
+            //
+            // EN ******************
+            // get students who has age between 20-50 and not yet taken (for this, add extra properties to the class)
 
             Predicate<int> statusRandomizer = x => { return x == 0; };
 
@@ -169,10 +192,12 @@ namespace linq
             Process(students);
 
             // hallgatók lekérése
+            // get students
 
             var selectedStuds = students.Where(x =>
             {
                 /* ==true lehagyható */
+                /* ==true can be left */
                return x.Status == true && (x.Age > 19 && x.Age < 51);   
             });
 
@@ -189,12 +214,18 @@ namespace linq
 
             #region TASK3
 
+            // HU ******************
             // 3. feladat:
             // kérjük le azokat, akik kapcsolatban vannak
             // a kapott eredményt rendezzük sorrendbe név alapján
             // és alakítsuk nagybetűssé a neveket
+            //
+            // EN ******************
+            //get taken students and order the output by the name, and make names to all caps
+            
 
-            var taken = students.Where(x => x.Status == true)
+            var taken = students    
+                .Where(x => x.Status == true)
                 .OrderBy(x => x.Name)
                 .Select(x => x.Name.ToUpper());
             
@@ -210,9 +241,13 @@ namespace linq
 
             #region TASK4
 
+            // HU ******************
             // 4. feladat:
             // kérjük le a kapcsolatban / nem kapcs. lévő hallgatókat
             // csoportsítva és számoljuk meg, hogy hány entitás van egyik/másik csoportban
+            //
+            // EN ******************
+            // get taken and not taken students and group them and count them
 
             var group1 = students.GroupBy( x => x.Status );
 
@@ -224,14 +259,15 @@ namespace linq
                                _COUNT = xres.Count()
                             };
                             /* direkt jelöltem meg alulvonással! */
+                            /* marked with _ for a reason */
 
             foreach (var item in group1)
-                Console.WriteLine("csoport: {0} <> darabszám: {1}", item.Key, item.Count());
+                Console.WriteLine("Group: {0} <> Quantity: {1}", item.Key, item.Count());
 
             Console.WriteLine("---");
 
             foreach (var item in group2)
-                Console.WriteLine("csoport: {0} <> darabszám: {1}", item._GROUP, item._COUNT);
+                Console.WriteLine("Group: {0} <> Quantity: {1}", item._GROUP, item._COUNT);
 
             #endregion
 
@@ -243,6 +279,7 @@ namespace linq
 
             #region TASK5
 
+            // HU ******************
             // 5. feladat:
             // kérjük le azokat a hallgatókat, akiknek a nevében van 'e' vagy 'E' betű
             //
@@ -250,6 +287,12 @@ namespace linq
             // tároljuk el mellé még az életkorát is (más-más nevű tulajdonságban)
             // 
             // rendezzük életkor szerint
+            //
+            // EN ******************
+            // get students who has 'e' or 'E' in their names
+            // make name to all caps using a new anonym class
+            // store the age next to it
+            // and order by their age
 
             var e_Students = from x in students
                              where x.Name.Contains('e') || x.Name.Contains('E')
@@ -264,9 +307,13 @@ namespace linq
 
 
 
+            // HU ******************
             // 5.1. feladat:
             // végezzük el ugyan ezt a lekérdezést, de csoportosítsuk kapcsolatban lévő státusz szerint
             // és az egyes csoportokban nézzük meg, hogy mennyi az átlagos életkor
+            //
+            // EN ******************
+            // make the same as above but group students by their status and check their average age
 
             var e_Students2 = from x in e_Students
                               group x by x._STATUS into g
@@ -279,19 +326,29 @@ namespace linq
 
             Process(e_Students2);
 
+            // HU ******************
             /* 
              * Természetesen van lehetőség az egyes query-ket egymásba is ágyazni,
              * hasonlóan SQL lekérdezésekhez (persze fontos, hogy ez nem ugyan az).
              * 
              * Ez esetben próbáljuk ki:
              * 
-             * Az 'eHallgatok' helyére másoljuk be a teljes lekérdezést zárójelek közé rakva.
+             * Az 'e_Students' helyére másoljuk be a teljes lekérdezést zárójelek közé rakva.
              * Lefuttatva ugyan azt fogjuk kapni!
              * 
              * Érdemes átlátni ezt a fajta verziót is, amikor
              * komplexebb egymásbaágyazások vannak.            
              * 
              * */
+
+             
+
+            // EN ******************
+            /*
+            * Of course there is a possibility to insert queries into each other, like SQL statements.
+            *
+            * In this case try the following: copy the full query in the place of 'e_Students' and run it.
+            */
 
 
             #endregion

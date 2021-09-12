@@ -38,6 +38,8 @@ namespace xml
 
             // 0. feladat:
             // írjuk ki minden ember nevét
+            //
+            // write out all the names
 
             var task0 = from x in doc.Root.Descendants("person")
                             select x.Element("name").Value;
@@ -46,6 +48,8 @@ namespace xml
 
             // 1. feladat:
             // kérdezzük le a tamásokat (figyelve kis és nagybetűkre)
+            //
+            // get all the people named Tamás (small and capital letters)
 
             var task1 = from x in doc.Root.Descendants("person")
                           where x.Element("name").Value.ToUpper().Contains("tamás".ToUpper())
@@ -55,6 +59,8 @@ namespace xml
 
             // 2. feladat:
             // kérjük le a polihisztorokat (email és név)
+            //
+            // get all the polihystors mail and name
 
             var task2 = from x in doc.Root.Descendants("person")
                                 where x.Element("rank").Value.Equals("polihisztor")
@@ -68,6 +74,8 @@ namespace xml
 
             // 3. feladat:
             // számoljuk meg, hányan dolgoznak az egyes intézetekben
+            //
+            // count how many employees are there in each faculty
 
             var task3 = from x in doc.Root.Descendants("person")
                       group x by x.Element("dept").Value into g
@@ -82,6 +90,8 @@ namespace xml
             // 4. feladat
             // számoljuk meg (egy teljesen új lekéréssel) hogy csak az AII-ben hányan
             // HF: csináljuk meg ugyan ezt, de az eredmény a 3. feladat "intezetek" változójából nyerjük ki!
+            //
+            // count how many employees are there in the AII faculty
 
             var task4 = from x in doc.Root.Descendants("person")
                       where x.Element("dept").Value.Equals("Alkalmazott Informatikai Intézet")
@@ -96,6 +106,8 @@ namespace xml
 
             // 5. feladat:
             // adjunk hozzá az egész állományhoz egy új alkalmazottat
+            //
+            // add a new employee to the items
 
 
             XElement uj = new XElement("person",
@@ -112,6 +124,8 @@ namespace xml
             //Process(doc);
 
             // mentés, ha akarjuk
+            // save if we want to
+            
             //allomany.Save("ujTetszolegesNev.xml");
 
 
