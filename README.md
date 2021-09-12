@@ -90,7 +90,7 @@ Please note that small changes / delays can occur during the weeks.
 |    | LECTURE                           | LAB                                     | PROJECT WORK                                 |
 | -- | --------------------------------- | --------------------------------------- | -------------------------------------------- |
 | 1  | Intro + Requirements + Delegates  | Delegates + Lambda                      |                                              |
-| 2  | LINQ + XML                        | LINQ + XLINQ                            |                                              |
+| 2  | LINQ + XML + JSON                 | LINQ + XLINQ                            |                                              |
 | 3  | DLL + Databases + Reflection      | Reflection + DLL                        |                                              |
 | 4  | Git + Layering                    | Code First DB + EF                      | details will be published                    |
 | 5  | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
