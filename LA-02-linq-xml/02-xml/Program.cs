@@ -5,6 +5,16 @@ using System.Xml.Linq;
 
 namespace xml
 {
+    static class Operations /* extension method => collection.MethodName(params) */
+    {
+        public static void ToConsole<T>(this IEnumerable<T> input, string header)
+        {
+            Console.WriteLine($"************* {header} ************");
+            foreach (var item in input) Console.WriteLine(item);
+            Console.WriteLine($"************* {header} ************");
+        }
+    }
+
     class Program
     {
         static XDocument LoadXML()
@@ -45,6 +55,7 @@ namespace xml
                             select x.Element("name").Value;
 
             Process(task0);
+            task0.ToConsole("TASK 0");
 
             // 1. feladat:
             // kérdezzük le a tamásokat (figyelve kis és nagybetűkre)
