@@ -59,10 +59,10 @@ namespace linq
             // var means that the compiler will take care of the type and determine it in runtime
             // we should avoid using var for everything
 
-            var stud1 = new Student() { Name = "X Ember" };
-            var stud2 = new {   Name = "Lajoska",
+            var stud1 = new Student() { Name = "X Person" };
+            var stud2 = new {   Name = "Tony Stark",
                                 Age = 23,
-                                Nationality = "Magyar" };
+                                Nationality = "Hungarian" };
                                 // ideiglenes, apró, csak adat összefogására
                                 // only for small, temporary data to hold them together
 
@@ -103,11 +103,11 @@ namespace linq
             Process(orderedNumbers);
 
             List<Student> students = new List<Student>();
-            students.Add(new Student() { Name = "Toporgó Tamás" });
-            students.Add(new Student() { Name = "Embertelen Elemér" });
-            students.Add(new Student() { Name = "Xedik Xavér" });
-            students.Add(new Student() { Name = "Kilencedik Klaudia" });
-            students.Add(new Student() { Name = "Ketyós KlaUdIA" });
+            students.Add(new Student() { Name = "Tim Tom" });
+            students.Add(new Student() { Name = "Even Edward" });
+            students.Add(new Student() { Name = "Lorem Lora" });
+            students.Add(new Student() { Name = "Killer Karol" });
+            students.Add(new Student() { Name = "King kARol" });
 
 
             // bevezető példák / tesztelés
@@ -117,7 +117,7 @@ namespace linq
 
             Process(orderedStuds);
 
-            var nameIs = students.Where(x => x.Name.Contains("Tamás"));
+            var nameIs = students.Where(x => x.Name.Contains("Tom"));
 
             Process(nameIs);
 
@@ -135,26 +135,26 @@ namespace linq
 
             // HU ******************
             // 1. feladat:
-            // adott egy adatbázis List-ként, kérdezzük le a Klaudiák számát
+            // adott egy adatbázis List-ként, kérdezzük le a Karol-ok számát
             // ekkora mérettel hozzunk létre tömböt
-            // és másoljuk át a tömbbe a Klaudiákat
+            // és másoljuk át a tömbbe a Karol-okat
             //
             // figyeljünk arra, hogy az adatbázisban lehet, hogy kis és nagybetűvel egyaránt lesz név
             
             // EN ******************
-            // we have a database as List, get how many Klaudia are there
-            // create an array with this length and copy all the Klaudias there
+            // we have a database as List, get how many Karols are there
+            // create an array with this length and copy all the Karols there
             //
             // make sure that names can contain small and capital letters as well
 
 
-            int count = students.Count(x => x.Name.ToUpper().Contains("klaudia".ToUpper()));
-            var klaudiak = students.Where(x => x.Name.ToUpper().Contains("klaudia".ToUpper()));
+            int count = students.Count(x => x.Name.ToUpper().Contains("karol".ToUpper()));
+            var karols = students.Where(x => x.Name.ToUpper().Contains("karol".ToUpper()));
 
             Student[] selectedOnes = new Student[count];
             int index = 0;
 
-            foreach (var oneGivenItem in klaudiak)
+            foreach (var oneGivenItem in karols)
                 selectedOnes[index++] = oneGivenItem;
 
             Process(selectedOnes);
