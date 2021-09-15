@@ -13,6 +13,11 @@ namespace xml
             foreach (var item in input) Console.WriteLine(item);
             Console.WriteLine($"************* {header} ************");
         }
+
+        public static void ToAPI<T>(this IEnumerable<T> input, string header)
+        {
+            // TODO: call API here with given header and input params...
+        }
     }
 
     class Program
@@ -28,14 +33,14 @@ namespace xml
 
             foreach (var item in input)
                 System.Console.WriteLine(item);
-            
+
             System.Console.WriteLine();
         }
 
         static void Process(XDocument doc)
         {
             var people = from x in doc.Root.Descendants("person")
-                            select x;
+                         select x;
 
             foreach (var item in people)
                 System.Console.WriteLine(item);
@@ -52,10 +57,11 @@ namespace xml
             // write out all the names
 
             var task0 = from x in doc.Root.Descendants("person")
-                            select x.Element("name").Value;
+                        select x.Element("name").Value;
 
             Process(task0);
             task0.ToConsole("TASK 0");
+            task0.ToAPI("lorem ipsum");
 
             // 1. feladat:
             // kérdezzük le a tamásokat (figyelve kis és nagybetűkre)
@@ -63,8 +69,8 @@ namespace xml
             // get all the people named Tamás (small and capital letters)
 
             var task1 = from x in doc.Root.Descendants("person")
-                          where x.Element("name").Value.ToUpper().Contains("tamás".ToUpper())
-                          select x.Element("name").Value;
+                        where x.Element("name").Value.ToUpper().Contains("tamás".ToUpper())
+                        select x.Element("name").Value;
 
             Process(task1);
 
@@ -74,12 +80,12 @@ namespace xml
             // get all the polihystors mail and name
 
             var task2 = from x in doc.Root.Descendants("person")
-                                where x.Element("rank").Value.Equals("polihisztor")
-                                select new
-                                {
-                                    Nev = x.Element("name").Value,
-                                    Mail = x.Element("email").Value
-                                };
+                        where x.Element("rank").Value.Equals("polihisztor")
+                        select new
+                        {
+                            Nev = x.Element("name").Value,
+                            Mail = x.Element("email").Value
+                        };
 
             Process(task2);
 
@@ -89,12 +95,12 @@ namespace xml
             // count how many employees are there in each faculty
 
             var task3 = from x in doc.Root.Descendants("person")
-                      group x by x.Element("dept").Value into g
-                      select new
-                      {
-                          Letszam = g.Count(),
-                          Intezet = g.Key
-                      };
+                        group x by x.Element("dept").Value into g
+                        select new
+                        {
+                            Letszam = g.Count(),
+                            Intezet = g.Key
+                        };
 
             Process(task3);
 
@@ -105,13 +111,13 @@ namespace xml
             // count how many employees are there in the AII faculty
 
             var task4 = from x in doc.Root.Descendants("person")
-                      where x.Element("dept").Value.Equals("Alkalmazott Informatikai Intézet")
-                      group x by x.Element("dept").Value into g
-                      select new
-                      {
-                          Letszam = g.Count(),
-                          Intezet = g.Key
-                      };
+                        where x.Element("dept").Value.Equals("Alkalmazott Informatikai Intézet")
+                        group x by x.Element("dept").Value into g
+                        select new
+                        {
+                            Letszam = g.Count(),
+                            Intezet = g.Key
+                        };
 
             Process(task4);
 
@@ -136,7 +142,7 @@ namespace xml
 
             // mentés, ha akarjuk
             // save if we want to
-            
+
             //allomany.Save("ujTetszolegesNev.xml");
 
 
