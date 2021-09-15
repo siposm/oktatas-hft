@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8"?>
+<war>
+    <battle>
+        <name>Battle of the Golden Tooth</name>
+        <year>298</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>1</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Golden Tooth</location>
+        <region>The Westerlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Jaime Lannister</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>15000</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Clement Piper</commander>
+                <commander>Vance</commander>
+            </commanders>
+            <house>Tully</house>
+            <size>4000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle at the Mummer's Ford</name>
+        <year>298</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>1</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Mummer's Ford</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Gregor Clegane</commander>
+            </commanders>
+            <house>Lannister</house>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Beric Dondarrion</commander>
+            </commanders>
+            <house>Baratheon</house>
+            <size>120</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of Riverrun</name>
+        <year>298</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>Riverrun</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Jaime Lannister</commander>
+                <commander>Andros Brax</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>15000</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Edmure Tully</commander>
+                <commander>Tytos Blackwood</commander>
+            </commanders>
+            <house>Tully</house>
+            <size>10000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Green Fork</name>
+        <year>298</year>
+        <outcome>defender</outcome>
+        <type>pitched battle</type>
+        <majordeath>1</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>Green Fork</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Roose Bolton</commander>
+                <commander>Wylis Manderly</commander>
+                <commander>Medger Cerwyn</commander>
+                <commander>Harrion Karstark</commander>
+                <commander>Halys Hornwood</commander>
+            </commanders>
+            <house>Stark</house>
+            <size>18000</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Tywin Lannister</commander>
+                <commander>Gregor Clegane</commander>
+                <commander>Kevan Lannister</commander>
+                <commander>Addam Marbrand</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>20000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Whispering Wood</name>
+        <year>298</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>1</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>Whispering Wood</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Robb Stark</commander>
+                <commander>Brynden Tully</commander>
+            </commanders>
+            <house>Stark</house>
+            <house>Tully</house>
+            <size>1875</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Jaime Lannister</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>6000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Camps</name>
+        <year>298</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Riverrun</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Robb Stark</commander>
+                <commander>Tytos Blackwood</commander>
+                <commander>Brynden Tully</commander>
+            </commanders>
+            <house>Stark</house>
+            <house>Tully</house>
+            <size>6000</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Lord Andros Brax</commander>
+                <commander>Forley Prester</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>12625</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Sack of Darry</name>
+        <year>298</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Darry</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Gregor Clegane</commander>
+            </commanders>
+            <house>Lannister</house>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Lyman Darry</commander>
+            </commanders>
+            <house>Darry</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of Moat Cailin</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Moat Cailin</location>
+        <region>The North</region>
+        <attacker>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Victarion Greyjoy</commander>
+            </commanders>
+            <house>Greyjoy</house>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <house>Stark</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of Deepwood Motte</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Deepwood Motte</location>
+        <region>The North</region>
+        <attacker>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Asha Greyjoy</commander>
+            </commanders>
+            <house>Greyjoy</house>
+            <size>1000</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <house>Stark</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Stony Shore</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Stony Shore</location>
+        <region>The North</region>
+        <attacker>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Theon Greyjoy</commander>
+            </commanders>
+            <house>Greyjoy</house>
+            <size>264</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <house>Stark</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of Torrhen's Square</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Torrhen's Square</location>
+        <region>The North</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Rodrik Cassel</commander>
+                <commander>Cley Cerwyn</commander>
+            </commanders>
+            <house>Stark</house>
+            <size>244</size>
+        </attacker>
+        <defender>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Dagmer Cleftjaw</commander>
+            </commanders>
+            <house>Greyjoy</house>
+            <size>900</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of Winterfell</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>0</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>Winterfell</location>
+        <region>The North</region>
+        <attacker>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Theon Greyjoy</commander>
+            </commanders>
+            <house>Greyjoy</house>
+            <size>20</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Bran Stark</commander>
+            </commanders>
+            <house>Stark</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Sack of Torrhen's Square</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>Torrhen's Square</location>
+        <region>The North</region>
+        <attacker>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Dagmer Cleftjaw</commander>
+            </commanders>
+            <house>Greyjoy</house>
+        </attacker>
+        <defender>
+            <king>Balon/Euron Greyjoy</king>
+            <house>Stark</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Sack of Winterfell</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>1</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Winterfell</location>
+        <region>The North</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Ramsay Snow</commander>
+                <commander>Theon Greyjoy</commander>
+            </commanders>
+            <house>Bolton</house>
+            <house>Greyjoy</house>
+            <size>618</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Rodrik Cassel</commander>
+                <commander>Cley Cerwyn</commander>
+                <commander>Leobald Tallhart</commander>
+            </commanders>
+            <house>Stark</house>
+            <size>2000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of Oxcross</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>1</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>Oxcross</location>
+        <region>The Westerlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Robb Stark</commander>
+                <commander>Brynden Tully</commander>
+            </commanders>
+            <house>Stark</house>
+            <house>Tully</house>
+            <size>6000</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Stafford Lannister</commander>
+                <commander>Roland Crakehall</commander>
+                <commander>Antario Jast</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>10000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Siege of Storm's End</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>1</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Storm's End</location>
+        <region>The Stormlands</region>
+        <attacker>
+            <king>Stannis Baratheon</king>
+            <commanders>
+                <commander>Stannis Baratheon</commander>
+                <commander>Davos Seaworth</commander>
+            </commanders>
+            <house>Baratheon</house>
+            <size>5000</size>
+        </attacker>
+        <defender>
+            <king>Renly Baratheon</king>
+            <commanders>
+                <commander>Renly Baratheon</commander>
+                <commander>Cortnay Penrose</commander>
+                <commander>Loras Tyrell</commander>
+                <commander>Randyll Tarly</commander>
+                <commander>Mathis Rowan</commander>
+            </commanders>
+            <house>Baratheon</house>
+            <size>20000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Fords</name>
+        <year>299</year>
+        <outcome>defender</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Red Fork</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Tywin Lannister</commander>
+                <commander>Flement Brax</commander>
+                <commander>Gregor Clegane</commander>
+                <commander>Addam Marbrand</commander>
+                <commander>Lyle Crakehall</commander>
+                <commander>Leo Lefford</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>20000</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Edmure Tully</commander>
+                <commander>Jason Mallister</commander>
+                <commander>Karyl Vance</commander>
+            </commanders>
+            <house>Tully</house>
+            <size>10000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Sack of Harrenhal</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>1</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Harrenhal</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Roose Bolton</commander>
+                <commander>Vargo Hoat</commander>
+                <commander>Robett Glover</commander>
+            </commanders>
+            <house>Stark</house>
+            <size>100</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Amory Lorch</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>100</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Crag</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Crag</location>
+        <region>The Westerlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Robb Stark</commander>
+                <commander>Smalljon Umber</commander>
+                <commander>Black Walder Frey</commander>
+            </commanders>
+            <house>Stark</house>
+            <size>6000</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Rolph Spicer</commander>
+            </commanders>
+            <house>Lannister</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Blackwater</name>
+        <year>299</year>
+        <outcome>defender</outcome>
+        <type>pitched battle</type>
+        <majordeath>1</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>King's Landing</location>
+        <region>The Crownlands</region>
+        <attacker>
+            <king>Stannis Baratheon</king>
+            <commanders>
+                <commander>Stannis Baratheon</commander>
+                <commander>Imry Florent</commander>
+                <commander>Guyard Morrigen</commander>
+                <commander>Rolland Storm</commander>
+                <commander>Salladhor Saan</commander>
+                <commander>Davos Seaworth</commander>
+            </commanders>
+            <house>Baratheon</house>
+            <size>21000</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Tyrion Lannister</commander>
+                <commander>Jacelyn Bywater</commander>
+                <commander>Sandor Clegane</commander>
+                <commander>Tywin Lannister</commander>
+                <commander>Garlan Tyrell</commander>
+                <commander>Mace Tyrell</commander>
+                <commander>Randyll Tarly</commander>
+            </commanders>
+            <house>Lannister</house>
+            <size>7250</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Siege of Darry</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Darry</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Helman Tallhart</commander>
+            </commanders>
+            <house>Darry</house>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <house>Lannister</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of Duskendale</name>
+        <year>299</year>
+        <outcome>defender</outcome>
+        <type>pitched battle</type>
+        <majordeath>1</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Duskendale</location>
+        <region>The Crownlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Robertt Glover</commander>
+                <commander>Helman Tallhart</commander>
+            </commanders>
+            <house>Stark</house>
+            <size>3000</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Randyll Tarly</commander>
+                <commander>Gregor Clegane</commander>
+            </commanders>
+            <house>Lannister</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Burning Septry</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location></location>
+        <region>The Riverlands</region>
+        <attacker>
+            <house>Brotherhood without Banners</house>
+        </attacker>
+        <defender>
+            <house>Brave Companions</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Ruby Ford</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Ruby Ford</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Gregor Clegane</commander>
+            </commanders>
+            <house>Lannister</house>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Roose Bolton</commander>
+                <commander>Wylis Manderly</commander>
+            </commanders>
+            <house>Stark</house>
+            <size>6000</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Retaking of Harrenhal</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>1</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>summer</season>
+        <location>Harrenhal</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Gregor Clegane</commander>
+            </commanders>
+            <house>Lannister</house>
+        </attacker>
+        <defender>
+            <commanders>
+                <commander>Vargo Hoat</commander>
+            </commanders>
+            <house>Brave Companions</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>The Red Wedding</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>ambush</type>
+        <majordeath>1</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>The Twins</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Walder Frey</commander>
+                <commander>Roose Bolton</commander>
+                <commander>Walder Rivers</commander>
+            </commanders>
+            <house>Frey</house>
+            <house>Bolton</house>
+            <size>3500</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Robb Stark</commander>
+            </commanders>
+            <house>Stark</house>
+            <size>3500</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Siege of Seagard</name>
+        <year>299</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>summer</season>
+        <location>Seagard</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Walder Frey</commander>
+            </commanders>
+            <house>Frey</house>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Jason Mallister</commander>
+            </commanders>
+            <house>Mallister</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of Castle Black</name>
+        <year>300</year>
+        <outcome>defender</outcome>
+        <type>siege</type>
+        <majordeath>1</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>winter</season>
+        <location>Castle Black</location>
+        <region>Beyond the Wall</region>
+        <attacker>
+            <king>Stannis Baratheon</king>
+            <commanders>
+                <commander>Mance Rayder</commander>
+                <commander>Tormund Giantsbane</commander>
+                <commander>Harma Dogshead</commander>
+                <commander>Magnar Styr</commander>
+                <commander>Varamyr</commander>
+            </commanders>
+            <house>Free folk</house>
+            <house>Thenns</house>
+            <house>Giants</house>
+            <size>100000</size>
+        </attacker>
+        <defender>
+            <king>Mance Rayder</king>
+            <commanders>
+                <commander>Stannis Baratheon</commander>
+                <commander>Jon Snow</commander>
+                <commander>Donal Noye</commander>
+                <commander>Cotter Pyke</commander>
+            </commanders>
+            <house>Night's Watch</house>
+            <house>Baratheon</house>
+            <size>1240</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Fall of Moat Cailin</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Moat Cailin</location>
+        <region>The North</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Ramsey Bolton</commander>
+            </commanders>
+            <house>Bolton</house>
+        </attacker>
+        <defender>
+            <king>Balon/Euron Greyjoy</king>
+            <house>Greyjoy</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Sack of Saltpans</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>razing</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Saltpans</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <commanders>
+                <commander>Rorge</commander>
+            </commanders>
+            <house>Brave Companions</house>
+        </attacker>
+        <defender />
+    </battle>
+    <battle>
+        <name>Retaking of Deepwood Motte</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Deepwood Motte</location>
+        <region>The North</region>
+        <attacker>
+            <king>Stannis Baratheon</king>
+            <commanders>
+                <commander>Stannis Baratheon</commander>
+                <commander>Alysane Mormot</commander>
+            </commanders>
+            <house>Baratheon</house>
+            <house>Karstark</house>
+            <house>Mormont</house>
+            <house>Glover</house>
+            <size>4500</size>
+        </attacker>
+        <defender>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Asha Greyjoy</commander>
+            </commanders>
+            <house>Greyjoy</house>
+            <size>200</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Battle of the Shield Islands</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>pitched battle</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Shield Islands</location>
+        <region>The Reach</region>
+        <attacker>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Euron Greyjoy</commander>
+                <commander>Victarion Greyjoy</commander>
+            </commanders>
+            <house>Greyjoy</house>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <house>Tyrell</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Invasion of Ryamsport, Vinetown, and Starfish Harbor</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>razing</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Ryamsport, Vinetown, Starfish Harbor</location>
+        <region>The Reach</region>
+        <attacker>
+            <king>Balon/Euron Greyjoy</king>
+            <commanders>
+                <commander>Euron Greyjoy</commander>
+                <commander>Victarion Greyjoy</commander>
+            </commanders>
+            <house>Greyjoy</house>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <house>Tyrell</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Second Seige of Storm's End</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Storm's End</location>
+        <region>The Stormlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Mace Tyrell</commander>
+                <commander>Mathis Rowan</commander>
+            </commanders>
+            <house>Baratheon</house>
+        </attacker>
+        <defender>
+            <king>Stannis Baratheon</king>
+            <commanders>
+                <commander>Gilbert Farring</commander>
+            </commanders>
+            <house>Baratheon</house>
+            <size>200</size>
+        </defender>
+    </battle>
+    <battle>
+        <name>Siege of Dragonstone</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Dragonstone</location>
+        <region>The Stormlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Loras Tyrell</commander>
+                <commander>Raxter Redwyne</commander>
+            </commanders>
+            <house>Baratheon</house>
+            <size>2000</size>
+        </attacker>
+        <defender>
+            <king>Stannis Baratheon</king>
+            <commanders>
+                <commander>Rolland Storm</commander>
+            </commanders>
+            <house>Baratheon</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Siege of Riverrun</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Riverrun</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Daven Lannister</commander>
+                <commander>Ryman Fey</commander>
+                <commander>Jaime Lannister</commander>
+            </commanders>
+            <house>Lannister</house>
+            <house>Frey</house>
+            <size>3000</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Brynden Tully</commander>
+            </commanders>
+            <house>Tully</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Siege of Raventree</name>
+        <year>300</year>
+        <outcome>attacker</outcome>
+        <type>siege</type>
+        <majordeath>0</majordeath>
+        <majorcapture>1</majorcapture>
+        <season>winter</season>
+        <location>Raventree</location>
+        <region>The Riverlands</region>
+        <attacker>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Jonos Bracken</commander>
+                <commander>Jaime Lannister</commander>
+            </commanders>
+            <house>Bracken</house>
+            <house>Lannister</house>
+            <size>1500</size>
+        </attacker>
+        <defender>
+            <king>Robb Stark</king>
+            <commanders>
+                <commander>Tytos Blackwood</commander>
+            </commanders>
+            <house>Blackwood</house>
+        </defender>
+    </battle>
+    <battle>
+        <name>Siege of Winterfell</name>
+        <year>300</year>
+        <outcome>defender</outcome>
+        <type>siege</type>
+        <majordeath>1</majordeath>
+        <majorcapture>0</majorcapture>
+        <season>winter</season>
+        <location>Winterfell</location>
+        <region>The North</region>
+        <attacker>
+            <king>Stannis Baratheon</king>
+            <commanders>
+                <commander>Stannis Baratheon</commander>
+            </commanders>
+            <house>Baratheon</house>
+            <house>Karstark</house>
+            <house>Mormont</house>
+            <house>Glover</house>
+            <size>5000</size>
+        </attacker>
+        <defender>
+            <king>Joffrey/Tommen Baratheon</king>
+            <commanders>
+                <commander>Roose Bolton</commander>
+            </commanders>
+            <house>Bolton</house>
+            <house>Frey</house>
+            <size>8000</size>
+        </defender>
+    </battle>
+</war>
