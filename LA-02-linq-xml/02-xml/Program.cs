@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace xml
@@ -17,6 +18,35 @@ namespace xml
         public static void ToAPI<T>(this IEnumerable<T> input, string header)
         {
             // TODO: call API here with given header and input params...
+        }
+    }
+
+    class Person
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public string Dept { get; set; }
+        public string Rank { get; set; }
+        public string Phone { get; set; }
+        public string Room { get; set; }
+
+        public static Person Parse(XElement node)
+        {
+            return new Person()
+            {
+                Name = node.Element("name")?.Value,
+                Email = node.Element("email")?.Value,
+                Dept = node.Element("dept")?.Value,
+                Rank = node.Element("rank")?.Value,
+                Phone = node.Element("phone")?.Value,
+                Room = node.Element("room")?.Value
+            };
+        }
+
+        public static IEnumerable<Person> Load(string url) // IEnumerable<X> vs List<X>
+        {
+            XDocument XDoc = XDocument.Load(url);
+            return XDoc.Descendants("person").Select(node => Person.Parse(node));
         }
     }
 
@@ -46,6 +76,11 @@ namespace xml
                 System.Console.WriteLine(item);
         }
 
+        // static List<Person> CreateListFromXML(string url)
+        // {
+        //     XDocument.Load(url).Root.Descendants("person").Select(x => x)
+        // }
+
         static void Main(string[] args)
         {
             XDocument doc = LoadXML();
@@ -56,12 +91,16 @@ namespace xml
             //
             // write out all the names
 
-            var task0 = from x in doc.Root.Descendants("person")
-                        select x.Element("name").Value;
-
+            // módszer / method 1.
+            var task0 = from x in doc.Root.Descendants("person") select x.Element("name").Value; 
             Process(task0);
+            
+            // módszer / method 2.
             task0.ToConsole("TASK 0");
             task0.ToAPI("lorem ipsum");
+            
+            // módszer / method 3.
+            doc.Root.Descendants("person").Select(person => person.Name).ToConsole("ALL WORKERS");
 
             // 1. feladat:
             // kérdezzük le a tamásokat (figyelve kis és nagybetűkre)
@@ -142,10 +181,27 @@ namespace xml
 
             // mentés, ha akarjuk
             // save if we want to
-
             //allomany.Save("ujTetszolegesNev.xml");
 
 
+
+
+
+            // HU ******************
+            // 6. feladat:
+            // kérjük le azokat a leghosszabb és legrövidebb nevű embereket (ehhez hozzuk létre a Person osztályt saját parse-olóval)
+            //
+            // EN ******************
+            // get all the shortest and longest named people
+
+            IEnumerable<Person> people = Person.Load("https://users.nik.uni-obuda.hu/siposm/db/workers.xml");
+            
+            var task6 = from person in people
+                         let minlen = people.Min(x => x.Name.Length)
+                          let maxlen = people.Max(x => x.Name.Length)
+                          where person.Name.Length == minlen || person.Name.Length == maxlen
+                          select new { person.Name, person.Name.Length };
+            task6.ToConsole("TASK-6");
         }
     }
 }
