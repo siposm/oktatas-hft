@@ -48,6 +48,11 @@ namespace xml
             XDocument XDoc = XDocument.Load(url);
             return XDoc.Descendants("person").Select(node => Person.Parse(node));
         }
+
+        public override string ToString()
+        {
+            return $"{Name} - {Email} - {Phone}";
+        }
     }
 
     class Program
@@ -76,15 +81,21 @@ namespace xml
                 System.Console.WriteLine(item);
         }
 
-        // static List<Person> CreateListFromXML(string url)
-        // {
-        //     XDocument.Load(url).Root.Descendants("person").Select(x => x)
-        // }
+        static List<Person> CreateListFromXML(string url)
+        {
+            List<Person> x = new List<Person>();
+            return XDocument.Load(url).Descendants("person").Select(node => Person.Parse(node)).ToList();
+        }
 
         static void Main(string[] args)
         {
             XDocument doc = LoadXML();
             Process(doc);
+
+            CreateListFromXML("https://users.nik.uni-obuda.hu/siposm/db/workers.xml").ForEach(x =>
+            {
+                Console.WriteLine("\t >>> " + x);
+            });
 
             // 0. feladat:
             // írjuk ki minden ember nevét
