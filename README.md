@@ -96,8 +96,8 @@ Please note that small changes / delays can occur during the weeks.
 | 5  | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
 | 6  | NUnit, Moq theory II.             | Unit testing                            |                                              |
 | 7  | CI/CD                             | Mock                                    |                                              |
-| 8  | Data Exchange Protocols           | **LAB EXAM**                            |                                              |
-| 9  | Parallel I.                       | API endpoint                            |                                              |
+| 8  | Data Exchange Protocols           | API endpoint                            |                                              |
+| 9  | Parallel I.                       | **LAB EXAM**                            |                                              |
 | 10 | Parallel II.                      | PW code review #1                       |
 | 11 | \-- BREAK --                      | \-- BREAK --                            | PW code review #2 via Teams (if needed)      |
 | 12 | Parallel III.                     | Thread, Task                            |                                              |
