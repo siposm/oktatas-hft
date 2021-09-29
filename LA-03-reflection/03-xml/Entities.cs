@@ -2,14 +2,14 @@ using System;
 
 namespace _03_xml
 {
-    class Allat
+    class Animal
     {
         public bool Novenyevo { get; set; }
     }
 
-    class Macska : Allat
+    class Cat : Animal
     {
-        public Macska()
+        public Cat()
         {
             Novenyevo = false;
         }
@@ -18,75 +18,75 @@ namespace _03_xml
         public int Eletkor { get; set; }
         public int EletekSzama { get; set; }
 
-        public string Koszon() { return "szia"; }
+        public string Greet() { return "szia"; }
 
         [MethodToXML]
-        public void Nyavog() { }
+        public void Meow() { }
 
         [MethodToXML]
-        public int Setal() { return 0; }
+        public int Walk() { return 0; }
 
         [MethodToXML]
-        public double FaraMaszik(string a, bool b) { return 0.5; }
+        public double ClimbToTree(string a, bool b) { return 0.5; }
     }
 
     [ModelToXML]
-    class Kutya : Allat
+    class Dog : Animal
     {
-        public string Nev { get; set; }
-        public int Eletkor { get; set; }
-        public bool Nosteny { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public bool Female { get; set; }
 
         [MethodToXML]
-        public int Ugat()
+        public int Bark()
         {
-            return 10; // ugatás hosszát adja vissza (msp)
+            return 10; // length of the barking in msp
         }
 
-        public void Koszon() { }
+        public void Greet() { }
 
         [MethodToXML]
-        public double Futas() { return 4.009; }
+        public double Run() { return 4.009; }
 
         [MethodToXML]
-        public double Seta() { return 432.114; }
+        public double Walk() { return 432.114; }
     }
 
-    class Hallgato
+    class Student
     {
-        public string Nev { get; set; }
-        public string NeptunKod { get; set; }
-        public bool Nem { get; set; }
-        public DateTime Szuletes { get; set; }
+        public string Name { get; set; }
+        public string NeptunCode { get; set; }
+        public bool Gender { get; set; }
+        public DateTime DateOfBirth { get; set; }
 
-        public void OraraJar() { }
-
-        [MethodToXML]
-        public void TargyFelvesz() { }
+        public void GoesToLecture() { }
 
         [MethodToXML]
-        public void TargyLead() { }
+        public void RegisterToSubject() { }
 
         [MethodToXML]
-        public void VizsgaraJelentkezik() { }
+        public void SkipCourse() { }
+
+        [MethodToXML]
+        public void RegisterToExam() { }
     }
 
-    class Auto
+    class Car
     {
-        public string Rendszam { get; set; }
-        public string Tulajdonos { get; set; }
-        public bool Szemelygepjarmu { get; set; }
-        public DateTime UzembehelyzesIdeje { get; set; }
+        public string License { get; set; }
+        public string OwnerName { get; set; }
+        public bool SportCar { get; set; }
+        public DateTime RegistrationDate { get; set; }
 
-        public void Tankol() { }
-
-        [MethodToXML]
-        public void Gyorsit() { }
+        public void FuelUp() { }
 
         [MethodToXML]
-        public void Lassit() { }
+        public void GoFaster() { }
 
         [MethodToXML]
-        public void Szervizel() { }
+        public void GoSlower() { }
+
+        [MethodToXML]
+        public void Repair() { }
     }
 }
