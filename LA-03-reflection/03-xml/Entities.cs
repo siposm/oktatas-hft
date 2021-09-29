@@ -4,19 +4,19 @@ namespace _03_xml
 {
     class Animal
     {
-        public bool Novenyevo { get; set; }
+        public bool Herbivorous { get; set; }
     }
 
     class Cat : Animal
     {
         public Cat()
         {
-            Novenyevo = false;
+            Herbivorous = false;
         }
 
-        public string Nev { get; set; }
-        public int Eletkor { get; set; }
-        public int EletekSzama { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public int NumberOfLives { get; set; }
 
         public string Greet() { return "szia"; }
 
