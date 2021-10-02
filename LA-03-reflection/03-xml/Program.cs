@@ -16,11 +16,17 @@ namespace _03_xml
         * 
         * Ezt követően ezeket xml fájlba írjuk és elmentjük.
         * 
+        * 
+        * In this case we will get the types from the running program (via the Assembly)
+        * from that we will get the types we really need (based on the attributes)
+        * then we will get the properties and methods of these types and create and xml out of it.
+        * 
         * */
 
         public void FetchDataFromProgram()
         {
             // Jelenleg csak 1 elemre van megírva (FirstOrDefault), ami nem más mint a Dog objektum (vagy amire rárakódik az attrib.).
+            // At the moment it is only written for 1 type (first or default) which is Dog (or whatever has the attributes).
 
             Assembly assem = Assembly.GetExecutingAssembly();
             Type[] types = assem.GetTypes();
@@ -36,6 +42,7 @@ namespace _03_xml
             //foreach (var method in instance.GetType().GetMethods())
             //    methods.Add(method);
             // probléma: minden metódus belekerül (tostring, equals, stb) >> megoldás: szűrés attrib. szerint
+            // problem: all the methods will be inside (tostring, equals etc) >> solution: filter by attributes
 
             instance.GetType()
                     .GetMethods()

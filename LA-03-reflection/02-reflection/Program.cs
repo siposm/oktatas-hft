@@ -12,7 +12,7 @@ namespace _02_reflection
 
     interface IMyObject 
     {
-        // szándékosan üres
+        // it is empty for a reason
     }
 
     class Person : IMyObject
@@ -33,9 +33,9 @@ namespace _02_reflection
 
     class BscStudent : Student
     {
-        public int EnrollmentYear; // sima mező, nem tulajdonság
+        public int EnrollmentYear; // field, not property
 
-        private int ActiveSemesters_1; // priv. nem látszik
+        private int ActiveSemesters_1; // private is not visible
         public int ActiveSemesters_2;
         public int ActiveSemesters_3;
         public int ActiveSemesters_4;
@@ -65,7 +65,7 @@ namespace _02_reflection
             foreach (var item in infos)
             {
                 Console.WriteLine("\t PROP NAME: " + item.Name);
-                Console.WriteLine("\t PROP VALUE: " + item.GetValue(p)); // instance kell neki!
+                Console.WriteLine("\t PROP VALUE: " + item.GetValue( p )); // instance must be provided! 'p'
             }
 
             PropertyInfo pi = t.GetProperty("Name"); // + GetMethods , GetFields
@@ -74,7 +74,7 @@ namespace _02_reflection
 
             // ---------------------------------------------------------------
 
-            // Metódus meghívása dinamikusan.
+            // Calling the method dynamically
             
             Type bscStudType = typeof(BscStudent);
             object testInstance = Activator.CreateInstance(bscStudType);
@@ -122,6 +122,7 @@ namespace _02_reflection
             }
 
             // annak megfelelően hogy milyen típus listázzuk ki a tulajdonságokat + metódusokat + adattagokat
+            // based on what is the type, list the properties + methods + fields
 
             foreach (var sObject in students)
             {
@@ -159,19 +160,26 @@ namespace _02_reflection
             // Hozzuk létre a szükséges attribútumot.
             // - CheckLength: int MaxLength tulajdonsággal állítható
             // Alkalmazzuk ezt az Email tulajdonságra Student-ben.
+            // 
+            // Create the needed attribute.
+            // - CheckLength: int MaxLength property can be set
+            // Apply this to the Email prop at Student class.
 
             // 1. RÉSZ
             // A Student típusok emailjeit ellenőrizzük le! (pl. a user beír valamit, és még mielőtt elmentenénk)
             // Reflexió segítségével vizsgáljuk meg a teljes tömböt, HA Student típusról van szó
             // akkor szűrjünk a megfelelő tulajdonságra és attribútum felhasználásával ellenőrizzük
             // annak helyességét.
+            //
+            // Check the emails of the Student types with reflection. Check the full array, and if one item is Student type
+            // then filter for the given property, and check if it's valid or not with the attribute applied to the property.
 
             int countStudentTypes = 0;
-            string newEmail = "lorem-ipsum-dolor-sit-amet@mail.com"; // első rész max 10 karakter lehet
+            string newEmail = "lorem-ipsum-dolor-sit-amet@mail.com"; // first section (before @) can be max 10 chars
 
             foreach (var studentObject in students)
             {
-                //if(studentObject is Student) // nem jó, túl gyenge szűrés (leszármazottat is beleveszi)
+                //if(studentObject is Student) // not good, too weak filtering because it inclides the descendant classes as well
                 if(studentObject.GetType().Equals(typeof(Student)))
                 {
                     countStudentTypes++;
@@ -190,7 +198,7 @@ namespace _02_reflection
                                 { 
                                     (studentObject as Student).Email = newEmail;
                                 }
-                                else // email nem ok
+                                else // email not ok
                                 {   
                                     (studentObject as Student).Email = firstPart.Substring(0,cl.MaxLength) + "@" + secondPart;
                                     //throw new Exception("ERROR: EMAIL IS INCORRECT!");
@@ -204,10 +212,15 @@ namespace _02_reflection
             // HF.: nem csak karakterszámra nézzük az emailt, hanem pl. van-e benne @ jel.
             // Ehhez itt található egy nagyon jó ValidationFactory példa. Érdemes átnézni és logikailag végigkövetni.
             // Ha 2 vagy több attribútum alapján akarunk validálni, akkor ez a helyes irány!
-            // link: https://gitlab.com/siposm/oktatas-hft-20211/-/blob/master/_ARCHIVED/LA-04-reflexio/reflexio_feladat-1-VALIDATOR/reflexio_feladat/Program.cs
+            // link: https://github.com/siposm/oktatas-hft-20211/blob/master/_archived/LA-04-reflexio/reflexio_feladat-1-VALIDATOR/reflexio_feladat/Program.cs
+            //
+            // Homework: not only the length should be checked but eg. if it contains @ symbol or not
+            // To check here is a great example at this link: https://github.com/siposm/oktatas-hft-20211/blob/master/_archived/LA-04-reflexio/reflexio_feladat-1-VALIDATOR/reflexio_feladat/Program.cs
+            // If 2 or more attributes are used this is the best way to validate them.
 
             // 2. RÉSZ
             // Ellenőrzés: kérjük le a Student típusokat és írjuk ki az email címüket.
+            // Check: get the Student types and write out their emails
 
             Console.WriteLine("\n-----------------\n");
             Console.WriteLine("STUDENT TYPES: " + countStudentTypes);
