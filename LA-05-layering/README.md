@@ -1,8 +1,8 @@
-# Figyelem!
+# Attention!
 
-A teljes példa az `.mdf` és `.ldf` állományokkal együtt, [innen](http://users.nik.uni-obuda.hu/siposm/lactures/HFT/layering.zip) letölthető egy zip-ként.
+The full example can be downloaded with the `.mdf` and `.ldf` files can be downloaded from [here](http://users.nik.uni-obuda.hu/siposm/lactures/HFT/layering.zip) az one zip.
 
-Az órai példa kiindulási alapja innen érhető el (https://github.com/siposm/hft-layering-init) (a fő solution elnevezése picit más `BlogSystem` vs `Blogging`, de minden más azonos) és az alábbi lépésekkel kell felépíteni a teljes kódállományt:
+The base for the lab exercise can be downloaded from here (https://github.com/siposm/hft-layering-init). Note that the solution's name a little different `BlogSystem` vs `Blogging`, but apart from that everything is the same. The steps below needed to be made in order to build up the full application.
 
 #### Steps:
 
