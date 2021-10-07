@@ -48,25 +48,25 @@ namespace _01blogbasics
 
             db.SaveChanges();
 
-            // 1. listázás
+            // 1. read all
             foreach (var item in db.Blogs)
                 Console.WriteLine($"{item.BlogId} - {item.Title}");
 
-            // 2. új elem felvétele -- CREATE
+            // 2. add new item -- CREATE
             db.Blogs.Add(new Blog() { Title = "NEW" });
             db.SaveChanges();
             // -- READ
             var q = db.Blogs.OrderByDescending(x => x.BlogId).FirstOrDefault();
             Console.WriteLine("\nNEW BLOG TITLE: " + q.Title);
 
-            // 3. meglévő elem módosítása -- UPDATE
+            // 3. modify existing item -- UPDATE
             var q1 = db.Blogs.OrderByDescending(x => x.BlogId).FirstOrDefault();
             q1.Title = "__NEW__";
             db.SaveChanges();
             var q2 = db.Blogs.OrderByDescending(x => x.BlogId).FirstOrDefault();
             Console.WriteLine("\nNEW BLOG TITLE v2: " + q2.Title);
 
-            // 4. meglévő elem törlése -- DELETE
+            // 4. delete existing item -- DELETE
             var toDel = db.Blogs.FirstOrDefault(x => x.Title.Contains("x"));
             db.Blogs.Remove(toDel);
             db.SaveChanges();

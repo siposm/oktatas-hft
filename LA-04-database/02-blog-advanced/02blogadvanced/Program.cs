@@ -124,17 +124,20 @@ namespace _02blogadvanced
             #endregion
 
             // 1. listázzuk ki az összes bejegyzést
+            // 1. list all blog posts
             Console.WriteLine("\n:: ALL RECORDS ::\n");
             db.Blogs
                 .ToList()
                 .ForEach(x => Console.WriteLine($"\t{x.AllData}"));
 
             // 2. hány olyan blogbejegyzés van, melyre 120-nál kevesebb like érkezett
+            // 2. how many blogs are where there is less likes than 120
             var q2 = db.Blogs.Where(x => x.LikesCount < 120).Count();
             Console.WriteLine("\n:: BLOG NO. WITH < 120 COMMENTS ::\n");
             Console.WriteLine("\t" + q2);
 
             // 3. mennyi a like-ok átlagos száma kategóriánként
+            // 3. what is the average of the likes for every category
             var q3 = from x in db.Blogs
                      group x by x.Category into g
                      select new
@@ -146,6 +149,7 @@ namespace _02blogadvanced
             q3.ToProcess("LIKES AVG PER GROUP");
 
             // 4. határozzuk meg a legtöbb kommentet kapott bejegyzést
+            // 4. determine which one is the most commented blog
             var q4 = (from x in db.Blogs
                       orderby x.Comments.Count() descending
                       select new
@@ -158,6 +162,7 @@ namespace _02blogadvanced
             Console.WriteLine("\t" + q4);
 
             // 5. szűrjük ki a csúnya szóval rendelkező blogbejegyzést (név és id)
+            // 5. filter the blogs where bad word is used (name and id)
             var rudeWordedComment = (from x in db.Comments
                                      where x.Content.Contains("SH!T")
                                      select x).SingleOrDefault();
@@ -172,7 +177,7 @@ namespace _02blogadvanced
             q5.ToProcess("BLOG WITH RUDE WORD");
 
             // 6. melyek azok a blogbejegyzések, amelyeknél a kommentszám kevesebb mint a legtöbb kommentszám
-
+            // 6. get all blogs where the like number is less than the most comment number
             var maxCommNo = db.Blogs
                 .OrderByDescending(x => x.Comments.Count())
                 .FirstOrDefault().Comments.Count();
@@ -189,9 +194,11 @@ namespace _02blogadvanced
             q7.ToProcess("SPECIAL COMMENTS NUMBER");
 
             // X. kategóriánként hány komment érkezett
+            // X. how many likes arrived for each category
             // [ special thanks to SzaboZs :) ]
             // 
             // Először próbáljátok meg Method Syntax-szal, utána Query Syntax-szal.
+            // Firstly try with method syntax then with query syntax.
             //
             var qx_sub = from x in db.Comments
                          group x by x.BlogId into g
