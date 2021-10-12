@@ -75,8 +75,8 @@ Please note that small changes / delays can occur during the weeks.
 | 4  | Git                               | Code First DB + EF                      | részletek publikálása                        |
 | 5  | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
 | 6  | NUnit, Moq theory II.             | Unit testing                            |                                              |
-| 7  | CI/CD                             | Mock                                    |                                              |
-| 8  | Data Exchange Protocols           | API endpoint                            |                                              |
+| 7  | Data Exchange Protocols (API)     | Mock                                    |                                              |
+| 8  | CI/CD                             | API endpoint                            |                                              |
 | 9  | Parallel I.                       | **LAB ZH**                              |                                              |
 | 10 | Parallel II.                      | FF code review #1                       |
 | 11 | \-- SZÜNET --                     | \-- SZÜNET --                           | FF code review #2 via Teams (ha kell  )      |
@@ -95,8 +95,8 @@ Please note that small changes / delays can occur during the weeks.
 | 4  | Layering + Databases              | Code First DB + EF                      | details will be published                    |
 | 5  | Git + NUnit, Moq theory I.        | Layered Project Example                 |                                              |
 | 6  | NUnit, Moq theory II.             | Unit testing                            |                                              |
-| 7  | CI/CD                             | Mock                                    |                                              |
-| 8  | Data Exchange Protocols           | API endpoint                            |                                              |
+| 7  | Data Exchange Protocols (API)     | Mock                                    |                                              |
+| 8  | CI/CD                             | API endpoint                            |                                              |
 | 9  | Parallel I.                       | **LAB EXAM**                            |                                              |
 | 10 | Parallel II.                      | PW code review #1                       |
 | 11 | \-- BREAK --                      | \-- BREAK --                            | PW code review #2 via Teams (if needed)      |
