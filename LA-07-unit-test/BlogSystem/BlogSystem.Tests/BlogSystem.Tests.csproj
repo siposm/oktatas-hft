@@ -10,4 +10,9 @@
     <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\BlogSystem.Logic\BlogSystem.Logic.csproj" />
+    <ProjectReference Include="..\BlogSystem.Repository\BlogSystem.Repository.csproj" />
+  </ItemGroup>
+
 </Project>

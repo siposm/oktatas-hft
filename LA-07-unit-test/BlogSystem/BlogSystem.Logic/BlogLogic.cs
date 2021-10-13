@@ -30,7 +30,7 @@ namespace BlogSystem.Logic
 
         public void ChangeBlogTitle(int id, string newTitle)
         {
-            if (newTitle == "")
+            if (newTitle == "" || newTitle == null)
                 throw new Exception("[ERR] Title can't be empty!");
 
             if (newTitle.Contains("ALMA"))
@@ -47,7 +47,10 @@ namespace BlogSystem.Logic
 
         public Blog GetBlogById(int id)
         {
-            return blogRepo.GetOne(id);
+            if (id < blogRepo.GetAll().Count())
+                return blogRepo.GetOne(id);
+            else
+                throw new IndexOutOfRangeException("[ERR] ID was too big!");
         }
 
         public IEnumerable<CommentNumberPerCategory> GetCommentNumberPerCategory()
