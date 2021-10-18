@@ -194,7 +194,7 @@ namespace _02blogadvanced
             q7.ToProcess("SPECIAL COMMENTS NUMBER");
 
             // X. kategóriánként hány komment érkezett
-            // X. how many likes arrived for each category
+            // X. how many comments arrived for each category
             // [ special thanks to SzaboZs :) ]
             // 
             // Először próbáljátok meg Method Syntax-szal, utána Query Syntax-szal.
