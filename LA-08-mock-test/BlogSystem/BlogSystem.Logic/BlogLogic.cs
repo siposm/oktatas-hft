@@ -78,7 +78,7 @@ namespace BlogSystem.Logic
 
         public double? AverageLikesCount()
         {
-            return blogRepo.GetAll().ToList().Average(x => x.LikesCount);
+            return blogRepo.GetAll().Average(x => x.LikesCount);
         }
 
         public CategoryAndCount GetLeastUsedCategory()
