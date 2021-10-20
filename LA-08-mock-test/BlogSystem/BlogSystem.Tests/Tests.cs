@@ -98,7 +98,7 @@ namespace BlogSystem.Tests
         }
 
         [Test]
-        public void Test()
+        public void GetBlogsWithRudeComments_ReturnsCorrectBlogInstance()
         {
             Assert.That(this.BlogLogic.GetBlogsWithRudeComments().First().BlogId, Is.EqualTo(4));
         }
