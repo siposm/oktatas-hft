@@ -94,5 +94,16 @@ namespace BlogSystem.Logic
                 .OrderBy(x => x.Count)
                 .First();
         }
+
+        public IList<Blog> GetBlogsWithRudeComments()
+        {
+            string rudeWord = "SH!T";
+
+            var q = from x in commentRepo.GetAll()
+                    where x.Content.Contains(rudeWord)
+                    select x.Blog;
+            
+            return q.ToList();
+        }
     }
 }

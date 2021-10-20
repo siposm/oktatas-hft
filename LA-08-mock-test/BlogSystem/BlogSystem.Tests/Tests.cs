@@ -97,7 +97,11 @@ namespace BlogSystem.Tests
             // using fakes we had problem here, because it lacked implementation for the ChangeBlogTitle method!
         }
 
-
+        [Test]
+        public void Test()
+        {
+            Assert.That(this.BlogLogic.GetBlogsWithRudeComments().First().BlogId, Is.EqualTo(4));
+        }
 
 
 
@@ -114,6 +118,12 @@ namespace BlogSystem.Tests
             Blog b3 = new Blog() { BlogId = 4, Category = "Design", LikesCount = null, Title = "#4 Designing a PWA", Tags = "cuda, nvidia, core", HasLink = false, HasImage = false };
             Blog b4 = new Blog() { BlogId = 5, Category = "Frontend", LikesCount = 300, Title = "#5 Frontend Architecture", Tags = "vue, angular", HasLink = true, HasImage = true };
 
+            b0.Comments = new List<Comment>();
+            b1.Comments = new List<Comment>();
+            b2.Comments = new List<Comment>();
+            b3.Comments = new List<Comment>();
+            b4.Comments = new List<Comment>();
+
             // -------------------------------------------------------------------------------------------------------
 
             Comment c0 = new Comment() { CommentId = 1, Content = "Some words were incorrect." };
@@ -127,21 +137,35 @@ namespace BlogSystem.Tests
             Comment c8 = new Comment() { CommentId = 9, Content = "This is pure SH!T." };
             Comment c9 = new Comment() { CommentId = 10, Content = "Good words used here!" };
 
+            c0.Blog = b0;
+            c1.Blog = b1;
+                    
+            c2.Blog = b2;
+            c3.Blog = b2;
+            c4.Blog = b2;
+            c5.Blog = b2;
+            c6.Blog = b2;
+                    
+            c7.Blog = b3;
+            c8.Blog = b3;
+                    
+            c9.Blog = b4;
+
             // -------------------------------------------------------------------------------------------------------
 
-            c0.BlogId = b0.BlogId;
-            c1.BlogId = b1.BlogId;
+            c0.BlogId = b0.BlogId; b0.Comments.Add(c0);
+            c1.BlogId = b1.BlogId; b1.Comments.Add(c1);
 
-            c2.BlogId = b2.BlogId;
-            c3.BlogId = b2.BlogId;
-            c4.BlogId = b2.BlogId;
-            c5.BlogId = b2.BlogId;
-            c6.BlogId = b2.BlogId;
+            c2.BlogId = b2.BlogId; b2.Comments.Add(c2);
+            c3.BlogId = b2.BlogId; b2.Comments.Add(c3);
+            c4.BlogId = b2.BlogId; b2.Comments.Add(c4);
+            c5.BlogId = b2.BlogId; b2.Comments.Add(c5);
+            c6.BlogId = b2.BlogId; b2.Comments.Add(c6);
 
-            c7.BlogId = b3.BlogId;
-            c8.BlogId = b3.BlogId;
+            c7.BlogId = b3.BlogId; b3.Comments.Add(c7);
+            c8.BlogId = b3.BlogId; b3.Comments.Add(c8);
 
-            c9.BlogId = b4.BlogId;
+            c9.BlogId = b4.BlogId; b4.Comments.Add(c9);
 
             // -------------------------------------------------------------------------------------------------------
 
@@ -168,6 +192,12 @@ namespace BlogSystem.Tests
             Blog b3 = new Blog() { BlogId = 4, Category = "Design", LikesCount = null, Title = "#4 Designing a PWA", Tags = "cuda, nvidia, core", HasLink = false, HasImage = false };
             Blog b4 = new Blog() { BlogId = 5, Category = "Frontend", LikesCount = 300, Title = "#5 Frontend Architecture", Tags = "vue, angular", HasLink = true, HasImage = true };
 
+            b0.Comments = new List<Comment>();
+            b1.Comments = new List<Comment>();
+            b2.Comments = new List<Comment>();
+            b3.Comments = new List<Comment>();
+            b4.Comments = new List<Comment>();
+
             // -------------------------------------------------------------------------------------------------------
 
             Comment c0 = new Comment() { CommentId = 1, Content = "Some words were incorrect." };
@@ -180,22 +210,36 @@ namespace BlogSystem.Tests
             Comment c7 = new Comment() { CommentId = 8, Content = "Dolor sit amet." };
             Comment c8 = new Comment() { CommentId = 9, Content = "This is pure SH!T." };
             Comment c9 = new Comment() { CommentId = 10, Content = "Good words used here!" };
+            
+            c0.Blog = b0;
+            c1.Blog = b1;
+
+            c2.Blog = b2;
+            c3.Blog = b2;
+            c4.Blog = b2;
+            c5.Blog = b2;
+            c6.Blog = b2;
+
+            c7.Blog = b3;
+            c8.Blog = b3;
+
+            c9.Blog = b4;
 
             // -------------------------------------------------------------------------------------------------------
 
-            c0.BlogId = b0.BlogId;
-            c1.BlogId = b1.BlogId;
+            c0.BlogId = b0.BlogId; b0.Comments.Add(c0);
+            c1.BlogId = b1.BlogId; b1.Comments.Add(c1);
 
-            c2.BlogId = b2.BlogId;
-            c3.BlogId = b2.BlogId;
-            c4.BlogId = b2.BlogId;
-            c5.BlogId = b2.BlogId;
-            c6.BlogId = b2.BlogId;
+            c2.BlogId = b2.BlogId; b2.Comments.Add(c2);
+            c3.BlogId = b2.BlogId; b2.Comments.Add(c3);
+            c4.BlogId = b2.BlogId; b2.Comments.Add(c4);
+            c5.BlogId = b2.BlogId; b2.Comments.Add(c5);
+            c6.BlogId = b2.BlogId; b2.Comments.Add(c6);
 
-            c7.BlogId = b3.BlogId;
-            c8.BlogId = b3.BlogId;
+            c7.BlogId = b3.BlogId; b3.Comments.Add(c7);
+            c8.BlogId = b3.BlogId; b3.Comments.Add(c8);
 
-            c9.BlogId = b4.BlogId;
+            c9.BlogId = b4.BlogId; b4.Comments.Add(c9);
 
             // -------------------------------------------------------------------------------------------------------
 

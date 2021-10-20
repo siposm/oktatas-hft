@@ -32,7 +32,8 @@ namespace BlogSystem.Client
             
             BlogLogic blogLogic = new BlogLogic(blogRepo, commentRepo);
 
-            
+
+
 
             ListAll(blogLogic);
 
