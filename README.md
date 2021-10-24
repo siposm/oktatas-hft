@@ -76,9 +76,9 @@ Please note that small changes / delays can occur during the weeks.
 | 5  | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
 | 6  | NUnit, Moq theory II.             | Unit testing                            |                                              |
 | 7  | Data Exchange Protocols (API)     | Mock                                    |                                              |
-| 8  | CI/CD                             | API endpoint                            |                                              |
+| 8  | CI/CD                             | LAB ZH gyak                             |                                              |
 | 9  | Parallel I.                       | **LAB ZH**                              |                                              |
-| 10 | Parallel II.                      | FF code review #1                       |
+| 10 | Parallel II.                      | API endpoint + FF code review #1        |                                              |
 | 11 | \-- SZÜNET --                     | \-- SZÜNET --                           | FF code review #2 via Teams (ha kell  )      |
 | 12 | Parallel III.                     | Thread, Task                            |                                              |
 | 13 | extra + **EA ZH**                 | ThreadSync                              | **határidő** #1 Thursday 23:59               |
@@ -96,9 +96,9 @@ Please note that small changes / delays can occur during the weeks.
 | 5  | Git + Unit testing theory (NUnit)          | Layered Project Example                 |                                              |
 | 6  | Dependency Injection + Mock theory (Moq)   | Unit testing                            |                                              |
 | 7  | Data Exchange Protocols (API)              | Mock                                    |                                              |
-| 8  | CI/CD                                      | API endpoint                            |                                              |
+| 8  | CI/CD                                      | LAB exam exercise                       |                                              |
 | 9  | Parallel I.                                | **LAB EXAM**                            |                                              |
-| 10 | Parallel II.                               | PW code review #1                       |
+| 10 | Parallel II.                               | API endpoint + PW code review #1        |                                              |
 | 11 | \-- BREAK --                               | \-- BREAK --                            | PW code review #2 via Teams (if needed)      |
 | 12 | Parallel III.                              | Thread, Task                            |                                              |
 | 13 | extra + **THEORY EXAM**                    | ThreadSync                              | **deadline** #1 Thursday 23:59               |
