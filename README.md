@@ -78,8 +78,8 @@ Please note that small changes / delays can occur during the weeks.
 | 7  | Data Exchange Protocols (API)     | Mock                                    |                                              |
 | 8  | CI/CD                             | LAB ZH gyak                             |                                              |
 | 9  | Parallel I.                       | **LAB ZH**                              |                                              |
-| 10 | Parallel II.                      | API endpoint + FF code review #1        |                                              |
-| 11 | \-- SZÜNET --                     | \-- SZÜNET --                           | FF code review #2 via Teams (ha kell  )      |
+| 10 | Parallel II.                      | API endpoint                            |                                              |
+| 11 | \-- SZÜNET --                     | \-- SZÜNET --                           |                                              |
 | 12 | Parallel III.                     | Thread, Task                            |                                              |
 | 13 | extra + **EA ZH**                 | ThreadSync                              | **határidő** #1 Thursday 23:59               |
 | 14 | .NET versions + **EA pótZH**      | **LAB pótZH**                           | **határidő** #2 Thursday 23:59 + **FF demó** |
