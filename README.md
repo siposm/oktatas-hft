@@ -87,22 +87,22 @@ Please note that small changes / delays can occur during the weeks.
 
 ### EN
 
-|    | LECTURE                                    | LAB                                     | PROJECT WORK                                 |
-| -- | ------------------------------------------ | --------------------------------------- | -------------------------------------------- |
-| 1  | Intro + Requirements + Delegates           | Delegates + Lambda                      |                                              |
-| 2  | LINQ + XML + JSON                          | LINQ + XLINQ                            |                                              |
-| 3  | DLL + Reflection                           | Reflection + DLL                        |                                              |
-| 4  | Layering + Databases                       | Code First DB + EF                      | details will be published                    |
-| 5  | Git                                        | Layered Project Example                 |                                              |
-| 6  | Unit testing theory (NUnit)                | Unit testing                            |                                              |
-| 7  | Dependency Injection + Mock theory (Moq)   | Mock                                    |                                              |
-| 8  | Data Exchange Protocols (API)              | LAB exam exercise                       |                                              |
-| 9  | DevOps basics, CI/CD                       | **LAB EXAM**                            |                                              |
-| 10 | Parallel programming I.                    | API endpoint + PW code review #1        |                                              |
-| 11 | \-- BREAK --                               | \-- BREAK --                            | PW code review #2 via Teams (if needed)      |
-| 12 | Parallel programming II.                   | Thread, Task                            |                                              |
-| 13 | extra + **THEORY EXAM**                    | ThreadSync                              | **deadline** #1 Thursday 23:59               |
-| 14 | .NET versions + **THEORY retake**          | **LAB retake**                          | **deadline** #2 Thursday 23:59 + **PW presentation** |
+|    | LECTURE                                    | LAB                                     | PROJECT WORK                                          |
+| -- | ------------------------------------------ | --------------------------------------- | ----------------------------------------------------- |
+| 1  | Intro + Requirements + Delegates           | Delegates + Lambda                      |                                                       |
+| 2  | LINQ + XML + JSON                          | LINQ + XLINQ                            |                                                       |
+| 3  | DLL + Reflection                           | Reflection                              |                                                       |
+| 4  | Databases                                  | Code First DB + EF                      | details will be published                             |
+| 5  | Layering                                   | Layered Project Example                 |                                                       |
+| 6  | Git                                        | Unit testing                            |                                                       |
+| 7  | Unit testing theory (NUnit)                | Mock                                    |                                                       |
+| 8  | Dependency Injection + Mock theory (Moq)   | LAB exam exercise                       |                                                       |
+| 9  | Data Exchange Protocols (API)              | **LAB EXAM**                            |                                                       |
+| 10 | DevOps basics, CI/CD                       | API endpoint + PW code review #1        |                                                       |
+| 11 | \-- BREAK --                               | \-- BREAK --                            | PW code review #2 via Teams (if needed)               |
+| 12 | Parallel programming I.                    | Thread, Task                            |                                                       |
+| 13 | Parallel programming II. + **THEORY EXAM** | ThreadSync                              | **deadline** #1 Thursday 23:59                        |
+| 14 | .NET versions + **THEORY retake**          | **LAB retake**                          | **deadline** #2 Thursday 23:59 + **PW presentation**  |
 
 
 <br><br>
