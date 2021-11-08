@@ -69,15 +69,15 @@ Please note that small changes / delays can occur during the weeks.
 
 |    | EA                                | LAB                                     | FF                                           |
 | -- | --------------------------------- | --------------------------------------- | -------------------------------------------- |
-| 1  | Intro + Requirements + LINQ + XML | Lambda                                  |                                              |
-| 2  | DLL + Databases                   | LINQ + XLINQ                            |                                              |
-| 3  | Layering                          | Reflection + DLL                        |                                              |
-| 4  | Git                               | Code First DB + EF                      | részletek publikálása                        |
-| 5  | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
-| 6  | NUnit, Moq theory II.             | Unit testing                            |                                              |
-| 7  | Data Exchange Protocols (API)     | Mock                                    |                                              |
-| 8  | CI/CD                             | LAB ZH gyak                             |                                              |
-| 9  | Parallel I.                       | **LAB ZH**                              |                                              |
+| 01 | Intro + Requirements + LINQ + XML | Lambda                                  |                                              |
+| 02 | DLL + Databases                   | LINQ + XLINQ                            |                                              |
+| 03 | Layering                          | Reflection + DLL                        |                                              |
+| 04 | Git                               | Code First DB + EF                      | részletek publikálása                        |
+| 05 | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
+| 06 | NUnit, Moq theory II.             | Unit testing                            |                                              |
+| 07 | Data Exchange Protocols (API)     | Mock                                    |                                              |
+| 08 | CI/CD                             | LAB ZH gyak                             |                                              |
+| 09 | Parallel I.                       | **LAB ZH**                              |                                              |
 | 10 | Parallel II.                      | API endpoint                            |                                              |
 | 11 | \-- SZÜNET --                     | \-- SZÜNET --                           |                                              |
 | 12 | Parallel III.                     | Thread, Task                            |                                              |
@@ -87,22 +87,24 @@ Please note that small changes / delays can occur during the weeks.
 
 ### EN
 
-|    | LECTURE                                    | LAB                                     | PROJECT WORK                                 |
-| -- | ------------------------------------------ | --------------------------------------- | -------------------------------------------- |
-| 1  | Intro + Requirements + Delegates           | Delegates + Lambda                      |                                              |
-| 2  | LINQ + XML + JSON                          | LINQ + XLINQ                            |                                              |
-| 3  | DLL + Reflection                           | Reflection + DLL                        |                                              |
-| 4  | Layering + Databases                       | Code First DB + EF                      | details will be published                    |
-| 5  | Git + Unit testing theory (NUnit)          | Layered Project Example                 |                                              |
-| 6  | Dependency Injection + Mock theory (Moq)   | Unit testing                            |                                              |
-| 7  | Data Exchange Protocols (API)              | Mock                                    |                                              |
-| 8  | CI/CD                                      | LAB exam exercise                       |                                              |
-| 9  | Parallel I.                                | **LAB EXAM**                            |                                              |
-| 10 | Parallel II.                               | API endpoint + PW code review #1        |                                              |
-| 11 | \-- BREAK --                               | \-- BREAK --                            | PW code review #2 via Teams (if needed)      |
-| 12 | Parallel III.                              | Thread, Task                            |                                              |
-| 13 | extra + **THEORY EXAM**                    | ThreadSync                              | **deadline** #1 Thursday 23:59               |
-| 14 | .NET versions + **THEORY retake**          | **LAB retake**                          | **deadline** #2 Thursday 23:59 + **PW presentation** |
+Please note that the lecture materials are available in advance! It means that for example the Git lecture (scheduled for the 8th week) can be viewed during the 4th week when the project works are published (because Git will be needed to create the base of the project work).
+
+|    | LECTURE                                    | LAB                                     | PROJECT WORK                                            |
+| -- | ------------------------------------------ | --------------------------------------- | ------------------------------------------------------- |
+| 01 | Intro + Requirements + Delegates           | Delegates + Lambda                      |                                                         |
+| 02 | LINQ + XML + JSON                          | LINQ + XLINQ                            |                                                         |
+| 03 | DLL + Reflection                           | Reflection                              |                                                         |
+| 04 | Databases                                  | Code First DB + EF                      | details will be published                               |
+| 05 | Layering                                   | Layered Project Example                 |                                                         |
+| 06 | Unit testing theory (NUnit)                | Unit testing                            |                                                         |
+| 07 | Dependency Injection + Mock theory (Moq)   | Mock                                    |                                                         |
+| 08 | Git SCM basics                             | LAB exam exercise                       |                                                         |
+| 09 | Data Exchange Protocols (API)              | **LAB EXAM**                            |                                                         |
+| 10 | DevOps basics, CI/CD                       | API endpoint                            | code review #1                                          |
+| 11 | \-- BREAK --                               | \-- BREAK --                            | code review #2                                          |
+| 12 | Parallel programming I.                    | Thread, Task                            |                                                         |
+| 13 | Parallel programming II. + **THEORY EXAM** | ThreadSync                              | **deadline** #1 thursday 23:59                          |
+| 14 | .NET versions + **THEORY retake**          | **LAB retake**                          | **deadline** #2 thursday 23:59 + **demo + presentation**|
 
 
 <br><br>
