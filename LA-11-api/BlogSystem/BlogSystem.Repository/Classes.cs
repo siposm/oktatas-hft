@@ -81,5 +81,28 @@ namespace BlogSystem.Repository
             comment.Content = newContent;
             ctx.SaveChanges();
         }
+
+        public void AddNewComment(Comment comment)
+        {
+            ctx.Add(comment);
+            ctx.SaveChanges();
+        }
+
+        public void DeleteCommentById(int id)
+        {
+            var toDelete = GetOne(id);
+            ctx.Remove(toDelete);
+            ctx.SaveChanges();
+        }
+
+        public void UpdateComment(Comment comment)
+        {
+            var toUpdate = GetOne(comment.CommentId);
+
+            toUpdate.Content = comment.Content;
+            // etc. for additional properties
+
+            ctx.SaveChanges();
+        }
     }
 }

@@ -13,6 +13,9 @@ namespace BlogSystem.Logic
         Comment GetCommentById(int id);
         void UpdateCommentContentById(int id, string newContent);
         IList<Comment> GetAllComments();
+        void AddNewComment(Comment comment);
+        void UpdateComment(Comment comment);
+        void DeleteComment(int id);
     }
 
     public class CommentLogic : ICommentLogic
@@ -24,6 +27,16 @@ namespace BlogSystem.Logic
             this.commentRepo = commentRepo;
         }
 
+        public void AddNewComment(Comment comment)
+        {
+            commentRepo.AddNewComment(comment);
+        }
+
+        public void DeleteComment(int id)
+        {
+            commentRepo.DeleteCommentById(id);
+        }
+
         public IList<Comment> GetAllComments()
         {
             return commentRepo.GetAll().ToList();
@@ -32,6 +45,11 @@ namespace BlogSystem.Logic
         public Comment GetCommentById(int id)
         {
             return commentRepo.GetOne(id);
+        }
+
+        public void UpdateComment(Comment comment)
+        {
+            commentRepo.UpdateComment(comment);
         }
 
         public void UpdateCommentContentById(int id, string newContent)

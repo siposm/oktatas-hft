@@ -24,5 +24,8 @@ namespace BlogSystem.Repository
     public interface ICommentRepository : IRepository<Comment>
     {
         void UpdateContent(int id, string newContent);
+        void AddNewComment(Comment comment);
+        void UpdateComment(Comment comment);
+        void DeleteCommentById(int id);
     }
 }
