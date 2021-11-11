@@ -52,6 +52,54 @@ namespace _03_webstat
             Console.WriteLine("\n\n");            
             foreach (var item in T.OrderBy(x => x.Speed))
                 WriteOutMeasurement(item.Url, item.Speed);
+
+
+
+
+
+            Action<string, string> openFileAsProcess = (filename, argument) =>
+            {
+                Process p = new Process()
+                {
+                    StartInfo = new ProcessStartInfo()
+                    {
+                        FileName = filename,
+                        Arguments = argument
+                    }
+                };
+                p.Start();
+            };
+
+            Action<Measurement[]> createXML = x =>
+            {
+                XDocument doc = new XDocument();
+                doc.Add(new XElement("measurements"));
+                foreach (var item in T.OrderBy(x => x.Speed))
+                {
+                    doc.Root.Add(new XElement("measurement",
+                        new XElement("Url", item.Url),
+                        new XElement("Byte", item.Byte),
+                        new XElement("MilliSec", item.MilliSec),
+                        new XElement("Speed", item.Speed)
+                    ));
+                }
+                string filename = "output.xml";
+                doc.Save(filename);
+                openFileAsProcess(@"C:\Program Files\Notepad++\notepad++.exe", filename);
+            };
+
+            createXML(T);
+
+            Action<Measurement[]> createJSON = x =>
+            {
+                var json = JsonSerializer.Serialize(x);
+                string filename = "output.json";
+                File.WriteAllText(filename, json);
+                openFileAsProcess(@"C:\Program Files\Notepad++\notepad++.exe", filename);
+                // to see output.json prettier https://jsonformatter.curiousconcept.com/
+            };
+
+            createJSON(T);
         }
 
         static void Measure(object o)
