@@ -56,7 +56,7 @@ namespace BlogSystem.Logic
 
         public Blog GetBlogById(int id)
         {
-            if (id < blogRepo.GetAll().Count())
+            if (id <= blogRepo.GetAll().Count())
                 return blogRepo.GetOne(id);
             else
                 throw new IndexOutOfRangeException("[ERR] ID was too big!");
