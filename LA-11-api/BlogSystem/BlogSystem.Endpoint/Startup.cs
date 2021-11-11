@@ -27,7 +27,8 @@ namespace BlogSystem.Endpoint
             services.AddTransient<IBlogRepository, BlogRepository>();
             services.AddTransient<ICommentRepository, CommentRepository>();
 
-            services.AddTransient<DbContext, BlogContext>();
+            //services.AddTransient<DbContext, BlogContext>();
+            services.AddSingleton<DbContext, BlogContext>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
