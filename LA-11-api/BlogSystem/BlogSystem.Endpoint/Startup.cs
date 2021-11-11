@@ -42,7 +42,7 @@ namespace BlogSystem.Endpoint
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers(); // localhost:0123/ALMA --> ALMA kontrollerhez fordul
+                endpoints.MapControllers(); // localhost:0123/ALMA --> ALMA controller
             });
         }
     }
