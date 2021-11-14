@@ -101,9 +101,9 @@ Please note that the lecture materials are available in advance! It means that f
 | 08 | Git SCM basics                             | LAB exam exercise                       |                                                         |
 | 09 | Data Exchange Protocols (API)              | **LAB EXAM**                            |                                                         |
 | 10 | DevOps basics, CI/CD                       | API endpoint                            | code review #1                                          |
-| 11 | \-- BREAK --                               | \-- BREAK --                            | code review #2                                          |
-| 12 | Parallel programming I.                    | Thread, Task                            |                                                         |
-| 13 | Parallel programming II. + **THEORY EXAM** | ThreadSync                              | **deadline** #1 thursday 23:59                          |
+| 11 | Parallel programming I.                    | \-- BREAK --                            | code review #2                                          |
+| 12 | Parallel programming II.                   | Thread, Task                            |                                                         |
+| 13 | Parallel programming III. + **THEORY EXAM**| ThreadSync                              | **deadline** #1 thursday 23:59                          |
 | 14 | .NET versions + **THEORY retake**          | **LAB retake**                          | **deadline** #2 thursday 23:59 + **demo + presentation**|
 
 
