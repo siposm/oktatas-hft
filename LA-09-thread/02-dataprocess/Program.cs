@@ -19,6 +19,7 @@ namespace _02_dataprocess
 
             StreamReader sr = new StreamReader(dt.OpenFile);
             string full = sr.ReadToEnd();
+            sr.Close();
 
             string saveStr = "";
             foreach (var item in full.Split('\n'))
@@ -55,25 +56,25 @@ namespace _02_dataprocess
         {
             #region INIT
 
-                string[] inputs = new string[] {
+            string[] inputs = new string[] {
                     "./_files/file1.txt",
                     "./_files/file2.txt",
                     "./_files/file3.txt",
                     "./_files/file4.txt"
                 };
 
-                string[] outputs = new string[] {
+            string[] outputs = new string[] {
                     "./_output/save_file1.txt",
                     "./_output/save_file2.txt",
                     "./_output/save_file3.txt",
                     "./_output/save_file4.txt"
                 };
 
-                int[] delays = new int[] { // * 1000 ==> msp
+            int[] delays = new int[] { // * 1000 ==> seconds
                     1,
-                    4,
                     1,
-                    1
+                    1,
+                    6
                 };
 
             #endregion
@@ -92,11 +93,11 @@ namespace _02_dataprocess
                 });
             }
 
-            // szinkronizációs pont
+            // sync point
             for (int i = 0; i < threads.Length; i++)
                 threads[i].Join();
 
-            // ezen a ponton biztosan minden kimeneti fájl előállt már
+            // by this point all the needed output files are created
             DataProcessor.CollectData(outputs);
         }
     }
