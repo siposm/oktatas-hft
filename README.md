@@ -82,7 +82,7 @@ Please note that small changes / delays can occur during the weeks.
 | 11 | \-- SZÜNET --                     | \-- SZÜNET --                           |                                              |
 | 12 | Parallel III.                     | Thread, Task                            |                                              |
 | 13 | extra + **EA ZH**                 | ThreadSync                              | **határidő** #1 Thursday 23:59               |
-| 14 | .NET versions + **EA pótZH**      | **LAB pótZH**                           | **határidő** #2 Thursday 23:59 + **FF demó** |
+| 14 | **EA pótZH**                      | **LAB pótZH**                           | **határidő** #2 Thursday 23:59 + **FF demó** |
 
 
 ### EN
@@ -104,7 +104,7 @@ Please note that the lecture materials are available in advance! It means that f
 | 11 | Parallel programming I.                    | \-- BREAK --                            | code review #2                                          |
 | 12 | Parallel programming II.                   | Thread, Task                            |                                                         |
 | 13 | Parallel programming III. + **THEORY EXAM**| ThreadSync                              | **deadline** #1 thursday 23:59                          |
-| 14 | .NET versions + **THEORY retake**          | **LAB retake**                          | **deadline** #2 thursday 23:59 + **demo + presentation**|
+| 14 | **THEORY retake**                          | **LAB retake**                          | **deadline** #2 thursday 23:59 + **demo + presentation**|
 
 
 <br><br>
