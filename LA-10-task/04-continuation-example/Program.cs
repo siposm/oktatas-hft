@@ -21,7 +21,7 @@ namespace tasktest
 
             t.Start();
 
-            Console.WriteLine("[0] some random lines after the 5 sec mark...");
+            Console.WriteLine("[0] some random lines after the 5 second mark...");
 
             Console.ReadLine();
 
