@@ -20,10 +20,7 @@ namespace _06_cancellation_demo_with_continuation
                     Thread.Sleep(300);
                     Console.Write(i + "\t");
 
-                    if (cts.Token.IsCancellationRequested)
-                    {
-                        cts.Token.ThrowIfCancellationRequested();
-                    }
+                    cts.Token.ThrowIfCancellationRequested();
                 }
             }, cts.Token);
 
