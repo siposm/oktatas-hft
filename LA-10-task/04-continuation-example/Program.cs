@@ -14,10 +14,10 @@ namespace tasktest
                 Console.WriteLine("[1] hello from the task!");
             });
 
-            t.ContinueWith(t =>
-            {
-                Console.WriteLine("[2] hello from the continuation! :)");
-            });
+            t.ContinueWith(t => { Console.WriteLine("[2] hello from the continuation! :)"); })
+            .ContinueWith(t => { Console.WriteLine("[3] hello from the second continuation! :)"); })
+            .ContinueWith(t => { Console.WriteLine("[4] hello from the third continuation! :)"); })
+            .ContinueWith(t => { Console.WriteLine("[5] hello from the fourth continuation! :)"); });
 
             t.Start();
 
