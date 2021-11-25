@@ -59,9 +59,6 @@ namespace _02_rss_reader
 
     class Program
     {
-        // The updated Main method is now considered an Async main, which allows for an asynchronous entry point into the executable./
-        // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks
-
         static void Main(string[] args) // !!!!!!!!!!!!!!!!!!!!!
         {
             CancellationTokenSource CTS = new CancellationTokenSource();
@@ -73,25 +70,35 @@ namespace _02_rss_reader
             {
                 int _i = i; // OVT!!!
                 tasks[i] = Task.Run(() => DataProcessor.Download(_i, CTS.Token), CTS.Token)
-                    .ContinueWith(x =>
-                        {
-                            Console.WriteLine("Task was canceled.");
 
-                        }, TaskContinuationOptions.OnlyOnCanceled);
+                        // OPTION A.: using continuation here --> then the tasks' status will be RanToCompletion, because once (here) it was already solved by this continuation
+
+                        // OPTION B.: using conditional continuation at the WhenAll section --> then the tasks' status will be Canceled, thus, the continueWith section after the WhenAll will NOT be executed as it is conditionally binded to only RanToCompletion state
+
+                        // .ContinueWith(x =>
+                        //     {
+                        //         Console.WriteLine("Task was canceled.");
+
+                        //     }, TaskContinuationOptions.OnlyOnCanceled)
+                        ;
             }
 
             // sync and write out
             Task.WhenAll(tasks).ContinueWith(x =>
             {
-                int id = 0; // != task ID
-                DataProcessor.news.ForEach(item => Console.WriteLine($"[{id++}] : {item.Title}"));
+
+                for (int i = 0; i < tasks.Length; i++)
+                    Console.WriteLine($">> {tasks[i].Status}");
+
+                int idx = 0;
+                DataProcessor.news.ForEach(item => Console.WriteLine($"[{idx++}] : {item.Title}"));
 
                 int choosen = new Random().Next(0, DataProcessor.news.Count);
                 Console.WriteLine("RANDOMLY SELECTED ID: " + choosen);
 
                 // DataProcessor.Open(DataProcessor.news[choosen].URL);
 
-            });
+            }, TaskContinuationOptions.OnlyOnRanToCompletion);
 
 
 
