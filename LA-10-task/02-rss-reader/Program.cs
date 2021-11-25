@@ -16,9 +16,8 @@ namespace _02_rss_reader
     class DataProcessor
     {
         public static string[] urls = {
-            // "http://www.origo.hu/contentpartner/rss/sport/origo.rss",
-            // "http://hvg.hu/rss/rss.hvg/hirek",
-            // "https://sg.hu/plain/rss.xml",
+            "http://hvg.hu/rss/rss.hvg/hirek",
+            "https://sg.hu/plain/rss.xml",
             "https://www.hwsw.hu/xml/latest_news_rss.xml",
             "https://feeds.soundcloud.com/users/soundcloud:users:281745775/sounds.rss"
         };
@@ -31,24 +30,23 @@ namespace _02_rss_reader
         {
             Process p = new Process();
             p.StartInfo = new ProcessStartInfo();
-            p.StartInfo.FileName = "firefox"; // win: .exe is lehetséges, hogy kell mögé
+            p.StartInfo.FileName = "firefox"; // or Chrome or whatever, the .exe is maybe needed to place afterwards on Windows
             p.StartInfo.Arguments = url;
             p.Start();
             p.WaitForExit();
         }
 
-        public static void Download(object o, CancellationToken CT)
+        public static void Download(int index, CancellationToken CT)
         {
-            int id = (int)o;
-            xdocs[id] = XDocument.Load(urls[id]);
+            Task.Delay(1000).Wait(); // in order to slow down a little bit the "processing" time
 
-            // if (ct.IsCancellationRequested) break;
+            //if (CT.IsCancellationRequested) return;
             CT.ThrowIfCancellationRequested();
 
-            foreach (var item in xdocs[id].Descendants("item"))
-            {
-                Thread.Sleep(10);
+            xdocs[index] = XDocument.Load(urls[index]);
 
+            foreach (var item in xdocs[index].Descendants("item"))
+            {
                 news.Add(new RSS()
                 {
                     Title = item.Element("title").Value,
@@ -58,62 +56,57 @@ namespace _02_rss_reader
         }
     }
 
-    
+
     class Program
     {
-        static CancellationTokenSource CTS = new CancellationTokenSource();
+        // The updated Main method is now considered an Async main, which allows for an asynchronous entry point into the executable./
+        // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/cancel-an-async-task-or-a-list-of-tasks
 
-        static void Main(string[] args)
+        static void Main(string[] args) // !!!!!!!!!!!!!!!!!!!!!
         {
+            CancellationTokenSource CTS = new CancellationTokenSource();
+
             Task[] tasks = new Task[DataProcessor.urls.Length];
 
             // start downloading
             for (int i = 0; i < tasks.Length; i++)
             {
                 int _i = i; // OVT!!!
-                tasks[i] = Task.Run( () => DataProcessor.Download(_i, CTS.Token), CTS.Token );
+                tasks[i] = Task.Run(() => DataProcessor.Download(_i, CTS.Token), CTS.Token)
+                    .ContinueWith(x =>
+                        {
+                            Console.WriteLine("Task was canceled.");
+
+                        }, TaskContinuationOptions.OnlyOnCanceled);
             }
 
             // sync and write out
-            Task.WhenAll(tasks).ContinueWith( x =>
+            Task.WhenAll(tasks).ContinueWith(x =>
             {
                 int id = 0; // != task ID
-                foreach (var item in DataProcessor.news)
-                    Console.WriteLine($"[{id++}] : {item.Title}");
+                DataProcessor.news.ForEach(item => Console.WriteLine($"[{id++}] : {item.Title}"));
 
-                Console.WriteLine("Select ID!");
-                int choosen = new Random().Next(0,371);
-                Console.WriteLine("CHOOSEN: " + choosen);
-                //int choosen = int.Parse(Console.ReadLine());
-                /* console readline-hoz linux / mac esetén a .vscode/launch.json-ban állítani kell!
-                    src: https://github.com/OmniSharp/omnisharp-vscode/issues/2029
-                    "In launch.json change the default value of console from internalTerminal to externalTerminal." */
-                DataProcessor.Open(DataProcessor.news[choosen].URL);
+                int choosen = new Random().Next(0, DataProcessor.news.Count);
+                Console.WriteLine("RANDOMLY SELECTED ID: " + choosen);
 
-            }, TaskContinuationOptions.OnlyOnRanToCompletion); //.Wait >> blokkolná az egészet, nem tud továbbmenni lefele!!!
-            
-            Task.WhenAll(tasks).ContinueWith( x =>
-            {
-                Console.WriteLine("::: TASKS WERE CANCELED :::");
-            }, TaskContinuationOptions.OnlyOnCanceled);
+                // DataProcessor.Open(DataProcessor.news[choosen].URL);
+
+            });
 
 
 
-            
-            Console.WriteLine("\n\n ::: PRESS ENTER TO CANCEL :::");
+
+
+            Console.WriteLine("PRESS ANY KEY TO CANCEL"); Console.ReadLine();
+
+            Console.WriteLine("CANCELING..."); CTS.Cancel(); Console.WriteLine("DONE");
+            // NOTE:
+            // IF we wait until the continuewith section is finished,
+            // then we'll still see canceling, and still calling the Cancel method, but there is NOTHING to be cancelled
+
+
+            Console.WriteLine("PRESS ANY KEY TO EXIT");
             Console.ReadLine();
-            Console.WriteLine("\n\n ::: CANCELLING... :::");
-            CTS.Cancel();
-            Console.WriteLine("\n\n ::: ...CANCEL DONE :::");
-
-            //Console.ReadLine(); // readline esetén a program még vár
-                                // (blokkolva van a readline miatt) ezért az exception bekövetkezik
-                                //
-                                // readline berakása esetén
-                                // utána nyomjunk a "folytatás" gombra és látni fogjuk hogy az OnlyOnCanceled rész is lefut
-                                //
-                                // itt most ez így jó nekünk, de lásd:
-                                // https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/task-cancellation
         }
     }
 }
