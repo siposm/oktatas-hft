@@ -27,7 +27,7 @@ namespace _06_cancellation_demo_with_continuation
             task.ContinueWith(x =>
             {
                 Console.WriteLine("TASK HAS BEEN CANCELED.");
-            }, TaskContinuationOptions.OnlyOnCanceled);
+            }, TaskContinuationOptions.OnlyOnCanceled); // change to TaskContinuationOptions.OnlyOnRanToCompletion to see continuation NOT executing because it was canceled
 
             Thread.Sleep(2000);
             Console.WriteLine("Cancellation starting in 2 seconds...");
