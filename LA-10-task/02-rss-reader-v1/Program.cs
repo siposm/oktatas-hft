@@ -98,7 +98,13 @@ namespace _02_rss_reader_v1
 
                 Console.WriteLine("COUNTED RSS NUMBER: " + DataProcessor.RSSCounter);
 
-            }, TaskContinuationOptions.OnlyOnRanToCompletion);
+            }, TaskContinuationOptions.OnlyOnRanToCompletion)
+            .ContinueWith(x =>
+            {
+                for (int i = 0; i < tasks.Length; i++)
+                    Console.WriteLine($">> {tasks[i].Status}");
+
+            }, TaskContinuationOptions.OnlyOnCanceled);
 
 
 
