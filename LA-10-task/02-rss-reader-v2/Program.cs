@@ -100,6 +100,12 @@ namespace _02_rss_reader_v2
                 int idx = 0;
                 DataProcessor.news.ForEach(item => Console.WriteLine($"[{idx++}] : {item.Title}"));
 
+                // ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ
+                // warning!!! completed --> canceled? canceled --> completed???
+                for (int i = 0; i < tasks.Length; i++)
+                    Console.WriteLine($">> {tasks[i].Status}");
+                // ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
                 int choosen = new Random().Next(0, DataProcessor.news.Count);
                 Console.WriteLine("RANDOMLY SELECTED ID: " + choosen);
 
