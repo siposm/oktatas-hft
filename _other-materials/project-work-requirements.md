@@ -4,7 +4,7 @@
 
 2021/22/2 semester
 
-During the project work each student have to develop a git version controlled layered CRUD application which uses a database.
+**During the project work each student have to develop a Git version controlled layered CRUD application which uses a database and API calls.**
 
 Here below in this document the requirements can be read. The obligatory parts must be completed fully, otherwise the project work can not be accepted. There are some requirements which are counted as “minus points” if they are not fulfilled, these are listed at the end of the document.
 
@@ -22,7 +22,7 @@ Here below in this document the requirements can be read. The obligatory parts m
 
 ### Minimal requirements regarding the empty solution’s structure:
 
-- To start the project work an empty **Console Application** (in **.Net 5.0**!) should be created from Visual Studio. The solution’s name must be: `ABC123_ADT_2021_22_2` (where the ABC123 must be replaced with your own Neptun code as well). The project name must be `ABC123_ADT_2021_22_2.Client`.
+- To start the project work an empty **Console Application** (in **.Net 5.0**!) should be created from Visual Studio. The solution’s name must be: `ABC123_ADT_2021_22_2` (where the ABC123 must be replaced with your own Neptun code as stated before). The project name must be `ABC123_ADT_2021_22_2.Client`.
 - In the solution the following structure must be created, by creating new projects. In the projects’ name the solution’s name must be used as well (with the replaced Neptun code of course), like below:
   - `ABC123_ADT_2021_22_2.Models` (Class Library)
   - `ABC123_ADT_2021_22_2.Data` (Class Library)
@@ -36,40 +36,54 @@ Here below in this document the requirements can be read. The obligatory parts m
   - **Shared** (Models)
 - It must be set that clicking on the Start button both the backend application (server) and the frontend application (client) starts. Right click to solution’s name, properties, startup project, multiple startup projects, and mark client and endpoint as start.
 - Dependencies must be set as well. Right click to any given project, add, project reference. Dependencies listed below, these must be set accordingly! Other dependencies must not be used, except if you want to test the Client, but before the final deadline the Client can only have the Models.
-  - **Endpoint**‘s dependencies: **Data, Logic, Repository, Models**
-  - **Test**‘s dependencies: **Logic, Repository, Models**
-  - **Data**‘s dependencies: **Models**
-  - **Logic**‘s dependencies: **Repository, Models**
-  - **Repository**‘s dependencies: **Models, Data**
-  - **Client**‘s dependencies: **Models**
+  - **Endpoint**‘s dependencies:
+    - Data
+    - Logic
+    - Repository
+    - Models
+  - **Test**‘s dependencies:
+    - Logic
+    - Repository
+    - Models
+  - **Data**‘s dependencies:
+    - Models
+  - **Logic**‘s dependencies:
+    - Repository
+    - Models
+  - **Repository**‘s dependencies:
+    - Models
+    - Data
+  - **Client**‘s dependencies:
+    - Models
 - When all these are set up and there is no C# code written yet, it’s time to initialize a git repository.
-  - **Please note** that the following steps will include a VS integrated git management tool, which is easy to use. But feel free to use other methods like discussed in the lecture video you can use GitKraken as external dedicated git GUI tool, or simply CLI itself. You can also create the repoistory itself from the GitHub GUI and then clone it, and initialize the solution into that folder. In any way, at the end you will end up having one git repository with a local (on your machine) and a remote (on GitHub).
-  - In the VS at the bottom right corner there is a button “Add to source control”. This is visibly only if during the VS install, on the individual components page **Git for Windows** and **GitHub Extension for Visual Studio** was previously selected. If it has not been done then the VS install should be  modified. On Windows go to Control Panel / Install and delete programs / Visual Studio 2019 Community (or other version) and click on change. For database management **Data Storage and Processing Workload** should be added as well from here.
-  - After clicking on the “Add to source control” button the GitHub account’s details should be entered, check if the repository name is correct, check if the repository’s visibility is correct. If everything is good click on “**Create and Publish**”.
-  - When we follow the above mentioned steps and start version control from VS itself, then the `.gitignore` file is automatically created to fit our needs for the C# language. But, one modification must be done regarding the `.mdf` and `.ldf` files.
-  - Create an “Others” folder in the solution, right click on it, add existing item and open the `.gitignore` file from our project’s root.
-  - The file’s 265. and 266. line contains `*.mdf` and `*.ldf` delete these lines. (By deleting these, it means that these file types will not be ignored, as they are not listed in the `.gitignore` file.)
-  - Since we already made our first two modifications after the git init, create our first commit for the changes.
-  - At the bottom right corner of the VS now there are other buttons available. Look for the pencil icon, which will show how many files are changed. Click on it and in the commit box write “mdf and ldf removed from gitignore” and click on **Commit All** button.
-  - After this a local commit was created, but it’s needed to be pushed to the remote repository at GitHub. On the panel the **up arrow** means the **push** command, click on it and then check it from the GitHub web UI if everything is good.
-  - During the development try to commit often and commit small pieces of code changes. After let’s say each day push the changes to the remote. Note that 1 push can push whatever number of commits.
-  - It’s a good practice to download the project from GitHub (using the green clone button and select download zip), and unzip it to a separate folder on your machine. If everything is fine you should be able to build the full solution without any problem. The instructor will see exactly this state!
+  - Please note that the following steps will use the Visual Studio's integrated git management tool, which is easy to use. But feel free to use other methods like discussed in the [lecture video](https://www.youtube.com/watch?v=9__ygBtYlBY&ab_channel=SIPOSM). You can use GitKraken as an external dedicated git GUI tool, or simply use CLI itself (which should be enough for a basic one branched, commit-push model). You can also create the repoistory itself from the GitHub GUI then clone it, and initialize the solution into that folder. In any way, at the end you will end up having one git repository with a local (on your machine) and a remote (on GitHub).
+  - Steps using Visual Studio's integrated Git management tool:
+    - In the VS at the bottom right corner there is a button “Add to source control”. This is visibly only if during the VS install, on the individual components page **Git for Windows** and **GitHub Extension for Visual Studio** was previously selected. If it has not been done then the VS install should be  modified. On Windows go to Control Panel / Install and delete programs / Visual Studio 2019 Community (or other version) and click on change. For database management **Data Storage and Processing Workload** should be added as well from here.
+    - After clicking on the “Add to source control” button the GitHub account’s details should be entered, check if the repository name is correct, check if the repository’s visibility is correct. If everything is good click on “**Create and Publish**”.
+    - When we follow the above mentioned steps and start version control from VS itself, then the `.gitignore` file is automatically created to fit our needs for the C# language. But, one modification must be done regarding the `.mdf` and `.ldf` files.
+    - Create an “Others” folder in the solution, right click on it, add existing item and open the `.gitignore` file from our project’s root.
+    - The file’s 265. and 266. line contains `*.mdf` and `*.ldf` delete these lines. (By deleting these, it means that these file types will not be ignored.)
+    - Since we already made our first two modifications after the git init, create our first commit for the changes.
+    - At the bottom right corner of the VS now there are other buttons available. Look for the pencil icon, which will show how many files are changed. Click on it and in the commit box write “mdf and ldf removed from gitignore” and click on **Commit All** button.
+    - After this a local commit was created, but it’s needed to be pushed to the remote repository at GitHub. On the panel the **up arrow** means the **push** command, click on it and then check it from the GitHub web UI if everything is good.
+    - During the development try to commit often and commit small pieces of code changes. After let’s say each day push the changes to the remote. Note that 1 push can push whatever number of commits.
+    - It’s a good practice to download the project from GitHub (using the green clone button and select download zip), and unzip it to a separate folder on your machine. If everything is fine you should be able to build the full solution without any problem. The instructor will see exactly this state during revision.
 
 ### Minimal requirements regarding the software:
 
 - The software must be build without any problem on the instructor’s computer.
 - The software must be created in **.NET 5.0** version and must use **MS SQL** database with **LocalDB**, above **Entity Framework Core**. Different approaches will not be accepted.
 - The program’s classes, methods, variables must be named in English, and also comments must be made in English.
-- In the project work at least 3 data tables must be created which has a connection to  each other using foreign keys. This means that 3 **Model** classes must be made in the **Model Class Library**. Example: one brand has many cars, every car has many renting event. If many-to-many relation is created then the connection table does not count as a table (out of the 3).
+- In the project work **at least 3 data tables** must be created which has a connection to  each other using foreign keys. This means that 3 **Model** classes must be made in the **Model Class Library**. Example: one brand has many cars, every car has many renting event. If many-to-many relation is created then the connection table does not count as a table (out of the 3).
 - In the **Model** classes the foreign keys should be added and use **Navigation Properties** with **LazyLoader**. Use join in the Linq queries if needed.
-- The **MDF** and **LDF** files should be created in the **Data** layer and their **Build Action** must be set to **Content**, and the **Copy to output directly** must be set to **Copy always**.
-- In the **Data** layer at the **DbContext** class’s **OnModelCreating** method the database should be seeded with test items.
+- The `.mdf` and `.ldf` files should be created in the **Data** layer and their **Build Action** must be set to **Content**, and the **Copy to output directly** must be set to **Copy always**.
+- In the **Data** layer at the `DbContext` class’s `OnModelCreating` method the database should be seeded with test items.
 - During the development for testing, it’s possible that the **ConsoleApp** receives the Logic, Repository, Data and Models layers as project reference, but at the end the ConsoleApp only can have **API calls** to the endpoint and can only know the Models library.
-- The **Logic** can only receive the **Repository** as a dependency through **interface reference** in the constructor (dependency injection). The repository can only receive the DbContext as a dependency through it’s constructor. The Endpoint’s controllers can only receive the logic as a dependency through interface reference in the constructor as well. The insertion of the dependencies is made by the Endpoint project, using IoC container. For testing purposes they can be created manually in the Console App.
-- Every **Model** class must have one dedicated repository class, which handles the **CRUD** operations (Create, Read, ReadAll, Update, Delete). The ReadAll method should return the DBSet collection to the Logic as an **IQeryable<T>** interface reference.
-- The **Logic** layer must have methods for these **CRUD** operations and also must have **at least 5 non-CRUD** methods, which are used for multi-table queries. The CRUD and and non-CRUD methods’ return values must be passed as an **IEnumberable<T>** reference to the above layers. Example for a non-CRUD method: for a given car brand who is the customer who has placed the most renting demand (in order to satisfy this query all 3 tables/entities must be used).
-- In the **Test** project **Nunit** and **Moq** libraries must be used. The Logic must receive a **fake-database** (mocked database) using moq. Unit tests firstly should be aimed to test the **non-CRUD functionalities** and secondly to test the **exception handling** of the create methods (eg. for an empty username an exception should be thrown). The logic’s create differ from the repository’s create in terms of error handling! The create method in the repository simply saves the entity to the database, without any validation or checking!
-- In the project work **at least 10 Unit Tests** must be created. For example 5 non-CRUD tests, 3 tests for the create functions and 2 can be chosen freely.
+- The **Logic** can only receive the **Repository** as a dependency through **interface reference** in the constructor (**dependency injection**). The repository can only receive the `DbContext` as a dependency through it’s constructor. The Endpoint’s controllers can only receive the logic as a dependency through interface reference in the constructor as well. The insertion of the dependencies is made by the Endpoint project, using IoC container. For testing purposes they can be created manually in the Console App.
+- Every **Model** class must have one dedicated repository class, which handles the **CRUD** operations (Create, Read, ReadAll, Update, Delete). The ReadAll method should return the `DBSet` collection to the Logic as an `IQeryable<T>` interface reference.
+- The **Logic** layer must have methods for these **CRUD** operations and also must have **at least 5 non-CRUD** methods, which are used for multi-table queries. The CRUD and and non-CRUD methods’ return values must be passed as an `IEnumberable<T>` reference to the above layers. Example for a non-CRUD method: for a given car brand who is the customer who has placed the most renting demand (in order to satisfy this query all 3 tables/entities must be used).
+- In the **Test** project **Nunit** and **Moq** libraries must be used. The Logic must receive a fake-database (**mocked database**) using Moq. Unit tests firstly should be aimed to test the **non-CRUD functionalities** and secondly to test the **exception handling** of the create methods (eg. for an empty username an exception should be thrown). The logic’s create differ from the repository’s create in terms of error handling! The create method in the repository simply saves the entity to the database, without any validation or checking!
+- In the project work **at least 10 Unit Tests** must be created. Out of the 10, must be 5 non-CRUD tests, 3 should be tests for the create functions and 2 can be chosen freely.
 - Every Model class should have one dedicated Repository class and one dedicated Logic class. Example:
   - Car 🡪 CarRepository
   - Car 🡪 CarLogic
