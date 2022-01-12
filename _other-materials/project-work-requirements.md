@@ -6,30 +6,30 @@
 
 During the project work each student have to develop a git version controlled layered CRUD application which uses a database.
 
-Here below in this document the requirements can be read. The obligatory parts must be completed fully, otherwise the project work can not be accepted. There are some requirements which are counted as “minus points” if they are not fullfilled, these are listed at the end of the document.
+Here below in this document the requirements can be read. The obligatory parts must be completed fully, otherwise the project work can not be accepted. There are some requirements which are counted as “minus points” if they are not fulfilled, these are listed at the end of the document.
 
 ### Minimal requirements regarding the project work:
 
 - The project work must be version controlled via git, starting from the very first steps. Please note, that this is not an “upload site”, so adding the project as a last step before deadline is not acceptable.
 - To the local git repository a remote must be connected. It must be created at github.com.
-- At github.com the repository’s name must be exactly: `ABC123_HFT_2021221`, where the `ABC123` must be replaced with your own Neptun code, `HFT` is the subject’s name (in Hungarian) and `2021221` is the semester identifier. Only the `ABC123` part should be changed, all other must remain as it stands here.
-- The repository’s visibility must be **private**! In the repository settings the **oenikprog** github user must be added. (If github asks about the role, it should be added as an **admin**.) After the invitation the invited user has to accept it manually, by hand so it will take some time.
+- At github.com the repository’s name must be exactly: `ABC123_ADT_2021_22_2`, where the `ABC123` must be replaced with your own Neptun code with all capital letters, `ADT` is the subject’s name and `2021_22_2` is the semester identifier. Only the `ABC123` part should be changed, all other must remain as it stands here.
+- The repository’s visibility must be **private**! In the repository settings the `siposm` GitHub user must be added. (If GitHub asks about the role, it should be added as an **admin**.) After the invitation the invited user has to accept it manually, by hand so it will take some time.
 - During the development, as one-one unit of code is created it’s advised to commit the changes. In the project work at least 25 commits must be made.
 - Before the milestones (see later) the commits must be pushed to the remote repository. Commits can be pushed more often of course, but at least before each milestone.
-- Between the student and the instructor the code must be shared only via github. Sending via email or other methods are not accepted.
+- Between the student and the instructor the code must be shared only via GitHub. Sending via email or other methods are not accepted.
 
 
 
 ### Minimal requirements regarding the empty solution’s structure:
 
-- To start the project work an empty **Console Application** (in **.Net 5.0**!) should be created from Visual Studio. The solution’s name must be: `ABC123_HFT_2021221` (where the ABC123 must be replaced with your own Neptun code as well). The project name must be `ABC123_HFT_2021221.Client`.
+- To start the project work an empty **Console Application** (in **.Net 5.0**!) should be created from Visual Studio. The solution’s name must be: `ABC123_ADT_2021_22_2` (where the ABC123 must be replaced with your own Neptun code as well). The project name must be `ABC123_ADT_2021_22_2.Client`.
 - In the solution the following structure must be created, by creating new projects. In the projects’ name the solution’s name must be used as well (with the replaced Neptun code of course), like below:
-  - `ABC123_HFT_2021221.Models` (Class Library)
-  - `ABC123_HFT_2021221.Data` (Class Library)
-  - `ABC123_HFT_2021221.Logic` (Class Library)
-  - `ABC123_HFT_2021221.Repository` (Class Library)
-  - `ABC123_HFT_2021221.Endpoint` (ASP.NET Core Empty and does not need https support)
-  - `ABC123_HFT_2021221.Test` (Class Library)
+  - `ABC123_ADT_2021_22_2.Models` (Class Library)
+  - `ABC123_ADT_2021_22_2.Data` (Class Library)
+  - `ABC123_ADT_2021_22_2.Logic` (Class Library)
+  - `ABC123_ADT_2021_22_2.Repository` (Class Library)
+  - `ABC123_ADT_2021_22_2.Endpoint` (ASP.NET Core Empty and does not need https support)
+  - `ABC123_ADT_2021_22_2.Test` (Class Library)
 - In the root, 3 folders must be created by clicking on the solution’s name and Add new folders from the Visual Studio’s solution explorer. Then, after the folders created via drag-n-drop method the previously created projects should be moved accordingly to this:
   - **Backend** (Data, Endpoint, Logic, Repository, Test)
   - **Frontend** (Client)
@@ -43,17 +43,17 @@ Here below in this document the requirements can be read. The obligatory parts m
   - **Repository**‘s dependencies: **Models, Data**
   - **Client**‘s dependencies: **Models**
 - When all these are set up and there is no C# code written yet, it’s time to initialize a git repository.
-  - **Please note** that the following steps will include a VS integrated git management tool, which is easy to use. But feel free to use other methods like discussed in the lecture video you can use GitKraken as external dedicated git GUI tool, or simply CLI itself. You can also create the repoistory itself from the Github GUI and then clone it, and initialize the solution into that folder. In any way, at the end you will end up having one git repository with a local (on your machine) and a remote (on Github).
-  - In the VS at the bottom right corner there is a button “Add to source control”. This is visibly only if during the VS install, on the individual components page **Git for Windows** and **Github Extension for Visual Studio** was previously selected. If it has not been done then the VS install should be  modified. On Windows go to Control Panel / Install and delete programs / Visual Studio 2019 Community (or other version) and click on change. For database management **Data Storage and Processing Workload** should be added as well from here.
-  - After clicking on the “Add to source control” button the Github account’s details should be entered, check if the repository name is correct, check if the repository’s visibility is correct. If everything is good click on “**Create and Publish**”.
+  - **Please note** that the following steps will include a VS integrated git management tool, which is easy to use. But feel free to use other methods like discussed in the lecture video you can use GitKraken as external dedicated git GUI tool, or simply CLI itself. You can also create the repoistory itself from the GitHub GUI and then clone it, and initialize the solution into that folder. In any way, at the end you will end up having one git repository with a local (on your machine) and a remote (on GitHub).
+  - In the VS at the bottom right corner there is a button “Add to source control”. This is visibly only if during the VS install, on the individual components page **Git for Windows** and **GitHub Extension for Visual Studio** was previously selected. If it has not been done then the VS install should be  modified. On Windows go to Control Panel / Install and delete programs / Visual Studio 2019 Community (or other version) and click on change. For database management **Data Storage and Processing Workload** should be added as well from here.
+  - After clicking on the “Add to source control” button the GitHub account’s details should be entered, check if the repository name is correct, check if the repository’s visibility is correct. If everything is good click on “**Create and Publish**”.
   - When we follow the above mentioned steps and start version control from VS itself, then the `.gitignore` file is automatically created to fit our needs for the C# language. But, one modification must be done regarding the `.mdf` and `.ldf` files.
   - Create an “Others” folder in the solution, right click on it, add existing item and open the `.gitignore` file from our project’s root.
   - The file’s 265. and 266. line contains `*.mdf` and `*.ldf` delete these lines. (By deleting these, it means that these file types will not be ignored, as they are not listed in the `.gitignore` file.)
   - Since we already made our first two modifications after the git init, create our first commit for the changes.
   - At the bottom right corner of the VS now there are other buttons available. Look for the pencil icon, which will show how many files are changed. Click on it and in the commit box write “mdf and ldf removed from gitignore” and click on **Commit All** button.
-  - After this a local commit was created, but it’s needed to be pushed to the remote repository at Github. On the panel the **up arrow** means the **push** command, click on it and then check it from the Github web UI if everything is good.
+  - After this a local commit was created, but it’s needed to be pushed to the remote repository at GitHub. On the panel the **up arrow** means the **push** command, click on it and then check it from the GitHub web UI if everything is good.
   - During the development try to commit often and commit small pieces of code changes. After let’s say each day push the changes to the remote. Note that 1 push can push whatever number of commits.
-  - It’s a good practice to download the project from Github (using the green clone button and select download zip), and unzip it to a separate folder on your machine. If everything is fine you should be able to build the full solution without any problem. The instructor will see exactly this state!
+  - It’s a good practice to download the project from GitHub (using the green clone button and select download zip), and unzip it to a separate folder on your machine. If everything is fine you should be able to build the full solution without any problem. The instructor will see exactly this state!
 
 ### Minimal requirements regarding the software:
 
@@ -71,8 +71,8 @@ Here below in this document the requirements can be read. The obligatory parts m
 - In the **Test** project **Nunit** and **Moq** libraries must be used. The Logic must receive a **fake-database** (mocked database) using moq. Unit tests firstly should be aimed to test the **non-crud functionalities** and secondly to test the **exception handling** of the create methods (eg. for an empty username an exception should be thrown). The logic’s create differ from the repository’s create in terms of error handling! The create method in the repository simply saves the entity to the database, without any validation or checking!
 - In the project work **at least 10 Unit Tests** must be created. For example 5 non-crud tests, 3 tests for the create functions and 2 can be chosen freely.
 - Every Model class should have one dedicated Repository class and one dedicated Logic class. Example:
-  - Car → CarRepository
-  - Car → CarLogic
+  - Car 🡪 CarRepository
+  - Car 🡪 CarLogic
 
 One logic class can use multiple repositories in order to have more complex queries in the non-crud methods.
 
@@ -88,36 +88,34 @@ One logic class can use multiple repositories in order to have more complex quer
 ### Milestones of the project work:
 
 - 6th week, Wednesday 23:59:59
-
-- October 10. 23:59:59
-    - Github repository is created with the correct naming
-    - oenikprog user was invited to the repository
+    - GitHub repository is created with the correct naming scheme
+    - `siposm` user was invited to the repository
     - the empty projects are created
-    - .gitignore file was modified
-    - .mdf and .ldf files are created in the Data layer
-    - the last three steps were committed and pushed to the remote repository (at Github)
+    - `.gitignore` file was modified
+    - `.mdf` and `.ldf` files are created in the Data layer
+    - the last three steps were committed and pushed to the remote repository (visible at GitHub's web UI)
 
-- October 17. 23:59:59
+- 7th week, Wednesday 23:59:59
     - in the Model layer at least 3 classes are created with content inside
     - in the Data layer the XYZDbContext class is created
     - in the DbSeed all three tables (or if there is more, all of them) are filled with test data as part of the initialization
 
-- November 7. 23:59:59
+- 9th week, Wednesday 23:59:59
     - in the Repository layer at least 3 classes are created
     - in these classes all the CRUD methods are created
 
-- November 21. 23:59:59
+- 11th week, Wednesday 23:59:59
     - in the Logic layer the classes are created
     - in these classes all the CRUD and non-crud methods are created
     - 10 out of 10 unit tests are created and all can be run without any fails
 
-- November 28. 23:59:59
+- 12th week, Wednesday 23:59:59
     - the Endpoint application should be ready, it can be built/run and it reacts to API calls
 
-- December 2. 23:59:59
+- 13th week, Wednesday 23:59:59
     - deadline #1
 
-- December 9. 23:59:59
+- 14th week, Wednesday 23:59:59
     - deadline #2
 
 The deadline means that at that time the instructor will download the code and starting from that, no change in the codebase can be accepted.
@@ -138,8 +136,8 @@ Moreover, everything which was described in detail as a minimal requirement in t
 
 ### Rules of the communication with the instructor regarding the project works:
 
-- firstly, the lab instructor should be asked personally at the end of the lab occasions
-- secondly, the lab instructor should be asked via email with a detailed problem description and precisely defining what is the question and listing what methods you have already tried to solve the problem
+- firstly, the lab instructor should be asked personally at the end of the lab occasions (if there is personal lab)
+- secondly, the lab instructor should be asked via email or Teams message with a **detailed problem description** and precisely defining what is the question and listing what methods **you have already tried** to solve the problem
   - if any of these is missing it would be more problematic to help, so please respect the rules and try to be as much detailed as possible but in the meanwhile be straightforward
 
 
