@@ -87,7 +87,7 @@ One logic class can use multiple repositories in order to have more complex quer
 
 ### Milestones of the project work:
 
-The project work will have milestones when an inspection mechanism will be used (gitstat) which will check for every student that the requirements of a given milestone is fulfilled or not. The result of this will be available to the students. Every milestone check will contains the previous milestones as well. After the 5th milestone this mechanism will be run daily.
+- 6th week, Wednesday 23:59:59
 
 - October 10. 23:59:59
     - Github repository is created with the correct naming
