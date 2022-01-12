@@ -14,7 +14,7 @@ Here below in this document the requirements can be read. The obligatory parts m
 - To the local git repository a remote must be connected. It must be created at github.com.
 - At github.com the repository’s name must be exactly: `ABC123_ADT_2021_22_2`, where the `ABC123` must be replaced with your own Neptun code with all capital letters, `ADT` is the subject’s name and `2021_22_2` is the semester identifier. Only the `ABC123` part should be changed, all other must remain as it stands here.
 - The repository’s visibility must be **private**! In the repository settings the `siposm` GitHub user must be added. (If GitHub asks about the role, it should be added as an **admin**.) After the invitation the invited user has to accept it manually, by hand so it will take some time.
-- During the development, as one-one unit of code is created it’s advised to commit the changes. In the project work at least 25 commits must be made.
+- During the development, as one-one unit of code is created it’s advised to commit the changes. In the project work **at least 25 commits** must be made.
 - Before the milestones (see later) the commits must be pushed to the remote repository. Commits can be pushed more often of course, but at least before each milestone.
 - Between the student and the instructor the code must be shared only via GitHub. Sending via email or other methods are not accepted.
 
@@ -22,7 +22,7 @@ Here below in this document the requirements can be read. The obligatory parts m
 
 ### Minimal requirements regarding the empty solution’s structure:
 
-- To start the project work an empty **Console Application** (in **.Net 5.0**!) should be created from Visual Studio. The solution’s name must be: `ABC123_ADT_2021_22_2` (where the ABC123 must be replaced with your own Neptun code as stated before). The project name must be `ABC123_ADT_2021_22_2.Client`.
+- To start the project work an empty **Console Application** (in **.Net 5.0**!) should be created from Visual Studio. The solution’s name must be: `ABC123_ADT_2021_22_2` (where the ABC123 part must be replaced with your own Neptun code as stated before). The project name must be `ABC123_ADT_2021_22_2.Client`.
 - In the solution the following structure must be created, by creating new projects. In the projects’ name the solution’s name must be used as well (with the replaced Neptun code of course), like below:
   - `ABC123_ADT_2021_22_2.Models` (Class Library)
   - `ABC123_ADT_2021_22_2.Data` (Class Library)
