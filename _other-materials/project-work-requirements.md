@@ -67,21 +67,21 @@ Here below in this document the requirements can be read. The obligatory parts m
 - During the development for testing, it’s possible that the **ConsoleApp** receives the Logic, Repository, Data and Models layers as project reference, but at the end the ConsoleApp only can have **API calls** to the endpoint and can only know the Models library.
 - The **Logic** can only receive the **Repository** as a dependency through **interface reference** in the constructor (dependency injection). The repository can only receive the DbContext as a dependency through it’s constructor. The Endpoint’s controllers can only receive the logic as a dependency through interface reference in the constructor as well. The insertion of the dependencies is made by the Endpoint project, using IoC container. For testing purposes they can be created manually in the Console App.
 - Every **Model** class must have one dedicated repository class, which handles the **CRUD** operations (Create, Read, ReadAll, Update, Delete). The ReadAll method should return the DBSet collection to the Logic as an **IQeryable<T>** interface reference.
-- The **Logic** layer must have methods for these **CRUD** operations and also must have **at least 5 non-crud** methods, which are used for multi-table queries. The CRUD and and non-crud methods’ return values must be passed as an **IEnumberable<T>** reference to the above layers. Example for a non-crud method: for a given car brand who is the customer who has placed the most renting demand (in order to satisfy this query all 3 tables/entities must be used).
-- In the **Test** project **Nunit** and **Moq** libraries must be used. The Logic must receive a **fake-database** (mocked database) using moq. Unit tests firstly should be aimed to test the **non-crud functionalities** and secondly to test the **exception handling** of the create methods (eg. for an empty username an exception should be thrown). The logic’s create differ from the repository’s create in terms of error handling! The create method in the repository simply saves the entity to the database, without any validation or checking!
-- In the project work **at least 10 Unit Tests** must be created. For example 5 non-crud tests, 3 tests for the create functions and 2 can be chosen freely.
+- The **Logic** layer must have methods for these **CRUD** operations and also must have **at least 5 non-CRUD** methods, which are used for multi-table queries. The CRUD and and non-CRUD methods’ return values must be passed as an **IEnumberable<T>** reference to the above layers. Example for a non-CRUD method: for a given car brand who is the customer who has placed the most renting demand (in order to satisfy this query all 3 tables/entities must be used).
+- In the **Test** project **Nunit** and **Moq** libraries must be used. The Logic must receive a **fake-database** (mocked database) using moq. Unit tests firstly should be aimed to test the **non-CRUD functionalities** and secondly to test the **exception handling** of the create methods (eg. for an empty username an exception should be thrown). The logic’s create differ from the repository’s create in terms of error handling! The create method in the repository simply saves the entity to the database, without any validation or checking!
+- In the project work **at least 10 Unit Tests** must be created. For example 5 non-CRUD tests, 3 tests for the create functions and 2 can be chosen freely.
 - Every Model class should have one dedicated Repository class and one dedicated Logic class. Example:
   - Car 🡪 CarRepository
   - Car 🡪 CarLogic
 
-One logic class can use multiple repositories in order to have more complex queries in the non-crud methods.
+One logic class can use multiple repositories in order to have more complex queries in the non-CRUD methods.
 
 - The project’s **Endpoint** layer can know the Logic classes and their functions will be published to the outside world in form of **API Endpoints**. To every Logic class there could be one or more **ApiController**. The **Actions** of the **ApiController**s can be understood as the Logic’s methods. Usually:
   - HTTP GET 🡪 Read, ReadAll
   - HTTP POST 🡪 Create
   - HTTP PUT 🡪 Update
   - HTTP DELETE 🡪 Delete
-- The **Console** application **sends API requests** to the **Endpoint** as **JSON** messages. From the Console application all the CRUD and non-crud methods should be available. For this, from the nuGet repository the ConsoleMenu-Simple can be used.
+- The **Console** application **sends API requests** to the **Endpoint** as **JSON** messages. From the Console application all the CRUD and non-CRUD methods should be available. For this, from the nuGet repository the ConsoleMenu-Simple can be used.
 
 
 
@@ -106,7 +106,7 @@ One logic class can use multiple repositories in order to have more complex quer
 
 - 11th week, Wednesday 23:59:59
     - in the Logic layer the classes are created
-    - in these classes all the CRUD and non-crud methods are created
+    - in these classes all the CRUD and non-CRUD methods are created
     - 10 out of 10 unit tests are created and all can be run without any fails
 
 - 12th week, Wednesday 23:59:59
