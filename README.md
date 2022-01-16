@@ -53,7 +53,7 @@ Use the command below to check and download updates:\
   - English Advanced Development Techniques: https://users.nik.uni-obuda.hu/siposm/adt
 - Repo processor:
   - https://users.nik.uni-obuda.hu/siposm/repo
-  - *details will be available later*
+  - *currently not in use*
 - YouTube channel
   - https://www.youtube.com/siposm
 - Official site of the subjects
@@ -113,9 +113,9 @@ Please note that the lecture materials are available in advance! It means that f
 
 <br><br>
 
-If you have any problem or demand feel free to reach out to me via email.
+If you have any problem or demand feel free to reach out to me via email or create an issue in this repository.
 
-Bármi kérdés, probléma vagy meglátás esetén állok rendelkezésre az alábbi elérhetőségen.
+Bármi kérdés, probléma vagy meglátás esetén állok rendelkezésre az alábbi elérhetőségen, vagy hozz létre egy issue-t itt a repóban.
 
 **Sipos Miklós**\
 Tanszéki Mérnök\
@@ -123,4 +123,3 @@ sipos.miklos@nik.uni-obuda.hu\
 https://users.nik.uni-obuda.hu/siposm \
 Óbudai Egyetem Neumann János Informatikai Kar\
 Szoftvertervezés és -fejlesztés Intézet\
-2020 - 2021 - 1 félév
