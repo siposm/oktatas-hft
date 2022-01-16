@@ -87,9 +87,7 @@ Here below in this document the requirements can be read. The obligatory parts m
 - Every Model class should have one dedicated Repository class and one dedicated Logic class. Example:
   - Car 🡪 CarRepository
   - Car 🡪 CarLogic
-
-One logic class can use multiple repositories in order to have more complex queries in the non-CRUD methods.
-
+- One logic class can use multiple repositories in order to have more complex queries in the non-CRUD methods.
 - The project’s **Endpoint** layer can know the Logic classes and their functions will be published to the outside world in form of **API Endpoints**. To every Logic class there could be one or more **ApiController**. The **Actions** of the **ApiController**s can be understood as the Logic’s methods. Usually:
   - HTTP GET 🡪 Read, ReadAll
   - HTTP POST 🡪 Create
