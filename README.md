@@ -61,6 +61,12 @@ Use the command below to check and download updates:\
 
 <br><br>
 
+## 📄 Official requirements
+- ADT (2021-22-2): https://nik.uni-obuda.hu/targyleirasok/tantargyak/advanced-development-techniques-2/
+- HFT (2021-22-1): https://nik.uni-obuda.hu/targyleirasok/wp-content/uploads/2021/09/HFT_2021-22-I_BSC.pdf
+
+<br><br>
+
 ## 🗓 Schedule
 
 Please note that small changes / delays can occur during the weeks.
