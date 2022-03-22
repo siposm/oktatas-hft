@@ -7,7 +7,7 @@ A feladat megoldása során a tanult elveket, szintaktikákat javasolt alkalmazn
 
 A feladatban felhasználandó állomány: [pizza-database.xml](https://users.nik.uni-obuda.hu/siposm/db/pizza-database.xml)
 
-Figyelem! Jelen feladathoz megoldás (kód) nincs. A `ZH1` mappában található feladat egy másik feladatsorra vonatkozik. Részletekért lásd `README.md` abban a mappában.
+Figyelem! Jelen feladathoz megoldás (kód) nincs.
 
 <br>
 <br>
