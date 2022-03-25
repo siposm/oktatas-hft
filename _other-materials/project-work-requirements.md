@@ -125,10 +125,10 @@ Here below in this document the requirements can be read. The obligatory parts m
     - the Endpoint application should be ready, it can be built/run and it reacts to API calls
 
 - 13th week, Wednesday 23:59:59
-    - deadline #1
+    - deadline no.1
 
 - 14th week, Wednesday 23:59:59
-    - deadline #2
+    - deadline no.2
 
 The deadline means that at that time the instructor will download the code and starting from that, no change in the codebase can be accepted.
 
