@@ -10,7 +10,7 @@ A feladatlap és a videó angol nyelvű.
 
 # ADT demo exam 1.
 
-I have created a practice exercise which has a step-by-step video walkthrough as well. Both of them is in english language.
+I have created a practice exercise which has a step-by-step video walkthrough as well. Both of them are in english language.
 
 - code: https://github.com/siposm/adt-demo-exam-1
 - exercise sheet: a gyökérben található `README`-ben van
