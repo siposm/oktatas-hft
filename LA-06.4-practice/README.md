@@ -6,7 +6,7 @@ A feladatlap és a videó angol nyelvű.
 
 - kód: https://github.com/siposm/adt-demo-exam-2
 - feladatlap: a gyökérben található `README`-ben van
-- videó: <!TODO!>
+- videó: https://youtu.be/t89p0l6p0TM
 
 # ADT demo exam 2.
 
@@ -14,4 +14,4 @@ I have created a practice exercise which has a step-by-step video walkthrough as
 
 - code: https://github.com/siposm/adt-demo-exam-2
 - exercise sheet: a gyökérben található `README`-ben van
-- video: <!TODO!>
+- video: https://youtu.be/t89p0l6p0TM
