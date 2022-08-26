@@ -2,7 +2,7 @@
 
 ## Project Work
 
-2021/22/2 semester
+2022-2023-1 semester
 
 **During the project work each student have to develop a Git version controlled layered CRUD application which uses a database and API calls.**
 
@@ -12,8 +12,8 @@ Here below in this document the requirements can be read. The obligatory parts m
 
 - The project work must be version controlled via git, starting from the very first steps. Please note, that this is not an “upload site”, so adding the project as a last step before deadline is not acceptable.
 - To the local git repository a remote must be connected. It must be created at github.com.
-- At github.com the repository’s name must be exactly: `ABC123_ADT_2021_22_2`, where the `ABC123` must be replaced with your own Neptun code with all capital letters, `ADT` is the subject’s name and `2021_22_2` is the semester identifier. Only the `ABC123` part should be changed, all other must remain as it stands here.
-- The repository’s visibility must be **private**! In the repository settings the `siposm` GitHub user must be added. (If GitHub asks about the role, it should be added as an **admin**.) After the invitation the invited user has to accept it manually, by hand so it will take some time.
+- At github.com the repository’s name must be exactly: `ABC123_ADT_2022_23_1`, where the `ABC123` must be replaced with your own Neptun code with all capital letters, `ADT` is the subject’s name and `2022_23_1` is the semester identifier. Only the `ABC123` part should be changed, all other must remain as it stands here.
+- The repository’s visibility must be **private**! In the repository settings the **lab teacher's** GitHub user must be added. (If GitHub asks about the role, it should be added as an **admin**.) After the invitation the invited user has to accept it manually, by hand so it will take some time.
 - During the development, as one-one unit of code is created it’s advised to commit the changes. In the project work **at least 25 commits** must be made.
 - Before the milestones (see later) the commits must be pushed to the remote repository. Commits can be pushed more often of course, but at least before each milestone.
 - Between the student and the instructor the code must be shared only via GitHub. Sending via email or other methods are not accepted.
@@ -22,14 +22,14 @@ Here below in this document the requirements can be read. The obligatory parts m
 
 ### Minimal requirements regarding the empty solution’s structure:
 
-- To start the project work an empty **Console Application** (in **.Net 5.0**!) should be created from Visual Studio. The solution’s name must be: `ABC123_ADT_2021_22_2` (where the ABC123 part must be replaced with your own Neptun code as stated before). The project name must be `ABC123_ADT_2021_22_2.Client`.
+- To start the project work an empty **Console Application** (in **.Net 5.0**!) should be created from Visual Studio. The solution’s name must be: `ABC123_ADT_2022_23_1` (where the ABC123 part must be replaced with your own Neptun code as stated before). The project name must be `ABC123_ADT_2022_23_1.Client`.
 - In the solution the following structure must be created, by creating new projects. In the projects’ name the solution’s name must be used as well (with the replaced Neptun code of course), like below:
-  - `ABC123_ADT_2021_22_2.Models` (Class Library)
-  - `ABC123_ADT_2021_22_2.Data` (Class Library)
-  - `ABC123_ADT_2021_22_2.Logic` (Class Library)
-  - `ABC123_ADT_2021_22_2.Repository` (Class Library)
-  - `ABC123_ADT_2021_22_2.Endpoint` (ASP.NET Core Empty and does not need https support)
-  - `ABC123_ADT_2021_22_2.Test` (Class Library)
+  - `ABC123_ADT_2022_23_1.Models` (Class Library)
+  - `ABC123_ADT_2022_23_1.Data` (Class Library)
+  - `ABC123_ADT_2022_23_1.Logic` (Class Library)
+  - `ABC123_ADT_2022_23_1.Repository` (Class Library)
+  - `ABC123_ADT_2022_23_1.Endpoint` (ASP.NET Core Empty and does not need https support)
+  - `ABC123_ADT_2022_23_1.Test` (Class Library)
 - In the root, 3 folders must be created by clicking on the solution’s name and Add new folders from the Visual Studio’s solution explorer. Then, after the folders created via drag-n-drop method the previously created projects should be moved accordingly to this:
   - **Backend** (Data, Endpoint, Logic, Repository, Test)
   - **Frontend** (Client)
@@ -101,7 +101,7 @@ Here below in this document the requirements can be read. The obligatory parts m
 
 - 6th week, Wednesday 23:59:59
     - GitHub repository is created with the correct naming scheme
-    - `siposm` user was invited to the repository
+    - the lab teacher's GitHub user was invited to the repository
     - the empty projects are created
     - `.gitignore` file was modified
     - `.mdf` and `.ldf` files are created in the Data layer
