@@ -40,7 +40,7 @@ Then from CLI or from Git Bash:
 `cd ~/Desktop/`\
 `mkdir your_folder_name`\
 `cd your_folder_name`\
-`git clone https://github.com/siposm/oktatas-hft-20211.git`
+`git clone https://github.com/siposm/oktatas-hft.git`
 
 Use the command below to check and download updates:\
 `git pull` from the root folder
@@ -49,8 +49,8 @@ Use the command below to check and download updates:\
 
 ## 🔗 Useful links
 - Personal website
-  - Hungarian Haladó fejlesztési Technikák: https://users.nik.uni-obuda.hu/siposm/hft-minfo
-  - English Advanced Development Techniques: https://users.nik.uni-obuda.hu/siposm/adt
+  - Hungarian Haladó fejlesztési Technikák: https://nik.siposm.hu/hft-minfo
+  - English Advanced Development Techniques: https://nik.siposm.hu/adt
 - Repo processor:
   - https://users.nik.uni-obuda.hu/siposm/repo
   - *currently not in use*
@@ -62,56 +62,14 @@ Use the command below to check and download updates:\
 <br><br>
 
 ## 📄 Official requirements
-- ADT (2021-22-2): https://nik.uni-obuda.hu/targyleirasok/tantargyak/advanced-development-techniques-2/
-- HFT (2021-22-1): https://nik.uni-obuda.hu/targyleirasok/wp-content/uploads/2021/09/HFT_2021-22-I_BSC.pdf
+- ADT (2022-2023-1): https://nik.uni-obuda.hu/targyleirasok/tantargyak/advanced-development-techniques-3/
+- HFT (2022-2023-1): https://nik.uni-obuda.hu/targyleirasok/wp-content/uploads/2022/06/HFT_2022-23-I_BSC-1.pdf
 
 <br><br>
 
 ## 🗓 Schedule
 
-Please note that small changes / delays can occur during the weeks.
-
-### HU
-
-|    | EA                                | LAB                                     | FF                                           |
-| -- | --------------------------------- | --------------------------------------- | -------------------------------------------- |
-| 01 | Intro + Requirements + LINQ + XML | Lambda                                  |                                              |
-| 02 | DLL + Databases                   | LINQ + XLINQ                            |                                              |
-| 03 | Layering                          | Reflection + DLL                        |                                              |
-| 04 | Git                               | Code First DB + EF                      | részletek publikálása                        |
-| 05 | NUnit, Moq theory I.              | Layered Project Example                 |                                              |
-| 06 | NUnit, Moq theory II.             | Unit testing                            |                                              |
-| 07 | Data Exchange Protocols (API)     | Mock                                    |                                              |
-| 08 | CI/CD                             | LAB ZH gyak                             |                                              |
-| 09 | Parallel I.                       | **LAB ZH**                              |                                              |
-| 10 | Parallel II.                      | API endpoint                            |                                              |
-| 11 | \-- SZÜNET --                     | \-- SZÜNET --                           |                                              |
-| 12 | Parallel III.                     | Thread, Task                            |                                              |
-| 13 | extra + **EA ZH**                 | ThreadSync                              | **határidő** #1 Thursday 23:59               |
-| 14 | **EA pótZH**                      | **LAB pótZH**                           | **határidő** #2 Thursday 23:59 + **FF demó** |
-
-
-### EN
-
-Please note that the lecture materials are available in advance! It means that for example the Git lecture (scheduled for the 8th week) can be viewed during the 4th week when the project works are published (because Git will be needed to create the base of the project work).
-
-|    | LECTURE                                    | LAB                                     | PROJECT WORK                                            |
-| -- | ------------------------------------------ | --------------------------------------- | ------------------------------------------------------- |
-| 01 | Intro + Requirements + Delegates           | Delegates + Lambda                      |                                                         |
-| 02 | LINQ + XML + JSON                          | LINQ + XLINQ                            |                                                         |
-| 03 | DLL + Reflection                           | Reflection                              |                                                         |
-| 04 | Databases                                  | Code First DB + EF                      | details will be published                               |
-| 05 | Layering                                   | Layered Project Example                 |                                                         |
-| 06 | Unit testing theory (NUnit)                | Unit testing                            |                                                         |
-| 07 | Dependency Injection + Mock theory (Moq)   | Mock                                    |                                                         |
-| 08 | Git SCM basics                             | LAB exam exercise                       |                                                         |
-| 09 | Data Exchange Protocols (API)              | **LAB EXAM**                            |                                                         |
-| 10 | DevOps basics, CI/CD                       | API endpoint                            | code review #1                                          |
-| 11 | Parallel programming I.                    | \-- BREAK --                            | code review #2                                          |
-| 12 | Parallel programming II.                   | Thread, Task                            |                                                         |
-| 13 | Parallel programming III. + **THEORY EXAM**| ThreadSync                              | **deadline** #1 thursday 23:59                          |
-| 14 | **THEORY retake**                          | **LAB retake**                          | **deadline** #2 thursday 23:59 + **demo + presentation**|
-
+Official schedule can be found in the official requirements, please take a look at those. Please note that small changes / delays can occur during the weeks.
 
 <br><br>
 
@@ -126,6 +84,6 @@ Bármi kérdés, probléma vagy meglátás esetén állok rendelkezésre az alá
 **Sipos Miklós**\
 Tanszéki Mérnök\
 sipos.miklos@nik.uni-obuda.hu\
-https://users.nik.uni-obuda.hu/siposm \
+https://nik.siposm.hu \
 Óbudai Egyetem Neumann János Informatikai Kar\
 Szoftvertervezés és -fejlesztés Intézet\
