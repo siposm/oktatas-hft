@@ -195,6 +195,143 @@ namespace EmpDeptCodeFirst
                 };
 
                 db.Emp.AddRange(e1, e2);
+
+                db.Emp.AddRange(new Emp[]
+                {
+                    new Emp()
+                    {
+                        Empno = 7782,
+                        Ename = "CLARK",
+                        Job = "MANAGER",
+                        Mgr = 7839,
+                        Hiredate = DateTime.Parse("9-JUN-1981"),
+                        Sal = 2450,
+                        Comm = null,
+                        Deptno = 10
+                    },
+                    new Emp()
+                    {
+                        Empno = 7566,
+                        Ename = "JONES",
+                        Job = "MANAGER",
+                        Mgr = 7839,
+                        Hiredate = DateTime.Parse("2-APR-1981"),
+                        Sal = 2975,
+                        Comm = null,
+                        Deptno = 20
+                    },
+                    new Emp()
+                    {
+                        Empno = 7654,
+                        Ename = "MARTIN",
+                        Job = "SALESMAN",
+                        Mgr = 7698,
+                        Hiredate = DateTime.Parse("28-SEP-1981"),
+                        Sal = 1250,
+                        Comm = 1400,
+                        Deptno = 30
+                    },
+                    new Emp()
+                    {
+                        Empno = 7499,
+                        Ename = "ALLEN",
+                        Job = "SALESMAN",
+                        Mgr = 7698,
+                        Hiredate = DateTime.Parse("20-FEB-1981"),
+                        Sal = 1600,
+                        Comm = 300,
+                        Deptno = 30
+                    },
+                    new Emp()
+                    {
+                        Empno = 7844,
+                        Ename = "TURNER",
+                        Job = "SALESMAN",
+                        Mgr = 7698,
+                        Hiredate = DateTime.Parse("8-SEP-1981"),
+                        Sal = 1500,
+                        Comm = 0,
+                        Deptno = 30
+                    },
+                    new Emp()
+                    {
+                        Empno = 7900,
+                        Ename = "JAMES",
+                        Job = "CLERK",
+                        Mgr = 7698,
+                        Hiredate = DateTime.Parse("3-DEC-1981"),
+                        Sal = 950,
+                        Comm = null,
+                        Deptno = 30
+                    },
+                    new Emp()
+                    {
+                        Empno = 7521,
+                        Ename = "WARD",
+                        Job = "SALESMAN",
+                        Mgr = 7698,
+                        Hiredate = DateTime.Parse("22-FEB-1981"),
+                        Sal = 1250,
+                        Comm = 500,
+                        Deptno = 30
+                    },
+                    new Emp()
+                    {
+                        Empno = 7902,
+                        Ename = "FORD",
+                        Job = "ANALYST",
+                        Mgr = 7566,
+                        Hiredate = DateTime.Parse("3-DEC-1981"),
+                        Sal = 3000,
+                        Comm = null,
+                        Deptno = 20
+                    },
+                    new Emp()
+                    {
+                        Empno = 7369,
+                        Ename = "SMITH",
+                        Job = "CLERK",
+                        Mgr = 7902,
+                        Hiredate = DateTime.Parse("17-DEC-1980"),
+                        Sal = 800,
+                        Comm = null,
+                        Deptno = 20
+                    },
+                    new Emp()
+                    {
+                        Empno = 7788,
+                        Ename = "SCOTT",
+                        Job = "ANALYST",
+                        Mgr = 7566,
+                        Hiredate = DateTime.Parse("09-DEC-1982"),
+                        Sal = 3000,
+                        Comm = null,
+                        Deptno = 20
+                    },
+                    new Emp()
+                    {
+                        Empno = 7876,
+                        Ename = "ADAMS",
+                        Job = "CLERK",
+                        Mgr = 7788,
+                        Hiredate = DateTime.Parse("12-JAN-1983"),
+                        Sal = 1100,
+                        Comm = null,
+                        Deptno = 20
+                    },
+                    new Emp()
+                    {
+                        Empno = 7934,
+                        Ename = "MILLER",
+                        Job = "CLERK",
+                        Mgr = 7782,
+                        Hiredate = DateTime.Parse("23-JAN-1982"),
+                        Sal = 1300,
+                        Comm = null,
+                        Deptno = 10
+                    },
+                });
+
                 db.SaveChanges();
 
                 foreach (var item in db.Emp)
@@ -209,8 +346,9 @@ namespace EmpDeptCodeFirst
                         where x.DeptnoNavigation.Dname == "ACCOUNTING"
                         select new
                         {
-                            dept_name = x.DeptnoNavigation.Dname,
-                            worker = x.Ename
+                            departmentName = x.DeptnoNavigation.Dname,
+                            workerName = x.Ename,
+                            HireDate = x.Hiredate
                         };
                 ;
 
