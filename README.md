@@ -28,7 +28,7 @@ This repository contains lab materials, codes, lecture slides and all the other 
 <br><br>
 
 ## Official requirements
-- [ADT (2022-2023-1)](https://nik.uni-obuda.hu/targyleirasok/tantargyak/advanced-development-techniques-3/)
+- [ADT (2023-2024-1)](https://nik.uni-obuda.hu/targyleirasok/tantargyak/advanced-development-techniques-5/)
 - [HFT (2022-2023-1)](https://nik.uni-obuda.hu/targyleirasok/wp-content/uploads/2022/06/HFT_2022-23-I_BSC-1.pdf)
 
 <br><br>
