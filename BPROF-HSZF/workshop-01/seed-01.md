@@ -98,4 +98,32 @@ List<Employee> employees = new List<Employee>()
     new Employee("Tony Stark","tony.stark@nik.uni-obuda.hu","Alkalmazott Matematikai Intézet","polihisztor","+36 (1) 666-1111","BA.0.00"),
     new Employee("Bruce Banner","bruce.banner@gmail.com","Alkalmazott Matematikai Intézet","polihisztor","+36 (1) 666-1111","BA.0.00")
 };
+
+Console.WriteLine("\n================================================");
+Console.WriteLine("AKIK NEVE 'T' BETŰVEL KEZDŐDIK AZOKAT LISTÁZZUK KI.\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("AKIK POLIHISZTORKÉNT DOLGOZNAK AZOKAT KÉRDEZZÜK LE.\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("SZŰRJÜK KI (NÉV+EMAIL) AZOKAT AKIK GMAIL-ES CÍMMEL RENDELKEZNEK.\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("AZ AII-BEN DOLGOZÓK NEVEIT LISTÁZZUK KI ABC CSÖKKENŐBEN.\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("HÁNYAN VANNAK AZ EGYES INTÉZETEKBEN?\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("HÁNYAN VANNAK AZ EGYES SZOBÁKBAN?\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("A 3. LEGKISEBB INTÉZETBEN HÁNYAN DOLGOZNAK?\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("AZ AII-BEN DOLGOZÓKAT MÓDOSÍTSUK ÉS ADJUNK NEKIK FIZETÉST.\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("MENNYI AZ AII-BEN AZ ÁTLAGKERESET?\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("A TELJES ÉS FÉLÁLLÁSÚAK HÁNYAN VANNAK ÉS MENNYI AZ ÁTLAG/MAX/MIN KERESET?\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("KIK KERESNEK TÖBBET MINT AZ AII TAGOK ÁTLAGÁNÁL?\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("KIK DOLGOZNAK A 3. EMELETEN?\n");
+Console.WriteLine("\n================================================");
+Console.WriteLine("KIK AZOK AKIKNEK TÖBB FELADATKÖRE IS VAN?\n");
+
 ```
