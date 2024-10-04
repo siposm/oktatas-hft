@@ -47,6 +47,24 @@ namespace _04_XML
             {
                 Console.WriteLine($"Tweet (év: {tweet.Year}): {tweet.Content}");
             }
+
+            // 3. XML fájlba írása
+            XElement usersXml = new XElement("Users",
+                new XElement("User",
+                    new XAttribute("ID", "XYZ123"),
+                    new XElement("UserName", "JohnDoe"),
+                    new XElement("UserEmail", "johndoe@example.com"),
+                    new XElement("Age", "30")
+                ),
+                new XElement("User",
+                    new XElement("UserName", "JaneSmith"),
+                    new XElement("UserEmail", "janesmith@example.com"),
+                    new XElement("Age", "25")
+                )
+            );
+
+            // A fájl elmentése
+            usersXml.Save("saved.xml");
         }
     }
 }
