@@ -1,6 +1,6 @@
 # Workshop 01 - LINQ
 
- Sipos Miklós - 2024
+    Sipos Miklós - 2024
 
 ## Egyszerű feladatok
 
