@@ -1,0 +1,65 @@
+[
+  {
+    "Name": "Dr. Tóth Tamás",
+    "ManagerId": "MGR789",
+    "BirthYear": 1970,
+    "StartOfEmployment": "2000-01-01",
+    "HasMBA": true
+  },
+  {
+    "Name": "Kiss Péter",
+    "ManagerId": "MGR456",
+    "BirthYear": 1975,
+    "StartOfEmployment": "1998-05-10",
+    "HasMBA": false
+  },
+  {
+    "Name": "Szabó Zoltán",
+    "ManagerId": "MGR123",
+    "BirthYear": 1980,
+    "StartOfEmployment": "2005-02-15",
+    "HasMBA": true
+  },
+  {
+    "Name": "Dr. Farkas Anna",
+    "ManagerId": "MGR654",
+    "BirthYear": 1968,
+    "StartOfEmployment": "1995-04-12",
+    "HasMBA": true
+  },
+  {
+    "Name": "Molnár László",
+    "ManagerId": "MGR321",
+    "BirthYear": 1982,
+    "StartOfEmployment": "2007-08-15",
+    "HasMBA": false
+  },
+  {
+    "Name": "Dr. Szilágyi István",
+    "ManagerId": "MGR321",
+    "BirthYear": 1972,
+    "StartOfEmployment": "2001-11-01",
+    "HasMBA": true
+  },
+  {
+    "Name": "Balogh Gábor",
+    "ManagerId": "MGR654",
+    "BirthYear": 1978,
+    "StartOfEmployment": "2003-03-10",
+    "HasMBA": false
+  },
+  {
+    "Name": "Dr. Kovács Béla",
+    "ManagerId": "MGR543",
+    "BirthYear": 1965,
+    "StartOfEmployment": "1990-06-20",
+    "HasMBA": true
+  },
+  {
+    "Name": "Nagy Eszter",
+    "ManagerId": "MGR987",
+    "BirthYear": 1985,
+    "StartOfEmployment": "2010-09-01",
+    "HasMBA": false
+  }
+]

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Employees>
+  <Employee employeeid="EMP001">
+    <Name>Kovács István</Name>
+    <BirthYear>1998</BirthYear>
+    <StartYear>2017</StartYear>
+    <CompletedProjects>180</CompletedProjects>
+    <Active>true</Active>
+    <Retired>false</Retired>
+    <Email>kovacs.istvan@example.com</Email>
+    <Phone>+36123456789</Phone>
+    <Job>Backend Developer</Job>
+    <Level>Junior</Level>
+    <Salary>750000</Salary>
+    <Commission>50000</Commission>
+    <Departments>
+      <Department>
+        <Name>Software Engineering</Name>
+        <DepartmentCode>SW101</DepartmentCode>
+        <HeadOfDepartment>Dr. Varga László</HeadOfDepartment>
+      </Department>
+      <Department>
+        <Name>Database Administration</Name>
+        <DepartmentCode>DBA102</DepartmentCode>
+        <HeadOfDepartment>Dr. Kiss Péter</HeadOfDepartment>
+      </Department>
+    </Departments>
+  </Employee>
+
+  <Employee employeeid="EMP002">
+    <Name>Nagy Anna</Name>
+    <BirthYear>1999</BirthYear>
+    <StartYear>2018</StartYear>
+    <CompletedProjects>120</CompletedProjects>
+    <Active>true</Active>
+    <Retired>false</Retired>
+    <Email>nagy.anna@example.com</Email>
+    <Phone>+36203456789</Phone>
+    <Job>Data Analyst</Job>
+    <Level>Senior</Level>
+    <Salary>650000</Salary>
+    <Commission currency="eur">300</Commission>
+    <Departments>
+      <Department>
+        <Name>Data Science</Name>
+        <DepartmentCode>DS101</DepartmentCode>
+        <HeadOfDepartment>Dr. Varga László</HeadOfDepartment>
+      </Department>
+      <Department>
+        <Name>Physics Research</Name>
+        <DepartmentCode>PHY101</DepartmentCode>
+        <HeadOfDepartment>Molnár Katalin</HeadOfDepartment>
+      </Department>
+    </Departments>
+  </Employee>
+
+  <Employee employeeid="EMP003">
+    <Name>Szabó Dávid</Name>
+    <BirthYear>1989</BirthYear>
+    <StartYear>2016</StartYear>
+    <CompletedProjects>210</CompletedProjects>
+    <Active>true</Active>
+    <Retired>false</Retired>
+    <Email>szabo.david@example.com</Email>
+    <Phone>+36304567890</Phone>
+    <Job>Network Engineer</Job>
+    <Level>Junior</Level>
+    <Salary>780000</Salary>
+    <Commission currency="eur">400</Commission>
+    <Departments>
+      <Department>
+        <Name>Network Administration</Name>
+        <DepartmentCode>NET103</DepartmentCode>
+        <HeadOfDepartment>Kovács László</HeadOfDepartment>
+      </Department>
+      <Department>
+        <Name>Learning Methods</Name>
+        <DepartmentCode>LEARN101</DepartmentCode>
+        <HeadOfDepartment>Dr. Farkas Anna</HeadOfDepartment>
+      </Department>
+    </Departments>
+  </Employee>
+
+  <Employee employeeid="EMP004">
+    <Name>Horváth Ádám</Name>
+    <BirthYear>2000</BirthYear>
+    <StartYear>2019</StartYear>
+    <CompletedProjects>90</CompletedProjects>
+    <Active>false</Active>
+    <Retired>false</Retired>
+    <Email>horvath.adam@example.com</Email>
+    <Phone>+36701234567</Phone>
+    <Job>Security Specialist</Job>
+    <Level>Junior</Level>
+    <Salary>620000</Salary>
+    <Commission currency="eur">200</Commission>
+    <Departments>
+      <Department>
+        <Name>Cyber Security</Name>
+        <DepartmentCode>SEC102</DepartmentCode>
+        <HeadOfDepartment>Dr. Horváth Ferenc</HeadOfDepartment>
+      </Department>
+      <Department>
+        <Name>Electronics</Name>
+        <DepartmentCode>ELEC101</DepartmentCode>
+        <HeadOfDepartment>Tóth Eszter</HeadOfDepartment>
+      </Department>
+    </Departments>
+  </Employee>
+
+  <Employee employeeid="EMP005">
+    <Name>Tóth László</Name>
+    <BirthYear>1980</BirthYear>
+    <StartYear>2015</StartYear>
+    <CompletedProjects>240</CompletedProjects>
+    <Active>true</Active>
+    <Retired>false</Retired>
+    <Email>toth.laszlo@example.com</Email>
+    <Phone>+36121234567</Phone>
+    <Job>Fullstack Developer</Job>
+    <Level>Medior</Level>
+    <Salary>850000</Salary>
+    <Commission>70000</Commission>
+    <Departments>
+      <Department>
+        <Name>Software Engineering</Name>
+        <DepartmentCode>SW101</DepartmentCode>
+        <HeadOfDepartment>Dr. Varga László</HeadOfDepartment>
+      </Department>
+      <Department>
+        <Name>Database Management</Name>
+        <DepartmentCode>DB102</DepartmentCode>
+        <HeadOfDepartment>Nagy Gábor</HeadOfDepartment>
+      </Department>
+      <Department>
+        <Name>Cyber Security</Name>
+        <DepartmentCode>SEC102</DepartmentCode>
+        <HeadOfDepartment>Dr. Horváth Ferenc</HeadOfDepartment>
+      </Department>
+    </Departments>
+  </Employee>
+
+  <Employee employeeid="EMP006">
+    <Name>Kiss Mária</Name>
+    <BirthYear>1975</BirthYear>
+    <StartYear>2018</StartYear>
+    <CompletedProjects>10</CompletedProjects>
+    <Active>false</Active>
+    <Retired>false</Retired>
+    <Email>kiss.maria@example.com</Email>
+    <Phone>+36304567812</Phone>
+    <Job>Fullstack Developer</Job>
+    <Level>Medior</Level>
+    <Salary>600000</Salary>
+    <Commission>15000</Commission>
+    <Departments>
+      <Department>
+        <Name>Software Engineering</Name>
+        <DepartmentCode>SW101</DepartmentCode>
+        <HeadOfDepartment>Dr. Varga László</HeadOfDepartment>
+      </Department>
+      <Department>
+        <Name>Database Management</Name>
+        <DepartmentCode>DB102</DepartmentCode>
+        <HeadOfDepartment>Nagy Gábor</HeadOfDepartment>
+      </Department>
+    </Departments>
+  </Employee>
+</Employees>
