@@ -1,0 +1,103 @@
+[
+    {
+        "UserName": "woddywatermelon",
+        "UserEmail": "woddywat@hotmail.net",
+        "Tweets": [
+            {
+                "Content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                "Flagged": true,
+                "Year": 2009
+            },
+            {
+                "Content": "Nulla tempus orci sem, ac laoreet justo faucibus quis.",
+                "Flagged": false,
+                "Year": 2018
+            }
+        ]
+    },
+    {
+        "UserName": "midnightbeetlewhale",
+        "UserEmail": "midnightbeetlewhale@hotmail.net",
+        "Tweets": [
+            {
+                "Content": "Nunc in mauris lectus. Integer et venenatis nulla, ac volutpat velit.",
+                "Flagged": true,
+                "Year": 2011
+            },
+            {
+                "Content": "Nulla tempus orci sem, ac laoreet justo faucibus quis.",
+                "Flagged": false,
+                "Year": 2021
+            }
+        ]
+    },
+    {
+        "UserName": "cloudbreeze54",
+        "UserEmail": "sourcrea_at_hotmail.net",
+        "Tweets": [
+            {
+                "Content": "Sed in rutrum sapien.",
+                "Flagged": true,
+                "Year": 2005
+            }
+        ]
+    },
+    {
+        "UserName": "grapeful_thomass",
+        "UserEmail": "gt@protonmail.com",
+        "Tweets": [
+            {
+                "Content": "Etiam quis cursus nisi. Sed orci nisi, eleifend ut tristique ut, bibendum in lorem.",
+                "Flagged": false,
+                "Year": 2021
+            },
+            {
+                "Content": "Ut dapibus, lorem a faucibus maximus, massa purus eleifend erat, et accumsan orci mauris aliquam tortor. Proin lacinia risus a aliquam vestibulum. Aenean pulvinar, ipsum sit amet ornare ultricies, lectus risus porttitor sapien, vel sagittis dui velit in erat. Morbi rutrum, orci at sollicitudin accumsan, mauris leo gravida nisl, ac rhoncus ante velit eu libero. Quisque dapibus sit amet nibh non condimentum.",
+                "Flagged": false,
+                "Year": 2022
+            },
+            {
+                "Content": "Vestibulum magna nunc, egestas ut sem vel, iaculis accumsan elit.",
+                "Flagged": false,
+                "Year": 2022
+            }
+        ]
+    },
+    {
+        "UserName": "codercody",
+        "UserEmail": "coder_cody_codes@protonmail.com",
+        "Tweets": [
+            {
+                "Content": "Sed scelerisque metus vel placerat euismod.",
+                "Flagged": true,
+                "Year": 2000
+            }
+        ]
+    },
+    {
+        "UserName": "johnromero",
+        "UserEmail": "info@doom.io",
+        "Tweets": [
+            {
+                "Content": "Integer ut libero volutpat.",
+                "Flagged": true,
+                "Year": 2001
+            },
+            {
+                "Content": "Nam sit amet ante malesuada justo posuere.",
+                "Flagged": true,
+                "Year": 2001
+            },
+            {
+                "Content": "Etiam quis cursus nisi.",
+                "Flagged": true,
+                "Year": 2020
+            },
+            {
+                "Content": "Aliquam quis ex diam.",
+                "Flagged": false,
+                "Year": 2021
+            }
+        ]
+    }
+]
