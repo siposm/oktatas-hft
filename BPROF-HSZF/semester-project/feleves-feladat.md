@@ -13,7 +13,7 @@ Megbízást kap egy cégtől, amely egy új rendszert szeretne fejleszteni a ré
 A megrendelő elvárása, hogy a szoftver miután elkészült a későbbiekben más fejlesztők által karbantartható és továbbfejleszthető legyen. Ennek érdekében alkalmazzon megfelelő rétegzési elveket és használjon jól szeparált osztályokat, interfészeket, és használjon Git verziókövetést a teljes kódbázison.
 
 Hozzon létre egy saját privát repository-t, melybe első lépésként a `.gitignore` fájlt vigye fel, [C#-ra vonatkozó szabályokkal](https://github.com/github/gitignore/blob/main/VisualStudio.gitignore).
-Továbbá, a kód fejlődését megfelelően gyakran, szem előtt tartva a "commit small, commit often" elvet kövesse és commitolja a kódot az idő előrehaladtával. Multibranch technika használata nem szükséges, elegendő csak a `master` branch-re dolgozni.
+Továbbá, szem előtt tartva a "commit small, commit often" elvet, a kód fejlődését commitolja megfelelő gyakoriságban és méretben. Ennek alapján 50 db (értelmes) commit készítése szükséges minimum. Multibranch technika használata nem szükséges, elegendő csak a `master` branch-re dolgozni.
 
 ## Alkalmazás menü
 
