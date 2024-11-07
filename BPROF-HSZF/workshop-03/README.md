@@ -25,9 +25,7 @@ Hozzon létre egy `ObjectValidation` osztályt, amelynek legyen egy logikai viss
 
 ## Objektumok exportálása
 
-Készítsen egy `Exporter` osztályt, amelynek legyen egy generikus `Export` metódusa. A metódus egy listát kap pl. Developer objektumokból, de bármi más is lehetne (ezért generikus!). A metódus dolgozza fel a lista elemeit, validálja azokat a fentebb leírt validáló osztály segítségével. Amennyiben valid (azaz megfelelő) az objektum, akkor exportálható XML-be.
-
-Exportáláskor az alábbi kimeneti formát kövesse, ahol látható, hogy a validáció eredménye a salary és skills esetén megjelenik.
+Készítsen egy `Exporter` osztályt, amelynek legyen egy generikus `Export` metódusa. A metódus egy listát kap pl. Developer objektumokból, de bármi más is lehetne (ezért generikus!). A metódus dolgozza fel a lista elemeit, validálja azokat a fentebb leírt validáló osztály segítségével. Exportáláskor az alábbi kimeneti formát kövesse, ahol látható, hogy a validáció eredménye a salary és skills esetén megjelenik.
 
 ```xml
 <Developer>
