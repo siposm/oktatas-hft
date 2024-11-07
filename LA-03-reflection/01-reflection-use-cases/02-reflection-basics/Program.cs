@@ -25,7 +25,7 @@ namespace _02_reflection_basics
             // Creating type dynamically
             Type bscStudType = typeof(BScStudent);
             // v1
-            object testInstance_1 = Activator.CreateInstance(bscStudType);
+            object? testInstance_1 = Activator.CreateInstance(bscStudType);
             // v2
             object testInstance = CreateType(bscStudType);
 

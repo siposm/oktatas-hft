@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "05-reflection-cloner", "05-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06-reflection-serializer", "06-reflection-serializer\06-reflection-serializer.csproj", "{BECF3503-47F0-4F88-A44B-9D5265ADCF85}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-reflection-tostring", "07-reflection-tostring\07-reflection-tostring.csproj", "{2FBBD443-1B32-4EA6-AF2B-7F3E3C570A75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "07-reflection-tostring", "07-reflection-tostring\07-reflection-tostring.csproj", "{2FBBD443-1B32-4EA6-AF2B-7F3E3C570A75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08-reflection-xml-export", "08-reflection-xml-export\08-reflection-xml-export.csproj", "{1F106F34-9532-49E1-A2EC-1DA586F7255F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{2FBBD443-1B32-4EA6-AF2B-7F3E3C570A75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FBBD443-1B32-4EA6-AF2B-7F3E3C570A75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FBBD443-1B32-4EA6-AF2B-7F3E3C570A75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F106F34-9532-49E1-A2EC-1DA586F7255F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F106F34-9532-49E1-A2EC-1DA586F7255F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F106F34-9532-49E1-A2EC-1DA586F7255F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F106F34-9532-49E1-A2EC-1DA586F7255F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
