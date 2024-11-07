@@ -10,7 +10,7 @@ namespace _02_reflection
         public int MaxLength { get; set; }
     }
 
-    interface IMyObject 
+    interface IMyObject
     {
         // it is empty for a reason
     }
@@ -31,7 +31,7 @@ namespace _02_reflection
         public int Credits { get; set; }
     }
 
-    class BscStudent : Student
+    class BScStudent : Student
     {
         public int EnrollmentYear; // field, not property
 
@@ -42,12 +42,9 @@ namespace _02_reflection
 
         public string Greeting()
         {
-            return "Hi! I'm "+ Name +", nice to meet you!";
+            return "Hi! I'm " + Name + ", nice to meet you!";
         }
     }
-
-
-
 
     class Program
     {
@@ -55,9 +52,7 @@ namespace _02_reflection
         {
             # region 01-BASICS-DEMO
 
-            Person p = new Person(){
-                Name = "Test Person", ID = 999 
-            };
+            Person p = new Person() { Name = "Test Person", ID = 999 };
 
             Type t = typeof(Person); // !!!??? vs .GetType()
             PropertyInfo[] infos = t.GetProperties(); // using reflection
@@ -65,7 +60,7 @@ namespace _02_reflection
             foreach (var item in infos)
             {
                 Console.WriteLine("\t PROP NAME: " + item.Name);
-                Console.WriteLine("\t PROP VALUE: " + item.GetValue( p )); // instance must be provided! 'p'
+                Console.WriteLine("\t PROP VALUE: " + item.GetValue(p)); // instance must be provided! 'p'
             }
 
             PropertyInfo pi = t.GetProperty("Name"); // + GetMethods , GetFields
@@ -75,20 +70,19 @@ namespace _02_reflection
             // ---------------------------------------------------------------
 
             // Calling the method dynamically
-            
-            Type bscStudType = typeof(BscStudent);
+
+            Type bscStudType = typeof(BScStudent);
             object testInstance = Activator.CreateInstance(bscStudType);
-            
+
             MethodInfo toInvoke = bscStudType.GetMethod("Greeting");
             var returnedValue = (string)toInvoke.Invoke(testInstance, null);
             System.Console.WriteLine("Invoked methods return value: " + returnedValue);
-            
 
             #endregion
 
-            
-            
-            
+
+
+
             // ##############################################################################################################################
 
 
@@ -99,18 +93,19 @@ namespace _02_reflection
             IMyObject[] students = new IMyObject[10];
             Random r = new Random();
 
-            Func<Type> typeRandomizer = ( () => {
+            Func<Type> typeRandomizer = (
+                () =>
+                {
+                    int x = r.Next(3);
 
-                int x = r.Next(3);
-
-                if(x == 0)
-                    return typeof(Student);
-                if(x == 1)
-                    return typeof(Person);
-                else
-                    return typeof(BscStudent);
-
-            });
+                    if (x == 0)
+                        return typeof(Student);
+                    if (x == 1)
+                        return typeof(Person);
+                    else
+                        return typeof(BScStudent);
+                }
+            );
 
             Assembly assem = Assembly.GetExecutingAssembly();
 
@@ -118,7 +113,9 @@ namespace _02_reflection
             {
                 IMyObject imo = (IMyObject)assem.CreateInstance(typeRandomizer().ToString());
                 students[i] = imo;
-                System.Console.WriteLine("--> " + imo/*.GetType()*/);
+                System.Console.WriteLine(
+                    "--> " + imo /*.GetType()*/
+                );
             }
 
             // annak megfelelően hogy milyen típus listázzuk ki a tulajdonságokat + metódusokat + adattagokat
@@ -143,9 +140,8 @@ namespace _02_reflection
                     Console.WriteLine("\t" + method.Name);
             }
 
-
             #endregion
-            
+
 
 
 
@@ -160,7 +156,7 @@ namespace _02_reflection
             // Hozzuk létre a szükséges attribútumot.
             // - CheckLength: int MaxLength tulajdonsággal állítható
             // Alkalmazzuk ezt az Email tulajdonságra Student-ben.
-            // 
+            //
             // Create the needed attribute.
             // - CheckLength: int MaxLength property can be set
             // Apply this to the Email prop at Student class.
@@ -179,8 +175,8 @@ namespace _02_reflection
 
             foreach (var studentObject in students)
             {
-                //if(studentObject is Student) // not good, too weak filtering because it inclides the descendant classes as well
-                if(studentObject.GetType().Equals(typeof(Student)))
+                //if(studentObject is Student) // not good, too weak filtering because it includes the descendant classes as well
+                if (studentObject.GetType().Equals(typeof(Student)))
                 {
                     countStudentTypes++;
 
@@ -189,18 +185,19 @@ namespace _02_reflection
                         foreach (Attribute attr in prop.GetCustomAttributes())
                         {
                             CheckLengthAttribute cl = attr as CheckLengthAttribute;
-                            if(prop.Name == "Email")
+                            if (prop.Name == "Email")
                             {
                                 string firstPart = newEmail.Split('@')[0];
                                 string secondPart = newEmail.Split('@')[1];
-                                    
-                                if(firstPart.Length <= cl.MaxLength) // email ok
-                                { 
+
+                                if (firstPart.Length <= cl.MaxLength) // email ok
+                                {
                                     (studentObject as Student).Email = newEmail;
                                 }
                                 else // email not ok
-                                {   
-                                    (studentObject as Student).Email = firstPart.Substring(0,cl.MaxLength) + "@" + secondPart;
+                                {
+                                    (studentObject as Student).Email =
+                                        firstPart.Substring(0, cl.MaxLength) + "@" + secondPart;
                                     //throw new Exception("ERROR: EMAIL IS INCORRECT!");
                                 }
                             }
@@ -224,12 +221,10 @@ namespace _02_reflection
 
             Console.WriteLine("\n-----------------\n");
             Console.WriteLine("STUDENT TYPES: " + countStudentTypes);
-            
-            var q = from x in students
-                    where x.GetType().Equals(typeof(Student))
-                    select x;
-            
-            q.ToList().ForEach( x => Console.WriteLine((x as Student).Email));
+
+            var q = from x in students where x.GetType().Equals(typeof(Student)) select x;
+
+            q.ToList().ForEach(x => Console.WriteLine((x as Student).Email));
 
             #endregion
         }
