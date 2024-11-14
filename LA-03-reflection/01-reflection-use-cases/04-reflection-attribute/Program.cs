@@ -31,11 +31,11 @@ namespace _04_reflection_attribute
                 {
                     foreach (PropertyInfo prop in studentObject.GetType().GetProperties())
                     {
-                        foreach (Attribute attr in prop.GetCustomAttributes())
+                        if (prop.Name == "Email")
                         {
-                            CheckLengthAttribute? cla = attr as CheckLengthAttribute;
-                            if (prop.Name == "Email")
-                            {   
+                            foreach (Attribute attr in prop.GetCustomAttributes())
+                            {
+                                CheckLengthAttribute? cla = attr as CheckLengthAttribute;
                                 string? firstPart = prop.GetValue(studentObject)?.ToString()?.Split('@')[0];
 
                                 if (firstPart?.Length <= cla?.MaxLength)
